@@ -1,0 +1,97 @@
+---
+--from markdown+simple_tables
+---
+
+# Induction
+
+## Mathematical Induction (aka Weak Induction)
+
+<br> <br> 
+Disclaimer: If you struggle with inequalities, please review here [link].
+
+###Toy Example - Inequalities
+
+Prove by induction that for all integers n≥2, $n < n^2$.
+
+1) __State the property__ you wish to prove. This is often expressed as a predicate.
+<br>Let the Property P(n) be $n < n^2$.
+
+2) __Base Case (BC, n=2):__ WTS P(2), as 2 is the smallest value as expressed in the problem statement.
+<br>LHS = 2
+<br>RHS = $2^2 = 4$
+<br>As $2 < 4$, then LHS < RHS.
+<br>Therefore $n < n^2$ holds for when $n=2$, and thus P(2) holds as desired.
+
+3) __Inductive Step (IS):__
+
++ __Inductive Hypothesis (IH):__ Suppose for some integer k≥2, P(k) holds.
+<br> This means that $k < k^2$.
++ __Inductive Argument (IA):__ WTS P(k+1).
+<br> That is, we want to show $(k+1) < (k+1)^2$.
+<br> So we insert $k+1$ into the LHS (or we could go from RHS to LHS, or do both sides __independently__):
+<br>__$k$__ $+1<$__$k^2$__$+1$ by IH
+<br>$\leq k^2+2k+1$ as $0 < 4 \leq 2k$, as 2 is the smallest $k$.
+<br>$=(k+1)^2$ _by factoring_
+<br>Therefore $(k+1) < (k+1)^2$ holds, and thus P(k+1) holds.
+
+4) __Concluding Statement:__
+<br>Thus by the principle of mathematical induction, for all n≥2, $n < n^2$.
+
+###Another Inequality Example
+
+_Lemma: for all integers n≥1, $1<2^n$._
+
+Prove the Lemma by induction. 
+
+1) Let the Property P(n) be $1<2^n$.
+
+2) BC (n=1): WTS P(1). Then $LHS=1<2=2^1=2^n=RHS$. Therefore LHS<RHS. 
+<br> Thus P(1) holds.
+
+3) IS: 
+
++ IH: Suppose that $1<2^k$ for some k≥1.
++ IA: WTS $1<2^(k+1)$
+<br> $1<2^k$ _by IH_
+<br> $<2^k+2^k$ _as $0<1<2^k$ by base case_
+<br> $=2*2^k$ _by factoring 2_
+<br> $=2^(k+1)$ _by property of exponents_
+<br>Therefore $1<2^(k+1)$ holds, and thus P(k+1) holds.
+
+4) Concluding Statement:
+<br>Thus by the principle of mathematical induction, for all n≥1, $n < n^2$.
+
+Lemmas are small technical results that are used in a longer and more important
+result - often called a theorem. 
+<br> We will use this lemma in the next proof.
+
+
+###Multiple Base Cases
+
+Sometimes we need to have more than one base case for an induction proof.
+
+Prove by induction that $n<2^n$ for all integers n≥0.
+
+1) Let the Property P(n) be $n<2^n$.
+
+2) BC 
++ (n=0): WTS P(0). Then $LHS=0<1=2^0=2^n=RHS$. Therefore LHS<RHS. <br> Thus P(0) holds. 
++ (n=1): WTS P(1). Then $LHS=1<2=2^1=2^n=RHS$. Therefore LHS<RHS. 
+<br> Thus P(1) holds.
+
+3) IS: 
++ IH: Suppose that $k<2^k$ for some k≥1. 
++ IA: WTS $k+1<2^{(k+1)}$
+<br> $k+1<2^k+1$ _by IH_
+<br> $<2^k+2^k$ _by lemma_
+<br> $=2*2^k$ _by factoring 2_
+<br> $=2^{(k+1)}$ _by property of exponents_
+<br>Therefore $k+1<2^{(k+1)}$ holds, and thus P(k+1) holds.
+
+4) Concluding Statement:
+<br>Thus by the principle of mathematical induction, for all n≥1, $n < n^2$.
+<br>Since we also proved the statement for n=0, it stands that the property holds for all n≥0.
+ 
+Why did we need the proof for P(1)? <br>What is wrong with having P(0) and having the IH assume for k≥0? [^1]
+
+[^1]: The line $2^k+1<2^k+2^k$ does not hold for when $k=0$ in the inductive argument.
