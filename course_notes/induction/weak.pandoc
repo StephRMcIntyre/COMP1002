@@ -1,0 +1,231 @@
+
+  <style>
+table {
+  font-size: 16px;
+}
+
+div.numer {
+  border-bottom:1px solid;
+  text-align:center;
+  font-size: 0.8em;
+}
+
+div.denom {
+  font-size: 0.8em;
+  border-top: 1px solid;
+  text-align: center;
+}
+</style>
+
+# Induction
+
+## Mathematical Induction (aka Weak Induction)
+
+<br><br>
+
+###Proof Structure
+
+The proof scheme looks like the following:
+
++ Base case: Show the property holds for the
+“smallest thing” you are reasoning about, b
++ Inductive step:
+* Assume the inductive hypothesis, P(k)
+* Make the inductive argument that P(k+1) holds.
++ Conclude that the property holds for all integers after the base case
+
+You will not have to do ND proofs with Induction, but we are giving it to you in this format as it might make sense seeing it as a rule for mathematics:
+
+$P(b)$
+<br> 
+$\forall k \geq b (P(k)\to P(k+1))$
+<br>-------------------------
+<br> $\forall k \geq b (P(k))$
+
+This rule means that proving the base case(s) $P(b)$ and if assuming $P(k)$ for an arbitrary $k$ that is at least as big as the base case will allow us to prove $P(k+1)$, then we derive that the property holds for __all__ $k$ at least as big as the base case.
+
+To start off, we are going to do some simple examples which do not need induction. <br>Later on you will do proofs where you _need_ induction for the proof.
+<br>We decided to start off easy to ensure you understand the general form for induction proofs.
+
+###Toy Example 
+
+Prove by induction that for all integers n≥1, $(n-1)(n+1)+1=n^2$.
+
+1) __State the property__ you wish to prove. This is often expressed as a predicate.
+<br>Let the Property P(n) be $(n-1)(n+1)+1=n^2$.
+
+2) __Base Case (BC, n=1):__ WTS P(1), as 1 is the smallest value as expressed in the problem statement.
+<br>$(1-1)(1+1)+1=(0)(2)+1=1=1^2$
+<br>Alternatively, we could do,
+<br>LHS = $(1-1)(1+1)+1=(0)(2)+1=1$
+<br>RHS = $1^2=1$.
+<br>LHS=RHS
+<br>Therefore $(n-1)(n+1)+1=n^2$ holds for when $n=1$, and thus P(1) holds as desired.
+
+3) __Inductive Step:__
+
++ Inductive Hypothesis (IH): Suppose for some integer k≥1, P(k) holds.
+<br> This means that $(k-1)(k+1)+1=k^2$.
++ Inductive Argument (IA): WTS P(k+1).
+<br> That is, we want to show $((k+1)-1)((k+1)+1)+1=(k+1)^2$
+<br> So we insert $k+1$ into the LHS (or we could go from RHS to LHS, or do both sides __independently__):
+<br>$((k+1)-1)((k+1)+1)+1=((k-1)+1)((k+1)+1)+1$, as $(k+1)-1=(k-1)+1$
+<br>$=$__$(k-1)(k+1)+1$__$+(k-1)+(k+1)+1$, _by expanding_
+<br>$=$__$k^2$__$+(k-1)+(k+1)+1$ _by IH (we replaced the previous bold subexpression with the other side of the IH)_
+<br>$=k^2+2k+1$ _by algebra_
+<br>$=(k+1)^2$ _by factoring_
+<br>Again, alternatively, we could do,
+<br>LHS = $((k+1)-1)((k+1)+1)+1=((k-1)+1)((k+1)+1)+1$, as $(k+1)-1=(k-1)+1$
+<br>$=$__$(k-1)(k+1)+1$__$+(k-1)+(k+1)+1$, _by expanding_
+<br>$=$__$k^2$__$+(k-1)+(k+1)+1$ _by IH (we replaced the previous bold subexpression with the other side of the IH)_
+<br>$=k^2+2k+1$ _by algebra_
+<br>RHS = $(k+1)^2$ =$k^2+2k+1$, _by expanding_
+<br>LHS=RHS
+<br>Therefore $((k+1)-1)((k+1)+1)+1=(k+1)^2$ holds, and thus P(k+1) holds.
+
+4) __Concluding Statement:__
+<br>Thus by the principle of mathematical induction, for all n≥1, $(n-1)(n+1)+1=n^2$
+
+_Notice how we show that the LHS equal the RHS over a few steps. 
+<br>We do not assume from the start that LHS=RHS.
+<br>Also in the IH, we assume for _some arbitrary k_, not every k. This is important!
+
+
+###Tale of Galileo 
+
+Consider we have some positive integer $n$, what happens if we took all the positive integers $\leq n$, and summed them all up?
+<br>So we would have $1+2+...+n$ and it should equal some value.
+<br>For example, if $n=4$, we get $1+2+3+4=10$.
+
+[Galileo's Story]
+
+###Proof
+
+<table>
+<tr><td>Prove by induction that for all integers n≥1, 1+2+...+n = &nbsp;</td>
+ <td>
+    <div class="numer">n(n+1)</div>
+    <div class="denom">2</div>
+  </td>
+<td>.</td>
+</tr>
+</table>
+
+1) __State the property__ you wish to prove. This is often expressed as a predicate.
+<br>  &emsp <table>
+<tr><td>Let the Property P(n) be  1+2+...+n = &nbsp;</td>
+ <td>
+    <div class="numer">n(n+1)</div>
+    <div class="denom">2</div>
+  </td>
+<td>.</td>
+</tr>
+</table>
+
+2) __Base Case__ (BC, n=1):
+<br>  &emsp WTS P(1), as 1 is the smallest value as expressed in the problem statement.
+<br>  &emsp <table>
+<tr>LHS = 1.</tr><tr><td>RHS = &nbsp;</td>
+ <td>
+    <div class="numer">1(1+1)</div>
+    <div class="denom">2</div>
+  </td>
+ <td>=</td>
+ <td>
+    <div class="numer">2</div>
+    <div class="denom">2</div>
+  </td>
+  <td> = 1 </td>
+</tr>
+</table>
+<br>  &emsp <table>
+<tr><td>LHS=RHS, therefore  1+2+...+n = &nbsp;</td>
+ <td>
+    <div class="numer">n(n+1)</div>
+    <div class="denom">2</div>
+  </td>
+<td>$~~$ holds for when $n=1$, and thus P(1) holds as desired. </td></tr>
+</table> 
+
+3) __Inductive Step:__
+
++ Inductive Hypothesis (IH): Suppose for some integer k≥1, P(k) holds.
+<br> This means that <table>
+<tr><td>1+2+...+k = &nbsp;</td>
+ <td>
+    <div class="numer">k(k+1)</div>
+    <div class="denom">2</div>
+  </td>
+</tr>
+</table>
++ Inductive Argument (IA): WTS P(k+1).
+<br> That is, we want to show <table>
+<tr><td>1+2+...+k+(k+1) = &nbsp;</td>
+ <td>
+    <div class="numer">(k+1)((k+1)+1)</div>
+    <div class="denom">2</div>
+  </td>
+</tr>
+</table>
+<br> So we insert $k+1$ into the LHS (or we could go from RHS to LHS, or do both sides __independently__):
+<br> <table>
+<tr><td>LHS = __1+2+...+k__+(k+1) = &nbsp;</td>
+ <td>
+    <div class="numer">__k(k+1)__</div>
+    <div class="denom">__2__</div>
+  </td>
+<td> +(k+1), __by IH__ </td>
+</tr>
+<tr> <td><p style="text-align:right;">= &nbsp;</p></td>
+ <td>
+    <div class="numer">k(k+1)+__2(k+1)__</div>
+    <div class="denom">2</div>
+  </td> 
+ <td>, _by multiplying $(k+1)$_ by 2/2. </td>
+</tr>
+<tr> <td><p style="text-align:right;">= &nbsp;</p></td>
+ <td>
+    <div class="numer">k^2+k+2k+2</div>
+    <div class="denom">2</div>
+  </td> 
+ <td>, _by expanding_. </td>
+</tr>
+<tr> <td><p style="text-align:right;">= &nbsp;</p></td>
+ <td>
+    <div class="numer">k^2+3k+2</div>
+    <div class="denom">2</div>
+  </td> 
+ <td>, _as $k+2k=3k$_ </td>
+</tr>
+<tr> <td><p style="text-align:right;">= &nbsp;</p></td>
+ <td>
+    <div class="numer">(k+1)((k+1)+1)</div>
+    <div class="denom">2</div>
+  </td> 
+ <td>, _by factoring_ </td>
+</tr>
+</table>
+<table>
+<tr> <td>Then 1+2+...+k+(k+1) =</td>
+ <td>
+    <div class="numer">(k+1)((k+1)+1)</div>
+    <div class="denom">2</div>
+  </td> 
+ <td>, and thus LHS=RHS as required. </td>
+</tr>
+</table>
+<br>Therefore P(k+1) holds.
+
+4) __Concluding Statement:__
+<br>
+<table>
+<tr> <td>Thus by the principle of mathematical induction, for all n≥1, $1+2+...+n$ =</td>
+ <td>
+    <div class="numer">n(n+1)</div>
+    <div class="denom">2</div>
+  </td> 
+</tr>
+</table>
+
+</body>
+</html>
