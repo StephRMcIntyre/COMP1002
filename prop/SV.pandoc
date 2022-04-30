@@ -1,0 +1,89 @@
+---
+--from markdown+simple_tables
+---
+
+# Propositional Logic
+
+## Sound & Valid Arguments
+
+
+__Valid Argument:__ An argument is valid if and only if the premises logically imply the conclusion.
+
+__Sound Argument:__ A valid argument where the premises are true in real life.
+
+Examples:
+
+Convert the following into logical form. Then assess whether they are valid and/or sound. Note: "I" refers to the reader.
+
+
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. I am awake now. If I am reading these notes, then I am awake. Therefore I am reading these notes now.
+| The statement is sound.
+| *The statement is not sound.
+| The statement is valid.
+| *The statement is not valid. 
+```
+Explanation[^1]
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. I am reading these notes now. If I am reading these notes now, then I am awake. Therefore I am awake now.
+| *The statement is sound.
+| The statement is not sound.
+| *The statement is valid.
+| The statement is not valid. 
+```
+Explanation[^2]
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+3. I am asleep now. If I am asleep, then I am not reading these slides now. Therefore I am not reading these slides now.
+| The statement is sound.
+| *The statement is not sound.
+| *The statement is valid.
+| The statement is not valid. 
+```
+Explanation[^3]
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+3. The moon is made of cheese and is spherical. Therefore the moon is made of cheese.
+| The statement is sound.
+| *The statement is not sound.
+| *The statement is valid.
+| The statement is not valid. 
+```
+Explanation[^4]
+
+[^1]: This not valid as the conclusion is not a logical consequence of the premises. This leads to it not being sound as valid is a requirement for sound arguments.
+
+[^2]: This is valid as the conclusion is a logical consequence of the premises. It is sound as it is valid and you, the reader, are reading these notes, and you are awake (unless you have amazing superpowers where you can read while sleeping...), therefore "If I am reading these notes now, then I am awake" is a true statement.
+
+[^3]: This is valid as the conclusion is a logical consequence of the premises. It is not sound as you, the reader, are not asleep. You are awake (at least physically).
+
+[^3]: This is valid as the conclusion is a logical consequence of the premises. It is not sound as the moon is in fact not made of cheese.
+
+##Alternate Definition of Logical Equivalence & Proof
+
+Alternate Definition: $\alpha$ ⧦ $\beta$ if and only if both $\alpha\models \beta$ and $\beta\models \alpha$.
+
+Proof:
+
++ Show if $\alpha$ ⧦ $\beta$ then both $\alpha\models \beta$ and $\beta\models \alpha$.
+	* Suppose $\alpha$ ⧦ $\beta$.
+	* Then $\alpha$ and $\beta$ have the same truth tables.
+	* Thus every row that has $\alpha$ true, has $\beta$ true. Therefore $\alpha\models\beta$.
+	* Thus every row that has $\beta$ true, has $\alpha$ true. Therefore $\beta\models\alpha$.
+	* $\alpha\models \beta$ and $\beta\models \alpha$.
++ Show if $\alpha\models \beta$ and $\beta\models \alpha$ then $\alpha$ ⧦ $\beta$.
+	* Suppose $\alpha\models \beta$ and $\beta\models \alpha$.
+	* Consider any arbitrary row in the truth table. (Meaning we pick any row, but not a specific row).
+		- Suppose $\alpha$ is true in this row. Since $\alpha\models\beta$, then $\beta$ is true in this row also. Then both $\alpha$ and $\beta are both true.
+		- Suppose $\beta$ is true in this row. Since $\beta\models\alpha$, then $\beta$ is true in this row also. Then both $\alpha$ and $\beta are both true.
+		- The only remaining case is when both $\alpha$ and $\beta$ are both false in the row. Then $\alpha$ and $\beta$ are both false (as if either were true, then one of the cases above hold.)
+	* In any case, $\alpha$ and $\beta$ have the same truth value for an arbitrary row. Since the row choice was arbitrary, then they must have the same truth tables.
+	* Thus $\alpha\leftrightarrow \beta$ evaluates to true only when $\alpha$, $\beta$ have the same truth valuation.
+	* Thus every row of the truth table has the same valuation for $\alpha$, $\beta$.
+	* Thus $\alpha$ ⧦ $\beta$.
++ $\alpha$ ⧦ $\beta$ if and only if both $\alpha\models \beta$ and $\beta\models \alpha$.
+
+Later in the course you will be expected to be able to construct proofs like the one above.
+
