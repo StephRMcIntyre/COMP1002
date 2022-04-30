@@ -1,0 +1,97 @@
+---
+--from markdown+simple_tables
+---
+
+# Propositional Logic
+
+## Soundness & Completeness
+
+###Soundness
+
+Soundness (now with triple the meanings!)
+
++ An argument is sound when it is valid, and the premises are true in real life
++ A proof rule is sound when the conclusion is logically implied (semantically
+entailed) by the lines cited.
++ A proof system S is sound when every proof in S is also logically implied.
+(Symbolically, if P ⊦ Q, then P ⊧ Q)
+
+Don’t get them confused! Which one is relevant depends on context!
+<br> Are we talking about an argument, a proof rule, or a proof system?
+
+Natural Deduction for Propositional Logic is Sound!
+
+__Soundness Theorem: If P ⊦ Q, then P ⊧ Q.__
+
+The Proof for Soundness isn’t too hard, but long.
+<br>Essentially, it boils down to showing that
+each individual proof rule is sound.
+
+Contrapositive of Soundness: If P⊭Q, then P⊬Q.
+<br>Knowing this, can we conclude useful things?
+
+Yes! We can use the contrapositive of soundness to show that a Natural Deduction proof for PL does not exist!
+<br>Since ND for PL only proves validities, then we cannot use ND to show something is not provable.
+<br>However, with soundness, if we can show that an argument isn't valid, then we can conclude there is no proof!
+
+Problem: Show P∨Q ⊬ P.
+
+We know from contrapositive of soundness for our logical system that
+if P∨Q⊭P, then P∨Q⊬P.
+<br>We can check this!
+
+Construct the truth table and enter in the counterexample!
+
+```{.TruthTable .Validity system="thomasBolducAndZachTFL2019" submission="none" options="nodash turnstilemark double-turnstile"}
+2.1 P\/Q :|-: P
+```
+
+Indeed, P∨Q⊭P as seen in our truth table and counterexample!
+<br>Therefore, by the contrapositive of soundness, P∨Q⊬P.
+
+Exercise: Show there is no ND Proof exists for $P\to Q, Q$ ⊦ $P$.
+
+```{.TruthTable .Validity system="thomasBolducAndZachTFL2019" submission="none" options="nodash turnstilemark double-turnstile"}
+2.1 P->Q,Q :|-: P
+```
+
+Do not forget to cite the countrapositive of soundness in your solution!
+
+
+###Completeness
+
++ A proof system S is complete when every validity in PL can be proved in S.
+(Symbolically, if P ⊦ Q, then P ⊧ Q)
+
+Natural Deduction for Propositional Logic is Complete!
+
+__Completeness Theorem: If P ⊧ Q, then P ⊦ Q.__
+
+The Proof for Completeness is harder and more complex.
+<br>Essentially, it boils down to showing that the language is
+sufficiently powerful to simulate truth tables in a proof.
+
+Sometimes we want to know that a proof exists without actually giving the proof.
+<br>Meaning, if we can show P ⊧ Q, then we know that P ⊦ Q, without needing to create the proof!
+
+Problem: Show that ¬(¬B → C), A ⊢ ¬(B ↔ A).
+
+We know from completeness for our logical system that
+if ¬(¬B → C), A ⊧ ¬(B ↔ A), then ¬(¬B → C), A ⊢ ¬(B ↔ A).
+
+Construct the truth table!
+
+```{.TruthTable .Validity system="thomasBolducAndZachTFL2019" submission="none" options="nodash turnstilemark double-turnstile"}
+2.1 ¬(¬B → C), A :|-: ¬(B ↔ A)
+```
+
+Indeed, ¬(¬B → C), A ⊧ ¬(B ↔ A) as seen in our truth table and counterexample!
+<br>Therefore, by completeness, ¬(¬B → C), A ⊢ ¬(B ↔ A).
+
+Exercise: Show there exists an ND proof for $P\to Q, \neg Q$ ⊢ $\neg P$.
+
+```{.TruthTable .Validity system="thomasBolducAndZachTFL2019" submission="none" options="nodash turnstilemark double-turnstile"}
+2.1 P->Q,~Q :|-: ~P
+```
+
+Again, do not forget to cite the relevant theorem!
