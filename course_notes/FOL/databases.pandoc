@@ -5,3 +5,8 @@
 # First-Order Logic
 
 ## Databases
+# Relational Databases: 
+# In databases, a relation is a “table” with rows and columns. Columns are called attributes. Rows are instances of the relation.
+# Typically each table has a primary key. This key uniquely identifies the row.
+# For example, Instructor Relation may have the primary key be Employee Number
+# 
