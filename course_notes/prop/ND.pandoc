@@ -1,0 +1,94 @@
+---
+--from markdown+simple_tables
+---
+
+# Propositional Logic
+
+## Natural Deduction
+
+
+
+Let us consider the following argument and a translation into propositional logic:
+
++ If I study really hard, then I will know the material. 	(A→B)
++ If I know the material, then I will pass the course. 		(B→C)
++ I will study really hard. 					( A )
+
+--------------------------------------------------------------------
+
++ Therefore, I will pass the course. 				(∴C)
+
+This argument is valid, but proving it may not be clear. 
+Writing out a truth table for every argument can become tedious especially since it is exponential in the number of variables.
+Is there an alternative?...
+
+Of course there is!
+
+###Formal Proof Systems
+
+__Formal proof systems__ allow us to use rules to derive new statements.
+
+A __deduction__ (derivation, proof) of a sentence $\alpha$ from a set of sentences $\mathcal{S}$
+is a sequence of sentences having $\mathcal{S}$ as premises and concluding $\alpha$ from $\mathcal{S}$.
+using logical rules of inference.
+To indicates $\mathcal{S}$ proves $\alpha$, we’ll write $\mathcal{S}$ ⊢ $\alpha$. 
+
+__Note: this is different from $\mathcal{S}$ ⊨ $\alpha$.__
+
+Here, $\mathcal{S}$ ⊢ $\alpha$ should be read as $\mathcal{S}$ proves $\alpha$ (syntactic proof), <br>
+while $\mathcal{S}$ ⊨ $\alpha$ should be read as $\mathcal{S}$ logically implies $\alpha$ (this is about the semantics).
+
+Each sentence in the proof must be one of:
+
++ a premise,
++ an assumption,
++ a statement drawn using a valid inference rule from the previous lines
+
+A system of inference rules for creating deductions is called a __deduction system__.
+
+The are differences between typical mathematical proofs and a proofs using a formal proof system.
+
+You won’t use such diagrams to construct proofs in mathematics, but for a while they will
+help us spell out the logical detail of an argument and grasp the overall structure of a proof.
+A formal argument lists all the premises at the outset, but this does not mean you should use
+them all right away. When a sentence is needed, you merely refer back to it by line number.
+In an informal mathematical proof, on the other hand, premises aren’t usually stated until
+they’re needed. Also most mathematical proofs tend to be more wordy and flow like a story.
+Also, the typical mathematical proofs we will be doing later on in the course make use of
+other rules/laws, such as arithmetic, which we will not be using.
+
+You will be allowed to have a list of the rules for ND the test– __you do not have to memorize them!__
+
+However, you will be asked to construct ND Proofs on tests. So get lots of practice!
+
+##Natural Deduction
+
+Each sentence in the proof must be one of:
+
++ a premise,
++ an assumption,
++ a statement drawn using a valid inference rule from the previous lines
+
+There is a bar that separates the premises/assumption from the rest of the proof.
+This is called the Fitch Bar.
+
+Each line in the proof is numbered and all valid inference rules will cite the dependencies
+needed by their line numbers (sometimes this will be a single line, sometimes multiple lines).
+
+~~~{.Playground .ZachTFL2019 guides="fitch" options="immutable"} 
+Premise_1    		:PR
+.		    	:PR
+.			:PR
+Derivation       	:Justification & Line(s) Citation
+Derivation       	:Justification & Line(s) Citation
+.			:Justification & Line(s) Citation
+.			:Justification & Line(s) Citation
+Conclusion		:Justification & Line(s) Citation
+~~~
+
++ Yes, the line numbers are required. 
++ Yes, the justifications are required.
++ Yes, the Fitch Bars/lines are required.
+
+Each connective will have both an introduction and elimination rule associated with it, which yields a nice symmetry for the system.
+Additionally, there are a few extra rules that go beyond the connectives.
