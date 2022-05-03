@@ -1,0 +1,102 @@
+
+∧ Rules and Practice
+====================
+
+When writing sentences of PL, remember you can use the following ways
+to enter connectives that are easier to do with a keyboard:
+
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+contradiction ⊥           `!?`, `_|_`
+------------------------- -----------------------------
+
+## The rules for ∧
+
+#∧I
+
+To derive a sentence of the form $\alpha \land \beta$, you
+need both $\alpha$ and $\beta$, separately, say with line
+numbers $m$ and $n$. Then write as justification "∧I $m$, $n$"
+(replacing $m$, $n$ with the actual line numbers, of course).
+
+In Carnap, you indicate that a line is a premise by writing `:PR` to
+the right. 
+Carnap will render the proof on the right, including the Fitch bars. 
+After adding the premises, then each line following will have a sentence in it, and a justification separated by a
+colon `:` to the right. For instance, to justify line 2 by ∧I from
+lines 1 and 2 you'd enter `:/\I 1,2` next to the sentence `A ∧ B` being justified.
+(Note: there must be *no* space between `:` and `/\I`.)
+
+Fill in the missing justifications in the proof outline below. A line
+will get a `+` next to it once you have entered a correct
+justification. If the justification is incorrect, you'll get a `?` or
+a `✗`. Carnap will try to tell you what's wrong: hover the cursor over
+the `?` or `✗` to see a hint.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" init="now" submission="none"} 
+IV.1 A, B, C :|-: (A & B) & C
+|A :PR
+|B :PR
+|C :PR
+|A /\ B
+|(A /\ B) /\ C
+~~~
+
+You can also cite a line twice to get say $A \land A$.
+For the next exercise, write the premise on line 1 (i.e., `A :PR`) and then try to find a proof of $(A \land A) \land A$ as the last line.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.2 A :|-: (A & A) & A
+~~~
+
+#∧E
+
+You can use $\alpha \land \beta$ to derive either
+$\alpha$ or $\beta$. But remember, only one derivation per line-- 
+so if you want both, you will need to have two lines, one for each. 
+If $alpha \land \beta$ appears on line number
+$n$, write "∧E $n$" next to $\alpha$, or "∧E $n$" next to $\beta$, depending on which you are deriving.
+
+Fill in the missing justifications in the proof outline below. A line
+will get a `+` next to it once you have entered a correct
+justification. If the justification is incorrect, you'll get a `?` or
+a `✗`. Carnap will try to tell you what's wrong: hover the cursor over
+the `?` or `✗` to see a hint.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" init="now" submission="none"} 
+IV.1 A & B :|-: B & A
+|A /\ B :PR
+|A
+|B
+|B /\ A
+~~~
+
+Note that while these sentences are logically equivalent, $B \land A$ and $A
+\land B$ are __different__ sentences. You first have to break $A \land B$
+apart and then put it back together. But note that once you have both
+$A$ and $B$ on separate lines, you can put them back together in any
+order, so you can get $B \land A$ using $\land$I or $A \land B$. 
+
+For the next exercise, write the premise on line 1 (i.e., `A /\ (B /\ C)
+:PR`) and then try to find a proof of $B$ as the last line.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.2 A & (B & C) :|-: B
+~~~
+
+
+For the next exercise, write the premise on line 1 (i.e., `A /\ (B /\ C)
+:PR`) and then try to find a proof of $A \land C$ as the last line.
+You will need to use both ∧ rules for this proof.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.2 A & (B & C) :|-: (A & B) & C
+~~~
+
+Tip: These rules only effect the main connective in the sentence.
+In this case, $\land E$ only breaks apart the first conjunction to get $A$ and $B \land C$ from
+line 1. To get $C$, you have to apply $\land$E again.
