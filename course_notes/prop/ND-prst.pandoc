@@ -1,0 +1,71 @@
+Proof Strategies
+================
+
+When writing sentences of PL, remember you can use the following ways
+to enter connectives that are easier to do with a keyboard:
+
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+contradiction ⊥           `!?`, `_|_`
+------------------------- -----------------------------
+
+## Proof construction strategies
+
+It is important to know, that there is no known general algorithm for writing proofs.
+So now you might be wondering: how do you come up with the lines in the first
+place, other than guessing wildly? 
+There are some strategies that may help you arrive at your desired derivation. 
+Sometimes you want to work forward, sometimes backwards, and sometimes you want to sandwich your proof.
+
+For instance, one strategy is to "work backward" from a conjunction. It applies in
+this case. You want to prove $C \land D$. So your last line will have
+to be $C \land D$. When you start a proof from scratch, you should
+therefore not only put in the premises at the top, but also the last
+line at the bottom, like so:
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" init="now"} 
+IV.4 A & B, A -> C, B -> D :|-: C & D
+|A /\ B :PR
+|A -> C:PR
+|B -> D:PR
+|?
+|C /\ D
+~~~
+
+Now to "work backwards" from $C \land D$ means that you will put into
+your partial proof whatever is needed in order for you to correctly
+apply the $\land$I rule on the last line.  (It's always the I rule for
+the main operator of the sentence you want to prove, in this case
+that's $\land$.) So you should write, between the premises and the
+last line, the corresponding sentences you'd need as justifications
+for $\land$I. In this case, that's $C$ and $D$. (Go on, do it: replace
+the `?` by two lines containing $C$ and $D$.)
+
+$C$ and $D$ are now your new "goals". You will also have to justify
+those, before you can use them to justify the last line. Let's focus
+on $C$. It has no main operator, so you cannot work backwards from it.
+But you can work forwards from the premises. You'll note that $C$ is
+also the consequent of the conditional $A \to C$ on line 2. Working
+forwards from a conditional means: put in your proof whatever you'd
+need to justify your goal (here: $C$) from the sentence you have
+(here: $A \to C$) by the E rule for the main operator of the sentence
+you're working forward from (here: $\to$). Since to use $\to$E to
+justify $C$ from $A \to C$ also requires you to have proved $A$,
+that's what you enter. (Go on, write $A$ on a new line above $C$.)
+
+You'll now note that you can justify $A$ by $\land$E from premise 1.
+Then you can justify $C$ by $\to$E. Now you go through the same
+process with $D$: working forward from the premise on line 3 you enter
+$B$ above $D$. You can justify $B$ by $\land$E from line 1, $D$ by
+$\to$E from $B$ and premise 3. Finally, now you can justify the last
+line $C \land D$ by $\land$I.
+
+Here's another longer exercise, without hints:
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
+IV.5 G /\ H, K, (K /\ G) -> L, H -> (M /\ O) :|-: L /\ O
+~~~
