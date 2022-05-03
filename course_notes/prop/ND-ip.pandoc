@@ -33,15 +33,3 @@ A harder example is $A \lor \lnot A$:
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
 IP.2 :|-: A \/ ~A
 ~~~
-
-## A proof box for you to play in!
-
-Want to use Carnap to construct and check an arbitrary proof? You can
-do that in this "playground" proof editor. 
-
-~~~{.Playground .ZachTFL2019 options="indent resize render tabindent autoindent fonts"} 
-~~~
-
-Your proof is correct if all lines have a `+` next to them. Since
-Carnap does not know what you're *trying* to prove, it will tell you
-in the top line what you *have* proved. 
