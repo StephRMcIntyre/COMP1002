@@ -1,0 +1,53 @@
+Reiteration
+===========
+
+When writing sentences of PL, remember you can use the following ways
+to enter connectives that are easier to do with a keyboard:
+
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+contradiction ⊥           `!?`, `_|_`
+------------------------- -----------------------------
+
+## Reiteration
+
+The reiteration rule R is a very simple rule that sometimes comes in
+handy. It allows you to simply repeat a previous line. For instance,
+we need it if we want to prove that $A \to A$ is a tautology. This
+involves proving $A \to A$, but our proof has no premises at all.
+
+Working strategically is especially important when you prove
+tautologies like this one. You start by writing down $A \to A$ as the
+last line of your proof. (Since there are no premises it will start
+off also being the first line of your proof!) Then construct your
+proof _above_ the sentence you're proving. Work backward from your
+goal sentence (here: $A \to A$) by writing down what the I rule for
+the main connective (here: $\to$I) requires as a justification. In our
+case, we will need a subproof with assumption $A$ and last line $A$.
+Now use the R rule!
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.12 :|-: A -> A
+~~~
+
+Carnap will put a $\top$ to the left of $\vdash$ if you're expected
+to give a proof with no premises at all.
+
+Here's another example: If $B$ is true, then $A \to B$ is true. After
+all, the conditional $A \to B$ is true iff either $A$ is false or $B$
+is true. So the argument $B \therefore A \to B$ is valid.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.13 B :|-: A -> B
+~~~
+
+You'll often need to do subproofs inside a bigger subproof. Here's an
+example that illustrates this:
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
+IV.14 :|-: A -> (B -> A)
+~~~
