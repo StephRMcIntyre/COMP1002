@@ -1,0 +1,107 @@
+---
+--from markdown+simple_tables
+---
+
+# Propositional Logic
+
+## Negating Statements
+
+It is important to learn how to negate statements as __disproving a statement is proving its negation__.
+
+The main idea is to place the negation symbol infront of the statement, and push it inwards by using replacement rules. 
+For any negation symbol infront of a (bi)conditional, you will need to convert the (bi)conditional first until you are
+dealing with just disjunctions, conjunctions, and negations.
+
+Every new line will add to the chain of logical equivalences.
+
+Symbols with keyboard
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+------------------------- -----------------------------
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+Replacement Rules
+------------------------------- ---------------------------------------
+Double Negation            `DN` 	$\neg \neg \alpha$ ⧦ $\alpha$
+Conditional              `Cond` 	$\alpha\to\beta$⧦$\neg\alpha\lor\beta$
+Biconditional Exchange `Bicond` 	$\alpha\leftrightarrow\beta$⧦$(\alpha\to\beta)\land(\beta\to\alpha)$
+DeMorgan's Laws           `DeM` 	$\neg (\alpha\lor\beta )$⧦$\neg\alpha\land\neg\beta$
+DeMorgan's Laws           `DeM` 	$\neg (\alpha\land\beta )$⧦$\neg\alpha\lor\neg\beta$
+------------------------------- ---------------------------------------
+
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+
+Example: Negate the statement $((P \land Q) \lor R) \to (P \to\neg Q)$
+
+First we negate the statement, $\neg(((P \land Q) \lor R) \to (P \to\neg Q))$, then we simplify it.
+In Carnap, you will need to label the first line as `:PR` to justify it as a premise. 
+Every following line will have exactly one change and `:` followed by the justifcation as listed above.
+If you have done the line incorrectly, there will be a hazard symbol next to the line and 
+hovering your cursor over it will give some information as to what went wrong.
+
+We stop simplifying when all the negations are only attached to the propositional variables.
+
+Note: The system will not allow for more than one step per line. 
+It is also not perfect with making sure you simplified as far as you can go.
+
+
+```{.ProofChecker .ZachPropEq feedback="manual" guides="fitch" options="indent resize render tabindent exam" submission="none" tests="maxNot:0" init="now"}
+1.1 ~(((P/\Q)\/R)->(P->~Q)) :|-:
+|~(((P/\Q)\/R)->(P->~Q)) :PR 
+|~(~((P/\Q)\/R)\/(P->~Q)) :Cond
+|~~((P/\Q)\/R)/\~(P->~Q) :DeM
+|((P/\Q)\/R)/\~(P->~Q) :DN
+|((P/\Q)\/R)/\~(~P\/~Q) :Cond
+|((P/\Q)\/R)/\(~~P/\~~Q) :DeM
+|((P/\Q)\/R)/\(P/\~~Q) :DN
+|((P/\Q)\/R)/\(P/\Q) :DN
+```
+
+Click `Check` to see the solution light up in Green.
+
+The above example starts at the first line, noted as `:PR`, and then this line is ⧦ to the next line, which is ⧦ to the third line, and so forth to until it is ⧦ to our conclusion. It is just a long chain of logical equivalences.
+
+Example: Negate the statement $P \leftrightarrow (R \to\neg Q)$
+
+First we negate the statement, $\neg(P \leftrightarrow (R \to\neg Q)$, then we simplify it.
+
+
+```{.ProofChecker .ZachPropEq feedback="manual" guides="fitch" options="indent resize render tabindent exam" submission="none"  tests="maxNot:2" init="now"}
+1.1 ~(P<>(R->~Q)) :|-:
+|~(P<>(R->~Q)) :PR 
+|~((P->(R->~Q))/\((R->~Q)->P)) :Bicond
+|~(P->(R->~Q))\/~((R->~Q)->P) :DeM
+|~(~P\/(R->~Q))\/~((R->~Q)->P) :Cond
+|~(~P\/(R->~Q))\/~(~(R->~Q)\/P) :Cond
+|(~~P/\~(R->~Q))\/~(~(R->~Q)\/P) :DeM
+|(~~P/\~(R->~Q))\/(~~(R->~Q)/\~P) :DeM
+|(P/\~(R->~Q))\/(~~(R->~Q)/\~P) :DN
+|(P/\~(R->~Q))\/((R->~Q)/\~P) :DN
+|(P/\~(~R\/~Q))\/((R->~Q)/\~P) :Cond
+|(P/\(~~R/\~~Q))\/((R->~Q)/\~P) :DeM
+|(P/\(R/\~~Q))\/((R->~Q)/\~P) :DN
+|(P/\(R/\Q))\/((R->~Q)/\~P) :DN
+```
+
+Exercise: Negate the statement $P \lor Q \to \neg R$
+
+```{.ProofChecker .ZachPropEq feedback="manual" guides="fitch" options="indent resize render tabindent" submission="none" tests="maxNot:2" init="now"}
+1.1 ~((P\/Q)->~R) :|-:
+|~((P\/Q)->~R) :PR 
+```
+
+Exercise: Negate the statement $P \to (\neg P \leftrightarrow Q)$
+
+```{.ProofChecker .ZachPropEq feedback="manual" guides="fitch" options="indent resize render tabindent exam" submission="none"  tests="maxIf:0" init="now"}
+1.1 ~(P->(~P<>Q)) :|-:
+|~(P->(~P<>Q)) :PR 
+```
+
+Note: While Carnap is showing the ⊢ symbol, we are really using the ⧦ symbol as it is bidirectional and it is about semantics rather than derivations.
