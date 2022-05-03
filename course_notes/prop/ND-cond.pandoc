@@ -1,0 +1,151 @@
+
+→ Rules and Practice
+====================
+
+When writing sentences of PL, remember you can use the following ways
+to enter connectives that are easier to do with a keyboard:
+
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+contradiction ⊥           `!?`, `_|_`
+------------------------- -----------------------------
+
+##→ Elimination
+
+The elimination rule for $\to$ is also known as Modus Ponens.
+You can derive $\beta$ if you already have both $\alpha \to \beta$
+and $\alpha$, on separate previous lines. 
+Meaning, given a conditional statement and the antecedant, we can derive the consequent.
+
+Fill in the applications of the rules for the following proof.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" init="now" submission="none"} 
+IV.3 A & B, A -> C :|-: C
+|A /\ B :PR
+|A -> C:PR
+|A
+|C 
+~~~
+
+In the next exercise, prove $C \land D$ from the premises $A
+\land B$, $A \to C$, and $B \to D$. You'll need the $\to$E rule twice
+to justify $C$ and then $D$, but before you can use it, you have to
+prove the antecedents of the conditionals you cite. We've filled in
+some sentences and justifications; you do the rest!
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" init="now" submission="none"} 
+IV.3 A & B, A -> C, B -> D :|-: C & D
+|A /\ B :PR
+|A -> C:PR
+|B -> D:PR
+|A 
+|C :->E
+|?
+|?
+|C /\ D 
+~~~
+
+For the next exercise, write the premise on line 1 (i.e., `A /\ (A -> B)
+:PR`) and then try to find a proof of $A \land B$ as the last line.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.2 A & (A -> B) :|-: A & B
+~~~
+
+##→ Introduction
+
+The $\to$I rule requires a new idea, namely that of a subproof. To
+derive the conditional $\alpha \to \beta$ you need a
+separate proof in which $\alpha$ is an assumption made in
+addition to the premises of the entire proof. 
+
+In Carnap, a subproof is made by _indenting_ the lines that make up
+the subproof, and by justifying its first line (the assumption of the
+subproof) by `:AS` on the right of the sentence. 
+__Only one assumption is made at the start of every subproof.__
+If you want to make another assumption, then you will have to start another subproof.
+
+An example of using subproofs can be seen in the following proof where we derive $L \to (R \land L)$ from the premise $R$.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.6 R :|-: L -> (R /\ L)
+|R :PR
+|   L :AS
+|   R /\ L :/\I 1,2
+|L -> (R /\ L) :->I 2-3
+~~~
+
+Sentences not in a subproof must not be indented at all, and sentences
+in the same subproof must be indented the same number of spaces. Otherwise,
+Carnap will be confused. Sometimes it helps to look at the nice
+rendering of the proof on the right: if the vertical lines extend too
+far or not far enough, you're most likely to have your indentation
+wrong. Annoyingly, the rendering of the proof sometimes looks right,
+but the indentation is still wrong.  So you have to be careful.
+
+For instance, fix the following proof by fixing the indentations:
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.7  :|-: (A /\ A) -> A
+|  (A /\ A) :AS
+|   A :/\E1
+| (A /\ A) -> A :->I 1-2
+~~~
+
+This last proof is also an example of a proof of a *theorem*: $A \to
+(A \land A)$ is a tautology, and its proof does not need any premises.
+We will be proving many tautologies in this course.
+The $\to$I rule, because it requires a subproof, allows us to, so to
+speak, make up out own premises (namely the antecedent of the
+conditional we're proving, which has to be an assumption of the
+subproof).
+Generally when making a subproof, we want to pick an assumption that will help us in our derivation.
+
+Let's prove that $A \to B, B \to C \vdash A \to C$. Your last line has
+to be $A \to C$, and it must *not* be indented at all. To prove it,
+you work backward: To use $\to$I to justify $A \to C$, you need (above
+the last line) a subproof with assumption $A$ and last line $C$. So
+you start your proof like this:
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.8 A -> B, B -> C :|-: A -> C
+|A -> B :PR
+|B -> C :PR
+|   A :AS
+|   ?
+|   C
+|A -> C :->I
+~~~
+
+Again, be careful when you write subproofs: the lines in a subproof
+all have to be indented the exact same amount.  Carnap's pretty
+rendering can help, but sometimes misleads. See what happens if you
+add a space or remove one before the line with `C` in it in the last
+proof to see what happens. Also, remember that the very last line of
+your proof should *never* be indented, i.e., never be inside a
+subproof. 
+
+Now let's combine all the rules we have so far to show that $A \to (B
+\to C) \vdash (A \land B) \to (A \land C)$. Start by writing the
+premise and conclusion as the first and last line, then construct a
+subproof in between that you can use to justify the conclusion using
+$\to$I. For this to work, its assumption must be the antecedent of $(A
+\land B) \to (A \land C)$ and its last line the consequent. Remember,
+the assumption should have `:AS` as its justification on the right.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.9 A -> (B -> C) :|-: (A /\ B) -> (A /\ C)
+~~~
+
+It is important to note that once you leave a subproof, you can __never cite specific lines inside the subproof__.
+For those of you more familiar with programming and Python, the indentations work the same way as they do for Python.
+Once you indent away from the subproof, the objects inside the subproof are no longer in scope.
+However, you can cite the entire subproof as an object, as we did for $\to I$
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.9 (A & C) -> B, C :|-: (A -> (B & C)) /\ (B -> (B & C))
+~~~
