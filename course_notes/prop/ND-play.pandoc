@@ -26,3 +26,7 @@ Your proof is correct if all lines have a `+` next to them. Since
 Carnap does not know what you're *trying* to prove, it will tell you
 in the top line what you *have* proved. 
 
+Alternatively, you could use the interactive version at Open Logic Project: https://proofs.openlogicproject.org
+For PL, you will want to select TFL (Truth-Functional Logic). Later we will use FOL (First-Order Logic). 
+
+There are additional exercises: https://proofs.openlogicproject.org/tfl-exs.html
