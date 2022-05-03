@@ -1,0 +1,94 @@
+∨ Rules and Practice
+====================
+
+When writing sentences of PL, remember you can use the following ways
+to enter connectives that are easier to do with a keyboard:
+
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+contradiction ⊥           `!?`, `_|_`
+------------------------- -----------------------------
+
+## $\lor$ Introduction
+
+The $\lor$I rule is very simple: you can derive $\alpha \lor
+\beta$ if you have $\alpha$. Alternatively, you can derive $\alpha \lor
+\beta$ if you have
+$\beta$. So it's like the opposite of the $\land$E rule.
+
+Accepting this rule makes more sense if we think about the connectives semantically.
+If you know $\alpha$ is true, then you know it must be the case that $\alpha \lor \beta$ is true as you already know $\alpha$ is true.
+It is the same thing except with derivations. If I have $\alpha$, then I know I can derive $\alpha \lor \beta$ as $\alpha$ was already previously given/derived.
+
+Fill in the rules for the example below.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.10 A :|-: (A \/ B) \/ C
+|A :PR
+|A \/ B
+|A \/ C
+|(A \/ B) /\ (A \/ C)
+~~~
+
+Here is another exercise for practice.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.10 :|-: A -> (B \/ A)
+~~~
+
+## $\lor$ Elimination
+
+The $\lor$E rule is more complicated. It requires __two__ subproofs. To
+justify some sentence $\phi$ using a disjunction $\alpha
+\lor \beta$ you need in addition two subproofs, one that derives
+$\phi$ from the assumption $\alpha$, and one that derives
+$\phi$ from the assumption $\beta$. (To tell Carnap where
+one subproof ends and the next one starts, type `--` on a line by
+itself. The `--` should be indented the same amout as the
+sentences in the _surrounding_ (sub)proof.)
+
+Think about $lor$E as investigating two paths. 
+There is the path that is the left side of the disjunction, and the path that is the right side of the disjunction.
+If we investigate each path independently and can derive the same conclusion, then that conclusion is derivable outside of the subproofs as it doesn't matter which path is taken to derive it.
+
+Complete the following proof.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
+IV.11 A \/ B :|-: B \/ A
+|A \/ B :PR
+|   A :AS
+|   ?
+|--
+|   B :AS
+|   ?
+|B \/ A 
+~~~
+
+Note that the sentence $\phi$ can be anything. It may even be
+one of the disjuncts, e.g, $\beta$. But, and this is important,
+__the last sentence in both subproofs must be the same__, and also
+identical to the sentence you are justifying using $\lor$E.
+
+Let's look at an example where we use $A \lor B$ and $\lor$E to
+justify $B$ (i.e., $B$ plays both the role of $\beta$ and
+$\phi$). You will still need two subproofs in this case,
+although one is very simple (and just involves the assumption $B$ and
+a single use of the R rule.)
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.15 A \/ B, A -> B :|-: B
+~~~
+
+Let's now prove $A$ from $A \lor A$. Here $A$ plays both the role of
+$\alpha$, $\beta$ and $\phi$ at the same time. You
+can do two subproofs in this case, both the same, and involving just
+the assumption $A$ and a single use of the R rule. Or you can just
+make one subproof, but cite it twice in the $\lor$E rule.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.16 A \/ A :|-: A
+~~~
