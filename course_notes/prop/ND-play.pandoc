@@ -1,1 +1,28 @@
+ND Playground
+=============
+
+When writing sentences of PL, remember you can use the following ways
+to enter connectives that are easier to do with a keyboard:
+
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+contradiction ⊥           `!?`, `_|_`
+------------------------- -----------------------------
+
+
+## A proof box for you to play in!
+
+Want to use Carnap to construct and check an arbitrary proof? You can
+do that in this "playground" proof editor. 
+
+~~~{.Playground .ZachTFL2019 options="indent resize render tabindent autoindent fonts"} 
+~~~
+
+Your proof is correct if all lines have a `+` next to them. Since
+Carnap does not know what you're *trying* to prove, it will tell you
+in the top line what you *have* proved. 
 
