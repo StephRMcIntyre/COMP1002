@@ -1,0 +1,47 @@
+IP Rule and Practice
+====================
+
+When writing sentences of PL, remember you can use the following ways
+to enter connectives that are easier to do with a keyboard:
+
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+contradiction ⊥           `!?`, `_|_`
+------------------------- -----------------------------
+
+## Indirect Proof (IP)
+
+The final rule of natural deduction is indirect proof, IP. It works
+like $\lnot$I, except the roles of $\alpha$ and
+$\lnot\alpha$ are reversed. In other words, a subproof with
+assumption $\lnot\alpha$ that leads to $\bot$ allows you to
+justify $\alpha$.  You should use IP if all the other rules and
+strategies don't lead to a solution.
+
+First, an easy exercise: the converse of contraposition.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
+IP.1 :|-: (~A -> ~B) -> (B -> A)
+~~~
+
+A harder example is $A \lor \lnot A$:
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
+IP.2 :|-: A \/ ~A
+~~~
+
+## A proof box for you to play in!
+
+Want to use Carnap to construct and check an arbitrary proof? You can
+do that in this "playground" proof editor. 
+
+~~~{.Playground .ZachTFL2019 options="indent resize render tabindent autoindent fonts"} 
+~~~
+
+Your proof is correct if all lines have a `+` next to them. Since
+Carnap does not know what you're *trying* to prove, it will tell you
+in the top line what you *have* proved. 
