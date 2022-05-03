@@ -69,3 +69,26 @@ Here's another longer exercise, without hints:
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
 IV.5 G /\ H, K, (K /\ G) -> L, H -> (M /\ O) :|-: L /\ O
 ~~~
+
+For instance, one strategy is to "work forward" from a disjunction. It applies in
+this case. You have the premise $(A \land B) \lor (A \land C)$.
+Since this statement does not appear elsewhere (for instance in a conditional statement), then you will want to have two subproofs for $\lor$E.
+Now, what do you want these to conclude with? 
+If you look at the desired conclusion, you want to prove $A \lor (B \land C)$. 
+There are no other premises to help you in your proof, so you will have to end your subproofs with either $A$, $B \land C$, or $A \lor (B\land C)$.
+You will find that two of these options will work, but you have to be consistent and make your choice be the same conclusion for both subproofs.
+
+In this one, try with one of the choices.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.17 (A /\ B) \/ (A /\ C) :|-: A \/ (B /\ C)
+~~~
+
+Now try the other valid choice.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.17 (A /\ B) \/ (A /\ C) :|-: A \/ (B /\ C)
+~~~
+
+As you can see, these are two different, but correct proofs.
+__There are often multiple ways of proving the same problem._
