@@ -1,0 +1,117 @@
+⊥ and ¬ Rules and Practice
+==========================
+
+When writing sentences of PL, remember you can use the following ways
+to enter connectives that are easier to do with a keyboard:
+
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+contradiction ⊥           `!?`, `_|_`
+------------------------- -----------------------------
+
+## ¬E
+
+To deal with $\lnot$, we introduce a new symbol into our language:
+$\bot$. It works just like a sentence letter, except that we think of
+it as a sentence letter that is always false. It's read as
+"contradiction". Naturally, we let it be justified in a proof if we
+have somehow arrived at an outright contradiction: a pair of sentences
+$\alpha$ and $\lnot \alpha$. 
+That's the $\lnot$E rule: we can derive $\bot$ if we have a sentence and its negation.
+
+## Explosion! 
+# An auxillary rule
+
+We have a weird rule, called "explosion" X. We can use $\bot$
+to justify _anything_. 
+Meaning if we derived $\bot$, then we can use ':X' on the following line and derive anything we want. 
+The $\bot$ symbolizes contradiction and semantically it can be thought as _always false_.
+
+Try out the two rules in the following exercise.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" init="now" submission="none"} 
+IV.1 A, ~A :|-:B
+|A :PR
+|~A :PR
+|?
+|?
+~~~
+
+Here is a more challenging proof for practice.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" init="now" submission="none"} 
+IV.1 A\/C, A->~B, C->~B, B :|-:D->E
+| A\/C :PR
+| A->~B :PR
+| C->~B :PR
+| B :PR
+~~~
+
+Tip: You can put __anything__ after the $\bot$.
+
+The rules $\lnot$E and X finally allow us to justify a derived rule known as disjunctive syllogism.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
+IV.18 A \/ B, ~B :|-: A
+~~~
+
+Here's another example where the X rule is needed: a conditional $A
+\to B$ is true iff either $A$ is false or $B$ is true. Since $A$ is
+false iff $\lnot A$ is true, that means the argument $\lnot A
+\therefore A \to B$ is valid. Let's prove it!
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.19 ~A :|-: A -> B
+~~~
+
+## ¬I
+
+Suppose you want to prove that something is not the case, say you want to derive $\lnot alpha$.
+Then by assuming $\alpha$ and deriving a contradiction,
+the subproof can be closed off and $\lnot alpha$ can be derived.
+
+Basically, if we start a subproof off assuming $\alpha$ and in that subproof derived $\bot$, 
+then we know it cannot possibly be the case of $\alpha$, and thus we must have $\lnot \alpha$.
+
+Finish the proof below to practice $\lnot$I.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.20 A -> B, ~B  :|-: ~A
+|A -> B :PR
+|~B :PR
+| A :AS
+| ?
+| ?
+|~A
+~~~
+
+For the next exercise, you will want to have a nested subproof.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.20 :|-: A -> ~~A
+~~~
+
+Here's another relatively easy one: the law of contraposition. This
+one will require triple-nested subproofs!
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+IV.21 :|-: (A -> B) -> (~B -> ~A)
+~~~
+
+Now something a bit more challenging: one direction of one of De
+Morgan's laws.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
+IV.22 ~(A \/ B) :|-: (~A /\ ~B)
+~~~
+
+Now let's try the other direction, but this time as a tautology:
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
+IV.23  :|-: (~A /\ ~B) -> ~(A \/ B)
+~~~
+
