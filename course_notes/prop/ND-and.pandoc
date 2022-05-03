@@ -38,7 +38,7 @@ a `✗`. Carnap will try to tell you what's wrong: hover the cursor over
 the `?` or `✗` to see a hint.
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" init="now" submission="none"} 
-IV.1 A, B, C :|-: (A & B) & C
+∧.1 A, B, C :|-: (A & B) & C
 |A :PR
 |B :PR
 |C :PR
@@ -50,7 +50,7 @@ You can also cite a line twice to get say $A \land A$.
 For the next exercise, write the premise on line 1 (i.e., `A :PR`) and then try to find a proof of $(A \land A) \land A$ as the last line.
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-IV.2 A :|-: (A & A) & A
+∧.2 A :|-: (A & A) & A
 ~~~
 
 #∧E
@@ -68,7 +68,7 @@ a `✗`. Carnap will try to tell you what's wrong: hover the cursor over
 the `?` or `✗` to see a hint.
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" init="now" submission="none"} 
-IV.1 A & B :|-: B & A
+∧.3 A & B :|-: B & A
 |A /\ B :PR
 |A
 |B
@@ -85,7 +85,7 @@ For the next exercise, write the premise on line 1 (i.e., `A /\ (B /\ C)
 :PR`) and then try to find a proof of $B$ as the last line.
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-IV.2 A & (B & C) :|-: B
+∧.4 A & (B & C) :|-: B
 ~~~
 
 
@@ -94,7 +94,7 @@ For the next exercise, write the premise on line 1 (i.e., `A /\ (B /\ C)
 You will need to use both ∧ rules for this proof.
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-IV.2 A & (B & C) :|-: (A & B) & C
+∧.5 A & (B & C) :|-: (A & B) & C
 ~~~
 
 Tip: These rules only effect the main connective in the sentence.
