@@ -14,9 +14,8 @@ if and only if ↔          `<->`, `<>`
 contradiction ⊥           `!?`, `_|_`
 ------------------------- -----------------------------
 
-## The rules for ∧
 
-#∧I
+#∧ Introduction
 
 To derive a sentence of the form $\alpha \land \beta$, you
 need both $\alpha$ and $\beta$, separately, say with line
@@ -53,12 +52,12 @@ For the next exercise, write the premise on line 1 (i.e., `A :PR`) and then try 
 ∧.2 A :|-: (A & A) & A
 ~~~
 
-#∧E
+#∧ Elimination
 
 You can use $\alpha \land \beta$ to derive either
 $\alpha$ or $\beta$. But remember, only one derivation per line-- 
 so if you want both, you will need to have two lines, one for each. 
-If $alpha \land \beta$ appears on line number
+If $\alpha \land \beta$ appears on line number
 $n$, write "∧E $n$" next to $\alpha$, or "∧E $n$" next to $\beta$, depending on which you are deriving.
 
 Fill in the missing justifications in the proof outline below. A line
@@ -100,3 +99,5 @@ You will need to use both ∧ rules for this proof.
 Tip: These rules only effect the main connective in the sentence.
 In this case, $\land E$ only breaks apart the first conjunction to get $A$ and $B \land C$ from
 line 1. To get $C$, you have to apply $\land$E again.
+
+<p>[Previous: Natural Deduction Overview](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Conditional Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-cond.pandoc) </p>
