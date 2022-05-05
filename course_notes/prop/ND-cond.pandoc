@@ -1,4 +1,3 @@
-
 → Rules and Practice
 ====================
 
@@ -18,13 +17,15 @@ contradiction ⊥           `!?`, `_|_`
 
 The elimination rule for $\to$ is also known as Modus Ponens.
 You can derive $\beta$ if you already have both $\alpha \to \beta$
-and $\alpha$, on separate previous lines. 
+and $\alpha$, on separate previous lines, say with line
+numbers $m$ and $n$. Then write as justification "→E $m$, $n$"
+(replacing $m$, $n$ with the actual line numbers, of course). 
 Meaning, given a conditional statement and the antecedant, we can derive the consequent.
 
 Fill in the applications of the rules for the following proof.
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" init="now" submission="none"} 
-IV.3 A & B, A -> C :|-: C
+→.1 A & B, A -> C :|-: C
 |A /\ B :PR
 |A -> C:PR
 |A
@@ -38,7 +39,7 @@ prove the antecedents of the conditionals you cite. We've filled in
 some sentences and justifications; you do the rest!
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" init="now" submission="none"} 
-IV.3 A & B, A -> C, B -> D :|-: C & D
+→.2 A & B, A -> C, B -> D :|-: C & D
 |A /\ B :PR
 |A -> C:PR
 |B -> D:PR
@@ -53,26 +54,25 @@ For the next exercise, write the premise on line 1 (i.e., `A /\ (A -> B)
 :PR`) and then try to find a proof of $A \land B$ as the last line.
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-IV.2 A & (A -> B) :|-: A & B
+→.3 A & (A -> B) :|-: A & B
 ~~~
 
 ##→ Introduction
 
 The $\to$I rule requires a new idea, namely that of a subproof. To
 derive the conditional $\alpha \to \beta$ you need a
-separate proof in which $\alpha$ is an assumption made in
-addition to the premises of the entire proof. 
+separate proof in which $\alpha$ is an assumption at the start of a subproof that concludes with $\beta$, which say spans from lines $m$ to $n$. Then write as justification "→I $m-n$" 
 
 In Carnap, a subproof is made by _indenting_ the lines that make up
 the subproof, and by justifying its first line (the assumption of the
 subproof) by `:AS` on the right of the sentence. 
-__Only one assumption is made at the start of every subproof.__
-If you want to make another assumption, then you will have to start another subproof.
+<br> __Only one assumption is made at the start of every subproof.__
+<br> If you want to make another assumption, then you will have to start another subproof.
 
 An example of using subproofs can be seen in the following proof where we derive $L \to (R \land L)$ from the premise $R$.
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-IV.6 R :|-: L -> (R /\ L)
+→.4 R :|-: L -> (R /\ L)
 |R :PR
 |   L :AS
 |   R /\ L :/\I 1,2
@@ -90,7 +90,7 @@ but the indentation is still wrong.  So you have to be careful.
 For instance, fix the following proof by fixing the indentations:
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-IV.7  :|-: (A /\ A) -> A
+→.5  :|-: (A /\ A) -> A
 |  (A /\ A) :AS
 |   A :/\E1
 | (A /\ A) -> A :->I 1-2
@@ -112,7 +112,7 @@ the last line) a subproof with assumption $A$ and last line $C$. So
 you start your proof like this:
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-IV.8 A -> B, B -> C :|-: A -> C
+→.6 A -> B, B -> C :|-: A -> C
 |A -> B :PR
 |B -> C :PR
 |   A :AS
@@ -138,7 +138,7 @@ $\to$I. For this to work, its assumption must be the antecedent of $(A
 the assumption should have `:AS` as its justification on the right.
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-IV.9 A -> (B -> C) :|-: (A /\ B) -> (A /\ C)
+→.7 A -> (B -> C) :|-: (A /\ B) -> (A /\ C)
 ~~~
 
 It is important to note that once you leave a subproof, you can __never cite specific lines inside the subproof__.
@@ -147,5 +147,7 @@ Once you indent away from the subproof, the objects inside the subproof are no l
 However, you can cite the entire subproof as an object, as we did for $\to I$
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-IV.9 (A & C) -> B, C :|-: (A -> (B & C)) /\ (B -> (B & C))
+→.8 (A & C) -> B, C :|-: (A -> (B & C)) /\ (B -> (B & C))
 ~~~
+
+<p>[Previous: Conjunction Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-and.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Biconditional Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-bicond.pandoc) </p>
