@@ -1,117 +1,112 @@
-⊥ and ¬ Rules and Practice
-==========================
+---
+--from markdown+simple_tables
+---
 
-When writing sentences of PL, remember you can use the following ways
-to enter connectives that are easier to do with a keyboard:
+# Propositional Logic
 
+## Negating Statements
+
+It is important to learn how to negate statements as __disproving a statement is proving its negation__.
+
+The main idea is to place the negation symbol infront of the statement, and push it inwards by using replacement rules. 
+For any negation symbol infront of a (bi)conditional, you will need to convert the (bi)conditional first until you are
+dealing with just disjunctions, conjunctions, and negations.
+
+Every new line will add to the chain of logical equivalences.
+
+Symbols with keyboard
 ------------------------- -----------------------------
 not ¬                     `-`, `~`
 and ∧                     `/\`,  `&`
 or ∨                      `\/`
 if then →                 `->`, `>`
 if and only if ↔          `<->`, `<>`
-contradiction ⊥           `!?`, `_|_`
 ------------------------- -----------------------------
 
-## ¬E
+-------------------------------------------------------
+-------------------------------------------------------
 
-To deal with $\lnot$, we introduce a new symbol into our language:
-$\bot$. It works just like a sentence letter, except that we think of
-it as a sentence letter that is always false. It's read as
-"contradiction". Naturally, we let it be justified in a proof if we
-have somehow arrived at an outright contradiction: a pair of sentences
-$\alpha$ and $\lnot \alpha$. 
-That's the $\lnot$E rule: we can derive $\bot$ if we have a sentence and its negation.
+Replacement Rules
+------------------------------- ---------------------------------------
+Double Negation            `DN` 	$\neg \neg \alpha$ ⧦ $\alpha$
+Conditional              `Cond` 	$\alpha\to\beta$⧦$\neg\alpha\lor\beta$
+Biconditional Exchange `Bicond` 	$\alpha\leftrightarrow\beta$⧦$(\alpha\to\beta)\land(\beta\to\alpha)$
+DeMorgan's Laws           `DeM` 	$\neg (\alpha\lor\beta )$⧦$\neg\alpha\land\neg\beta$
+DeMorgan's Laws           `DeM` 	$\neg (\alpha\land\beta )$⧦$\neg\alpha\lor\neg\beta$
+------------------------------- -------------------------------
 
-## Explosion! 
-# An auxillary rule
+-------------------------------------------------------
+-------------------------------------------------------
 
-We have a weird rule, called "explosion" X. We can use $\bot$
-to justify _anything_. 
-Meaning if we derived $\bot$, then we can use ':X' on the following line and derive anything we want. 
-The $\bot$ symbolizes contradiction and semantically it can be thought as _always false_.
+Example: Negate the statement $((P \land Q) \lor R) \to (P \to\neg Q)$
 
-Try out the two rules in the following exercise.
+First we negate the statement, $\neg(((P \land Q) \lor R) \to (P \to\neg Q))$, then we simplify it.
+In Carnap, you will need to label the first line as `:PR` to justify it as a premise. 
+Every following line will have exactly one change and `:` followed by the justifcation as listed above.
+If you have done the line incorrectly, there will be a hazard symbol next to the line and 
+hovering your cursor over it will give some information as to what went wrong.
 
-~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" init="now" submission="none"} 
-IV.1 A, ~A :|-:B
-|A :PR
-|~A :PR
-|?
-|?
-~~~
+We stop simplifying when all the negations are only attached to the propositional variables.
 
-Here is a more challenging proof for practice.
+Note: The system will not allow for more than one step per line. 
+It is also not perfect with making sure you simplified as far as you can go.
 
-~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" init="now" submission="none"} 
-IV.1 A\/C, A->~B, C->~B, B :|-:D->E
-| A\/C :PR
-| A->~B :PR
-| C->~B :PR
-| B :PR
-~~~
 
-Tip: You can put __anything__ after the $\bot$.
+```{.ProofChecker .ZachPropEq feedback="manual" guides="fitch" options="indent resize render tabindent exam" submission="none" tests="maxNot:0" init="now"}
+1.1 ~(((P/\Q)\/R)->(P->~Q)) :|-:
+|~(((P/\Q)\/R)->(P->~Q)) :PR 
+|~(~((P/\Q)\/R)\/(P->~Q)) :Cond
+|~~((P/\Q)\/R)/\~(P->~Q) :DeM
+|((P/\Q)\/R)/\~(P->~Q) :DN
+|((P/\Q)\/R)/\~(~P\/~Q) :Cond
+|((P/\Q)\/R)/\(~~P/\~~Q) :DeM
+|((P/\Q)\/R)/\(P/\~~Q) :DN
+|((P/\Q)\/R)/\(P/\Q) :DN
+```
 
-The rules $\lnot$E and X finally allow us to justify a derived rule known as disjunctive syllogism.
+Click `Check` to see the solution light up in Green.
 
-~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
-IV.18 A \/ B, ~B :|-: A
-~~~
+The above example starts at the first line, noted as `:PR`, and then this line is ⧦ to the next line, which is ⧦ to the third line, and so forth to until it is ⧦ to our conclusion. It is just a long chain of logical equivalences.
 
-Here's another example where the X rule is needed: a conditional $A
-\to B$ is true iff either $A$ is false or $B$ is true. Since $A$ is
-false iff $\lnot A$ is true, that means the argument $\lnot A
-\therefore A \to B$ is valid. Let's prove it!
+Example: Negate the statement $P \leftrightarrow (R \to\neg Q)$
 
-~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-IV.19 ~A :|-: A -> B
-~~~
+First we negate the statement, $\neg(P \leftrightarrow (R \to\neg Q)$, then we simplify it.
 
-## ¬I
+Finish the simplification below by citing the rule used in each step.
 
-Suppose you want to prove that something is not the case, say you want to derive $\lnot alpha$.
-Then by assuming $\alpha$ and deriving a contradiction,
-the subproof can be closed off and $\lnot alpha$ can be derived.
 
-Basically, if we start a subproof off assuming $\alpha$ and in that subproof derived $\bot$, 
-then we know it cannot possibly be the case of $\alpha$, and thus we must have $\lnot \alpha$.
+```{.ProofChecker .ZachPropEq feedback="manual" guides="fitch" options="indent resize render tabindent exam" submission="none"  tests="maxNot:2" init="now"}
+1.2 ~(P<>(R->~Q)) :|-:
+|~(P<>(R->~Q)) :PR 
+|~((P->(R->~Q))/\((R->~Q)->P)) :
+|~(P->(R->~Q))\/~((R->~Q)->P) :
+|~(~P\/(R->~Q))\/~((R->~Q)->P) :
+|~(~P\/(R->~Q))\/~(~(R->~Q)\/P) :
+|(~~P/\~(R->~Q))\/~(~(R->~Q)\/P) :
+|(~~P/\~(R->~Q))\/(~~(R->~Q)/\~P) :
+|(P/\~(R->~Q))\/(~~(R->~Q)/\~P) :
+|(P/\~(R->~Q))\/((R->~Q)/\~P) :
+|(P/\~(~R\/~Q))\/((R->~Q)/\~P) :
+|(P/\(~~R/\~~Q))\/((R->~Q)/\~P) :
+|(P/\(R/\~~Q))\/((R->~Q)/\~P) :
+|(P/\(R/\Q))\/((R->~Q)/\~P) :
+```
 
-Finish the proof below to practice $\lnot$I.
+Exercise: Negate the statement $P \lor Q \to \neg R$
 
-~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-IV.20 A -> B, ~B  :|-: ~A
-|A -> B :PR
-|~B :PR
-| A :AS
-| ?
-| ?
-|~A
-~~~
+```{.ProofChecker .ZachPropEq feedback="manual" guides="fitch" options="indent resize render tabindent" submission="none" tests="maxNot:2" init="now"}
+1.3 ~((P\/Q)->~R) :|-:
+|~((P\/Q)->~R) :PR 
+```
 
-For the next exercise, you will want to have a nested subproof.
+Exercise: Negate the statement $P \to (\neg P \leftrightarrow Q)$
 
-~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-IV.20 :|-: A -> ~~A
-~~~
+```{.ProofChecker .ZachPropEq feedback="manual" guides="fitch" options="indent resize render tabindent exam" submission="none"  tests="maxIf:0" init="now"}
+1.4 ~(P->(~P<>Q)) :|-:
+|~(P->(~P<>Q)) :PR 
+```
 
-Here's another relatively easy one: the law of contraposition. This
-one will require triple-nested subproofs!
+Note: While Carnap is showing the ⊢ symbol, we are really using the ⧦ symbol as it is bidirectional and it is about semantics rather than derivations.
 
-~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-IV.21 :|-: (A -> B) -> (~B -> ~A)
-~~~
 
-Now something a bit more challenging: one direction of one of De
-Morgan's laws.
-
-~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
-IV.22 ~(A \/ B) :|-: (~A /\ ~B)
-~~~
-
-Now let's try the other direction, but this time as a tautology:
-
-~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
-IV.23  :|-: (~A /\ ~B) -> ~(A \/ B)
-~~~
-
+<p>[Previous: Sound & Valid Arguments](https://carnap.io/shared/srenee651@gmail.com/book-prop-SV.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: 1.1 Practice Problems](https://carnap.io/shared/srenee651@gmail.com/book-prop-prac1.pandoc) </p>
