@@ -1,0 +1,75 @@
+---
+--from markdown+simple_tables
+---
+
+# Propositional Logic
+
+## The Semantics of Arguments
+
+###Semantics: Logical Truths & Falsehoods
+
+
+There are three distinct types of sentence forms with respect to truth values.
+
+* A logically indeterminate sentence form is one that can be either true or false under different truth-value assignments. (The column in the truth table for that statement has both T and F).
+* A logically true sentence form is one that is true under all truth-value assignments. Logical truths
+are also called tautologies. (The column in the truth table is only Ts)
+* A logically false sentence form is one that is false under all truth-value assignments. Logical
+falsehoods are also called contradictions. (The column in the truth table is only Fs)
+
+
+For example, P is logically indeterminate, $P\lor\neg P$ is a tautology, and $P\land \neg P$ is a contradiction.
+```{.TruthTable .Simple system="thomasBolducAndZachTFL2019" submission="none" options="nocounterexample nodash immutable nocheck"}
+1.1 P, P\/~P, P/\~P
+|    T -T--  -F--
+|    F -T--  -F--
+```
+
+```{.TruthTable .Simple system="thomasBolducAndZachTFL2019" submission="none" options="nocounterexample nodash immutable nocheck"}
+1.2 P, P\/~P, P/\~P
+|   T  TTFT   TFFT
+|   F  FTTF   FFTF
+```
+
+
+Exercise: Determine whether that $(P \to Q) \lor P$ is indeterminate, a tautology, or a contradiction.
+
+```{.TruthTable .Simple system="thomasBolducAndZachTFL2019" submission="none" options="nocounterexample nodash autoAtom"}
+2.1 (P -> Q) \/ P
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+2.2 What kind of sentence is the above statement?
+| Indeterminate
+| *Tautology
+| Contradiction
+```
+
+Exercise: Determine whether that $\neg(P \to P)$ is indeterminate, a tautology, or a contradiction.
+
+```{.TruthTable .Simple system="thomasBolducAndZachTFL2019" submission="none" options="nocounterexample nodash autoAtom"}
+3.1 ~(P -> P)
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+3.2 What kind of sentence is the above statement?
+| Indeterminate
+| Tautology
+| *Contradiction
+```
+
+Exercise: Determine whether that $(P \to P) \leftrightarrow P$ is indeterminate, a tautology, or a contradiction.
+
+```{.TruthTable .Simple system="thomasBolducAndZachTFL2019" submission="none" options="nocounterexample nodash autoAtom"}
+4.1 (P -> P) <> P
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+4.2 What kind of sentence is the above statement?
+| *Indeterminate
+| Tautology
+| Contradiction
+```
+
+
+<p>[Previous: Conjunction, Disjunction and Negation](https://carnap.io/shared/srenee651@gmail.com/book-prop-CDN.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Logical Equivalence & Implication](https://carnap.io/shared/srenee651@gmail.com/book-prop-arg.pandoc) </p>
