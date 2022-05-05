@@ -30,7 +30,16 @@ Some examples of propositions:
 
 But not "Hi!" or "what is x?" or "Open this book!"
 
-When we say "proposition", we usually mean a *sentence stating a single fact*, rather than a "compound proposition" such as "Sky is blue and snow is white".
+When we say "proposition", we usually mean a *sentence stating a single fact*, rather than a "compound proposition" such as "Sky is blue and snow is white". These single fact propositions are also known as __atomic propositions__.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none"}
+a Select all of the atomic propositions.
+| * 5 < 7
+| Click this option.
+| * This question has only one correct answer.
+| What if 5 > 7?
+| * Rylo Ashmore is the Queen of France.
+```
 
 ##Symbols
 
@@ -45,6 +54,15 @@ Connectives (Logical Operators) allow for us to build compound propositions. Rec
 -   $A \leftrightarrow B$ means **A if and only if B**
 
 A sentence with one or more of these connectives is a compound sentence; otherwise it is an atomic sentence.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none"}
+b Select all of the compound sentences.
+| * 5 is less than or equal to 7.
+| Click this option but not the next option.
+| * If roses are red, then violets are not blue.
+| How is 5 < 7 and 3 < 5?
+| * Rylo Ashmore is not the Queen of France.
+```
 
 For the exercises in Carnap, you will have to enter sentences of PL into Carnap. You don't have to enter the actual symbols of PL but instead can use symbols found on your keyboard. Here's a list:
 
@@ -93,7 +111,7 @@ letters are left. When you have completely analyzed the sentence, the box will t
 Example: Draw the parse tree for $\neg (P \lor Q)$.
 
 ~~~{.SynChecker .Match system="thomasBolducAndZachTFL2019" submission="none"} 
-III.1 ~(P \/ Q)
+1 ~(P \/ Q)
 ~~~
 
 In this example, the main connective was $\neg$.
@@ -101,157 +119,12 @@ In this example, the main connective was $\neg$.
 Example: Draw the parse tree for $\neg P \to Q \land \neg R$.
 
 ~~~{.SynChecker .Match system="ZachTFL2019" submission="none"} 
-III.1 ~P -> Q \/ ~R
+2 ~P -> Q \/ ~R
 ~~~
 In this example, the main connective was $\to$.
 
-##Translations
-
-Translations require an interpretation key. This pairs propositions with propositional variables. Here is an example interpretation key:
-
-* A: Two plus two is equal to five.
-* B: Two plus two is greater than five.
-* R: St.John's is raining.
-* D: St.JOhn's is drizzling.
-* F: St.John's is foggy.
-
-###Negation
-
-To symbolize negation, you should rewrite the English statement using "not" or "it is not the case that" followed by the sentence being negated (e.g., "its not the case that [St.John's is raining]"). You can then express the statement with propositional variables and the "$\neg$" symbol (use `~` on your keyboard).
-
-Example:
-
-~~~{.Translate .Prop system="thomasBolducAndZachTFL2019" submission="none"}
-II.3 ~R: It is not the case that St.John's is raining.
-|
+~~~{.SynChecker .Match system="ZachTFL2019" submission="none"} 
+3 ~P -> Q \/ (~R <> ~~Q /\ P)
 ~~~
 
-The example can be solved by entering ~R.
-
-Exercise:
-
-
-~~~{.Translate .Prop system="thomasBolducAndZachTFL2019" submission="none"}
-II.3 ~A: Two plus two does not equal five.
-| Hint: move "not" to front of the atomic propostion.
-~~~
-
-###Conjunction
-"And", "although", "but" are symbolized using $\land$. On the keyboard, you can use `/\` or `&` instead. 
-
-Example:
-
-~~~{.Translate .Prop system="thomasBolducAndZachTFL2019" submission="none"}
-II.3 D /\ F: St.John's is drizzling and foggy.
-|
-~~~
-
-The example can be solved by entering D /\ F.
-
-Exercise:
-
-~~~{.Translate .Prop system="thomasBolducAndZachTFL2019" submission="none"}
-II.3 R/\~F: St.John's is raining but not foggy.
-| Hint: remember what "but" means.
-~~~
-
-###Disjunction
-
-"Either or", "or" are symbolized using $\lor$, or `\/` on your keyboard. Disjunctions are always assumed to be inclusive unless explicitly stated otherwise (usually denoted with a "but not both" clause)
-
-Example:
-
-~~~{.Translate .Prop system="thomasBolducAndZachTFL2019" submission="none"}
-II.3 D\/R: St.John's is drizzling or raining.
-|
-~~~
-
-The example can be solved by entering D \/ R.
-
-Exercises:
-
-~~~{.Translate .Prop system="thomasBolducAndZachTFL2019" submission="none"}
-II.3 D\/R\/F: St.John's is either raining, drizzling, or foggy.
-| Hint: three disjunctions.
-~~~
-
-~~~{.Translate .Prop system="thomasBolducAndZachTFL2019" submission="none"}
-II.3 (D/\F)\/R: St.John's is either drizzling and foggy, or raining.
-| Hint: Look at where the "either or" is split.
-~~~
-
-~~~{.Translate .Prop system="thomasBolducAndZachTFL2019" submission="none"}
-II.3 A\/B: Two plus two is greater than or equal to five.
-| 
-~~~
-
-###Conditionals
-
-"if" and "only if" are
-symbolized with $\to$ (-> on the keyboard).
-
-The statement $P\to Q$ can be expressed in a variety of ways:
-
-+ "if P then Q",
-+ "if P, Q",
-+ "Q if P",
-+ "Q when P",
-+ "P imples Q",
-+ "P only if Q",
-+ "Q whenever P",
-+ "Q unless ¬P",
-+ "P is sufficient for Q",
-+ "Q is necessary for P".
-
-The last two are very common in mathematics and computer science.
-
-Example:
-
-~~~{.Translate .Prop system="thomasBolducAndZachTFL2019" submission="none"}
-II.3 D->R: If St.John's is drizzling then it is raining.
-|
-~~~
-
-The example can be solved by entering D -> R.
-
-Exercises:
-
-~~~{.Translate .Prop system="thomasBolducAndZachTFL2019" submission="none"}
-II.5 A -> (A \/ B): If two plus two equals five then two plus two is greater than or equal to five.
-| Hint: This uses a previous solution.
-~~~
-
-~~~{.Translate .Prop system="thomasBolducAndZachTFL2019" submission="none"}
-II.6 ~(F->R): It is not the case that if St.John's is foggy then it is raining.
-| Hint: Look at where the "not" is in the statement.
-~~~ 
-
-~~~{.Translate .Prop system="thomasBolducAndZachTFL2019" submission="none"}
-II.6 F->R: In St.John's it is foggy only if it is raining.
-| Hint: Look up "only if".
-~~~
-
-###Biconditionals
-
-"if and only if", "iff" and "is necessary and sufficient for" are symbolized with $\leftrightarrow$ (<-> on the keyboard).
-
-Example:
-
-~~~{.Translate .Prop system="thomasBolducAndZachTFL2019" submission="none"}
-II.3 D<->R: St.John's is drizzling if and only if it is raining.
-|
-~~~
-
-The example can be solved by entering D <-> R.
-
-Exercises:
-
-~~~{.Translate .Prop system="thomasBolducAndZachTFL2019" submission="none"}
-II.5 ~A -> B: Two plus two does not equal 5 if and only if two plus two is greater than 5.
-|
-~~~
-
-~~~{.Translate .Prop system="thomasBolducAndZachTFL2019" submission="none"}
-II.6 D<->(R/\F): For St.John's to be drizzling it is necessary and sufficient for St.John's to both be raining and foggy.
-|
-~~~
+<p>&emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Translations](https://carnap.io/shared/srenee651@gmail.com/book-prop-trans.pandoc) </p>
