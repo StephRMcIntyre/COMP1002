@@ -1,0 +1,111 @@
+↔ Rules and Practice
+====================
+
+When writing sentences of PL, remember you can use the following ways
+to enter connectives that are easier to do with a keyboard:
+
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+contradiction ⊥           `!?`, `_|_`
+------------------------- -----------------------------
+
+##↔ Elimination
+
+The elimination rule for $\leftrightarrow$ is similar to Modus Ponens, but it works in both directions.
+You can derive $\beta$ if you already have both $\alpha \leftrightarrow \beta$
+and $\alpha$, on separate previous lines, say with line
+numbers $m$ and $n$. Then write as justification "↔E $m$, $n$". 
+Similarly, you can derive $\alpha$ if you already have both $\alpha \leftrightarrow \beta$
+and $\beta$, on separate previous lines. 
+
+Fill in the applications of the rules for the following proof.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" init="now" submission="none"} 
+↔.1 A & B, A <-> C :|-: C
+|A /\ B :PR
+|A <-> C:PR
+|A
+|C 
+~~~
+
+In the next exercise, prove $C \land D$ from the premises $A
+\land B$, $A \to C$, and $B \to D$. You'll need the $\\leftrightarrow$E rule twice
+to justify $C$ and then $D$, but before you can use it, you have to
+prove the antecedents of the conditionals you cite. We've filled in
+some sentences and justifications; you do the rest!
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" init="now" submission="none"} 
+↔.2 A & B, A <-> C, B <-> D :|-: C & D
+|A /\ B :PR
+|A <-> C:PR
+|B <-> D:PR
+|A 
+|C :<->E
+|?
+|?
+|C /\ D 
+~~~
+
+For the next exercise, write the premise on line 1 (i.e., `A /\ (A <-> B)
+:PR`) and then try to find a proof of $A \land B$ as the last line.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+↔.3 A & (A <-> B) :|-: A & B
+~~~
+
+##↔ Introduction
+
+The $\leftrightarrow$I is just like the $\to$I, except it needs to be done twice- once for each direction. To
+derive the biconditional $\alpha \leftrightarrow \beta$ you need a
+separate proof in which $\alpha$ is an assumption made for the subproof which concludes with $\beta$, which spans from say lines $i$ to $j$. 
+Then another separate proof in which $\beta$ is an assumption made for the subproof which concludes with $\alpha$, which spans from say lines $m$ to $n$. Then write as justification "↔I $i-j$, $m-n$". 
+
+(To tell Carnap where
+one subproof ends and the next one starts, type `--` on a line by
+itself. The `--` should be indented the same amout as the
+sentences in the _surrounding_ (sub)proof.)
+
+Both subproofs will be cited in the justification.
+
+An example of using this rule can be seen in the following proof where we derive $L \leftrightarrow (R \land L)$ from the premise $R$.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+↔.4 R :|-: L <-> (R /\ L)
+|R :PR
+|   L :AS
+|   R /\ L :/\I 1,2
+|--
+|   R /\ L :AS
+|   ?
+|L <-> (R /\ L) :<->I 2-3,5-6
+~~~
+
+Let's prove that $A \leftrightarrow B, B \leftrightarrow C \vdash A \leftrightarrow C$. Your last line has
+to be $A \leftrightarrow C$, and it must *not* be indented at all. To prove it,
+you work backward: To use $\leftrightarrow$I you will need both a subproof that begins with $A$ and concludes with $C$ and another subproof that begins with $C$ and concludes with $A$.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+↔.5 A <-> B, B <-> C :|-: A <-> C
+|A <-> B :PR
+|B <-> C :PR
+|   A :AS
+|   ?
+|   C
+|--
+|   C :AS
+|   ? 
+|   A
+|A <-> C :<->I
+~~~
+
+Let's do one more exercise using biconditionals.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+↔.6 A <-> (B <-> C) :|-: (A /\ B) <-> (A /\ C)
+~~~
+
+<p>[Previous: Conditional Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-cond.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Reiteration Rule](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-reit.pandoc) </p>
