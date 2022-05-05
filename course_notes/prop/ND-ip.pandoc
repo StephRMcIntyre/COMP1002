@@ -18,8 +18,8 @@ contradiction ⊥           `!?`, `_|_`
 The final rule of natural deduction is indirect proof, IP. It works
 like $\lnot$I, except the roles of $\alpha$ and
 $\lnot\alpha$ are reversed. In other words, a subproof with
-assumption $\lnot\alpha$ that leads to $\bot$ allows you to
-justify $\alpha$.  You should use IP if all the other rules and
+assumption $\lnot\alpha$ that leads to $\bot$, which spans lines $m$ to $n$, allows you to
+justify $\alpha$.  Then write as justification "IP $m-n$". You should use IP if all the other rules and
 strategies don't lead to a solution.
 
 First, an easy exercise: the converse of contraposition.
@@ -33,3 +33,12 @@ A harder example is $A \lor \lnot A$:
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
 IP.2 :|-: A \/ ~A
 ~~~
+
+The converse of exercise $\lnot .11$.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
+IP.3 :|-: ~~P -> P
+~~~
+
+
+<p>[Previous: Negation Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-neg.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: ND Playground](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-play.pandoc) </p>
