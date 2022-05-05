@@ -26,7 +26,10 @@ Your proof is correct if all lines have a `+` next to them. Since
 Carnap does not know what you're *trying* to prove, it will tell you
 in the top line what you *have* proved. 
 
-Alternatively, you could use the interactive version at Open Logic Project: https://proofs.openlogicproject.org
+Alternatively, you could use the interactive version at [Open Logic Project] (https://proofs.openlogicproject.org).
 For PL, you will want to select TFL (Truth-Functional Logic). Later we will use FOL (First-Order Logic). 
 
-There are additional exercises: https://proofs.openlogicproject.org/tfl-exs.html
+There are [additional exercises](https://proofs.openlogicproject.org/tfl-exs.html) on the OLP website.
+
+
+<p>[Previous: Indirect Proof Rule](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-ip.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: More ND Practice](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-prac.pandoc) </p>
