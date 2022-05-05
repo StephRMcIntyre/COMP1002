@@ -16,7 +16,9 @@ contradiction ⊥           `!?`, `_|_`
 ## Reiteration
 
 The reiteration rule R is a very simple rule that sometimes comes in
-handy. It allows you to simply repeat a previous line. For instance,
+handy. It allows you to simply repeat a previous line. You can derive $\alpha$ if you already have $\alpha$
+on a previous lines, say with line
+number $m$ with the justification justification "R $m$". For instance,
 we need it if we want to prove that $A \to A$ is a tautology. This
 involves proving $A \to A$, but our proof has no premises at all.
 
@@ -31,23 +33,29 @@ case, we will need a subproof with assumption $A$ and last line $A$.
 Now use the R rule!
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-IV.12 :|-: A -> A
+R.1 A /\ B :|-: A
 ~~~
 
 Carnap will put a $\top$ to the left of $\vdash$ if you're expected
 to give a proof with no premises at all.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+R.2 :|-: A -> A
+~~~
 
 Here's another example: If $B$ is true, then $A \to B$ is true. After
 all, the conditional $A \to B$ is true iff either $A$ is false or $B$
 is true. So the argument $B \therefore A \to B$ is valid.
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-IV.13 B :|-: A -> B
+R.3 B :|-: A -> B
 ~~~
 
 You'll often need to do subproofs inside a bigger subproof. Here's an
 example that illustrates this:
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none" points=0} 
-IV.14 :|-: A -> (B -> A)
+R.4 :|-: A -> (B -> A)
 ~~~
+
+<p>[Previous: Biconditional Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-bicond.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Disjunction Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-or.pandoc) </p>
