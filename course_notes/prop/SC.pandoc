@@ -10,10 +10,10 @@
 
 Soundness (now with triple the meanings!)
 
-+ An argument is sound when it is valid, and the premises are true in real life
-+ A proof rule is sound when the conclusion is logically implied (semantically
++ __An argument is sound__ when it is valid, and the premises are true in real life
++ __A proof rule is sound__ when the conclusion is logically implied (semantically
 entailed) by the lines cited.
-+ A proof system S is sound when every proof in S is also logically implied.
++ __A proof system S is sound__ when every proof in S is also logically implied.
 (Symbolically, if P ⊦ Q, then P ⊧ Q)
 
 Don’t get them confused! Which one is relevant depends on context!
@@ -31,7 +31,7 @@ Contrapositive of Soundness: If P⊭Q, then P⊬Q.
 <br>Knowing this, can we conclude useful things?
 
 Yes! We can use the contrapositive of soundness to show that a Natural Deduction proof for PL does not exist!
-<br>Since ND for PL only proves validities, then we cannot use ND to show something is not provable.
+<br>Since ND for PL only proves validities, then we __cannot use ND to show something is not provable__.
 <br>However, with soundness, if we can show that an argument isn't valid, then we can conclude there is no proof!
 
 Problem: Show P∨Q ⊬ P.
@@ -43,7 +43,7 @@ if P∨Q⊭P, then P∨Q⊬P.
 Construct the truth table and enter in the counterexample!
 
 ```{.TruthTable .Validity system="thomasBolducAndZachTFL2019" submission="none" options="nodash turnstilemark double-turnstile"}
-2.1 P\/Q :|-: P
+Soundness.1 P\/Q :|-: P
 ```
 
 Indeed, P∨Q⊭P as seen in our truth table and counterexample!
@@ -52,10 +52,45 @@ Indeed, P∨Q⊭P as seen in our truth table and counterexample!
 Exercise: Show there is no ND Proof exists for $P\to Q, Q$ ⊦ $P$.
 
 ```{.TruthTable .Validity system="thomasBolducAndZachTFL2019" submission="none" options="nodash turnstilemark double-turnstile"}
-2.1 P->Q,Q :|-: P
+Soundness.2 P->Q,Q :|-: P
 ```
 
-Do not forget to cite the countrapositive of soundness in your solution!
+Do not forget to cite the countrapositive of soundness in your solution! This step is crucial!
+
+Suppose we want to show that a proof rule is sound. To do so, we must show that the conclusion is logically implied by the lines cited.
+
+Example: Show that the $\land$I introduction rule is sound.
+
+Let $\alpha$ and $\beta$ be any PL statements. Then, in accordance to the $\land$I rule, it suffices to show that if $\alpha$ is True and $\beta$ is True, then $\alpha \land \beta$ is True.
+
+<p>&emsp; Suppose $\alpha$ is True and $\beta$ is True.
+<br> &emsp; The semantics of $\land$ state that $\alpha \land \beta$ is True if and only if both $\alpha$ is True and $\beta$ is True.
+<br> &emsp; As both $\alpha$ is True and $\beta$ is True, then by the semantics of $\land$, it follows that $\alpha \land \beta$ is True.
+<br> Therefore if $\alpha$ is True and $\beta$ is True, then $\alpha \land \beta$ is True.
+<br> Thus $\land$ introduction is a sound inference rule.
+</p>
+
+_Notice how these style of proofs kind of mimic the way our Natural Deduction proofs operate._
+
+Example: Show that the $\to$I rule is sound.
+
+Let $\alpha$ and $\beta$ be any PL statements. Then, in accordance to the $\to$I rule, assume that the derivation of $\beta$ from $\alpha$ is sound. Meaning, if $\alpha$ is True, then $\beta$ is True.
+
+<p>Prove $\alpha \to \beta$ is True by cases on the possible values of $\alpha$.
+<br> $\alpha$ is either True or False.
+<br> Case 1: &emsp; Suppose $\alpha$ is False.
+<br> &emsp; The semantics of $\to$ state that $\alpha \to\beta$ is True if and only if $\alpha$ is False or $\beta$ is True.
+<br> &emsp; As $\alpha$ is False, then by the semantics of $\to$, it follows that $\alpha \to \beta$ is True.
+<br>
+<br> Case 2: &emsp; Suppose $\alpha$ is True.
+<br> &emsp; By assumption, since $\alpha$ is True, then $\beta$ must be True.
+<br> &emsp; The semantics of $\to$ state that $\alpha \to\beta$ is True if and only if $\alpha$ is False or $\beta$ is True.
+<br> &emsp; As $\beta$ is True, then by the semantics of $\to$, it follows that $\alpha \to \beta$ is True.
+<br> Therefore $\alpha \to \beta$ is True.
+<br> Thus $\to$ introduction is a sound inference rule.
+</p>
+
+Exercises: Show, independently, that each proof rule is sound.
 
 
 ###Completeness
@@ -82,16 +117,19 @@ if ¬(¬B → C), A ⊧ ¬(B ↔ A), then ¬(¬B → C), A ⊢ ¬(B ↔ A).
 Construct the truth table!
 
 ```{.TruthTable .Validity system="thomasBolducAndZachTFL2019" submission="none" options="nodash turnstilemark double-turnstile"}
-2.1 ¬(¬B → C), A :|-: ¬(B ↔ A)
+Completeness.1 ¬(¬B → C), A :|-: ¬(B ↔ A)
 ```
 
 Indeed, ¬(¬B → C), A ⊧ ¬(B ↔ A) as seen in our truth table and counterexample!
-<br>Therefore, by completeness, ¬(¬B → C), A ⊢ ¬(B ↔ A).
+<br>Therefore, by the completeness theorem, ¬(¬B → C), A ⊢ ¬(B ↔ A).
 
 Exercise: Show there exists an ND proof for $P\to Q, \neg Q$ ⊢ $\neg P$.
 
 ```{.TruthTable .Validity system="thomasBolducAndZachTFL2019" submission="none" options="nodash turnstilemark double-turnstile"}
-2.1 P->Q,~Q :|-: ~P
+Completeness.2 P->Q,~Q :|-: ~P
 ```
 
 Again, do not forget to cite the relevant theorem!
+
+
+<p> &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  
