@@ -5,3 +5,90 @@
 # First-Order Logic
 
 ## Sets
+
+To properly understand FOL there is some necessary set theory...
+
+A collection of ‘things’ is a __set__. 
+
+a∈A means that a is an __element__ of set A.
+
+Example:
+<br> Let X = {sun, moon, 42, b}
+<br> Then sun∈X as sun is an element in X, but Alpha Centauri∉X as Alpha Centauri is not in X.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. Let Y = { {sun}, (moon, 1, 2), 42, b}. Select all of the elements below which are elements of Y.
+| moon
+| *(moon, 1, 2)
+| *{sun}
+| sun
+| {42}
+| *42
+```
+
+Items in a set have no order and duplicates do not matter.
+<br>i.e. {2,2} is the same as {2}, and {1,2} is the same as {2,1}.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Let Y = { {sun}, (moon, 1, 2), 42, b}. Select all of the sets that are the same as Y.
+| { sun, (moon, 1, 2), 42, b}
+| *{ {sun}, 42, (moon, 1, 2), b}
+| *{ {sun}, b, b, 42, (moon, 1, 2)}
+| *{ 42, b, b, 42, {sun}, (moon, 1, 2)}
+```
+
+A special set is called the __empty set__, denoted by ∅.
+
+A set A is a __subset__ of set B if and only if every element of A is also in B. We express this as A⊆B.
+
+Example: {2,3}⊆{1,2,3,5,8} as both 2 and 3 are elements of {1,2,3,5,8}.
+<br>Example: {2,3,4}⊈{1,2,3,5,8} as 4 is not an element of {1,2,3,5,8}.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+3. Let Y = { {sun}, (moon, 1, 2), 42, b}. Select all of the sets that are subsets of Y.
+| *{ {sun} }
+| {sun}
+| *{ {sun}, (moon, 1, 2) }
+| (moon, 1, 2)
+| *{42}
+| 42
+```
+
+Note: ∅ is a subset of every set. Why do you think this is?
+
+An __ordered pair__ is a pair of objects where order matters. i.e (2,3) is the ordered pair of 2 then 3.
+<br>A __tuple__ is a collection of objects where the order matters. i.e. (1,2,3) is a tuple where we have 1 first, then 2, then 3.
+<br>An ordered pair is a tuple.
+<br>As order matters, it is important to note that (2,3)≠(3,2). 
+<br>Duplicates also matter so (2)≠(2,2).
+
+__Sets are not tuples, and vice versa.__ Sets are a type of object. Tuples are a different type of object.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+4. (2) = {2}
+| True
+| *False
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+5. (1,2,3) = (1,3,2)
+| True
+| *False
+```
+
+The __Cartesian product__ of two sets A,B is denoted A✖B, and is defined as a set of ordered pairs { (a,b) | a∈A and b∈B }.
+<br>Example: {1,2,3}✖{4,5} = { (1,4),(1,5),(2,4),(2,5),(3,4),(3,5) }
+<br>Notation: A✖A✖…✖A is denoted $A^n$ for n copies of A.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+6. Let A = { {sun}, (moon, 1, 2) }. Let B = {42, b}. Select all of the elements in A✖B.
+| { {sun} }
+| { {sun}, b }
+| *( {sun}, b )
+| ( {sun}, (moon, 1, 2) )
+| ( {sun}, (moon, 1, 2), 42, b )
+| *( (moon, 1, 2), 42 )
+| ( 42, (moon, 1, 2) )
+```
+
+<p>[Previous: Syntax](https://carnap.io/shared/srenee651@gmail.com/book-FOL-syntax.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Predicates](https://carnap.io/shared/srenee651@gmail.com/book-FOL-pred.pandoc) </p>
