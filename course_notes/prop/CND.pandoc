@@ -118,7 +118,7 @@ Let $\alpha$, $\beta$ be sentence variables for any two propositional statements
 
 __Truth-Value Assignment for Conjunctions__
 
-A disjunction $\alpha \land \beta$ is true if and only if both $\alpha$ is true (T) and $\beta$ is true (T).
+A conjunction $\alpha \land \beta$ is true if and only if both $\alpha$ is true (T) and $\beta$ is true (T).
 
 
 Example: D $\land$ F: It is drizzling and foggy in St.John's.
