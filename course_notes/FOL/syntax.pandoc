@@ -20,40 +20,41 @@ Instead of propositions we will have properties.
 Example sentences using only what has been described so far:
 
 - $Pa_2$, 
-- $Ra_2b∨Qb→Pc_39
+- R$a_2$b∨Qb→P$c_39$
 
 ### Quantifiers
 
 Quantifiers, ∀ meaning 'for all' and ∃ meaning 'exists', are how we reason with variables.
 
 For now, informally read these as follows:
-+ ∀xPx: “For all x, predicate P holds of x”
-+ ∃yRy: “For some y, predicate R holds of y”
+- ∀xPx: “For all x, predicate P holds of x”
+- ∃yRy: “For some y, predicate R holds of y”
 
 ∀xPx can be expressed as ∀xP(x). This may be easier for those who are more programming oriented. 
 You can always think of predicates as boolean functions that take in a __non-negative__ amount of arguments.
 
 ### Definition of Well-Formed Formulas (wffs) in FOL 
 
-- If P is an n-ary predicate, and c_1,...,c_n are any constants or variables, then Pc_1…c_n is a wff.
-+ Ex: P a unary predicate means Pc is a wff.
-+ Ex: Q a binary predicate means Qxy is a wff.
-+ Ex: R a trinary predicate means Rxc21z is a wff.
+- If P is an n-ary predicate, and $c_1$,...,$c_n$ are any constants or variables, then P$c_1$…$c_n$ is a wff.
+  + Ex: P a unary predicate means Pc is a wff.
+  + Ex: Q a binary predicate means Qxy is a wff.
+  + Ex: R a trinary predicate means Rx$c_21$z is a wff.
 - If P,Q are wffs, then (P∧Q), (P∨Q), (¬P), (P→Q), (P↔Q) are all wffs. 
-+ () can be dropped when unambiguous.
+  + () can be dropped when unambiguous.
 - If P is a wff and x any variable, then ∀xP(x), ∃xP(x) are wffs.
-+ Note x may occur (or may not occur) in P.
+  + Note x may occur (or may not occur) in P.
 
 Examples of well-formed formula (wffs) in FOL: 
+
 - Px
-- Rxb ∨ Qy1 → Pc_39
+- Rxb ∨ Qy1 → P$c_39$
 - ∀x∃y(Px∨¬Qxy)
 
 Note: Quantifiers cannot bind predicates. This means ∀P is __not__ a wff in FOL. 
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
 1. Select the wff.
-| *∀x∃xPxx
+| *∀x∃x1Pxx
 | PQc
 | ∀x
 | ∀Px→Qy
@@ -83,7 +84,7 @@ __Sentences__ are wffs with all __variables__ bounded to a quantifier.
 <br>A variable that is under the scope of a quantifier associated with that variable is known as a __bound__ variable.
 <br>A variable that is not under scope of a quantifier associated with that variable is known as a __free__ variable.
 
-Example sentences with predicates
+Example sentences with predicates:
 
 - ∀xPx∨∃x¬Px
 - ∀x∀y∀z(Rxy∧Ryz→Rxz)
