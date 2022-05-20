@@ -5,3 +5,110 @@
 # First-Order Logic
 
 ## Syntax
+
+The language will have the same connectives you are used to:
+				and is ∧, or is ∨, not is ¬, if..then is →, if.. and only if.. is ↔ 
+        
+Instead of propositions we will have properties.
+
+- Letters may or may not have subscripts.
+- Capital letters represent predicates (A,B,C;P,Q,R). Each predicate has an __arity__. This is the number of arguments it takes. The arity is always non-negative.
+- Lower-case letters represent objects
+- Letters near the start of the alphabet represent specific objects ($a_2$ for Trudeau, $b$ for NL). These are known as __constants__.
+- Letters near the end of the alphabet represent __variables__ ($x$, $y_29$, $z$)
+
+Example sentences using only what has been described so far:
+
+- $Pa_2$, 
+- $Ra_2b∨Qb→Pc_39
+
+### Quantifiers
+
+Quantifiers, ∀ meaning 'for all' and ∃ meaning 'exists', are how we reason with variables.
+
+For now, informally read these as follows:
++ ∀xPx: “For all x, predicate P holds of x”
++ ∃yRy: “For some y, predicate R holds of y”
+
+∀xPx can be expressed as ∀xP(x). This may be easier for those who are more programming oriented. 
+You can always think of predicates as boolean functions that take in a __non-negative__ amount of arguments.
+
+### Definition of Well-Formed Formulas (wffs) in FOL 
+
+- If P is an n-ary predicate, and c_1,...,c_n are any constants or variables, then Pc_1…c_n is a wff.
++ Ex: P a unary predicate means Pc is a wff.
++ Ex: Q a binary predicate means Qxy is a wff.
++ Ex: R a trinary predicate means Rxc21z is a wff.
+- If P,Q are wffs, then (P∧Q), (P∨Q), (¬P), (P→Q), (P↔Q) are all wffs. 
++ () can be dropped when unambiguous.
+- If P is a wff and x any variable, then ∀xP(x), ∃xP(x) are wffs.
++ Note x may occur (or may not occur) in P.
+
+Examples of well-formed formula (wffs) in FOL: 
+- Px
+- Rxb ∨ Qy1 → Pc_39
+- ∀x∃y(Px∨¬Qxy)
+
+Note: Quantifiers cannot bind predicates. This means ∀P is __not__ a wff in FOL. 
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+1. Select the wff.
+| *∀x∃xPxx
+| PQc
+| ∀x
+| ∀Px→Qy
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Select all of the expressions which are well-formed formulas in FOL.
+| *∀y(Pay→∃xQxy)
+| *P
+| ∀x
+| ∀∃xPx
+```
+
+__Quantifiers fit after parenthesis but before any of the connectives in the priority order.__
+
+When doing a parse tree, the quantifiers behave similar to negation.
+
+__Example of the parse tree for ∀xPx∨∃x¬Px__
+
+<img src="https://carnap.io/shared/srenee651@gmail.com/parse_FOL.jpg" alt="∀xPx∨∃x¬Px Parse Tree">
+
+
+### Sentences
+
+__Sentences__ are wffs with all __variables__ bounded to a quantifier. 
+<br>Or in other words, every variable is under the scope of a quantifier associated with that variable.
+<br>A variable that is under the scope of a quantifier associated with that variable is known as a __bound__ variable.
+<br>A variable that is not under scope of a quantifier associated with that variable is known as a __free__ variable.
+
+Example sentences with predicates
+
+- ∀xPx∨∃x¬Px
+- ∀x∀y∀z(Rxy∧Ryz→Rxz)
+- Pa
+
+Note: the last one, Pa, is a sentence as 'a' is a __constant__ symbol, not a variable.
+
+The way to check if a wff is a sentence is to take a look at the parse tree. 
+
+Example.
+
+<img src="https://carnap.io/shared/srenee651@gmail.com/parse_FOL2.jpg" alt="∀xPx∨∃x¬Px Parse Tree">
+
+<br>Looking at the previous parse tree, we want to check the variables that are arguments with the quantified variables.
+<br>We notice that the subformula ∀xPx has Px underneath it. Variable x for the universal quantifier has the scope of Px.
+<br>The subformula ∃x¬Px has ¬Px underneath it. Variable x for the existential quantifier has the scope of ¬Px.
+
+Example. ∀xPx∨¬Px is not a sentence.
+
+<img src="https://carnap.io/shared/srenee651@gmail.com/parse_FOL3.jpg" alt="∀xPx∨¬Px Parse Tree">
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Select all of the wffs which are sentences.
+| *∀y(Pay→∃xQxy)
+| ∀xPxy
+| ∀y∃xPxy→Qxy
+| *P
+```
