@@ -107,7 +107,7 @@ Example. ∀xPx∨¬Px is not a sentence.
 <img src="https://carnap.io/shared/srenee651@gmail.com/parse_FOL3.png" alt="∀xPx∨¬Px Parse Tree">
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-2. Select all of the wffs which are sentences.
+3. Select all of the wffs which are sentences.
 | *∀y(Pay→∃xQxy)
 | ∀xPxy
 | ∀y∃xPxy→Qxy
