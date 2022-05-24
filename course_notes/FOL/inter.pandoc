@@ -5,3 +5,41 @@
 # First-Order Logic
 
 ## Interpretations
+
+When evaluating a propositional sentence, we need a truth valuation (a truth value T/F for every propositional variable.
+
+For first-order logic, we need to assign meaning to our predicates. Which arguments will satisfy a predicate? Which arguments are we considering? What are the constant symbols referring to?
+
+This assignment of constants/variables/predicates is called an interpretation ℐ.
+
+Each interpretation ℐ must include:
+
+- the __universe__, U, (also called domain) which is the set of objects that all variables/constants could refer to. 
+<br> We will assume/require that the universe is non-empty.
+<br> i.e. the universe can be the set of all integers, or the cats {Sal, Kitkat, Floof}, or {1}.
+- the __meaning for all the predicate symbols__ P, ℐ(P). In other words, the set of arguments (could be empty) that satisfies each predicates.
+<br>The interpretation of a predicate is always a subset of $U^n$ where n is the arity of the predicate.
+<br>Suppose we have P, a unary predicate, and Q, a binary predicate. U is {1,2,3,4,5}.
+<br>i.e. ℐ(P) = {1, 3, 5}. ℐ(Q) = { (1,2), (2,3), (3,4) }.
+<br>Notice how $Q^ℐ$ is a set of pairs. This is because it is a binary predicate meaning it takes in two arguments.
+- the __meaning for all of the constant symbols__ c, $ℐ(c)$. In other words, the item from U each constant represents.
+<br>Suppose we have constant c and U is {1,2,3,4,5}.
+<br> i.e. ℐ(c) = 2.
+<br> Note: the interpretation of a constant is __an element__ in the universe.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. Suppose we have a unary predicate P, a binary predicate Q, and constant symbols c and d. Select everything that is required for the interpretation.
+| *ℐ(P)
+| *ℐ(Q)
+| *ℐ(c)
+| *ℐ(d)
+| *U
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Let T be a ternary predicate symbol, meaning it takes in three arguments. Then T ⊆ ...
+| U
+| UxU
+| *UxUxU
+| UxUxUxU
+```
