@@ -6,42 +6,66 @@
 
 ## Predicates
 
-When evaluating a propositional sentence, we need a truth valuation (a truth value T/F for every propositional variable.
+__Constants__ are specific objects/entities.
+<br>i.e. Kitkat is a constant as Kitkat is my roommate's cat, 0 is a constant as it is a specific number, and {1,2,3} is a constant as it is the set of 1, 2 and 3.
 
-For first-order logic, we need to assign meaning to our predicates. Which arguments will satisfy a predicate? Which arguments are we considering? What are the constant symbols referring to?
+In PL, we used propositions which are declarative statements. Meanwhile, in FOL, we use __Predicates__. 
+Predicates are properties or relations which apply to or between objects/entities. 
+Every predicate has an __arity__ which is the number of inputs (objects/entities) for the predicate.
 
-This assignment of constants/variables/predicates is called an interpretation ℐ.
+In the PL section, we listed some example propositions:
 
-### Interpretations
+-   "Ice is colder than water."
+-   "MUN is a university."
+-   "Kitkat is playing."
 
-Each interpretation ℐ must include:
+These can all be expressed as predicates with constants.
 
-- the __universe__, U, (also called domain) which is the set of objects that all variables/constants could refer to. 
-<br> We will assume/require that the universe is non-empty.
-<br> i.e. the universe can be the set of all integers, or the cats {Sal, Kitkat, Floof}, or {1}.
-- the __meaning for all the predicate symbols__ P, ℐ(P). In other words, the set of arguments (could be empty) that satisfies each predicates.
-<br>The interpretation of a predicate is always a subset of $U^n$ where n is the arity of the predicate.
-<br>Suppose we have P, a unary predicate, and Q, a binary predicate. U is {1,2,3,4,5}.
-<br>i.e. ℐ(P) = {1, 3, 5}. ℐ(Q) = { (1,2), (2,3), (3,4) }.
-<br>Notice how $Q^ℐ$ is a set of pairs. This is because it is a binary predicate meaning it takes in two arguments.
-- the __meaning for all of the constant symbols__ c, $ℐ(c)$. In other words, the item from U each constant represents.
-<br>Suppose we have constant c and U is {1,2,3,4,5}.
-<br> i.e. ℐ(c) = 2.
-<br> Note: the interpretation of a constant is __an element__ in the universe.
+-   "_Ice_ is __colder__ than _water_." 
+<br>Here _ice_ and _water_ are constants and __colder__ is the predicate. IsColderThan(ice,water).
+<br>Symbolically we would state let b be "ice", and c be "water". Let Cxy be "x is colder than y". Here x and y are variables and the xy indicates that C is a binary predicate. 
+<br>Then this translates to Cbc.
+-   "MUN is a university."
+<br>Here _MUN_ is a constants and __university__ is the predicate. IsAUniversity(MUN).
+<br>Symbolically we would state let m be "MUN". Let Ux "x is a university". 
+<br>Then this translates to Um.
+-   "Kitkat is playing."
+<br>Here _Kitkat_ is a constants and __playing__ is the predicate. IsPlaying(Kitkat).
+<br>Symbolically we would state let k be "Kitkat". Let Px "x is playing". 
+<br>Then this translates to Pk.
 
-```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-1. Suppose we have a unary predicate P, a binary predicate Q, and constant symbols c and d. Select everything that is required for the interpretation.
-| *ℐ(P)
-| *ℐ(Q)
-| *ℐ(c)
-| *ℐ(d)
-| *U
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+1. Amy is in-between Bob and Chris. Select the predicate.
+| Amy
+| *In-between
+| Bob
+| Chris
+| and
 ```
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-2. Let T be a ternary predicate symbol, meaning it takes in three arguments. Then T ⊆ ...
-| U
-| UxU
-| *UxUxU
-| UxUxUxU
+2. Amy is in-between Bob and Chris. Select the constants.
+| *Amy
+| In-between
+| *Bob
+| *Chris
+| and
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+3. Amy is inbetween Bob and Chris. Let Bxyz be "y is in-between x and z". Let a be "Amy", let b be "Bob", let c be "Chris". Select the statement in its symbollic form.
+| Babc
+| *Bbac
+| Bacb
+| Bcba
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+4. The arity of the in-between predicate is:
+| 0
+| 1
+| 2
+| *3
+| 4
 ```
