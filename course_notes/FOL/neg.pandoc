@@ -1,0 +1,101 @@
+---
+--from markdown+simple_tables
+---
+
+# First-Order Logic
+
+## Negating Statements
+
+As said in PL, it is important to learn how to negate statements as __disproving a statement is proving its negation__.
+
+When we negate a universal quantifier, we are no longer stating "all" and instead we are stating "not all".
+<br> This is not to be confused with "none".
+<br> If I said _I did not do all of my homework_, I am not saying I did none of the homework. 
+I am just stating that there is some piece of homework that I did not do.
+<br> If ∀xPx means _everything is a P_, then ¬∀xPx means _not everything is a P_ or in other words _something is not a P_.
+
+When we negate an existential quantifier, we are no longer stating "some" and instead we are stating "not some".
+<br> This is not to be confused with "not all".
+<br> If I said _I did not do some of my homework_, I am stating that there is not a single piece of homework that I did- I did nothing.
+<br> If ∃xPx means _something is a P_, then ¬∃xPx means _there is no object that is a P_ or in other words _nothing is a P_.
+
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+universal quantifier ∀    `A`, `@`
+existential quantifier ∃  `E`, `3`
+------------------------- -----------------------------
+
+------------- ----------------------------------- ------------- --------------------------             
+$Px~~$        $x$ is a professor.             
+$Cx~~$        $x$ is a computer scientist.        $~~~~c$       Christine Paulin-Mohring
+$Ixy~~$       $x$ was influenced by $y$.          
+------------- ----------------------------------- ------------- --------------------------
+
+<br> The universe will be every person currently alive.<br>
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+1 ~ExCx : No one is a computer scientist.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+2 ~∀xCx : Not everyone is a professor.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+3 ~Ex(Px/\Cx) : None of the professors are computer scientists.
+~~~
+
+The main idea is to place the negation symbol infront of the statement, and push it inwards by using replacement rules. 
+
+There are two new rules: negating ∀x$\alpha$ and negating ∃x$\alpha$.
+<br> You can think of ∀ and ∃ as having a similar relationship like ∧ and ∨.
+<br> ¬∀x$\alpha$ ⧦ ∃x¬$\alpha$. The negation pushes through the universal quantifier which flips for an existential.
+<br> ¬∃x$\alpha$ ⧦ ∀x¬$\alpha$. And a similar thing happens when we negate an existential.
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+Replacement Rules
+------------------------------- ---------------------------------------
+Double Negation            `DN` 	$\neg \neg \alpha$ ⧦ $\alpha$
+Conditional              `Cond` 	$\alpha\to\beta$⧦$\neg\alpha\lor\beta$
+Biconditional Exchange `Bicond` 	$\alpha\leftrightarrow\beta$⧦$(\alpha\to\beta)\land(\beta\to\alpha)$
+DeMorgan's Laws           `DeM` 	$\neg (\alpha\lor\beta )$⧦$\neg\alpha\land\neg\beta$
+DeMorgan's Laws           `DeM` 	$\neg (\alpha\land\beta )$⧦$\neg\alpha\lor\neg\beta$
+Quantifier Negation        `QN`   $\neg \forall x \alpha$⧦$\exists x\neg\alpha$
+Quantifier Negation        `QN`   $\neg \exists x \alpha$⧦$\forall x\neg\alpha$
+------------------------------- -------------------------------
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+<br>Showing that ¬∃x(Px ∧ Cx) ⧦ ∀x(Px → ¬Cx)
+```{.ProofChecker .ZachFOLEq options="resize" feedback="manual" tests="PNF"}
+4 ¬∃x(Px ∧ Cx) :|-: 
+|¬∃x(Px ∧ Cx) :PR
+|∀x¬(Px ∧ Cx) :QN
+|∀x(¬Px \/ ¬Cx) :DeM
+|∀x(Px → ¬Cx) :Cond
+```
+
+<br>Negate and simplify ∃x∀yRxy.
+```{.ProofChecker .ZachFOLEq options="resize" feedback="manual" tests="PNF"}
+5 ¬∃x∀yRxy :|-: 
+|¬∃x∀yRxy :PR
+```
+
+<br>Negate and simplify ∀x∀y(Rxy → Ryy).
+```{.ProofChecker .ZachFOLEq options="resize" feedback="manual" tests="PNF"}
+6 ¬∀x∀y(Rxy → Ryy) :|-: 
+|¬∀x∀y(Rxy → Ryy) :PR
+```
+
+<br>Negate and simplify ∀x(Rxx → ∃y(Ryx ∧ ¬Qy)).
+```{.ProofChecker .ZachFOLEq options="resize" feedback="manual" tests="PNF"}
+7 ¬∀x(Rxx → ∃y(Ryx ∧ ¬Qy)) :|-: 
+|¬∀x(Rxx → ∃y(Ryx ∧ ¬Qy)) :PR
+```
