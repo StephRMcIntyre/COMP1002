@@ -4,109 +4,120 @@
 
 # First-Order Logic
 
-## Satisfying Formulas
+## Satisfying Formulas with Interpretations
 
-The semantics of the connectives were discussed in PL and remain unchanged. 
-<br>The only things left to discuss are the semantics of the quantifiers...
+Recall, each interpretation ℐ must include:
 
-------------------------- -----------------------------
-not ¬                     `-`, `~`
-and ∧                     `/\`,  `&`
-or ∨                      `\/`
-if then →                 `->`, `>`
-if and only if ↔          `<->`, `<>`
-universal quantifier ∀    `A`, `@`
-existential quantifier ∃  `E`, `3`
-------------------------- -----------------------------
+- the __universe__, U, (also called domain) which is the set of objects that all variables/constants could refer to. 
+<br> We will assume/require that the universe is non-empty.
+- the __meaning for all the predicate symbols__ P, ℐ(P). In other words, the set of arguments (could be empty) that satisfies each predicates.
+- the __meaning for all of the constant symbols__ c, $ℐ(c)$. In other words, the item from U each constant represents.
 
-------------- ----------------------------------- ------------- --------------------------             
-$Px~~$        $x$ is prime.                       a             the number 1
-$Ox~~$        $x$ is odd.                         b             the number 2
-$Lxy~~$       $x$ is less than $y$.          
-------------- ----------------------------------- ------------- --------------------------
+On this page, we will investigate whether or not given formulas, or sets of formulas, are satisfiable. 
+<br>Meaning, is there an interpretation which sets the formula(s) to be True?
 
-<br> The universe will be the positive integers.
+__So long as there is at least one interpretation which sets the formula to be True, then the formula is satisfiable.__
 
-```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-1. Select the formula that is True under the given interpretation.
-| *Lab
-| Lba
-```
+In Carnap, you specify the __domain__ (another name for the universe) of an interpretation by listing its
+elements (only natural numbers are allowed, e.g., 0, 1, 2, 3). To
+specify the extension of a one-place predicate, list the objects in
+the extension, individually within brackets.
 
-```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-2. Select all of the formulas that are True under the given interpretation.
-| Pb
-| Ob ∨ Pa
-| *Pb → Lba
-| *Pa ∧ ¬Lba
-```
+To make "Some $A$s are $B$s" true, the $A$s and the
+$B$s must have at least one object in common (they may be the same, but it is not necessary).
 
-### The semantics of ∃
+To make $\exists x(Ax \land Bx)$ true, make sure the enxtension of
+$Ax$ and $Bx$ overlap. E.g., put `[0]` for both `A(_)` and `B(_)`.
+<br>For A(_): give the set of values in the domain which satisfies A. 
+<br>For B(_): give the set of values in the domain which satisfies B. 
 
-Let $\alpha$ be any well-formed formula (wff). 
-<br>Then ∃x$\alpha$ is True iff there exists at least one element in the universe where $alpha$ is True.
-<br>That is, $alpha$ is True with at least one value x takes from the universe.
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+1 Ex(Ax & Bx)
+| Domain : 0,1,2,3,4
+| A : 0,1
+| B : 0,1,2
+~~~ 
 
-We can think of checking universal quantifiers (on finite universes) with using a loop from Python that checks if something sets $\alpha$ to True.
+Click check on the example above. 
 
-<p>for x in universe:
-<br>&emsp;if alpha(x):
-<br>&emsp;  &emsp; return true;
-<br>return false;
-</p>
+This next example is incorrect. 
+<br> Do not modify the domain. Instead change only A and/or B to get a correct answer.
 
-```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-3. ∃x(Px ∧ ~Ox) is True under the given interpretation.
-| *True
-| False
-```
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+2 Ex(Ax & Bx)
+| Domain : 0,2,4
+| A : 0,1
+| B : 0,1,2
+~~~ 
 
-```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-4. Select all of the formulas that are True under the given interpretation.
-| ∃x(Px ∧ Lxa)
-| *∃x(Px ∧ Lax)
-| *∃x(Px ∧ Ox)
-| ∃xPx ∧ Lba
-| ∃x(Ox ∧ Lxb) ∧ ∃x(Oy ∧ Lyb)
-```
 
-```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-5. ∃x(Ox ∧ Lxb) ∧ ∃y(Oy ∧ Lyb) is True under the given interpretation.
-| *True
-| False
-```
-_Hint: Use the semantics to determine if ∃x(Ox ∧ Lxb) True and repeat to determine if ∃y(Oy ∧ Lyb) True._
+Find an interpretation that satisfies __both__ formulas. 
+<br>This example will illustrate that $\exists x Px$ is not the opposite of $\exists x \neg Px$.
+<br>Remember, you evaluate each formula separately. So the x in the first formula is not necessarily the same as the x in the second formula.
 
-### The semantics of ∀
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+3 ExPx, Ex~Px
+~~~ 
 
-Let $\alpha$ be any well-formed formula (wff). 
-<br>Then ∀x$\alpha$ is True iff for every element in the universe, $alpha$ is True.
-<br>That is, $alpha$ is True regardless which value x takes from the universe.
+Find an interpretation that satisfies __both__ formulas. 
+<br>This example will illustrate that $\forall x Px$ is not the opposite of $\forall x \neg Px$.
+<br>While these two formulas are not satisfiable at the same time, if they were opposites then nor should their negated forms be satisfiable at the same time... But you will soon see this is not the case.
+<br>Remember, you evaluate each formula separately. So the x in the first formula is not necessarily the same as the x in the second formula.
 
-We can think of checking universal quantifiers (on finite universes) with using a loop from Python that checks if something sets $\alpha$ to False.
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+4 ~AxPx, ~Ax~Px
+~~~ 
 
-<p>for x in universe:
-<br>&emsp;if not alpha(x):
-<br>&emsp;  &emsp; return false;
-<br>return true;
-</p>
 
-```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-6. ∀x(Px ∨ ~Ox) is True under the given interpretation.
-| True
-| *False
-```
+#### Multiple Quantifiers
 
-```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-7. Select all of the formulas that are True under the given interpretation.
-| *∀x(Lbx ∧ Px → Ox)
-| *∀x¬Lxa
-| ∀x(Px ∨ Lxb)
-| *∀xPx ∨ Lab
-```
+Remember, variables can take on anything in the domain. Two variables can point to the same element.
 
-```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-8. ∀x¬Lxa ∧ ∀y¬Lya is True under the given interpretation.
-| *True
-| False
-```
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+5 ExEy(Ax & Ay)
+| Domain : 0,1,2
+| A : 1
+~~~ 
+<br>Click on the example above. Notice how there is no requirement that x and y are not the same element.
+
+Find an interpretation that satisfies the formula.
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+6 AxAy(Bx \/ Cy)
+~~~ 
+<br>For a more challenging variant, see if you can satisfy the formula above without having B and C be the same set.
+
+Find an interpretation that satisfies the formula.
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+7 ExAyBxy
+~~~ 
+<br>For a more challenging variant, see if you can satisfy the formula above without having B equal to Domain$^2$.
+
+Find an interpretation that satisfies __both__ formulas. 
+<br>This example will illustrate the importance of the order of the arguments for predicates.
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+8 ExAyByx, ~ExAyBxy
+~~~ 
+
+
+Find an interpretation that satisfies __both__ formulas. 
+<br>This example will illustrate the importance of the order of mixed quantifiers.
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+9 AxEyBxy, ~ExAyBxy
+~~~ 
+
+
+
+
+<br>This example will illustrate how existential quantifiers wrapped around conditional statements are not what you would expect.
+<br>Click check and think about why this is satisfied.
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+10 Ex(Ax->Bx)
+| Domain : 1,2,3
+| A : 
+| B :
+~~~ 
