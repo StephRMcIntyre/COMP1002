@@ -53,7 +53,7 @@ However, it is entirely possible that this could be the case.
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-4 ∀x∀y(Cx/\Py->Ixy) : Every computer scientist has worked with every professor.
+4 ∀x∀y(Cx/\Py->Wxy) : Every computer scientist has worked with every professor.
 ~~~
 _Hint: Think of what the connectives are here, then think of the quantifiers._
 
