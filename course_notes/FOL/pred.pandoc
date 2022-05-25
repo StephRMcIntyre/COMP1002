@@ -21,16 +21,16 @@ In the PL section, we listed some example propositions:
 
 These can all be expressed as predicates with constants.
 
--   "_Ice_ is __colder__ than _water_." 
-<br>Here _ice_ and _water_ are constants and __colder__ is the predicate. IsColderThan(ice,water).
+-   "__Ice__ is _colder_ than __water__." 
+<br>Here __ice__ and __water__ are constants and _colder_ is the predicate. IsColderThan(ice,water).
 <br>Symbolically we would state let b be "ice", and c be "water". Let Cxy be "x is colder than y". Here x and y are variables and the xy indicates that C is a binary predicate. 
 <br>Then this translates to Cbc.
--   "MUN is a university."
-<br>Here _MUN_ is a constants and __university__ is the predicate. IsAUniversity(MUN).
+-   "__MUN__ is a _university_."
+<br>Here __MUN__ is a constant and _university_ is the predicate. IsAUniversity(MUN).
 <br>Symbolically we would state let m be "MUN". Let Ux "x is a university". 
 <br>Then this translates to Um.
--   "Kitkat is playing."
-<br>Here _Kitkat_ is a constants and __playing__ is the predicate. IsPlaying(Kitkat).
+-   "__Kitkat__ is playing."
+<br>Here __Kitkat__ is a constant and _playing_ is the predicate. IsPlaying(Kitkat).
 <br>Symbolically we would state let k be "Kitkat". Let Px "x is playing". 
 <br>Then this translates to Pk.
 
@@ -80,34 +80,37 @@ if then →                 `->`, `>`
 if and only if ↔          `<->`, `<>`
 ------------------------- -----------------------------
 
-------------- -------------------------------- ------------- --------------------------
-$Ax$          $x$ is alive.                    $a$           Alonzo Church
-$Px$          $x$ is/was a professor.          $b$           Bertrand Russell
-$Cx$          $x$ is/was a computer scientist. $i$           Christine Paulin-Mohring
-$Wxy$         $x$ work(s/ed) with $y$.         $d$           David Hilbert
-$Ixy$         $x$ was influenced by $y$.       $e$           Ernst Zermelo
-------------- -------------------------------- ------------- --------------------------
+------------- ----------------------------------- ------------- --------------------------
+$Ax~~$        $x$ is alive.                       $~~~~a$       Alonzo Church
+$Px~~$        $x$ is/was a professor.             $~~~~b$       Bertrand Russell
+$Cx~~$        $x$ is/was a computer scientist.    $~~~~c$       Christine Paulin-Mohring
+$Wxy~~$       $x$ work(s/ed) with $y$.            $~~~~d$       David Hilbert
+$Ixy~~$       $x$ was influenced by $y$.          $~~~~e$       Ernst Zermelo
+------------- ----------------------------------- ------------- --------------------------
 
-~~~{.Translate .FOL system="thomasBolducAndZachTFL"}
+<br>
+<br>
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
 5 Cc /\ Pc : Christine Paulin-Mohring is a professor of computer science.
 ~~~
 
-~~~{.Translate .FOL system="thomasBolducAndZachTFL"}
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
 6 Ieb /\ Ied : Ernst Zermelo was influenced by both Bertrand Russell and David Hilbert.
 ~~~
 
-~~~{.Translate .FOL system="thomasBolducAndZachTFL"}
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
 7 Ab -> (Pb /\ Wbc) : If Bertrand Russell is alive, then he is a professor working with Christine Paulin-Mohring.
 ~~~
 
-~~~{.Translate .FOL system="thomasBolducAndZachTFL"}
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
 8 ~Iba /\ Iab : Alonzo Church did not influence Bertrand Russell, but he was influenced by Bertrand Russell.
 ~~~
 
-~~~{.Translate .FOL system="thomasBolducAndZachTFL"}
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
 9 Wad \/ Wae : Alonzo Church worked with either David Hilbert or Ernst Zermelo.
 ~~~
 
-~~~{.Translate .FOL system="thomasBolducAndZachTFL"}
-10 Pd /\ Ad -> Cd /\ Wdc : David Hilbert was a professor who if he were alive, then he would be a computer scientist working with Chrsitine Paulin-Mohring.
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+10 (Pd /\ Ad) -> (Cd /\ Wdc) : David Hilbert was a professor who if he were alive, then he would be a computer scientist working with Christine Paulin-Mohring.
 ~~~
