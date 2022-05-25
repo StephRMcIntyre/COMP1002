@@ -5,3 +5,82 @@
 # First-Order Logic
 
 ## Multiple Quantifiers
+
+As was teased on the previous page, we can nest quantifiers. 
+Statements such as ∃x∀yRxy and ∀x(Rxx → ∃y(Ryx ∧ ¬Qy)) are perfectly acceptable in our language.
+<br>On this page we will learn how to translate such statements.
+
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+universal quantifier ∀    `A`, `@`
+existential quantifier ∃  `E`, `3`
+------------------------- -----------------------------
+
+------------- ----------------------------------- ------------- --------------------------             
+$Px~~$        $x$ is a professor.             
+$Cx~~$        $x$ is a computer scientist.        $~~~~c$       Christine Paulin-Mohring
+$Ixy~~$       $x$ was influenced by $y$.  
+$Wxy~~$       $x$ worked with $y$.          
+------------- ----------------------------------- ------------- --------------------------
+
+<br> The universe will be every person currently alive.<br>
+
+
+###Same Quantifier Type
+
+∃∃ statements such as ∃x∃yRxy means _"There are items x and y such that Rxy is satisfied."_
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+1 ExEy(Ixy/\Cy) : There is someone who was influenced by a computer scientist.
+~~~
+_Hint: Think of how many existentials there are here and their scopes._
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+2 ExEy(Cx/\Py) : There is a computer scientist and a professor.
+~~~
+This last one doesn't require the computer scientist and professor to be the same person. 
+However, it is entirely possible that this could be the case. 
+<br> Remember, variables are just that, variables. If the variable x points to Christine Paulin-Mohring, the variable y can point to the same entity.
+
+∀∀ statements such as ∀x∀yRxy means _"For every item x and every item y, Rxy is satisfied."_
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+3 ∀x∀yIxy : Everyone is influenced by everyone.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+4 ∀x∀y(Cx/\Py->Ixy) : Every computer scientist has worked with every professor.
+~~~
+_Hint: Think of what the connectives are here, then think of the quantifiers._
+
+###∃∀ Statements
+
+∃∀ statements such as ∃x∀yRxy means _"There exists an item x such that for all items y, Rxy is satisfied"_. 
+<br> It is important to note that ∃x∀yRxy is __different__ from ∃x∀yRyx.
+<br> Imagine R is a predicate symbol for $\leq$ and the universe are the positive integers.
+<br> Then ∃x∀yRxy would translate to _"There is some positive integer x such that for all positive integers y, x$\leq$y"_. 
+Or in other words, _"There is a smallest positive integer."_, which is obviously true as 1 is the smallest positive integer.
+<br> Whereas ∃x∀yRyx would translate to _"There is some positive integer x such that for all positive integers y, y$\leq$x"_. 
+Or in other words, _"There is a largest positive integer."_, 
+which is obviously false as there is no greatest positive integer- we can always find a bigger one.
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+5 ExAyWxy : Someone works with everyone.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+6 ∀xEyIxy : Everyone is influenced by someone.
+~~~
+_Hint: Don't confuse this with "Someone influenced everyone".
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+7 ~∀xEyWxy : Not everyone works with someone.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+8 ~ExAyWxy : No one works with everyone. 
+~~~
