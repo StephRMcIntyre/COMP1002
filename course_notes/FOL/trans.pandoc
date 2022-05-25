@@ -1,0 +1,70 @@
+---
+--from markdown+simple_tables
+---
+
+# First-Order Logic
+
+## More Translation Practice
+
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+universal quantifier ∀    `A`, `@`
+existential quantifier ∃  `E`, `3`
+------------------------- -----------------------------
+
+------------- ----------------------------------- ------------- --------------------------             
+$Px~~$        $x$ is a professor.             
+$Cx~~$        $x$ is a computer scientist.        $~~~~c$       Christine Paulin-Mohring
+$Ixy~~$       $x$ was influenced by $y$.  
+$Wxy~~$       $x$ worked with $y$.          
+------------- ----------------------------------- ------------- --------------------------
+
+<br> The universe will be every person currently alive.<br>
+
+Here are some more difficult translation exercises.
+<br>Ensure your wffs are __sentences__.
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+1 ∀x(Px -> Wxc) : Every professor has worked with Christine Paulin-Mohring.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+2 Ex(Cx /\ ∀y(Py->Ixy)) : There is someone who was influenced by a computer scientist and they are influenced by every professor.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+3 ∀x∀y(Cx/\Wxy->Py) : Every computer scientist has only worked with professors.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+4 ∀x∀y(Px/\Cy->~Wxy) : Professors do not work with Computer Scientists.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+5 ∀x∀y(Cy/\Px->Ez(Ixz/\Iyz)) : Every computer scientist and every professor share someone they were influenced by.
+~~~
+_Hint: Three quantifiers._
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+6 ∀x(Px/\Cx->~EyIxy) : Anyone who is both a professor and a computer scientist does not have someone they were influenced by. 
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+7 AxWxx : Every professor works with themselves. 
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+8 ~ExIxx : No computer scientist influences themselves.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+9 Ax(Wxx->~EyIxy) : Any professor who works with themselves does not have a computer scientist that influenced them.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+10 Ax(Cx->~AyWxy) : Computer Scientists do not work with everyone.
+~~~
