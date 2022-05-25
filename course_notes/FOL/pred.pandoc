@@ -69,3 +69,45 @@ These can all be expressed as predicates with constants.
 | *3
 | 4
 ```
+
+### Translation Examples & Exercises
+
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+------------------------- -----------------------------
+
+------------- -------------------------------- ------------- --------------------------
+$Ax$          $x$ is alive.                    $a$           Alonzo Church
+$Px$          $x$ is/was a professor.          $b$           Bertrand Russell
+$Cx$          $x$ is/was a computer scientist. $i$           Christine Paulin-Mohring
+$Wxy$         $x$ work(s/ed) with $y$.         $d$           David Hilbert
+$Ixy$         $x$ was influenced by $y$.       $e$           Ernst Zermelo
+------------- -------------------------------- ------------- --------------------------
+
+~~~{.Translate .FOL system="thomasBolducAndZachTFL"}
+5 Cc /\ Pc : Christine Paulin-Mohring is a professor of computer science.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachTFL"}
+6 Ieb /\ Ied : Ernst Zermelo was influenced by both Bertrand Russell and David Hilbert.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachTFL"}
+7 Ab -> (Pb /\ Wbc) : If Bertrand Russell is alive, then he is a professor working with Christine Paulin-Mohring.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachTFL"}
+8 ~Iba /\ Iab : Alonzo Church did not influence Bertrand Russell, but he was influenced by Bertrand Russell.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachTFL"}
+9 Wad \/ Wae : Alonzo Church worked with either David Hilbert or Ernst Zermelo.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachTFL"}
+10 Pd /\ Ad -> Cd /\ Wdc : David Hilbert was a professor who if he were alive, then he would be a computer scientist working with Chrsitine Paulin-Mohring.
+~~~
