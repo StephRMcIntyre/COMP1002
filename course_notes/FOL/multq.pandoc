@@ -73,14 +73,37 @@ which is obviously false as there is no greatest positive integer- we can always
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-6 ∀xEyIxy : Everyone is influenced by someone.
+6 ExAyIyx : Someone influenced everyone.
+~~~
+
+###∀∃ Statements
+
+∀∃ statements such as ∀x∃yRxy means _"For all items y, there is some x such that Rxy is satisfied"_. 
+<br> It is important to note that ∀x∃yRyx is __different__ from ∀x∃yRyx.
+<br> Imagine R is a predicate symbol for < and the universe are the positive integers.
+<br> Then ∀x∃yRxy would translate to _"For every positive integer x, there is some positive integer y such that x<y"_. 
+Or in other words, _"There is always a smaller positive integer."_, which is obviously false as nothing is smaller than 1.
+<br> Whereas ∀x∃yRyx would translate to _"For every positive integer x, there is some positive integer y<x"_. 
+Or in other words, _"There is always a larger positive integer."_, 
+which is obviously true as we can always find a bigger one.
+
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+7 ∀xEyIxy : Everyone is influenced by someone.
 ~~~
 _Hint: Don't confuse this with "Someone influenced everyone".
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-7 ~∀xEyWxy : Not everyone works with someone.
+8 ∀xEyIyx : Everyone influences someone.
+~~~
+
+Other simple examples using negations:
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+9 ~∀xEyWxy : Not everyone works with someone.
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-8 ~ExAyWxy : No one works with everyone. 
+10 ~ExAyWxy : No one works with everyone. 
 ~~~
+
