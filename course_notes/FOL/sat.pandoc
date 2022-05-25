@@ -5,3 +5,108 @@
 # First-Order Logic
 
 ## Satisfying Formulas
+
+The semantics of the connectives were discussed in PL and remain unchanged. 
+<br>The only things left to discuss are the semantics of the quantifiers...
+
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+universal quantifier ∀    `A`, `@`
+existential quantifier ∃  `E`, `3`
+------------------------- -----------------------------
+
+------------- ----------------------------------- ------------- --------------------------             
+$Px~~$        $x$ is prime.                       a             the number 1
+$Ox~~$        $x$ is odd.                         b             the number 2
+$Lxy~~$       $x$ is less than $y$.          
+------------- ----------------------------------- ------------- --------------------------
+
+<br> The universe will be the positive integers.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+1. Select the formula that is True under the given interpretation.
+| *Lab
+| Lba
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Select all of the formulas that are True under the given interpretation.
+| Pb
+| Ob ∨ Pa
+| *Pb → Lba
+| *Pa ∧ ¬Lba
+```
+
+### The semantics of ∃
+
+Let $\alpha$ be any well-formed formula (wff). 
+<br>Then ∃x$\alpha$ is True iff there exists at least one element in the universe where $alpha$ is True.
+<br>That is, $alpha$ is True with at least one value x takes from the universe.
+
+We can think of checking universal quantifiers (on finite universes) with using a loop from Python that checks if something sets $\alpha$ to True.
+
+<p>for x in universe:
+<br>&emsp;if alpha(x):
+<br>&emsp;  &emsp; return true;
+<br>return false;
+</p>
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+3. ∃x(Px ∧ ~Ox) is True under the given interpretation.
+| *True
+| False
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+4. Select all of the formulas that are True under the given interpretation.
+| ∃x(Px ∧ Lxa)
+| *∃x(Px ∧ Lax)
+| *∃x(Px ∧ Ox)
+| ∃xPx ∧ Lba
+| ∃x(Ox ∧ Lxb) ∧ ∃x(Oy ∧ Lyb)
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+5. ∃x(Ox ∧ Lxb) ∧ ∃y(Oy ∧ Lyb) is True under the given interpretation.
+| *True
+| False
+```
+_Hint: Use the semantics to determine if ∃x(Ox ∧ Lxb) True and repeat to determine if ∃y(Oy ∧ Lyb) True._
+
+### The semantics of ∀
+
+Let $\alpha$ be any well-formed formula (wff). 
+<br>Then ∀x$\alpha$ is True iff for every element in the universe, $alpha$ is True.
+<br>That is, $alpha$ is True regardless which value x takes from the universe.
+
+We can think of checking universal quantifiers (on finite universes) with using a loop from Python that checks if something sets $\alpha$ to False.
+
+<p>for x in universe:
+<br>&emsp;if not alpha(x):
+<br>&emsp;  &emsp; return false;
+<br>return true;
+</p>
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+6. ∀x(Px ∨ ~Ox) is True under the given interpretation.
+| True
+| *False
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+7. Select all of the formulas that are True under the given interpretation.
+| *∀x(Lbx ∧ Px → Ox)
+| *∀x¬Lxa
+| ∀x(Px ∨ Lxb)
+| *∀xPx ∨ Lab
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+8. ∀x¬Lxa ∧ ∀y¬Lya is True under the given interpretation.
+| *True
+| False
+```
