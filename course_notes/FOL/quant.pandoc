@@ -5,3 +5,72 @@
 # First-Order Logic
 
 ## Quantifiers
+
+As was introduced, we have two quantifiers in our language:
+
+- The universal quantifier ∀, meaning "all", "every".
+- The existential quantifier ∃, meaning "some", "exists", "there is a".
+
+These quantifiers will quantify a specific variable. These specific variables would then be bound to the quantifier (if in scope). 
+<br> ∀xPx captures that everything in the universe satisfies the property P. 
+<br> Meanwhile ∃xPx captures that there exists something in the universe which satisfies the property P.
+
+------------------------- -----------------------------
+not ¬                     `-`, `~`
+and ∧                     `/\`,  `&`
+or ∨                      `\/`
+if then →                 `->`, `>`
+if and only if ↔          `<->`, `<>`
+universal quantifier ∀    `A`, `@`
+existential quantifier ∃  `E`, `3`
+------------------------- -----------------------------
+
+------------- ----------------------------------- ------------- --------------------------             
+$Px~~$        $x$ is a professor.             
+$Cx~~$        $x$ is a computer scientist.        $~~~~c$       Christine Paulin-Mohring
+$Ixy~~$       $x$ was influenced by $y$.          
+------------- ----------------------------------- ------------- --------------------------
+
+<br> The universe will be every person currently alive.<br>
+
+_Everyone is a computer scientist._
+<br>Cx is the only predicate being used. 
+<br>The use of the word _everyone_ with the universe being people indicates universal quantification on the property of being a computer scientist.
+<br>The statement would be translated to ∀xCx.
+
+_Someone is a professor._
+<br>Px is the only predicate being used. 
+<br>The use of the word _someone_ with the universe being people indicates existential quantification on the property of being a professor.
+<br>The statement would be translated to ∃xCx.
+
+_All computer scientists are professors._
+<br>Cx and Px are used here. 
+<br>The use of the word _all_ with the universe being people indicates universal quantification on both computer scientists and professors.
+<br>There is a conditional connective implicitly used here... 
+<br>_All computer scientists are professors_ is really stating _for all entities, if they are a computer scientist, then they are a professor_.
+<br>The statement would be translated to ∀x(Cx → Px).
+
+_Some computer scientists are professors._
+<br>Cx and Px are used here. 
+<br>The use of the word _some_ with the universe being people indicates existential quantification on both computer scientists and professors.
+<br>There is a conjunction connective implicitly used here... 
+<br>_Some computer scientists are professors_ is really stating _there is some entity that is both a computer scientist and a professor_.
+<br>The statement would be translated to ∃x(Cx ∧ Px).
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+1 ∀x(Cx -> ~Px) : Every computer scientist is not a professor.
+~~~
+
+Sometimes the quantification is implicit... 
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+2 ∀x(Cx -> ~Px) : A computer scientist is not a professor.
+~~~
+
+_Hint: "A square is a rectangle."... is this about a specific square or a general rule applied to all squares?_
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+3 ∃xWxx : Someone works with themselves.
+~~~
+
+_Hint: W takes in two variables. What is the difference between the first input and the second input of W?
