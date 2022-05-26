@@ -9,10 +9,12 @@
 _Socrates is a human. All humans are mortal. Therefore, Socrates is mortal._
 
 Converting this argument into PL would give us:
-				<p> &emsp P, Q; therefore R.</p>
-								Which is not a valid argument…
 
-	But when we look at this argument, it ought to be valid as the conclusion __follows__ from the premises.
+<p> &emsp P, Q; therefore R.</p>
+
+	Which is not a valid argument…
+
+But when we look at this argument, it ought to be valid as the conclusion __follows__ from the premises.
   
   Just like _If both 2+2=4 and 1<2, then 1+1<4__ ought to be valid as it holds mathematically. 
   
@@ -23,14 +25,17 @@ Converting this argument into PL would give us:
 
 Comparing PL with FOL
 
--------------------------------------------------   -----------------------------------------------
-__Propositional Logic__                             __First-Order Logic__                         
+---------------------------------------------------   --------------------------------------------------
+__Propositional Logic__                               __First-Order Logic__                         
                                                 
--Whole statements are abstracted as propositions.   -Statements are abstracted as subjects and verbs
--Cannot identify same object by a different name.   -Equality is introduced.
--Cannot distinguish between general and             -Statements may be quantified over all or 
-specific statements.                                some subjects in the domain.
-------------------------------------------------   -----------------------------------------------
+Whole statements are abstracted as propositions.      Statements are abstracted as subjects and verbs
+
+Cannot identify same object by a different name.      Equality is introduced.
+
+Cannot distinguish between general and                Statements may be quantified over all or 
+specific statements.                                  some subjects in the domain.
+---------------------------------------------------   --------------------------------------------------
+--------------------------------------------------------------------------------------------------------
 
 This kind of language problem in logic can also motivate tensed logic (reasoning about the past/future), 
 modal logic (reasoning about what is possible/necessary). Such variants of logic are often objects of 
