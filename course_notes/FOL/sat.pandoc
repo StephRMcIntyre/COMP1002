@@ -28,17 +28,15 @@ $B$s must have at least one object in common (they may be the same, but it is no
 
 To make $\exists x(Ax \land Bx)$ true, make sure the enxtension of
 $Ax$ and $Bx$ overlap. E.g., put `[0]` for both `A(_)` and `B(_)`.
-<br>For A(_): give the set of values in the domain which satisfies A. 
-<br>For B(_): give the set of values in the domain which satisfies B. 
+<br>For `A(_)`: give the set of values in the domain which satisfies A. 
+<br>For `B(_)`: give the set of values in the domain which satisfies B. 
+<br>Enter in a list of values for A and B such that the formula is satisfied (evaluated to True).
 
-~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none" options="strictGivens"}
 1 Ex(Ax & Bx)
 | Domain : 0,1,2,3,4
-| A : 0,1
-| B : 0,1,2
 ~~~ 
 
-Click check on the example above. 
 
 This next example is incorrect. 
 <br> Do not modify the domain. Instead change only A and/or B to get a correct answer.
@@ -46,59 +44,83 @@ This next example is incorrect.
 ~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
 2 Ex(Ax & Bx)
 | Domain : 0,2,4
-| A : 0,1
-| B : 0,1,2
+| A(_) : 0,1
+| B(_) : 0,1,2
 ~~~ 
 
 
-Find an interpretation that satisfies __both__ formulas. 
+Complete the interpretation that satisfies __both__ formulas. 
 <br>This example will illustrate that $\exists x Px$ is not the opposite of $\exists x \neg Px$.
 <br>Remember, you evaluate each formula separately. So the x in the first formula is not necessarily the same as the x in the second formula.
 
-~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none" options="strictGivens"}
 3 ExPx, Ex~Px
+| Domain : 1,2,3
 ~~~ 
 
 Find an interpretation that satisfies __both__ formulas. 
 <br>This example will illustrate that $\forall x Px$ is not the opposite of $\forall x \neg Px$.
-<br>While these two formulas are not satisfiable at the same time, if they were opposites then nor should their negated forms be satisfiable at the same time... But you will soon see this is not the case.
+<br>While these two formulas are not satisfiable at the same time, if they were opposites then their negated forms should be satisfiable at the same time... But you will soon see this is not the case.
 <br>Remember, you evaluate each formula separately. So the x in the first formula is not necessarily the same as the x in the second formula.
 
-~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none" options="strictGivens"}
 4 ~AxPx, ~Ax~Px
+| Domain : 1,2,3,4
 ~~~ 
 
 
 #### Multiple Quantifiers
 
 Remember, variables can take on anything in the domain. Two variables can point to the same element.
+<br>Click on the example below. Notice how there is no requirement that x and y are not the same element.
 
 ~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
 5 ExEy(Ax & Ay)
-| Domain : 0,1,2
-| A : 1
+| Domain : 1
+| A(_) : 1
 ~~~ 
-<br>Click on the example above. Notice how there is no requirement that x and y are not the same element.
+
 
 Find an interpretation that satisfies the formula.
 
 ~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
 6 AxAy(Bx \/ Cy)
 ~~~ 
-<br>For a more challenging variant, see if you can satisfy the formula above without having B and C be the same set.
 
-Find an interpretation that satisfies the formula.
+
+
+Here is a trickier one that builds off the last one. Find an interpretation that satisfies the formulas.
 
 ~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
-7 ExAyBxy
+7 AxAy(Bx \/ Cy), ~Ax(Bx<>Cx)
 ~~~ 
-<br>For a more challenging variant, see if you can satisfy the formula above without having B equal to Domain$^2$.
+
+Remember, binary predicates take in a pair of elements.
+<br>Find an interpretation that satisfies the formula.
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+8 ExEyBxy
+~~~ 
+
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+9 ExAyBxy
+~~~ 
+
+Here is a trickier one that builds off the last one. Find an interpretation that satisfies the formulas. 
+
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+10 ExAyBxy, ~AxAyBxy
+~~~ 
+
+
 
 Find an interpretation that satisfies __both__ formulas. 
 <br>This example will illustrate the importance of the order of the arguments for predicates.
 
 ~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
-8 ExAyByx, ~ExAyBxy
+11 ExAyByx, ~ExAyBxy
 ~~~ 
 
 
@@ -106,7 +128,7 @@ Find an interpretation that satisfies __both__ formulas.
 <br>This example will illustrate the importance of the order of mixed quantifiers.
 
 ~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
-9 AxEyBxy, ~ExAyBxy
+12 AxEyBxy, ~ExAyBxy
 ~~~ 
 
 
@@ -116,8 +138,9 @@ Find an interpretation that satisfies __both__ formulas.
 <br>Click check and think about why this is satisfied.
 
 ~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
-10 Ex(Ax->Bx)
+13 Ex(Ax->Bx)
 | Domain : 1,2,3
 | A : 
 | B :
 ~~~ 
+
