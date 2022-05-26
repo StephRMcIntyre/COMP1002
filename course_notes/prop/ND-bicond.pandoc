@@ -33,7 +33,7 @@ Fill in the applications of the rules for the following proof.
 ~~~
 
 In the next exercise, prove $C \land D$ from the premises $A
-\land B$, $A \to C$, and $B \to D$. You'll need the $\\leftrightarrow$E rule twice
+\land B$, $A \leftrightarrow C$, and $B \leftrightarrow D$. You'll need the $\leftrightarrow$E rule twice
 to justify $C$ and then $D$, but before you can use it, you have to
 prove the antecedents of the conditionals you cite. We've filled in
 some sentences and justifications; you do the rest!
