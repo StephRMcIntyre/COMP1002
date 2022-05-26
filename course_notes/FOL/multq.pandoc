@@ -7,7 +7,7 @@
 ## Multiple Quantifiers
 
 As was teased on the previous page, we can nest quantifiers. 
-Statements such as ∃x∀yRxy and ∀x(Rxx → ∃y(Ryx ∧ ¬Qy)) are perfectly acceptable in our language.
+<br>Statements such as ∃x∀yRxy and ∀x(Rxx → ∃y(Ryx ∧ ¬Qy)) are perfectly acceptable in our language.
 <br>On this page we will learn how to translate such statements.
 
 ------------------------- -----------------------------
@@ -22,7 +22,7 @@ existential quantifier ∃  `E`, `3`
 
 ------------- ----------------------------------- ------------- --------------------------             
 $Px~~$        $x$ is a professor.             
-$Cx~~$        $x$ is a computer scientist.        $~~~~c$       Christine Paulin-Mohring
+$Cx~~$        $x$ is a computer scientist.        $~~~~c~~$       Christine Paulin-Mohring
 $Ixy~~$       $x$ was influenced by $y$.  
 $Wxy~~$       $x$ worked with $y$.          
 ------------- ----------------------------------- ------------- --------------------------
@@ -43,7 +43,7 @@ _Hint: Think of how many existentials there are here and their scopes._
 2 ExEy(Cx/\Py) : There is a computer scientist and a professor.
 ~~~
 This last one doesn't require the computer scientist and professor to be the same person. 
-However, it is entirely possible that this could be the case. 
+<br>However, it is entirely possible that this could be the case. 
 <br> Remember, variables are just that, variables. If the variable x points to Christine Paulin-Mohring, the variable y can point to the same entity.
 
 ∀∀ statements such as ∀x∀yRxy means _"For every item x and every item y, Rxy is satisfied."_
@@ -53,7 +53,7 @@ However, it is entirely possible that this could be the case.
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-4 ∀x∀y(Cx/\Py->Wxy) : Every computer scientist has worked with every professor.
+4 ∀x∀y((Cx/\Py)->Wxy) : Every computer scientist has worked with every professor.
 ~~~
 _Hint: Think of what the connectives are here, then think of the quantifiers._
 
@@ -91,7 +91,7 @@ which is obviously true as we can always find a bigger one.
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
 7 ∀xEyIxy : Everyone is influenced by someone.
 ~~~
-_Hint: Don't confuse this with "Someone influenced everyone".
+_Hint: Don't confuse this with "Someone influenced everyone"._
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
 8 ∀xEyIyx : Everyone influences someone.
@@ -106,4 +106,7 @@ Other simple examples using negations:
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
 10 ~ExAyWxy : No one works with everyone. 
 ~~~
+
+
+<p>[Previous: Negating Statements](https://carnap.io/shared/srenee651@gmail.com/book-FOL-neg.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: More Translations](https://carnap.io/shared/srenee651@gmail.com/book-FOL-trans.pandoc) </p>
 
