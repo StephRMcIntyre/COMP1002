@@ -31,7 +31,7 @@ existential quantifier ∃  `E`, `3`
 
 ------------- ----------------------------------- ------------- --------------------------             
 $Px~~$        $x$ is a professor.             
-$Cx~~$        $x$ is a computer scientist.        $~~~~c$       Christine Paulin-Mohring
+$Cx~~$        $x$ is a computer scientist.        $~~~~c~~$       Christine Paulin-Mohring
 $Ixy~~$       $x$ was influenced by $y$.          
 ------------- ----------------------------------- ------------- --------------------------
 
@@ -48,6 +48,8 @@ $Ixy~~$       $x$ was influenced by $y$.
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
 3 ~Ex(Px/\Cx) : None of the professors are computer scientists.
 ~~~
+
+### Negating Formulas
 
 The main idea is to place the negation symbol infront of the statement, and push it inwards by using replacement rules. 
 
@@ -99,3 +101,5 @@ Quantifier Negation        `QN`   $\neg \exists x \alpha$⧦$\forall x\neg\alpha
 7 ¬∀x(Rxx → ∃y(Ryx ∧ ¬Qy)) :|-: 
 |¬∀x(Rxx → ∃y(Ryx ∧ ¬Qy)) :PR
 ```
+
+<p>[Previous: Quantifiers](https://carnap.io/shared/srenee651@gmail.com/book-FOL-quant.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Negating Statements](https://carnap.io/shared/srenee651@gmail.com/book-FOL-multq.pandoc) </p>
