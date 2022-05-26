@@ -37,20 +37,20 @@ Here are some more difficult translation exercises.
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-3 ∀x∀y(Cx/\Wxy->Py) : Every computer scientist has only worked with professors.
+3 ∀x∀y((Cx/\Wxy)->Py) : Every computer scientist has only worked with professors.
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-4 ∀x∀y(Px/\Cy->~Wxy) : Professors do not work with Computer Scientists.
+4 ∀x∀y((Px/\Cy)->~Wxy) : Professors do not work with Computer Scientists.
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-5 ∀x∀y(Cy/\Px->Ez(Ixz/\Iyz)) : Every computer scientist and every professor share someone they were influenced by.
+5 ∀x∀y((Cy/\Px)->Ez(Ixz/\Iyz)) : Every computer scientist and every professor share someone they were influenced by.
 ~~~
 _Hint: Three quantifiers._
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-6 ∀x(Px/\Cx->~EyIxy) : Anyone who is both a professor and a computer scientist does not have someone they were influenced by. 
+6 ∀x((Px/\Cx)->~EyIxy) : Anyone who is both a professor and a computer scientist does not have someone they were influenced by. 
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
