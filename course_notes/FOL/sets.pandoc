@@ -24,6 +24,7 @@ Example:
 | sun
 | {42}
 | *42
+| *b
 ```
 
 Items in a set have no order and duplicates do not matter.
@@ -91,4 +92,4 @@ The __Cartesian product__ of two sets A,B is denoted A✖B, and is defined as a 
 | ( 42, (moon, 1, 2) )
 ```
 
-<p>[Previous: Syntax](https://carnap.io/shared/srenee651@gmail.com/book-FOL-syntax.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Predicates](https://carnap.io/shared/srenee651@gmail.com/book-FOL-pred.pandoc) </p>
+<p>[Previous: Syntax](https://carnap.io/shared/srenee651@gmail.com/book-FOL-syntax.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Predicates](https://carnap.io/shared/srenee651@gmail.com/book-FOL-pred.pandoc) </p>
