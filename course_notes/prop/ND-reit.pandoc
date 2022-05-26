@@ -32,15 +32,17 @@ the main connective (here: $\to$I) requires as a justification. In our
 case, we will need a subproof with assumption $A$ and last line $A$.
 Now use the R rule!
 
-~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-R.1 A /\ B :|-: A
-~~~
-
 Carnap will put a $\top$ to the left of $\vdash$ if you're expected
 to give a proof with no premises at all.
 
 ~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
-R.2 :|-: A -> A
+R.1 :|-: A -> A
+~~~
+
+Here is another one for you to try.
+
+~~~{.ProofChecker .ZachTFL2019 options="indent resize render tabindent fonts" submission="none"} 
+R.2 :|-: A <-> A
 ~~~
 
 Here's another example: If $B$ is true, then $A \to B$ is true. After
