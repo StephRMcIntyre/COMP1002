@@ -29,7 +29,7 @@ These can all be expressed as predicates with constants.
 <br>Here __MUN__ is a constant and _university_ is the predicate. IsAUniversity(MUN).
 <br>Symbolically we would state let m be "MUN". Let Ux "x is a university". 
 <br>Then this translates to Um.
--   "__Kitkat__ is playing."
+-   "__Kitkat__ is _playing_."
 <br>Here __Kitkat__ is a constant and _playing_ is the predicate. IsPlaying(Kitkat).
 <br>Symbolically we would state let k be "Kitkat". Let Px "x is playing". 
 <br>Then this translates to Pk.
@@ -114,3 +114,6 @@ $Ixy~~$       $x$ was influenced by $y$.          $~~~~e$       Ernst Zermelo
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
 10 (Pd /\ Ad) -> (Cd /\ Wdc) : David Hilbert was a professor who if he were alive, then he would be a computer scientist working with Christine Paulin-Mohring.
 ~~~
+
+<p>[Previous: Sets](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sets.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Quantifiers(https://carnap.io/shared/srenee651@gmail.com/book-FOL-quant.pandoc) </p>
+
