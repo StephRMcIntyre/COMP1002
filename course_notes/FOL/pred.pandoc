@@ -81,11 +81,11 @@ if and only if ↔          `<->`, `<>`
 ------------------------- -----------------------------
 
 ------------- ----------------------------------- ------------- --------------------------
-$Ax~~$        $x$ is alive.                       $~~~~a$       Alonzo Church
-$Px~~$        $x$ is/was a professor.             $~~~~b$       Bertrand Russell
-$Cx~~$        $x$ is/was a computer scientist.    $~~~~c$       Christine Paulin-Mohring
-$Wxy~~$       $x$ work(s/ed) with $y$.            $~~~~d$       David Hilbert
-$Ixy~~$       $x$ was influenced by $y$.          $~~~~e$       Ernst Zermelo
+$Ax~~$        $x$ is alive.                       $~~~~a~~$       Alonzo Church
+$Px~~$        $x$ is/was a professor.             $~~~~b~~$       Bertrand Russell
+$Cx~~$        $x$ is/was a computer scientist.    $~~~~c~~$       Christine Paulin-Mohring
+$Wxy~~$       $x$ work(s/ed) with $y$.            $~~~~d~~$       David Hilbert
+$Ixy~~$       $x$ was influenced by $y$.          $~~~~e~~$       Ernst Zermelo
 ------------- ----------------------------------- ------------- --------------------------
 
 <br>
