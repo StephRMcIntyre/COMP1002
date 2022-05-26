@@ -27,7 +27,7 @@ existential quantifier ∃  `E`, `3`
 
 ------------- ----------------------------------- ------------- --------------------------             
 $Px~~$        $x$ is a professor.             
-$Cx~~$        $x$ is a computer scientist.        $~~~~c$       Christine Paulin-Mohring
+$Cx~~$        $x$ is a computer scientist.        $~~~~c~~$       Christine Paulin-Mohring
 $Ixy~~$       $x$ was influenced by $y$.          
 ------------- ----------------------------------- ------------- --------------------------
 
@@ -74,3 +74,7 @@ _Hint: "A square is a rectangle."... is this about a specific square or a genera
 ~~~
 
 _Hint: W takes in two variables. What is the difference between the first input and the second input of W?
+
+<p>[Previous: Predicates](https://carnap.io/shared/srenee651@gmail.com/book-FOL-pred.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Negating Statements](https://carnap.io/shared/srenee651@gmail.com/book-FOL-neg.pandoc) </p>
+
+
