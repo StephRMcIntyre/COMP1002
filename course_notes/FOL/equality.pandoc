@@ -1,0 +1,35 @@
+---
+--from markdown+simple_tables
+---
+
+# First-Order Logic
+
+## Equality Predicate
+
+A special predicate used is the equality predicate, =.
+
+Hopefully you have been exposed to this but incase you have not, x=y is T if and only if x and y are the same element.
+
+Sometimes it is expressed as =xy. Expressing it like this is what is called prefix notation. 
+<br>We will write it as x=y instead as this is familiar to most.
+
+To say x is not equal to y, we write ¬x=y or ¬(x=y). The former is accepted in Carnap. 
+<br>On tests you could also write x≠y.
+
+Unless stated otherwise, the equality predicate is always allowed to be used.
+
+Consider this interpretation, ℐ.
+
+------------- ----------------------------------- ------------- --------------------------             
+$Px:~$        $x$ is prime.                       $~~~a~~$      the number 1
+$Ox:~$        $x$ is odd.                         $~~~b~~$      the number 2
+$B~=~$        {2,3,4}
+$Lxy:~$       $x$ is less than $y$.        
+------------- ----------------------------------- ------------- --------------------------
+
+<br> U = {1,2,3,4,5}  __U denotes the universe.__
+
+
+
+
+<p>[Previous: Satisfying Formulas](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sat.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Databases](https://carnap.io/shared/srenee651@gmail.com/book-FOL-databases.pandoc) </p>
