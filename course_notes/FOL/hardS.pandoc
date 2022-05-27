@@ -1,0 +1,64 @@
+---
+--from markdown+simple_tables
+---
+
+# First-Order Logic
+
+## Harder Examples
+
+For each, determine if there exists an interpretation which satisfies the given set of sentences.
+<br>If so, give the interpretation. 
+<br>If not, explain in words why such an interpretation does not exist.
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none" options="strictGivens"}
+1 ExAy(Ay -> Bx)
+| Domain : 0,1,2,3,4
+~~~ 
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+2 AxEy(Sxy ->  Syy)
+| Domain : 0,1,2,3,4
+~~~ 
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none" options="strictGivens"}
+3 AxEy(Sxy ->  ~EzSzx)
+| Domain : 0,1,2,3,4
+~~~ 
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none" options="strictGivens"}
+4 ~ExPx -> AyPy
+| Domain : 0,1,2,3,4
+~~~ 
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+5 ExPx, EyPy
+| Domain : 0
+~~~ 
+
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+6 ~AxQxx, ExEyQxy
+| Domain : 0,1
+~~~ 
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+7 Ax(Bxx -> AyBxy)
+| Domain : 0,1,2,3,4
+~~~ 
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+8 Ax(Bxx -> ~AyBxy)
+| Domain : 0,1,2,3,4
+~~~ 
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+9 Ex(Bxx/\Ay(Byx->(~EzBzx\/Bzz)))
+| Domain : 0,1,2,3,4
+~~~ 
+
+~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
+10 Ex(Bxx/\Ay(Byx/\~Bzz->~EzBzx))
+| Domain : 0,1,2,3,4
+~~~ 
+
+<p>[Previous: Satisfying Formulas](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sat.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Harder Examples](https://carnap.io/shared/srenee651@gmail.com/book-FOL-arg.pandoc) </p>
