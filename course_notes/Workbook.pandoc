@@ -6,7 +6,6 @@
 
 ### Compiled by Steph McIntyre
 
-### Excerpts written by Rylo Ashmore
 
 
 <br>
@@ -14,7 +13,7 @@
 
 [^1]: <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">An Algorithm for Truth</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. It is written for the [carnap.io](http://carnap.io) platform.
 
-[^2]: *Acknowledgements*: Firstly, many thanks to Graham Leach-Krouse et al, for their work on [carnap.io](http://carnap.io), as this is an amazing tool. Secondly, many thanks to Richard Zach from UCalgary and the rest of the OLP team for providing these wonderful resources and guidance. Many exercises in the first two sections are either taken from his work or inspired by his work. Thirdly, thanks to Dr. Antonina Kolokolova who is an absolute pleasure to work with and many of this book is based off of her slides, just presented in a different order with some topics omitted. Fourthly, many thanks to my coworkers and other faculty members at MUN who have provided support on my endeavours, and my every patient advisor at UWaterloo. Fifthly, thank you to the students from COMP 1002 Winter 2022- you were such a fantasic group to teach and test my teaching methods on. And lastly, the students from COMP 1002 Summer 2022 who are using these notes for the first time-- good luck!
+[^2]: *Acknowledgements*: Firstly, many thanks to Graham Leach-Krouse et al, for their work on [carnap.io](http://carnap.io), as this is an amazing tool. Secondly, many thanks to Richard Zach from UCalgary and the rest of the OLP team for providing these wonderful resources and guidance. Many exercises in the first two sections are either taken from his work or inspired by his work. Thirdly, thanks to Rylo Ashmore and Dr. Antonina Kolokolova whom both heavily influenced these notes. Lastly, thank you to the students from COMP 1002 Winter 2022- you were such a fantasic group to teach and test my teaching methods on and the students from COMP 1002 Summer 2022 who are using these notes for the first time-- good luck!
 
 
 <br>
@@ -29,6 +28,16 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 <br>
 
+### Table of Contents
+
+- [Prologue](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#prologue)
+- [Propositional Logic](https://carnap.io/assignments/Testing/Workbook.pandoc#part-i-propositional-logic)
+- [First-Order Logic](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)
+- [Induction](https://carnap.io/assignments/Testing/Workbook.pandoc#part-iii-induction)
+- [Sets & Relations](https://carnap.io/assignments/Testing/Workbook.pandoc#part-iv-sets-relations)
+- [Number Theory](https://carnap.io/assignments/Testing/Workbook.pandoc#part-v-number-theory)
+- [Program Verification](https://carnap.io/assignments/Testing/Workbook.pandoc#part-vi-program-verification)
+- [Epilogue](https://carnap.io/assignments/Testing/Workbook.pandoc#epilogue)
 
 <br>
 
@@ -92,6 +101,9 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 ## Part II: First-Order Logic
 
+!!UNDER CONSTRUCTION!!
+
+
 <br>
 - [Overview](https://carnap.io/shared/srenee651@gmail.com/book-FOL-overview.pandoc)
 <br>
@@ -103,11 +115,14 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 - [Syntax](https://carnap.io/shared/srenee651@gmail.com/book-FOL-syntax.pandoc)
 - [Sets](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sets.pandoc)
 - [Predicates](https://carnap.io/shared/srenee651@gmail.com/book-FOL-pred.pandoc)
-- [Translations](https://carnap.io/shared/srenee651@gmail.com/book-FOL-trans.pandoc)
-- [Multiple Quantifiers](https://carnap.io/shared/srenee651@gmail.com/book-FOL-multq.pandoc)
-- [Interpretations](https://carnap.io/shared/srenee651@gmail.com/book-FOL-interp.pandoc)
-- [Satisfying Formulas](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sat.pandoc)
+- [Quantifiers](https://carnap.io/shared/srenee651@gmail.com/book-FOL-quant.pandoc)
 - [Negating Statements](https://carnap.io/shared/srenee651@gmail.com/book-FOL-neg.pandoc)
+- [Multiple Quantifiers](https://carnap.io/shared/srenee651@gmail.com/book-FOL-multq.pandoc)
+- [More Translations](https://carnap.io/shared/srenee651@gmail.com/book-FOL-trans.pandoc)
+- [Interpretations](https://carnap.io/shared/srenee651@gmail.com/book-FOL-interp.pandoc)
+- [Semantics](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sem.pandoc)
+- [Satisfying Formulas](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sat.pandoc)
+- [Harder Examples](https://carnap.io/shared/srenee651@gmail.com/book-FOL-hardS.pandoc)
 - [Logical Implication & Equivalence](https://carnap.io/shared/srenee651@gmail.com/book-FOL-arg.pandoc)
 - [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/book-FOL-prac1.pandoc)
 
@@ -143,6 +158,9 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 <br>
 
 ## Part III: Induction
+
+!!UNDER CONSTRUCTION!!
+
 
 <br>
 - [Overview](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
@@ -200,7 +218,9 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 <br>
 
 
-## Part IV: Sets & Relations
+## Part IV: Sets & Relations 
+
+!!UNDER CONSTRUCTION!!
 
 
 <br>
@@ -261,6 +281,8 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 ## Part V: Number Theory
 
+!!UNDER CONSTRUCTION!!
+
 
 <br>
 - [Overview](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
@@ -314,6 +336,8 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 ## Part VI: Program Verification
 
+!!UNDER CONSTRUCTION!!
+
 
 <br>
 - [Overview](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
@@ -343,6 +367,9 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 <br>
 <br>
+
+!!UNDER CONSTRUCTION!!
+
 
 ## [Epilogue](https://carnap.io/shared/srenee651@gmail.com/book-epilogue.pandoc)
 
