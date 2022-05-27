@@ -38,7 +38,7 @@ $Ax$ and $Bx$ overlap. E.g., put `[0]` for both `A(_)` and `B(_)`.
 ~~~ 
 
 
-This next example is incorrect. 
+This next example is incorrect. You can click check to see this.
 <br> Do not modify the domain. Instead change only A and/or B to get a correct answer.
 
 ~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
@@ -144,3 +144,4 @@ Find an interpretation that satisfies __both__ formulas.
 | B :
 ~~~ 
 
+<p>[Previous: Semantics](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sem.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Harder Examples](https://carnap.io/shared/srenee651@gmail.com/book-FOL-hardS.pandoc) </p>
