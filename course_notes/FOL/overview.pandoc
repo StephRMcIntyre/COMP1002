@@ -10,17 +10,17 @@ _Socrates is a human. All humans are mortal. Therefore, Socrates is mortal._
 
 Converting this argument into PL would give us:
 
-<p> &emsp P, Q; therefore R.</p>
+<p> &emsp; P, Q; therefore R.</p>
 
 	Which is not a valid argument…
 
 But when we look at this argument, it ought to be valid as the conclusion __follows__ from the premises.
   
-  Just like _If both 2+2=4 and 1<2, then 1+1<4__ ought to be valid as it holds mathematically. 
+Just like _If both 2+2=4 and 1<2, then 1+1<4_ ought to be valid as it holds mathematically. 
   
   How are we going to determine if an arithmetic statement is valid or not if we cannot adequately express arithmetic in our logical system???
   
-  Well, it turns out the PL is not _expressible_ enough to handle __all__, __exists__, or __predicates__.
+Well, it turns out the PL is not _expressible_ enough to handle __all__, __exists__, or __predicates__.
 	So we are going to extend PL to what is called First-Order Logic (FOL).
 
 Comparing PL with FOL
