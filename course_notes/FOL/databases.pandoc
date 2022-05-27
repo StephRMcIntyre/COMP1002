@@ -32,7 +32,7 @@ In databases, a relation is a “table” with rows and columns.
 <br>Columns are called attributes. Rows are instances of the relation.
 
 __Instructor Relation__
-<br>Instructor(id,first_name,last_name) : Txyz
+<br>Instructor(id,first name,last name) : Txyz
 <table>
   <tr>    
   	<td>id</td>
@@ -122,16 +122,24 @@ For example, we can ask for all the first names of the instructors.
 <br>So the query is { f | ∃x∃yTxfy }.
 <br>The answer set for this query is {Steph, Antonina, Adrian}.
 
+For example, we can ask for all the first and last names of the instructors, last names appearing first.
+<br>There are two free variables, the first names which we will call f, and the last names which we will call l.
+<br>Then we want every f and l that is in a row in the Instructor table.
+<br>$~~~$This means there exists some id that accompanies it in the row: ∃xTxfl.
+<br>Since we want the last names to appear first, we will have the tuple look like (l,f).
+<br>So the query is { (l,f) | ∃x∃yTxfy }.
+<br>The answer set for this query is {(McIntyre,Steph), (Kolokolova,Antonina), (Fiech,Adrian)}.
+
 Let's add another table instance to the database.
 
-__Instructor Relation__
-<br>Section(section_id,course_code,instructor_id) : Sxyz
+__Section Relation__
+<br>Section(section id, course code, instructor id) : Sxyz
 <br>
 <table>
   <tr>    
-  	<td>section_id</td>
-    <td>course_code</td>
-    <td>instructor_id</td>
+    <td>section id</td>
+    <td>course code</td>
+    <td>instructor id</td>
   </tr><tr>
     <td>001</td>
     <td>COMP 1002</td>
@@ -149,6 +157,8 @@ __Instructor Relation__
   </tr>
 </table>
 
+<br>
+
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
 4. Which element is in the answer set for { (u,v) | ∃x(T(x,Steph,McIntyre) ∧ Sxvu) }?
 | 123456789
@@ -158,11 +168,31 @@ __Instructor Relation__
 ```
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-5. How many unique elements/answers are in the answer set for { (u,v) | ∃x(T(x,Steph,McIntyre) ∧ Sxvu) }?
+5. How many unique elements are in the answer set for { (u,v) | ∃x(T(x,Steph,McIntyre) ∧ Sxvu) }?
 | 0
 | 1
 | *2
 | 3
+```
+
+Let's assume that the Section Relation describes all of the courses being taught right now.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+6. Which query captures "All the last names of the instructors currently not teaching a course."?
+| { n | ∃x∃y(Txny ∧ ¬∃u∃v Suvx) }
+| *{ n | ∃x∃y(Txyn ∧ ∀u∀v∀w(Suvw → ¬(w = x))) }
+| { n | ∀x∀y(Txyn ∧ ¬∃u∃v Suvx) }
+| { n | ∀x∀y(Txyn → ∃u∃v∃w(Suvw ∧ ¬(w = x))) }
+```
+Note: There could be other ways to express the query from Q6. In fact, one of the incorrect selections had only a minor error.
+
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+7. Select all of the elements in the answer set for Q6.
+| *Fiech
+| (Kolokolova,Antonina)
+| McIntyre
+| Anthony
 ```
 
 </body>
