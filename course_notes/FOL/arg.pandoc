@@ -1,0 +1,123 @@
+---
+--from markdown+simple_tables
+---
+
+# First-Order Logic
+
+## Logical Equivalence
+
+Let $\alpha$ and $\beta$ be wffs.
+
+$\alpha$⧦$\beta$ iff both $\alpha \models \beta$ and $\beta \models \alpha$.
+
+Some common equivalences are:
+
+∃xPx⧦$\neg$∀x$\neg$Px
+<br>∀xPx⧦$\neg$∃x$\neg$Px
+<br>∀x(Px∧Qx)⧦∀xPx∧∀xQx
+<br>∃x(Px∧Qx)⧦∃xPx∨∃xQx
+
+## Logical Implication 
+
+Logical Implication in FOL is just an extension of the PL variant.
+
+For a set of premises $\alpha$, conclusion $\beta$, we may write $\alpha\models\beta$ if and only if 
+for every interpretation ℐ making every statement in $\alpha$ True, 
+							$\beta$ is also True under that same interpretation.
+              
+In other words, there does not exist an interpretation ℐ such that every statement in $\alpha$ is True but the conclusion is False.
+<br>If such an interpretation exists, then we say $\alpha$⊭$\beta$.
+
+### Showing ⊭
+
+To show that $\alpha$⊭$\beta$, we need to give an interpretation which sets the premises to True and the conclusion to False.
+
+For example, show that $Pa$⊭$Pb$.
+<br>I will choose the following interpretation ℐ:
+<br>U={1,2}, ℐ(a)=1, ℐ(b)=2, ℐ(P)={1}.
+<br>Then ℐ(Pa)=T and ℐ(Pb)=F.
+
+For example, show that $\exists x Px$⊭$\forall x Px$.
+<br>I will choose the following interpretation ℐ:
+<br>U={1,2}, ℐ(P)={1}.
+<br>Then ℐ($\exists x$ Px)=T as there is an element in the universe in the truth set of P ℐ$[$x->1$]$(Px)=T, 
+<br>but ℐ($\forall x$ Px)=F as there is an element not in the truth set of P ℐ$[$x->2$]$(Px)=F.
+
+For each of the following, show that the logical implication does not hold.
+<br>That is, give the counterexample interpretation.
+<br>Note: the domain auto-defaults to the set of 0. This can be changed.
+
+~~~{.CounterModeler .Validity system="thomasBolducAndZachFOL" submission="none" options="double-turnstile"}
+1 ExSx :|-: Sa
+~~~
+
+~~~{.CounterModeler .Validity system="thomasBolducAndZachFOL" submission="none" options="double-turnstile"}
+2 Ax(Px\/~Px) :|-: AxPx \/ Ax~Px
+~~~
+
+~~~{.CounterModeler .Validity system="thomasBolducAndZachFOL" submission="none" options="double-turnstile"}
+3 ExPx/\ExQx :|-: Ex(Px /\ Qx)
+~~~
+
+~~~{.CounterModeler .Validity system="thomasBolducAndZachFOL" submission="none" options="double-turnstile"}
+4 AxEyFxy :|-: AxEyFyx
+~~~
+
+~~~{.CounterModeler .Validity system="thomasBolducAndZachFOL" submission="none" options="double-turnstile"}
+5 ExAyFxy :|-: AyExFxy
+~~~
+
+~~~{.CounterModeler .Validity system="thomasBolducAndZachFOL" submission="none" options="double-turnstile"}
+6 Ex(Px->Qx) :|-: ExQx \/ ExPx
+~~~
+
+~~~{.CounterModeler .Validity system="thomasBolducAndZachFOL" submission="none" options="double-turnstile"}
+7 Ax(Px->Qx) :|-: ExQx \/ ExPx
+~~~
+
+~~~{.CounterModeler .Validity system="thomasBolducAndZachFOL" submission="none" options="double-turnstile"}
+8 Ex(Px->Qx) :|-: ~Ex(Px/\~Qx)
+~~~
+
+### Showing ⊨
+
+We want to make a semantic argument to show $\alpha$⊨$\beta$. 
+<br>Since we know the definition of logical implication for FOL, we __cannot__ pick a _specific_ interpretation. We must pick an arbitrary interpretation which sets the premises to True.
+<br>By arbitrary we mean one where we know _nothing_ about it except that it sets the premises to True.
+<br>We don't know the universe, we don't know the interpretation of the predicates or constant symbols. 
+
+For example, show that ∀yPy⊨∃yPy.
+<br> Let ℐ be an arbitrary interpretation which sets the premise to True. Meaning ℐ(∀yPy)=T.
+<br> $~~~$ Since ℐ(AyPy)=T, then for every d∈U ℐ$[$y->d$]$(Py)=T by definition of ∀.
+<br> $~~~$ As every d∈U ℐ$[$y->d$]$(Py)=T and our universe is non-empty, then there must be some d∈U ℐ$[$y->d$]$(Py)=T.
+<br> $~~~$ Because there must be some d∈U ℐ$[$y->d$]$(Py)=T, then by definition of ∃, ℐ(∃yPy)=T.
+<br>Since ℐ was arbitrary, then any interpretation which sets ∀yPy=T must then set ∃yPy=T.
+<br>Therefore, ∀yPy⊨∃yPy.
+
+
+We are also permitted to use known or previously proven logical equivalences to simplify our statements with logical implication.
+
+For example, show that ¬¬∀yPy⊨¬∃x¬Px.
+<br>¬¬∀yPy⧦∀yPy by double negation,
+<br>¬∃x¬Px⧦∀yPy as given above at the top of this page.
+<br>Since ¬¬∀yPy⧦∀yPy⧦¬∃x¬Px, then ¬¬∀yPy⧦¬∃x¬Px.
+<br>By definition of ⧦, ¬¬∀yPy⊨¬∃x¬Px and ¬∃x¬Px⊨¬¬∀yPy.
+<br>Therefore ¬¬∀yPy⊨¬∃x¬Px.
+
+You can also blend the two techniques. 
+
+For example, show that $\neg$∃yPy⊨$\neg$∀xPx.
+<br> Using the premise, ¬∃yPy⧦∀y¬Py by negation of ∃.
+<br> Using the conclusion, ¬∀xPx⊨∃x¬Px by negation of ∀.
+<br> It suffices to now show that ∀y¬Py⊨∃x¬Px.
+<br> Let ℐ be an arbitrary interpretation which sets the premise to True. Meaning ℐ(∀y¬Py)=T.
+<br> $~~~$ Since ℐ(Ay¬Py)=T, then for every d∈U ℐ$[$y->d$]$(¬Py)=T by definition of ∀.
+<br> $~~~$ℐ$[$y->d$]$(y)=d and ℐ$[$x->d$]$(x)=d and both x and y are not quantified, 
+<br>$~~~$$~~~$then we can replace the y with x to get every d∈U ℐ$[$x->d$]$(¬Px)=T.
+<br> $~~~$By the statement above and the fact that the universe is non-empty, 
+<br>$~~~$$~~~$then there must be some d∈U ℐ$[$x->d$]$(¬Px)=T.
+<br> $~~~$ Because there must be some d∈U ℐ$[$x->d$]$(¬Px)=T, then by definition of E, ℐ(Ex¬Px)=T.
+<br>Since ℐ was arbitrary, then any interpretation which sets ∀y¬Py=T must then set Ex¬Px=T.
+<br>Therefore, ∀y¬Py⊨Ex¬Px.
+
+<p>[Previous: Harder Examples](https://carnap.io/shared/srenee651@gmail.com/book-FOL-hardS.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Natural Deduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND.pandoc) </p>
