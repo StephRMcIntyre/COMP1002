@@ -52,12 +52,12 @@ For each, determine if there exists an interpretation which satisfies the given 
 ~~~ 
 
 ~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
-9 Ex(Bxx/\Ay(Byx->(~EzBzx\/Bzz)))
+9 Ex(Bxx/\Ay(Byx->(~EzBzx\/Byy)))
 | Domain : 0,1,2,3,4
 ~~~ 
 
 ~~~{.CounterModeler .Simple system="thomasBolducAndZachFOL" submission="none"}
-10 Ex(Bxx/\Ay(Byx/\~Bzz->~EzBzx))
+10 Ex(Bxx/\Ay((Byx/\~Byy)->~EzBzx))
 | Domain : 0,1,2,3,4
 ~~~ 
 
