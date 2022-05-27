@@ -4,109 +4,221 @@
 
 # First-Order Logic
 
-## Satisfying Formulas
+## Semantics
 
 The semantics of the connectives were discussed in PL and remain unchanged. 
-<br>The only things left to discuss are the semantics of the quantifiers...
+<br>The only things left to discuss are the semantics of the [Constants](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sem.pandoc#constants), [Variables](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sem.pandoc#variables), [Predicates](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sem.pandoc#predicates) and [Quantifiers](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sem.pandoc#quantifiers)...
 
-------------------------- -----------------------------
-not ¬                     `-`, `~`
-and ∧                     `/\`,  `&`
-or ∨                      `\/`
-if then →                 `->`, `>`
-if and only if ↔          `<->`, `<>`
-universal quantifier ∀    `A`, `@`
-existential quantifier ∃  `E`, `3`
-------------------------- -----------------------------
+Consider this interpretation, ℐ.
 
 ------------- ----------------------------------- ------------- --------------------------             
-$Px~~$        $x$ is prime.                       a             the number 1
-$Ox~~$        $x$ is odd.                         b             the number 2
-$Lxy~~$       $x$ is less than $y$.          
+$Px:~$        $x$ is prime.                       $~~~a~~$      the number 1
+$Ox:~$        $x$ is odd.                         $~~~b~~$      the number 2
+$B~=~$        {2,3,4}
+$Lxy:~$       $x$ is less than $y$.     
+$Sxy:~$       $x$ is equal to $y$.            
 ------------- ----------------------------------- ------------- --------------------------
 
-<br> The universe will be the positive integers.
+<br> U = {1,2,3,4,5}  __U denotes the universe.__
+
+### Constants
+
+Each constant is mapped to a value in the universe.
+<br> For constant c, ℐ(c) = d where d∈U.
+<br> As we see in our interpretation, ℐ(a) = 1.
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-1. Select the formula that is True under the given interpretation.
+1. ℐ(b) =
+| 1
+| *2
+| ℐ(x)
+| d
+```
+
+### Variables
+
+Each free-variable is mapped to a value in the universe.
+<br> ℐ$[$x->d$]$(x), means the interpretation of variable x, but x is associated with d∈U. 
+
+Formally, we can define this as:
+<br> $~~~~~$ℐ$[$x->d$]$(y) = d $~~~~~~~~~$ if y is identical to x,
+<br> $~~~~~$ℐ$[$x->d$]$(y) = ℐ(y) $~~~$ otherwise
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+2. ℐ[x->1](x) =
+| *1
+| 2
+| ℐ(x)
+| d
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+3. ℐ[x->1](y) =
+| 1
+| 2
+| *ℐ(y)
+| d
+```
+
+<br> Additionally, when we evaluate wffs with quantifiers, we will need to map variables in the subformulas to values in the universe.
+<br> ℐ$[$x->d$]$($\alpha$), means variables x in $\alpha$ is associated with d∈U. 
+<br> ℐ$[$x->c$][$y->d$]$($\alpha$), means variable in $\alpha$ is associated with c∈U and variable y in $\alpha$ is associated with d∈U. 
+<br> However, when an interpretation (with or without a variable assignment) is applied to wffs, we get T or F.
+
+### Predicates
+
+#### Truth-Sets
+
+Each predicate under an interpretation has a truth-set. 
+<br>This is the set of all inputs which evaluates the predicate to True and is a subset of U$^n$ where n is the arity of the predicate.
+
+For instance, the truth-set for ℐ(P) is {2,3,5} as these are all of the prime numbers in our universe.
+<br>P has arity 1 and thus P⊆U. Note: 7∉P, even though 7 is a prime number. This is because 7∉U and P⊆U. 
+
+Sometimes you will be given a description for a predicate, such as $Px$ means $x$ is prime, and sometimes it will just be the truth-set.
+<br>For instance, in the interpretation, instead of a description, the truth-set for ℐ(B) is given as {2,3,4}. 
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+4. Select the truth-set for ℐ(O).
+| {1,2,3,4,5}
+| {1,3}
+| *{1,3,5}
+| {1,3,5,7}
+```
+
+When dealing with predicates whose arity is larger than 1, we need to result to pairs (if arity is 2) or tuples.
+<br> Remember, the order for pairs/tuples matters!
+
+For instance, the truth-set for ℐ(L) is going to contain every pair of number (x,y) where x<y.
+<br>ℐ(L) = {(1,2),(1,3),(1,4),(1,5),(2,3),(2,4),(2,5),(3,4),(3,5),(4,5)}.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+5. Select the truth-set for ℐ(S).
+| {1, 2, 3, 4, 5}
+| {(1,1)}
+| {{1,1}, {2,2}, {3,3}, {4,4}, {5,5}}
+| *{(1,1), (2,2), (3,3), (4,4), (5,5)}
+```
+#### Truth Evaluation of Wffs
+
+Truth evaluation of n-ary predicate P: __ ℐ(P$t_1...t_n$)=T if and only if ℐ($t_1...t_n$)∈ℐ(P).__
+
+Let's evaluate Pa.
+<br>ℐ(a)=1. 1∉P. Therefore ℐ(Pa)=F.
+
+Let's evaluate Bb.
+<br>ℐ(b)=2. 2∈B. Therefore ℐ(Pa)=T.
+
+Let's evaluate Saa.
+<br>ℐ(a)=1. (1,1)∈S. Therefore ℐ(Saa)=T.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+6. Select the predicate that is True under the given interpretation.
 | *Lab
 | Lba
 ```
 
+When a wff has connectives, we handle them with the semantic definitions from PL.
+
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-2. Select all of the formulas that are True under the given interpretation.
+7. Select all of the formulas that are True under the given interpretation.
 | Pb
 | Ob ∨ Pa
 | *Pb → Lba
 | *Pa ∧ ¬Lba
 ```
 
-### The semantics of ∃
+We can even evaluate these with variable assignments. 
+<br> For example, ℐ$[$x->1$]$(Px)=F as ℐ$[$x->1$]$(x)=1 and 1∉P.
+<br> For example, ℐ$[$x->1$][$y->2$]$(Lxy)=T as ℐ$[$x->1$][$y->2$]$(x)=1, ℐ$[$x->1$][$y->2$]$(y)=2, and (1,2)∈L.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+8. Select all of the formulas that are True under the given interpretation.
+| Pb
+| Ob ∨ Pa
+| *Pb → Lba
+| *Pa ∧ ¬Lba
+```
+
+### Quantifiers
+
+#### The semantics of ∃
 
 Let $\alpha$ be any well-formed formula (wff). 
-<br>Then ∃x$\alpha$ is True iff there exists at least one element in the universe where $alpha$ is True.
+<br>Then ℐ(∃x$\alpha$) is True iff __there exists at least one element__ d∈U ℐ$[$x->d$]$($\alpha$) is True.
 <br>That is, $alpha$ is True with at least one value x takes from the universe.
+<br>An element that makes an existential statement True is often called a _witness_.
 
-We can think of checking universal quantifiers (on finite universes) with using a loop from Python that checks if something sets $\alpha$ to True.
+We can think of checking existential quantifiers (on finite universes) with using a loop from Python that checks if something in our universe sets $\alpha$ to True.
 
-<p>for x in universe:
-<br>&emsp;if alpha(x):
-<br>&emsp;  &emsp; return true;
-<br>return false;
+<p>for d in universe:
+<br>&emsp;if ℐ$[$x->d$]$($\alpha$(x)) == True:
+<br>&emsp;  &emsp; return True
+<br>return False
 </p>
 
+For example, ℐ(∃xPx)=T as ℐ$[$x->2$]$(Px)=T.
+
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-3. ∃x(Px ∧ ~Ox) is True under the given interpretation.
+9. Evaluate ℐ(∃x(Px ∧ ~Ox))
 | *True
 | False
 ```
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-4. Select all of the formulas that are True under the given interpretation.
-| ∃x(Px ∧ Lxa)
-| *∃x(Px ∧ Lax)
-| *∃x(Px ∧ Ox)
-| ∃xPx ∧ Lba
-| ∃x(Ox ∧ Lxb) ∧ ∃x(Oy ∧ Lyb)
+10. Select all of the formulas that are True under the given interpretation.
+| ℐ(∃x(Px ∧ Lxa))
+| *ℐ(∃x(Px ∧ Lax))
+| *ℐ(∃x(Px ∧ Ox))
+| ℐ(∃xPx ∧ Lba)
+| ℐ((∃x(Ox ∧ Lxb) ∧ ∃x(Oy ∧ Lyb))
 ```
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-5. ∃x(Ox ∧ Lxb) ∧ ∃y(Oy ∧ Lyb) is True under the given interpretation.
+11. Evaluate ℐ(∃x(Ox ∧ Lxb) ∧ ∃y(Oy ∧ Lyb)).
 | *True
 | False
 ```
 _Hint: Use the semantics to determine if ∃x(Ox ∧ Lxb) True and repeat to determine if ∃y(Oy ∧ Lyb) True._
 
-### The semantics of ∀
+#### The semantics of ∀
 
 Let $\alpha$ be any well-formed formula (wff). 
-<br>Then ∀x$\alpha$ is True iff for every element in the universe, $alpha$ is True.
-<br>That is, $alpha$ is True regardless which value x takes from the universe.
+<br>Then ℐ(∀x$\alpha$) is True iff __for every element__ d∈U ℐ$[$x->d$]$($\alpha$) is True.
+<br>That is, $\alpha$ is True regardless which value x takes from the universe.
+<br>In other words, there is no element d∈U such that ℐ$[$x->d$]$($\alpha$) is False.
+<br>An element that makes a universal statement False is often called a _counterexample_.
 
-We can think of checking universal quantifiers (on finite universes) with using a loop from Python that checks if something sets $\alpha$ to False.
+We can think of checking universal quantifiers (on finite universes) with using a loop from Python that checks if something in our universe sets $\alpha$ to False.
 
-<p>for x in universe:
-<br>&emsp;if not alpha(x):
-<br>&emsp;  &emsp; return false;
-<br>return true;
+<p>for d in universe:
+<br>&emsp;if ℐ$[$x->d$]$($\alpha$(x))==False:
+<br>&emsp;  &emsp; return False
+<br>return True
 </p>
 
+For example, ℐ(∀xPx)=F as ℐ$[$x->1$]$(Px)=F.
+
+For example, ℐ(∀xSxx)=T as ℐ(S) is the set of all pairs (d,d) where d∈U.
+
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-6. ∀x(Px ∨ ~Ox) is True under the given interpretation.
+12. Evaluate ℐ(∀x(Px ∨ ~Ox)).
 | True
 | *False
 ```
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-7. Select all of the formulas that are True under the given interpretation.
-| *∀x(Lbx ∧ Px → Ox)
-| *∀x¬Lxa
-| ∀x(Px ∨ Lxb)
-| *∀xPx ∨ Lab
+13. Select all of the formulas that are True.
+| *ℐ(∀x(Lbx ∧ Px → Ox))
+| *ℐ(∀x¬Lxa)
+| ℐ(∀x(Px ∨ Lxb))
+| *ℐ(∀xPx ∨ Lab)
 ```
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-8. ∀x¬Lxa ∧ ∀y¬Lya is True under the given interpretation.
+14. Evaluate ℐ(∀x¬Lxa ∧ ∀y¬Lya).
 | *True
 | False
 ```
+
+<p>[Previous: Interpretations](https://carnap.io/shared/srenee651@gmail.com/book-FOL-interp.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Satisfying Formulas](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sat.pandoc) </p>
