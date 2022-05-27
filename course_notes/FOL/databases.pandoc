@@ -1,12 +1,169 @@
 ---
 --from markdown+simple_tables
 ---
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
 
 # First-Order Logic
 
 ## Databases
-# Relational Databases: 
-# In databases, a relation is a “table” with rows and columns. Columns are called attributes. Rows are instances of the relation.
-# Typically each table has a primary key. This key uniquely identifies the row.
-# For example, Instructor Relation may have the primary key be Employee Number
-# 
+
+
+In databases, a relation is a “table” with rows and columns. 
+<br>Columns are called attributes. Rows are instances of the relation.
+
+__Instructor Relation__
+<br>Instructor(id,first_name,last_name) : Txyz
+<table>
+  <tr>    
+  	<td>id</td>
+    <td>first_name</td>
+    <td>last_name</td>
+  </tr><tr>
+    <td>123456789</td>
+    <td>Steph</td>
+    <td>McIntyre</td>
+  </tr>
+  <tr>
+    <td>234567890</td>
+    <td>Antonina</td>
+    <td>Kolokolova</td>
+  </tr>
+  <tr>
+    <td>345678901</td>
+    <td>Adrian</td>
+    <td>Fiech</td>
+  </tr>
+</table>
+
+The above table is an instance or interpretation of the Instructor Relation with three attributes: employee id, last name, and first name.
+<br>The truth-set for this relation is {(123456789,Steph,McIntyre), (234567890,Antonina,Kolokolova), (345678901,Adrian,Fiech)}.
+<br>This means that under this interpretation, Instructor(234567890,Kolokolova,Antonina)=F, but Instructor(234567890,Antonina,Kolokolova)=F
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. Select all of the wffs that are True in the above table. The universe is all possible strings/integers.
+| *Instructor(123456789,Steph,McIntyre)
+| Instructor(123456789,Adrian,Fiech)
+| Instructor(345678901,Fiech,Adrian)
+| Instructor(Antonina,Antonina,Antonina)
+```
+
+We can also evaluate more complex statements over this table.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Select all of the wffs that are True in the above table. The universe is all possible strings/integers.
+| *∃x∃y∃z Instructor(x,y,z)
+| ∀x∀y∀z Instructor(x,y,z)
+| *∃x∃y (Instructor(x,y,Fiech) ∨ Instructor(x,y,Anthony))
+| *∀x∀y(Instructor(x,Antonina,y) → ¬∃z Instructor(x,z,Fiech))
+```
+
+Typically each table has a primary key. This key uniquely identifies the row.
+<br>For example, Instructor table may have the primary key be id, meaning given an id we can determine the last and first name of the individual.
+
+A __database__ is a __set of relations__.
+<br>These are usually related to each other, captured by the database schema which can be expressed in FOL.
+
+<img src="https://carnap.io/shared/srenee651@gmail.com/DB.png" alt="DB Sample">
+
+The above diagram illustrates there are three tables in our database: Instructor, Section, and Course.
+<br>The Instructor table has three attributes, in order: ID, First Name, Last Name.
+<br>$~~~~~$There is a primary key for Instructor which is the ID.
+<br>The Course table has two attributes, in order: Course Code and Department.
+<br>$~~~~~$There is a primary key for Course which is the Course Code.
+<br>The Section table has three attributes, in order: Section Number, Course Code, and Instructor ID.
+<br>$~~~~~$There is a primary key for Section which is the pair (Section Number, Course Code).
+<br>$~~~~~$Instructor ID refers to the ID from the Instructor table.
+<br>$~~~~~$Course Code refers to the Course Code from the Course table.
+
+Here are some statements that can be captured in FOL:
+<br> Every section has an instructor: ∀x∀y∀z(Sxyz->∃u∃vTzuv)
+<br> Every Instructor’s ID is unique: ∀x∀y$_1$∀y$_2$∀z$_1$∀$z_2$(Txy$_1$z$_1$ ∧ Txy$_2$z$_2$ → y$_1$=y$_2$ ∧ z$_1$=z$_2$)
+
+Capture the following in FOL:
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+3 ∀x∀y∀z(Sxyz->∃uCyu) : Every section has a course code. 
+~~~
+
+### Queries
+
+Queries are questions posed to the database. 
+<br>More formally, queries are _sets of tuples_ that satisfy a wff.
+
+We discussed a lot about sentences. We can think that a query is a wff that is not a sentence, and it is returning the sets of tuples of values that the free variables can take to satisfy the wff.
+
+Generally, a query looks like:
+<br>{ (tuple of all the free variables, in the order you want) | wff that is not a sentence }
+
+For example, we can ask for all the first names of the instructors.
+<br>There is only one free variable, the first names, so let's call this f.
+<br>Then we want every f that is in a row in the Instructor table.
+<br>$~~~$This means there exists some id and last name that accompanies it in the row: ∃x∃yTxfy.
+<br>So the query is { f | ∃x∃yTxfy }.
+<br>The answer set for this query is {Steph, Antonina, Adrian}.
+
+Let's add another table instance to the database.
+
+__Instructor Relation__
+<br>Section(section_id,course_code,instructor_id) : Sxyz
+<br>
+<table>
+  <tr>    
+  	<td>section_id</td>
+    <td>course_code</td>
+    <td>instructor_id</td>
+  </tr><tr>
+    <td>001</td>
+    <td>COMP 1002</td>
+    <td>123456789</td>
+  </tr>
+  <tr>
+    <td>002</td>
+    <td>COMP 1002</td>
+    <td>123456789</td>
+  </tr>
+  <tr>
+    <td>001</td>
+    <td>COMP 3600</td>
+    <td>234567890</td>
+  </tr>
+</table>
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+4. Which element is in the answer set for { (u,v) | ∃x(T(x,Steph,McIntyre) ∧ Sxvu) }?
+| 123456789
+| (001,COMP 1002)
+| *(COMP 1002,002)
+| (123456789,001,COMP 1002)
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+5. How many unique elements/answers are in the answer set for { (u,v) | ∃x(T(x,Steph,McIntyre) ∧ Sxvu) }?
+| 0
+| 1
+| *2
+| 3
+```
+
+</body>
+</html>
