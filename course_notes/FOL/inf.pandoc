@@ -1,0 +1,55 @@
+---
+--from markdown+simple_tables
+---
+
+# First-Order Logic
+
+## Informal Proofs
+
+As warned earlier, the formalities of Natural Deduction will now be dropped.
+<br>We still want to keep those rules in mind, but now we no longer need the diagram, the rule and line justifications, nor listing all the givens at the beginning.
+<br>Sometimes we will even use math in our proofs.
+
+Example 1: 
+<br>Premises/Givens: An integer n is even if and only if there exists an integer k such that n=2k.
+<br>Conclusion: There exists an even integer.
+<br>_Note: We want to prove an existential statement on the property even._
+<br>Proof:
+<br>$~~~~~~~~~~$2 is an integer. 
+<br>$~~~~~~~~~~$By definition, an integer n is even if and only if there exists an integer k such that n=2k.
+<br>$~~~~~~~~~~~~~~~~~~~~$_Notice how the above statement is implicitly universally quantified._
+<br>$~~~~~~~~~~$Since 2=2*1, then there exists an integer k such that 2=2k.
+<br>$~~~~~~~~~~~~~~~~~~~~$_The 1 was generalized as a k._
+<br>$~~~~~~~~~~$As there exists an integer k such that 2=2k, then it follows that 2 is even.
+<br>$~~~~~~~~~~~~~~~~~~~~$_We did universal elimination on the definition replacing n with 2, then bicondition elimination._
+<br>$~~~~~~~~~~$Therefore there exists an even integer.
+
+When asked to give a proof, once a definition is known, it usually is not given as a premise. 
+
+Example 2:  Prove that if integer n is even, then n$^2$ is even.
+<br>Proof:
+<br>_Note: We want to prove a universal statement on a conditional._
+<br>$~~~~~~~~~~$Suppose n is an even integer. 
+<br>$~~~~~~~~~~~~~~~~~~~~$_Assume the antecedent with an arbitrary even integer._
+<br>$~~~~~~~~~~$Since n is even, then there exists an integer k such that n=2k.
+<br>$~~~~~~~~~~~~~~~~~~~~$_Used the definition of an even integer._
+<br>$~~~~~~~~~~$Squaring both sides we get n$^2$=(2k)$^2$.
+<br>$~~~~~~~~~~$(2k)$^2$=4k$^2$=2(2k$^2$), by algebra and factoring out the 2.
+<br>$~~~~~~~~~~$2k$^2$ is an integer and n$^2$=2(2k$^2$), so there exists an integer j n$^2$=2j.
+<br>$~~~~~~~~~~~~~~~~~~~~$_Existential introduction._
+<br>$~~~~~~~~~~$Then it follows that n$^2$ is even.
+<br>$~~~~~~~~~~~~~~~~~~~~$_Biconditional elimination._
+<br>$~~~~$Therefore if integer n is even, then n$^2$ is even.
+<br>$~~~~~~~~~~~~~~~~~~~~$_Conditional introduction and, since n was arbitrary, universal introduction._
+
+Definition of odd: An integer n is odd if and only if there exists an integer k such that n=2k+1.
+
+Using only basic math and the definitions of even/odd, prove the following: 
+
++ The square of an odd integer is odd. 
++ No integer is both even and odd.
++ For any integers m,n, the product of m and n is even if and only if m or n is even.
++ For all integers x, there exists an integer y such that xy = 0.
++ If integer n$^2$ is even, then n is even.
+
+<p>[Previous: Soundness & Completeness](https://carnap.io/shared/srenee651@gmail.com/book-FOL-SC.pandoc)&emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp; [Next: Bad Informal Proofs](https://carnap.io/shared/srenee651@gmail.com/book-FOL-badinf.pandoc)</p>
