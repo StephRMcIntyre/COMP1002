@@ -29,8 +29,8 @@ then m is the line where the subproof (with the arbitrary assumption) begins suc
 
 Exercise: Enter the justifications for the proof below.
 
-~~~{.ProofChecker .thomasBolducAndZachFOL options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-1 ExPx, Qa :|-: Ex(Px/\Qa)
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+1 ExPx, Qa :|-: Ex (Px /\ Qa)
 | ExPx :PR
 | Qa :PR
 |     Pb :AS
@@ -45,7 +45,7 @@ Notice how the above proof eliminated the existential quantifier from ∃xPx, bu
 The below proof is incorrect as b is not fresh in the assumption of the subproof as b occurs in scope at that line. 
 <br>Fix and complete the proof.
 
-~~~{.ProofChecker .thomasBolducAndZachFOL options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 2 ExQxb :|-: EyQyb
 | ExQxb :PR
 |     Qbb :AS
@@ -55,7 +55,7 @@ The below proof is incorrect as b is not fresh in the assumption of the subproof
 
 Here is one that makes use of all the FOL ND rules we have learned so far. 
 
-~~~{.ProofChecker .thomasBolducAndZachFOL options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 3 Ax(Px→Qxa),ExPx :|-: ExAyQyx
 ~~~
 
@@ -63,5 +63,3 @@ Note: The above proof captures the example: “All penguins are birds. There is 
 
 
 <p>[Previous: Universal Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ui.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Equality Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-eqi.pandoc) </p>
-
-
