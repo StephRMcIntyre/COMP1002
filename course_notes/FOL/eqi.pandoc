@@ -14,11 +14,13 @@ In FOL, we can get the statement that constant t is equal to constant t (written
 To denote Equality Introduction in Carnap, we would write the justification `:=I`. 
 <br>There are no lines to cite as this is an axiom.
 
-Exercise: Finish the proof below.
+Let's prove that equality is reflexive.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 1 :|-: Ax x=x
 ~~~
+
+Equality introduction and elimination often go well together.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 2 a=b :|-: b=a
@@ -26,8 +28,20 @@ Exercise: Finish the proof below.
 ~~~
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-3 Ax(a=x <> Cx) :|-: Ca
-|Ax(a=x <> Cx) :PR
+3 Ax(a=x <-> Cx) :|-: Ca
+|Ax(a=x <-> Cx) :PR
+~~~
+
+Let's prove that equality is symmetric. 
+
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+4 :|-: AxAy(x=y -> y=x)
+~~~
+
+Let's prove that equality is transitive. 
+
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+5 :|-: AxAyAz((x=y /\ y=z) -> x=z)
 ~~~
 
 
