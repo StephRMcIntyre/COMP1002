@@ -1,0 +1,34 @@
+---
+from markdown+simple_tables
+---
+
+# First-Order Logic
+
+## Equality Introduction
+
+a=a asserts that object a is equal to itself.
+
+In FOL, we can get the statement that constant t is equal to constant t (written as t=t), for any constant, for free!
+<br>A statement that can be written from nothing is considered to be an __axiom__.
+
+To denote Equality Introduction in Carnap, we would write the justification `:=I`. 
+<br>There are no lines to cite as this is an axiom.
+
+Exercise: Finish the proof below.
+
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+1 :|-: Ax x=x
+~~~
+
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+2 a=b :|-: b=a
+|a=b :PR
+~~~
+
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+3 Ax(a=x <> Cx) :|-: Ca
+|Ax(a=x <> Cx) :PR
+~~~
+
+
+<p>[Previous: Equality Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ei.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)  
