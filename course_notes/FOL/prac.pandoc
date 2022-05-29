@@ -6,52 +6,40 @@ from markdown+simple_tables
 
 ## More ND Practice!
 
-b=c asserts that object b is equal to object c.
-
-If we know that b=c and a property holds for b say Pb, then we can conclude that this property must also old for c, Pc.
-<br>Alternatively, if we know that b=c and Pc, then we can conclude Pb.
-
-Essentially, if two objects are equal, then they share the same properties.
-
-To denote Equality Elimination in Carnap, we would write the justification `:=E m,n`, where m and n cite the lines where the equality and property are from. 
-
-Exercise: Finish the proof.
-
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-1 Ax(Px -> x=a), Pb :|-: Pa
-|Ax(Px -> x=a) :PR
-|Pb :PR
-|Pb->b=a 
-|b=a
-|Pa
+1 ∀y¬Py :|-: Ay(~Py\/~Qy)
 ~~~
 
 Since equality _is a predicate_, then Equality Elimination can used on it.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-2 a=b, a=a :|-: b=a
-|a=b :PR
-|a=a :PR
+2 ∃xQx  :|-: ∀x(Qx → ∃yQy)
 ~~~
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-3 AxAy((Px/\Py)-> x=y) :|-: AxAy(~x=y->(~Px\/~Py))
-|AxAy((Px/\Py)-> x=y) :PR
+3 ∀x∀yRyx :|-:  ∃x∀yRxy ∧ ∀x∃yRxy
 ~~~
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-4 Ax(Px -> ~EyPy), a=b :|-: ~Pa /\ ~Pb
-|Ax(Px -> ~EyPy) :PR
-|a=b :PR
+4 ∅ :|-: ∀xPx → ∃yPy
 ~~~
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-5 ExPx, a=b, b=c, Ax(Px-> Laa) :|-: Lac
-|ExPx :PR
-|a=b :PR
-|b=c :PR
-|Ax(Px->Laa) :PR
+5 ∀x(Px → ∃yQxy) :|-: ∀x∃y(Px → Qxy)
 ~~~
 
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+6 ∀x∃y(Px → Qxy) :|-: ∀x(Px → ∃yQxy)
+~~~
+
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+7 :|-: ExAyRxy -> AyExRxy
+~~~
+
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+8 :|-: ExAyRxy -> ~EyAx~Rxy
+~~~
+
+There are [additional exercises](https://proofs.openlogicproject.org/fol-exs.html) on the OLP website.
 
 <p>[Previous: Equality Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-eqi.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)  
