@@ -29,6 +29,65 @@ $Lxy:~$       $x$ is less than $y$.
 
 <br> U = {1,2,3,4,5}  __U denotes the universe.__
 
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+1. ℐ[x->1](a=x) =
+| *True
+| False
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+2. ℐ[x->1][y->1](x=y) =
+| *True
+| False
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+3. ℐ[x->2][y->1](b=y) =
+| True
+| *False
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+4. ℐ[x->2][y->1](¬a=y) =
+| True
+| *False
+```
+
+Equality can be very useful for explaining differences or sameness. In previous examples, we used the predicate Sxy to mean, "x is the same as y".
+
+This translates to everything in the universe is equal to 1.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+5. ℐ(∀x a=x) =
+| True
+| *False
+```
+
+Something in the universe is equal to 2.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+6. ℐ(∃x a=x) =
+| *True
+| False
+```
+
+Everything in the universe is not equal to 1.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+7. ℐ(∀x ¬a=x) =
+| *True
+| False
+```
+
+Everything in the universe has something it is not equal to.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+8. ℐ(∀x∃y ¬y=x) =
+| *True
+| False
+```
+
+Equality can also be used to capture uniqueness.
 
 
 
