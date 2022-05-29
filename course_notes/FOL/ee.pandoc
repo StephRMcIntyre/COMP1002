@@ -6,7 +6,6 @@
 
 ## Existential Elimination
 
-====================
 
 ∃xPx asserts that some object satisfies property P -- BUT! we do not know _which_ object.
 <br>Since some object satisfies P, we may call that object a _fresh_ constant name, say a.
@@ -31,12 +30,12 @@ Exercise: Enter the justifications for the proof below.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 1 ExPx, Qa :|-: Ex (Px /\ Qa)
-| ExPx :PR
-| Qa :PR
-|     Pb :AS
-|     Pb /\ Qa 
-|     Ex(Px/\Qa)
-| Ex(Px /\ Qa)
+|ExPx :PR
+|Qa :PR
+| Pb :AS
+| Pb /\ Qa 
+| Ex(Px/\Qa)
+|Ex(Px /\ Qa)
 ~~~
 
 Notice how the above proof eliminated the existential quantifier from ∃xPx, but the resulting formula contained another existential quantifier.
@@ -47,16 +46,18 @@ The below proof is incorrect as b is not fresh in the assumption of the subproof
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 2 ExQxb :|-: EyQyb
-| ExQxb :PR
-|     Qbb :AS
-|     EyQyb :EI 2
-| EyQyb
+|ExQxb :PR
+| Qbb :AS
+| EyQyb :EI 2
+|EyQyb
 ~~~
 
 Here is one that makes use of all the FOL ND rules we have learned so far. 
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 3 Ax(Px→Qxa),ExPx :|-: ExAyQyx
+|Ax(Px->Qxa) :PR
+|ExPx :PR
 ~~~
 
 Note: The above proof captures the example: “All penguins are birds. There is a penguin. Therefore, there is a bird.”
