@@ -76,30 +76,24 @@ Quantifier Negation        `QN`   $\neg \exists x \alpha$⧦$\forall x\neg\alpha
 -------------------------------------------------------
 
 <br>Showing that ¬∃x(Px ∧ Cx) ⧦ ∀x(Px → ¬Cx)
-```{.ProofChecker .ZachFOLEq options="resize" feedback="manual" tests="PNF"}
-4 ¬∃x(Px ∧ Cx) :|-: 
-|¬∃x(Px ∧ Cx) :PR
-|∀x¬(Px ∧ Cx) :QN
-|∀x(¬Px \/ ¬Cx) :DeM
-|∀x(Px → ¬Cx) :Cond
-```
+<br>¬∃x(Px ∧ Cx) ⧦ ∀x¬(Px ∧ Cx) :QN
+<br> ⧦ ∀x(¬Px ∨ ¬Cx) :DeM
+<br> ⧦ ∀x(Px → ¬Cx) :Cond
 
-<br>Negate and simplify ∃x∀yRxy.
-```{.ProofChecker .ZachFOLEq options="resize" feedback="manual" tests="PNF"}
-5 ¬∃x∀yRxy :|-: 
-|¬∃x∀yRxy :PR
-```
 
-<br>Negate and simplify ∀x∀y(Rxy → Ryy).
-```{.ProofChecker .ZachFOLEq options="resize" feedback="manual" tests="PNF"}
-6 ¬∀x∀y(Rxy → Ryy) :|-: 
-|¬∀x∀y(Rxy → Ryy) :PR
-```
+Negate and simplify ∃x∀yRxy.
+<br> ¬∃x∀yRxy ⧦ ∀x¬∀yRxy :QN
+<br> ⧦ ∀x∃y¬Rxy :QN
 
-<br>Negate and simplify ∀x(Rxx → ∃y(Ryx ∧ ¬Qy)).
-```{.ProofChecker .ZachFOLEq options="resize" feedback="manual" tests="PNF"}
-7 ¬∀x(Rxx → ∃y(Ryx ∧ ¬Qy)) :|-: 
-|¬∀x(Rxx → ∃y(Ryx ∧ ¬Qy)) :PR
-```
+Negate and simplify ∀x∀y(Rxy → Ryy).
+<br> ¬∀x∀y(Rxy → Ryy) ⧦ ∃x¬∀y(Rxy → Ryy) :QN
+<br> ⧦ ∃x∃y¬(Rxy → Ryy) :QN
+<br> ⧦ ∃x∃y¬(¬Rxy ∨ Ryy) :Cond
+<br> ⧦ ∃x∃y(¬¬Rxy ∧ ¬Ryy) :DeM
+<br> ⧦ ∃x∃y(Rxy ∧ ¬Ryy) :DN
 
-<p>[Previous: Quantifiers](https://carnap.io/shared/srenee651@gmail.com/book-FOL-quant.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Multiple Quantifiers](https://carnap.io/shared/srenee651@gmail.com/book-FOL-multq.pandoc) </p>
+
+
+Negate and simplify ∀x(Rxx → ∃y(Ryx ∧ ¬Qy)).
+
+<p>[Previous: Quantifiers](https://carnap.io/shared/srenee651@gmail.com/book-FOL-quant.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Negating Statements](https://carnap.io/shared/srenee651@gmail.com/book-FOL-multq.pandoc) </p>
