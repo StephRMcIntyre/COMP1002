@@ -98,7 +98,7 @@ The above diagram illustrates there are three tables in our database: Instructor
 <br>$~~~~~$Course Code refers to the Course Code from the Course table.
 
 Here are some statements that can be captured in FOL:
-<br> Every section has an instructor: ∀x∀y∀z(Sxyz->∃u∃vTzuv)
+<br> Every section has an instructor: ∀x∀y∀z(Sxyz → ∃u∃vTzuv)
 <br> Every Instructor’s ID is unique: ∀x∀y$_1$∀y$_2$∀z$_1$∀$z_2$(Txy$_1$z$_1$ ∧ Txy$_2$z$_2$ → y$_1$=y$_2$ ∧ z$_1$=z$_2$)
 
 Capture the following in FOL:
