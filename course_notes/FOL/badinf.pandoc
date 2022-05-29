@@ -12,7 +12,7 @@ Some common mistakes people make when writing proofs:
 <br> Remember in our ND proofs, we never assumed what we wanted to prove!
 + "Proof" by example: Uses a specific object of a type, then generalizes to all objects of that type.
 <br> This is a bad use of universal introduction.
-+ Re-using variables: When knowing that an object exists, the name you choose for it should always be fresh and new.
++ Re-using variables: When knowing that an object exists, the name you choose for it should always be fresh.
 <br> This is a bad use of existential elimination.
 + Using seemingly arbitrary objects that are not arbitrary: Make sure that you do not assume more than what is given of your arbitrary objects, otherwise they cease to truly be arbitrary.
 <br> Bad use of existential elimination or universal introduction.
@@ -22,24 +22,24 @@ Some common mistakes people make when writing proofs:
 <br> Bad use of disjunction eliminaton.
 + Incorrect introduction of a conditional: Make sure you assume the antecedent and then derive the consequent.
 <br> Bad use of conditional introduction.
-+ Incorrectly negating a statement: Make sure you correctly negate a statement when doing a proof by contradiction.
++ Incorrectly negating a statement: Correctly negate a statement when doing a proof by contradiction.
 <br> Bad use of IP or negation introduction.
 
 Here are some examples of bad proofs.
 
-Example 1:  All stop signs have 8 sides.
+Example 1:  Prove that all stop signs have 8 sides.
 <br>Proof:
-<br>$~~~~~~~~~~$The octagonal stop sign on Duckworth St and Military Rd has 8 sides. 
-<br>$~~~~~~~~~~$Since the stop sign on Duckworth is an arbitrary stop sign, all stop signs have 8 sides.
+<br> $~~~~~~~~~~$ The octagonal stop sign on Duckworth St and Military Rd has 8 sides. 
+<br> $~~~~~~~~~~$ Since the stop sign on Duckworth is an arbitrary stop sign, all stop signs have 8 sides.
 
 While as far as I know all stop signs have 8 sides, this "proof" doesn't generalize. 
 <br>It picks a _specific_ stop sign, proves it for that stop sign, and then assumes it works for all stop signs.
 
 
-Example 2:  All integers are even.
+Example 2:  Prove that all integers are even.
 <br>Proof:
-<br>$~~~~~~~~~~$An integer n is even if and only if there exists an integer k such that n = 2k.
-<br>$~~~~~~~~~~$4 is an integer and 4=2*2, meaning there exists an integer k such that 4=2k.
+<br> $~~~~~~~~~~$ An integer n is even if and only if there exists an integer k such that n = 2k.
+<br> $~~~~~~~~~~$ 4 is an integer and 4=2*2, meaning there exists an integer k such that 4=2k.
 <br> Since 4 is an even integer, then all integers are even.
 
 This example illustrates how bad proofs can be used to "prove" things that simply are not true.
@@ -51,7 +51,7 @@ This example illustrates how bad proofs can be used to "prove" things that simpl
 | It re-uses variables when using existential elimination.
 ```
 
-Example 3: The difference between any odd integer and an even integer is odd.
+Example 3: Prove that the difference between any odd integer and an even integer is odd.
 <br>Proof:
 <br>$~~~~~~~~~~$Suppose $n$ is any odd integer, and $m$ is any even integer. 
 <br>$~~~~~~~~~~$By definition of odd, there exists an integer $k$ such that $n=2k+1$. 
@@ -68,7 +68,7 @@ The issue in this "proof" may be hard to spot. A giveaway that it is an incorrec
 | *It re-uses variables when using existential elimination.
 ```
 
-Example 4: There exists an integer x such that 2x=0.
+Example 4: Prove that there exists an integer x such that 2x=0.
 <br>Proof:
 <br>$~~~~~~~~~~$Since there exists an integer x such that 2x=0, then divide both sides by 2.
 <br>$~~~~~~~~~~$Then x=0. 0 is an integer.
@@ -83,7 +83,7 @@ This proof has all the right components, but in the wrong places...
 | It re-uses variables when using existential elimination.
 ```
 
-Example 5: If integers $m$ and $n$ share the same parity then $m+n$ is even.
+Example 5: Prove that if integers $m$ and $n$ share the same parity then $m+n$ is even.
 <br>_Parity means even or odd. So if both $m$ and $n$ are even or both $m$ and $n$ are odd._
 <br>Proof:
 <br>$~~~~~~~~~~$Suppose that $m$ and $n$ have the same parity. 
