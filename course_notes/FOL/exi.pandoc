@@ -4,12 +4,12 @@ from markdown+simple_tables
 
 # First-Order Logic
 
-## Existential Introduction/Instantiation
+## Existential Introduction/Generalization
 
 ====================
 
 Pt asserts that object t satisfies property P.
-Since some object (in particular, t) satisfies P, we may conclude ∃xPx.
+Since some object (in particular, t) satisfies P, we may conclude ∃xPx by generalizing what satisfies P to be _some_ element, rather than the specific element t.
 
 + t in P(t) is any constant including but not limited to arbitrary objects. 
 
