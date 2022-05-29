@@ -24,9 +24,9 @@ Exercise: Finish the proof below.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 1 Lcj :|-: Ex Ey Lxy
-| Lcj :PR
-| EyLcy
-| ExEyLxy
+|Lcj :PR
+|EyLcy
+|ExEyLxy
 ~~~
 
 __Important note__ : When ∃xPkx is put through another existential introduction, the ∃y must come before ∃x as such ∃y∃xPyx. 
@@ -36,15 +36,15 @@ __Important note__ : When ∃xPkx is put through another existential introductio
 When applying existential introduction, we can apply it to all of the constants of the same name.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-2 Lcc :|-: Ex Lxx
-| Lcj :PR
+2Lcc :|-: Ex Lxx
+|Lcj :PR
 ~~~
 
 Or we can apply it to some of the constants of the same name.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 3 Kccc :|-: Ex Lxcx
-| Kccc :PR
+|Kccc :PR
 ~~~
 
 If we want to existentially quantify a constant within a compound wff, we must apply it to the entire wff.
@@ -52,15 +52,15 @@ If we want to existentially quantify a constant within a compound wff, we must a
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 4 Lab /\ Lcd :|-: Ex (Lab /\ Ey Lyx)
-| Lab /\ Lcd :PR
-| Lab /\ Ey Lyd :EI 1
+|Lab /\ Lcd :PR
+|Lab /\ Ey Lyd :EI 1
 ~~~
 
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 5 Ljc, Lcj :|-: Ex Ljx /\ Ex Lxj 
-| Ljc :PR
-| Lcj :PR
+|Ljc :PR
+|Lcj :PR
 ~~~
 
 When we want to do a proof by contradiction and need to assume the opposite of what we want to prove, it sometimes makes more sense to only assume the oppositive of the part inside the existential quantifier.
