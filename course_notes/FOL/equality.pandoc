@@ -53,7 +53,8 @@ $Lxy:~$       $x$ is less than $y$.
 
 We can bind the variables in the equality predicate with quantifiers.
 
-This translates to everything in the universe is equal to 1.
+∀x a=x translates to _everything in the universe is equal to 1_. 
+<br>Determine its truth value under our interpretation.
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
 5. ℐ(∀x a=x) =
@@ -61,7 +62,7 @@ This translates to everything in the universe is equal to 1.
 | *False
 ```
 
-Everything in the universe has something it is not equal to.
+∀x∃y(¬y=x) is _everything in the universe has something it is not equal to_.
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
 6. ℐ(∀x∃y ¬y=x) =
@@ -70,7 +71,7 @@ Everything in the universe has something it is not equal to.
 ```
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-7. ∃x∀x x=y : There is something that is equal to everything.
+7. ∃x∀y ¬x=y : There is something that is equal to everything.
 ~~~
 
 Equality can also be used to capture at least one of, no more than one of, and specific numbers of.
@@ -92,17 +93,17 @@ Capturing _Exactly one item is equal to 2._ is merely combining the previous two
 <br>If it is both at most one item and at least one item, then it is exactly one item.
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-10. ∀x∀y ((b=x /\ b=y) -> x=y) /\ (∃x x=b): Exactly one item is equal to 2.
+10. ∀x∀y ((b=x /\ b=y) -> x=y) /\ ∃x x=b: Exactly one item is equal to 2.
 ~~~
 
 Stating at least two items are less than 3 is a little harder. You need to use the equality predicate.
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-11. ∃x∃y (Lxc /\ Lyc /\ ¬x=y): Exactly two items are less than 3.
+11. ∃x∃y ((Lxc /\ Lyc) /\ ¬x=y): Exactly two items are less than 3.
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-12. ∀x∀y∀z ((Lxc /\ Lyc /\ Lzc) -> (x=y \/ x=z \/ y=z)) /\ (∃x∃y( Lxc /\ Lyc /\ ¬x=y)): Exactly two items are less than 3.
+12. ∀x∀y∀z (((Lxc /\ Lyc) /\ Lzc) -> ((x=y \/ x=z) \/ y=z)) /\ ∃x∃y((Lxc /\ Lyc) /\ ¬x=y): Exactly two items are less than 3.
 ~~~
 
 <p>[Previous: Satisfying Formulas](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sat.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Databases](https://carnap.io/shared/srenee651@gmail.com/book-FOL-databases.pandoc) </p>
