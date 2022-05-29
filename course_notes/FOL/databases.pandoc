@@ -56,8 +56,10 @@ __Instructor Relation__
 </table>
 
 The above table is an instance or interpretation of the Instructor Relation with three attributes: employee id, last name, and first name.
-<br>The truth-set for this relation is {(123456789,Steph,McIntyre), (234567890,Antonina,Kolokolova), (345678901,Adrian,Fiech)}.
-<br>This means that under this interpretation, Instructor(234567890,Kolokolova,Antonina)=F, but Instructor(234567890,Antonina,Kolokolova)=F
+<br>The truth-set for this relation is:
+<br>{(123456789,Steph,McIntyre), (234567890,Antonina,Kolokolova), (345678901,Adrian,Fiech)}.
+
+Under this interpretation, Instructor(234567890,Kolokolova,Antonina)=F, but Instructor(234567890,Antonina,Kolokolova)=F as the __order of the elements in the tuple matters__.
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
 1. Select all of the wffs that are True in the above table. The universe is all possible strings/integers.
@@ -120,7 +122,7 @@ For example, we can ask for all the first names of the instructors.
 <br>Then we want every f that is in a row in the Instructor table.
 <br>$~~~$This means there exists some id and last name that accompanies it in the row: ∃x∃yTxfy.
 <br>So the query is { f | ∃x∃yTxfy }.
-<br>The answer set for this query is {Steph, Antonina, Adrian}.
+<br>The answers for this query is {Steph, Antonina, Adrian}.
 
 For example, we can ask for all the first and last names of the instructors, last names appearing first.
 <br>There are two free variables, the first names which we will call f, and the last names which we will call l.
@@ -128,7 +130,7 @@ For example, we can ask for all the first and last names of the instructors, las
 <br>$~~~$This means there exists some id that accompanies it in the row: ∃xTxfl.
 <br>Since we want the last names to appear first, we will have the tuple look like (l,f).
 <br>So the query is { (l,f) | ∃x∃yTxfy }.
-<br>The answer set for this query is {(McIntyre,Steph), (Kolokolova,Antonina), (Fiech,Adrian)}.
+<br>The answers for this query is {(McIntyre,Steph), (Kolokolova,Antonina), (Fiech,Adrian)}.
 
 Let's add another table instance to the database.
 
@@ -160,7 +162,7 @@ __Section Relation__
 <br>
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-4. Which element is in the answer set for { (u,v) | ∃x(T(x,Steph,McIntyre) ∧ Sxvu) }?
+4. Which element an answer for { (u,v) | ∃x(T(x,Steph,McIntyre) ∧ Sxvu) }?
 | 123456789
 | (001,COMP 1002)
 | *(COMP 1002,002)
@@ -168,7 +170,7 @@ __Section Relation__
 ```
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-5. How many unique elements are in the answer set for { (u,v) | ∃x(T(x,Steph,McIntyre) ∧ Sxvu) }?
+5. How many unique elements are answers for { (u,v) | ∃x(T(x,Steph,McIntyre) ∧ Sxvu) }?
 | 0
 | 1
 | *2
@@ -188,7 +190,7 @@ Note: There could be other ways to express the query from Q6. In fact, one of th
 
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-7. Select all of the elements in the answer set for Q6.
+7. Select all of the elements which are answers for Q6.
 | *Fiech
 | (Kolokolova,Antonina)
 | McIntyre
