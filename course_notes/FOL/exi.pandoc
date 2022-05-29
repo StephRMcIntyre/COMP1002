@@ -6,7 +6,6 @@ from markdown+simple_tables
 
 ## Existential Introduction/Generalization
 
-====================
 
 Pt asserts that object t satisfies property P.
 Since some object (in particular, t) satisfies P, we may conclude ∃xPx by generalizing what satisfies P to be _some_ element, rather than the specific element t.
@@ -30,8 +29,8 @@ Exercise: Finish the proof below.
 | ExEyLxy
 ~~~
 
-__Important note__ : When ExPkx is put through another existential introduction, the Ey must come before Ex as such EyExPyx. 
-<br>One could not turn ExPkx into ExEyPyx since the most recent existential introduction has the scope of the whole formula. 
+__Important note__ : When ∃xPkx is put through another existential introduction, the ∃y must come before ∃x as such ∃y∃xPyx. 
+<br>One could not turn ∃xPkx into ∃x∃yPyx since the most recent existential introduction has the scope of the whole formula. 
 
 
 When applying existential introduction, we can apply it to all of the constants of the same name.
@@ -81,5 +80,5 @@ The above proof would then translate:
 6 :|-: Ex(Px \/ ~Px) 
 ~~~
 
-<p>[Previous: Natural Deduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Universal Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND.ue) </p>
+<p>[Previous: Natural Deduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Universal Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ue.pandoc) </p>
 
