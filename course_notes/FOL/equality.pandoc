@@ -23,37 +23,35 @@ Consider this interpretation, ℐ.
 ------------- ----------------------------------- ------------- --------------------------             
 $Px:~$        $x$ is prime.                       $~~~a~~$      the number 1
 $Ox:~$        $x$ is odd.                         $~~~b~~$      the number 2
-$B~=~$        {2,3,4}
+$B~=~$        {2,3,4}                             $~~~b~~$      the number 3
 $Lxy:~$       $x$ is less than $y$.        
 ------------- ----------------------------------- ------------- --------------------------
 
 <br> U = {1,2,3,4,5}  __U denotes the universe.__
 
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+1. ¬a=b : 1 is not equal to 2.
+~~~
+
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-1. ℐ[x->1](a=x) =
+2. ℐ[x->1](a=x) =
 | *True
 | False
 ```
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-2. ℐ[x->1][y->1](x=y) =
+3. ℐ[x->1][y->1](x=y) =
 | *True
 | False
 ```
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-3. ℐ[x->2][y->1](b=y) =
+4. ℐ[x->2][y->1](b=y) =
 | True
 | *False
 ```
 
-```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-4. ℐ[x->2][y->1](¬a=y) =
-| True
-| *False
-```
-
-Equality can be very useful for explaining differences or sameness. In previous examples, we used the predicate Sxy to mean, "x is the same as y".
+We can bind the variables in the equality predicate with quantifiers.
 
 This translates to everything in the universe is equal to 1.
 
@@ -63,32 +61,48 @@ This translates to everything in the universe is equal to 1.
 | *False
 ```
 
-Something in the universe is equal to 2.
-
-```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-6. ℐ(∃x a=x) =
-| *True
-| False
-```
-
-Everything in the universe is not equal to 1.
-
-```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-7. ℐ(∀x ¬a=x) =
-| *True
-| False
-```
-
 Everything in the universe has something it is not equal to.
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-8. ℐ(∀x∃y ¬y=x) =
+6. ℐ(∀x∃y ¬y=x) =
 | *True
 | False
 ```
 
-Equality can also be used to capture uniqueness.
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+7. ∃x∀x x=y : There is something that is equal to everything.
+~~~
 
+Equality can also be used to capture at least one of, no more than one of, and specific numbers of.
 
+_At least one item is equal to 2_ merely makes use of a simple existential.
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+8. ∃x x=b : At least one item is equal to 2.
+~~~
+
+At most makes use of two universal quantifiers. 
+_Hint: Think about what happens if two items are equal to 2..._
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+9. ∀x∀y ((b=x /\ b=y) -> x=y) : At most one item is equan to 2.
+~~~
+
+Capturing _Exactly one item is equal to 2._ is merely combining the previous two.
+<br>If it is both at most one item and at least one item, then it is exactly one item.
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+10. ∀x∀y ((b=x /\ b=y) -> x=y) /\ (∃x x=b): Exactly one item is equal to 2.
+~~~
+
+Stating at least two items are less than 3 is a little harder. You need to use the equality predicate.
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+11. ∃x∃y (Lxc /\ Lyc /\ ¬x=y): Exactly two items are less than 3.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+12. ∀x∀y∀z ((Lxc /\ Lyc /\ Lzc) -> (x=y \/ x=z \/ y=z)) /\ (∃x∃y( Lxc /\ Lyc /\ ¬x=y)): Exactly two items are less than 3.
+~~~
 
 <p>[Previous: Satisfying Formulas](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sat.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Databases](https://carnap.io/shared/srenee651@gmail.com/book-FOL-databases.pandoc) </p>
