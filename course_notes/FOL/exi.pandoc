@@ -1,4 +1,5 @@
---from markdown+simple_tables
+---
+from markdown+simple_tables
 ---
 
 # First-Order Logic
