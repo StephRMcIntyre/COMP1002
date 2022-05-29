@@ -1,0 +1,43 @@
+---
+--from markdown+simple_tables
+---
+
+# First-Order Logic
+
+## Soundness & Completeness
+
+Natural Deduction for First-Order Logic is both Sound and Complete. 
+<br>Meaning both the Soundness and Completeness Theorems hold!
+
+These theorems can be used the same way as we did before.
+<br>Let's try some examples.
+
+Problem: Show $\forall x (Px \lor Qx)$ ⊬ $\forall x Px \lor forall x Qx$.
+
+We know from contrapositive of soundness for our logical system that
+if $\forall x (Px \lor Qx)$ ⊭ $\forall x Px \lor forall x Qx$, then $\forall x (Px \lor Qx)$ ⊬ $\forall x Px \lor forall x Qx$.
+<br>We can give an interpretation that shows that $\forall x (Px \lor Qx)$ ⊭ $\forall x Px \lor forall x Qx$
+
+~~~{.CounterModeler .Validity system="thomasBolducAndZachFOL" submission="none" options="double-turnstile"}
+1 Ax(Px\/Qx) :|-: AxPx \/ AxQx
+~~~
+
+Indeed, $\forall x (Px \lor Qx)$ ⊭ $\forall x Px \lor forall x Qx$ as we found an interpretation which makes the premises true but the conclusion false.
+<br>Therefore, by the contrapositive of soundness, $\forall x (Px \lor Qx)$ ⊬ $\forall x Px \lor forall x Qx$.
+
+Exercise: Show there is no ND Proof exists for $\exists x Qx \land \exists x Px$ ⊦ $\exists x (Qx \land Px)$.
+
+~~~{.CounterModeler .Validity system="thomasBolducAndZachFOL" submission="none" options="double-turnstile"}
+1 ExQx/\ExPx) :|-: Ex(Qx /\ Px)
+~~~
+
+Do not forget to cite the countrapositive of soundness in your solution! This step is crucial!
+
+
+Problem: Show that ¬¬∀yPy⊢¬∃x¬Px.
+
+Hint: ¬¬∀yPy⊧¬∃x¬Px was shown on the Logical Implications & Equivalence page.
+<br>Again, do not forget to cite the relevant theorem!
+
+
+<p> &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  
