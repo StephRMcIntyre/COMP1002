@@ -24,7 +24,7 @@ Exercise: Finish the proof below.
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 1 Ax(Lcx /\ Lxc) :|-: Ax Lxc
 | Ax(Lcx /\ Lxc) :PR
-| Lca /\ Lac :PR
+| Lca /\ Lac 
 | Lac 
 | Ax Lxc
 ~~~
