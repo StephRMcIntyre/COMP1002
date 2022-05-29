@@ -40,7 +40,7 @@ The proof below is incorrect. Correct and finish the proof.
 ~~~
 
 
-If we want to universally generalize a compound wff, we must apply it to the entire wff.
+If we want to universally instantiate on a compound wff, we must apply it to the entire wff.
 <br>The second line onwards in the proof below is all incorrect. Fix and complete the proof.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
@@ -87,5 +87,5 @@ Here's a tautology to prove. Since universals are easy to eliminate, we would wa
 6 :|-: ~Ax(Px /\ ~Px) 
 ~~~
 
-<p>[Previous: Existential Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ei.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Universal Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND.ui) </p>
+<p>[Previous: Existential Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ei.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Universal Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ui.pandoc) </p>
 
