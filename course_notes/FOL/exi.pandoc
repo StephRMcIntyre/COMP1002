@@ -19,10 +19,11 @@ It is similar to ∨I in this regard, but instead of introducing ∨, it introdu
 + Note: This phrasing fails* for infinite universes (like reasoning about numbers)
 + *The phrasing fails, but the proof rule remains sound.
 
-To denote Existential Introduction in Carnap, we would write the justification ':EI m' where m is the line number we are referencing.
+To denote Existential Introduction in Carnap, we would write the justification ":EI m" where m is the line number we are referencing.
 
 Exercise: Finish the proof below.
-~~~{.ProofChecker .thomasBolducAndZachFOL options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 1 Lcj :|-: Ex Ey Lxy
 | Lcj :PR
 | EyLcy
@@ -35,14 +36,14 @@ __Important note__ : When ExPkx is put through another existential introduction,
 
 When applying existential introduction, we can apply it to all of the constants of the same name.
 
-~~~{.ProofChecker .thomasBolducAndZachFOL options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 2 Lcc :|-: Ex Lxx
 | Lcj :PR
 ~~~
 
 Or we can apply it to some of the constants of the same name.
 
-~~~{.ProofChecker .thomasBolducAndZachFOL options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 3 Kccc :|-: Ex Lxcx
 | Kccc :PR
 ~~~
@@ -50,30 +51,35 @@ Or we can apply it to some of the constants of the same name.
 If we want to existentially quantify a constant within a compound wff, we must apply it to the entire wff.
 <br>The second line of the proof is incorrect. Fix and complete the proof.
 
-~~~{.ProofChecker .thomasBolducAndZachFOL options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 3 Lab /\ Lcd :|-: Ex (Lab /\ Ey Lyx)
 | Lab /\ Lcd :PR
 | Lab /\ Ey Lyd :EI 1
 ~~~
 
 
-~~~{.ProofChecker .thomasBolducAndZachFOL options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-4 Ljc, Lcj :|-: (Ex (Ljx)) /\ (Ex (Lxj)) 
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+4 Ljc, Lcj :|-: Ex Ljx /\ Ex Lxj 
+| Ljc :PR
+| Lcj :PR
 ~~~
 
 When we want to do a proof by contradiction and need to assume the opposite of what we want to prove, it sometimes makes more sense to only assume the oppositive of the part inside the existential quantifier.
 
-~~~{.ProofChecker .thomasBolducAndZachFOL options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-5 :|-: Ex(~(Px /\ ~Px)) 
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+5 :|-: Ex ~(Px /\ ~Px) 
 ~~~
 
 The above proof would then translate:
-$~~~~~~~$ Let us assume that for some item c in our universe, that both Pc and not Pc holds.
-$~~~~~~~$ Then we have Pc. Then we have ~Pc.
-$~~~~~~~$ Since we a wff and its negation, then we have arrived at a contradiction.
-$~~~$Therefore, it is not the case that both Pc and not Pc holds. 
-$~~~$Since it is not the case that both Pc and not Pc holds, and c is an item in our universe, then there must exist an item in our universe such that not both Pc and not Pc holds.
+<br>$~~~~~~~$ Let us assume that for some item c in our universe, that both Pc and not Pc holds.
+<br>$~~~~~~~$ Then we have Pc. Then we have ~Pc.
+<br>$~~~~~~~$ Since we a wff and its negation, then we have arrived at a contradiction.
+<br>$~~~$Therefore, it is not the case that both Pc and not Pc holds. 
+<br>$~~~$Since it is not the case that both Pc and not Pc holds, and c is an item in our universe, <br>then there must exist an item in our universe such that not both Pc and not Pc holds.
 
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+6 :|-: Ex(Px \/ ~Px) 
+~~~
 
 <p>[Previous: Natural Deduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Universal Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND.ue) </p>
 
