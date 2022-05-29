@@ -1,0 +1,58 @@
+---
+from markdown+simple_tables
+---
+
+# First-Order Logic
+
+## Equality Elimination
+
+b=c asserts that object b is equal to object c.
+
+If we know that b=c and a property holds for b say Pb, then we can conclude that this property must also old for c, Pc.
+<br>Alternatively, if we know that b=c and Pc, then we can conclude Pb.
+
+Essentially, if two objects are equal, then they share the same properties.
+
+To denote Equality Elimination in Carnap, we would write the justification `:=E m,n`, where m and n cite the lines where the equality and property are from. 
+
+Exercise: Finish the proof.
+
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+1 Ax(Px -> x=a), Pb :|-: Pa
+|Ax(Px -> x=a) :PR
+|Pb :PR
+|Pb->b=a 
+|b=a
+|Pa
+~~~
+
+Since equality _is a predicate_, then Equality Elimination can used on it.
+
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+2 a=b, a=a :|-: b=a
+|a=b :PR
+|a=a :PR
+~~~
+
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+3 AxAy((Px/\Py)-> x=y) :|-: AxAy(~x=y->(~Px\/~Py))
+|AxAy((Px/\Py)-> x=y) :PR
+~~~
+
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+4 Ax(Px -> ~EyPy), a=b :|-: ~Pa /\ ~Pb
+|Ax(Px -> ~EyPy) :PR
+|a=b :PR
+~~~
+
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+5 ExPx, a=b, b=c, Ax(Px-> Laa) :|-: Lac
+|ExPx :PR
+|a=b :PR
+|b=c :PR
+|Ax(Px->Laa) :PR
+~~~
+
+
+<p>[Previous: Existential Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-exe.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp; [Next: Equality Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-eqi.pandoc)  
+ 
