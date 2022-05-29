@@ -1,0 +1,67 @@
+---
+--from markdown+simple_tables
+---
+
+# First-Order Logic
+
+## Existential Elimination
+
+====================
+
+∃xPx asserts that some object satisfies property P -- BUT! we do not know _which_ object.
+<br>Since some object satisfies P, we may call that object a _fresh_ constant name, say a.
+<br>Then we can assume Pa holds, and if we reach conclusion Q that does not depend on the name a, then we may conclude Q outside of the subproof.
+
+Note: 
+
++ a is an arbitrary object meaning that there can be no mention of that object before it appears in the assumption. 
++ When we say Q does not depend on a, we mean that Q is any propositional formula where a does not appear in it.  
+
+Beware: This rule is often done differently in other books/texts. 
+
+
+We can think of ExPx as $Pt_1∨Pt_2∨Pt_3$∨… where $t_1,t_2,t_3$,... are all elements of U. 
+It is similar to ∨E in this regard, but instead of eliminating ∨, it eliminates existential(E).
+
+To denote Existential Introduction in Carnap, we would write the justification `:EE k, m-n` where k is the original existential assertation such as ∃xPx,
+then m is the line where the subproof (with the arbitrary assumption) begins such as Pa, and n is the line where Q (which is not dependant on 'a' appears).
+<br>The existential introduction takes Q out of the subproof granted it does not depend on 'a'.
+
+Exercise: Enter the justifications for the proof below.
+
+~~~{.ProofChecker .thomasBolducAndZachFOL options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+1 ExPx, Qa :|-: Ex(Px/\Qa)
+| ExPx :PR
+| Qa :PR
+|     Pb :AS
+|     Pb /\ Qa 
+|     Ex(Px/\Qa)
+| Ex(Px /\ Qa)
+~~~
+
+Notice how the above proof eliminated the existential quantifier from ∃xPx, but the resulting formula contained another existential quantifier.
+<br>This is completely acceptable.
+
+The below proof is incorrect as b is not fresh in the assumption of the subproof as b occurs in scope at that line. 
+<br>Fix and complete the proof.
+
+~~~{.ProofChecker .thomasBolducAndZachFOL options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+2 ExQxb :|-: EyQyb
+| ExQxb :PR
+|     Qbb :AS
+|     EyQyb :EI 2
+| EyQyb
+~~~
+
+Here is one that makes use of all the FOL ND rules we have learned so far. 
+
+~~~{.ProofChecker .thomasBolducAndZachFOL options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+3 Ax(Px→Qxa),ExPx :|-: ExAyQyx
+~~~
+
+Note: The above proof captures the example: “All penguins are birds. There is a penguin. Therefore, there is a bird.”
+
+
+<p>[Previous: Universal Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ui.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Equality Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-eqi.pandoc) </p>
+
+
