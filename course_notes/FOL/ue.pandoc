@@ -6,7 +6,6 @@ from markdown+simple_tables
 
 ## Universal Elimination/Specification/Instantiation
 
-====================
 
 ∀xPx asserts that every object in the universe satisfies property P.
 Since every object satisfies P, then we may conclude Pt for some specific object in the universe t.
@@ -22,9 +21,9 @@ To denote Universal Elimination in Carnap, we would write the justification ":AE
 Exercise: Finish the proof below.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-1 Ax Lcx :|-: Lcj
+1 Ax Lcx :|-: Lcc
 | Ax Lcx :PR
-| Lcj
+| Lcc
 ~~~
 
 __Important note__ : When ∀xPxx is put through universal elimination, we must replace every x present in the formula under the scope of the ∀ quantifier. 
@@ -42,7 +41,7 @@ The proof below is incorrect. Correct and finish the proof.
 
 
 If we want to universally generalize a compound wff, we must apply it to the entire wff.
-<br>The second line of the proof is incorrect. Fix and complete the proof.
+<br>The second line onwards in the proof below is all incorrect. Fix and complete the proof.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 3 ∀x(Lxb /\ Lcx) :|-: Ex (Lab /\ Ey Lyx)
@@ -57,13 +56,17 @@ If we want to universally generalize a compound wff, we must apply it to the ent
 4 Pa, AxAyLxy :|-: Ex(Px /\ Lax) 
 | Pa :PR
 | AxAyLxy :PR
+|
 ~~~
 
 Sometimes it takes a minute to find the contradiction... 
-<br>Remember, using the X rule, _anything_ wff follows. 
+<br>Remember, using the X rule, _any_ wff follows. 
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 5 Lab /\ Pb, AxAy(Lxy -> ~Py) :|-: AxQxx 
+| Lab /\ Pb :PR
+| AxAy(Lxy -> ~Py) :PR
+|
 ~~~
 
 The above proof would then translate:
@@ -75,6 +78,10 @@ The above proof would then translate:
 <br>$~~~$We know that a relates to b via L, so b is not a P.
 <br>$~~~$As b is both a P and not a P, then we have a contradiction. 
 <br>$~~~$As anything follows from a contradiction, then it is the case that every x relates to x via Q.
+
+<br><br>
+
+Here's a tautology to prove. Since universals are easy to eliminate, we would want to keep the ∀ quantifier when we assume the opposite.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 6 :|-: ~Ax(Px /\ ~Px) 
