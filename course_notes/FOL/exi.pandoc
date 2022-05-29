@@ -51,14 +51,14 @@ If we want to existentially quantify a constant within a compound wff, we must a
 <br>The second line of the proof is incorrect. Fix and complete the proof.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-3 Lab /\ Lcd :|-: Ex (Lab /\ Ey Lyx)
+4 Lab /\ Lcd :|-: Ex (Lab /\ Ey Lyx)
 | Lab /\ Lcd :PR
 | Lab /\ Ey Lyd :EI 1
 ~~~
 
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-4 Ljc, Lcj :|-: Ex Ljx /\ Ex Lxj 
+5 Ljc, Lcj :|-: Ex Ljx /\ Ex Lxj 
 | Ljc :PR
 | Lcj :PR
 ~~~
@@ -66,7 +66,7 @@ If we want to existentially quantify a constant within a compound wff, we must a
 When we want to do a proof by contradiction and need to assume the opposite of what we want to prove, it sometimes makes more sense to only assume the oppositive of the part inside the existential quantifier.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-5 :|-: Ex ~(Px /\ ~Px) 
+6 :|-: Ex ~(Px /\ ~Px) 
 ~~~
 
 The above proof would then translate:
@@ -77,7 +77,7 @@ The above proof would then translate:
 <br>$~~~$Since it is not the case that both Pc and not Pc holds, and c is an item in our universe, <br>then there must exist an item in our universe such that not both Pc and not Pc holds.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-6 :|-: Ex(Px \/ ~Px) 
+7 :|-: Ex(Px \/ ~Px) 
 ~~~
 
 <p>[Previous: Natural Deduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Universal Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ue.pandoc) </p>
