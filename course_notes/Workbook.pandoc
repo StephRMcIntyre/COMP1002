@@ -138,9 +138,8 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 - [Universal Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ue.pandoc)
 - [Universal Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ui.pandoc)
 - [Existential Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-exe.pandoc)
-- [ND Playground](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-play.pandoc)
-- [Informal Proofs](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-informal.pandoc)
-- [Bad Informal Proofs](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-badinf.pandoc)
+- [Equality Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-eqe.pandoc)
+- [Equality Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-eqi.pandoc)
 - [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-prac.pandoc)
 
 
@@ -152,9 +151,9 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 <br>
 
-- [Tarski's World](https://carnap.io/shared/srenee651@gmail.com/book-FOL-tarski.pandoc)
 - [Soundness and Completeness Theorems](https://carnap.io/shared/srenee651@gmail.com/book-FOL-SC.pandoc)
-
+- [Informal Proofs](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-informal.pandoc)
+- [Bad Informal Proofs](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-badinf.pandoc)
 
 <br>
 <br>
