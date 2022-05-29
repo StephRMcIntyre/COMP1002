@@ -1,91 +1,80 @@
 ---
-from markdown+simple_tables
+--from markdown+simple_tables
 ---
 
 # First-Order Logic
 
-## Universal Elimination/Specification/Instantiation
-
+## Universal Introduction/Generalization
 
 ∀xPx asserts that every object in the universe satisfies property P.
-Since every object satisfies P, then we may conclude Pt for some specific object in the universe t.
+If we know that Pt holds for some _arbitrary_ element t, then we can conclude that ∀xPx.
 
 We can think of ∀xPx as asserting a grand conjunction where we have P$t_1$∧P$t_2$∧P$t_3$∧… where $t_1,t_2,t_3$,.. are all of the objects in U. 
-It is similar to ∧E in this regard, but instead of eliminating ∧, it eliminates ∀.
+It is similar to ∧E in this regard, but instead of introducing ∧, it introduces ∀.
+<br>Since proving for each would take too long, we can prove that it holds for some arbirary element which we know nothing about. 
+<br>By arbitrary, we mean that the __chosen constant does not appear in any premises and/or assumptions in scope__.
 
 + Note: This phrasing fails* for infinite universes (like reasoning about numbers)
 + *The phrasing fails, but the proof rule remains sound.
 
-To denote Universal Elimination in Carnap, we would write the justification ":AE m" where m is the line number we are referencing.
+To denote Universal Introduction in Carnap, we would write the justification ":AI m" where m is the line number we are referencing.
 
 Exercise: Finish the proof below.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-1 Ax Lcx :|-: Lcc
-| Ax Lcx :PR
-| Lcc
+1 Ax(Lcx /\ Lxc) :|-: Ax Lxc
+|Ax(Lcx /\ Lxc) :PR
+|Lca /\ Lac
+|Lac 
+|Ax Lxc
 ~~~
 
-__Important note__ : When ∀xPxx is put through universal elimination, we must replace every x present in the formula under the scope of the ∀ quantifier. 
-<br>One could not turn ∀xPxx into ∀xPax or Pax.  
+__Important note__ : When ∀xPxx is put through universal introduction, we must replace every constant with the same name we are quantifying with x.
+<br>One could not turn Paa into ∀x∀yPyx or ∀xPax or ∀xPxa.
+<br>Think about why this is not allowed.  
 
 The proof below is incorrect. Correct and finish the proof.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-2 ∀xPxx :|-: ExEy Pxy
-| ∀xPxx :PR
-| Pab :∀E 1
-| EyPay :EI 2
-| ExEyPxy :EI 3
+2 ∀xPxx, :|-: AxEy Pxy
+|∀xPxx :PR
+|Paa :∀E 1
+|AxPax :AI 2
+|AxEyPxy :EI 3
 ~~~
 
 
-If we want to universally instantiate on a compound wff, we must apply it to the entire wff.
-<br>The second line onwards in the proof below is all incorrect. Fix and complete the proof.
-
-~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-3 ∀x(Lxb /\ Lcx) :|-: Ex (Lab /\ Ey Lyx)
-| ∀x(Lxb /\ Lcx) :PR
-| Lab /\ ∀xLcx :AE 1
-| Lab /\ Lcd :AE 2
-| Lab /\ Ey Lyd :EI 3
-~~~
+If we want to universally generalize a compound wff, we must apply it to the entire wff.
 
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-4 Pa, AxAyLxy :|-: Ex(Px /\ Lax) 
-| Pa :PR
-| AxAyLxy :PR
+3 ∀x(Lxb /\ Lcx) :|-: Ax (Lab /\ Ey Lyy)
+|∀x(Lxb /\ Lcx) :PR
 |
 ~~~
 
-Sometimes it takes a minute to find the contradiction... 
-<br>Remember, using the X rule, _any_ wff follows. 
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-5 Lab /\ Pb, AxAy(Lxy -> ~Py) :|-: AxQxx 
-| Lab /\ Pb :PR
-| AxAy(Lxy -> ~Py) :PR
+4 AxAySxy :|-: Pa -> AxSax 
+|AxAySxy :PR
 |
 ~~~
 
-The above proof would then translate:
-<br>$~~~$a relates to b via L and b is a P. Also, for any two items x and y, if x relates to y via L, then y is not a P.
-<br>$~~~$Since a relates to b via L and b is a P, then a relates to b via L. Also, b is a P.
-<br>$~~~$Since for any two items x and y, if x relates to y via L, then y is not a P -- let's specify x as a.
-<br>$~~~$Since for any item y, if a relates to y via L, then y is not a P -- let's specify y as b.
-<br>$~~~$Then we get that if a relates to b via L, then b is not a P. 
-<br>$~~~$We know that a relates to b via L, so b is not a P.
-<br>$~~~$As b is both a P and not a P, then we have a contradiction. 
-<br>$~~~$As anything follows from a contradiction, then it is the case that every x relates to x via Q.
-
-<br><br>
-
-Here's a tautology to prove. Since universals are easy to eliminate, we would want to keep the ∀ quantifier when we assume the opposite.
+For this next one, we will start with assuming Pbb. 
+<br>If we can reach a contradiction in the subproof, then we can do ¬I to get ¬Pbb outside of the subproof.
+<br>Once ¬Pbb is outside of the subproof, then b at that line will be an arbitrary constant.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-6 :|-: ~Ax(Px /\ ~Px) 
+5 AxLx, Ax(Lx -> ~EyPxy) :|-: Ax~Pxx 
+|AxLx :PR
+|Ax(Lx -> ~EyPxy) :PR
+| Pbb :AS
 ~~~
 
-<p>[Previous: Existential Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ei.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Universal Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ui.pandoc) </p>
+He's a tautology to prove. We will want to use a similar strategy as Q5.
 
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+6 :|-: Ax(Px \/ ~Px) 
+~~~
+
+<p>[Previous: Universal Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ue.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Existential Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ee.pandoc) </p>
