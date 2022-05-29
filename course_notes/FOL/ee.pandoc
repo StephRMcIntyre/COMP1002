@@ -22,9 +22,9 @@ Beware: This rule is often done differently in other books/texts.
 We can think of ExPx as $Pt_1∨Pt_2∨Pt_3$∨… where $t_1,t_2,t_3$,... are all elements of U. 
 It is similar to ∨E in this regard, but instead of eliminating ∨, it eliminates existential(E).
 
-To denote Existential Introduction in Carnap, we would write the justification `:EE k, m-n` where k is the original existential assertation such as ∃xPx,
+To denote Existential Elimination in Carnap, we would write the justification `:EE k, m-n` where k is the original existential assertation such as ∃xPx,
 then m is the line where the subproof (with the arbitrary assumption) begins such as Pa, and n is the line where Q (which is not dependant on 'a' appears).
-<br>The existential introduction takes Q out of the subproof granted it does not depend on 'a'.
+<br>The existential elimination takes Q out of the subproof granted it does not depend on 'a'.
 
 Exercise: Enter the justifications for the proof below.
 
