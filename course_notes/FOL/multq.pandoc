@@ -79,13 +79,16 @@ which is obviously false as there is no greatest positive integer- we can always
 ###∀∃ Statements
 
 ∀∃ statements such as ∀x∃yRxy means _"For all items y, there is some x such that Rxy is satisfied"_. 
-<br> It is important to note that ∀x∃yRyx is __different__ from ∀x∃yRyx.
+<br> It is important to note that ∀x∃yRxy is __different__ from ∀x∃yRyx.
 <br> Imagine R is a predicate symbol for < and the universe are the positive integers.
 <br> Then ∀x∃yRxy would translate to _"For every positive integer x, there is some positive integer y such that x<y"_. 
 Or in other words, _"There is always a smaller positive integer."_, which is obviously false as nothing is smaller than 1.
 <br> Whereas ∀x∃yRyx would translate to _"For every positive integer x, there is some positive integer y<x"_. 
 Or in other words, _"There is always a larger positive integer."_, 
 which is obviously true as we can always find a bigger one.
+
+It should now be easy to see how ∀x∃yRxy differs from ∃x∀yRxy. 
+<br>__The order of the quantifiers matters!__
 
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
