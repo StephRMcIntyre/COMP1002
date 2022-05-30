@@ -263,5 +263,18 @@ $~~~~1~+~~~2~+~~~3~+...+~98~+~99~+100$
 </body>
 </html>
 
+#### Exercises:
+
+1. _The sun rises today. If the sun rises today, then the sun will rise tomorrow._
+<br>Prove by induction that the sun will always rise.
+
+2. Prove by induction that $1^3+2^3+3^3+...+n^3=n^2(n+1)^2/4$.
+
+3. Prove by induction that $1^2+3^2+5^2+...+(2n-1)^2=(4n^3-n)/3$.
+
+4. Prove by induction that $1^2+2^2+3^2+...+n^2=n(n+1)(2n+1)/6$.
+
+5. Prove by induction that $(1+2)^{-1}+(2*3)^{-1}+(3*4)^{-1}+...+(n(n+1))^{-1}=n/(n+1)$.
+
 <p>[Overview](https://carnap.io/shared/srenee651@gmail.com/book-induction-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Examples](https://carnap.io/shared/srenee651@gmail.com/book-induction-ex.pandoc) </p>
 
