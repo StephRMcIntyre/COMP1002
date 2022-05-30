@@ -1,9 +1,7 @@
 ---
 --from markdown+simple_tables
 ---
-<!---
-Needs to be reuploaded
--->
+
 # First-Order Logic
 
 ## Sets
@@ -42,7 +40,7 @@ Items in a set have no order and duplicates do not matter.
 | *{ 42, b, b, 42, {sun}, (moon, 1, 2)}
 ```
 
-A special set is called the __empty set__, denoted by ∅.
+A special set is called the __empty set__, denoted by ∅ or by {}.
 
 A set A is a __subset__ of set B if and only if every element of A is also in B. We express this as A⊆B.
 
@@ -95,5 +93,20 @@ The __Cartesian product__ of two sets A,B is denoted A✖B, and is defined as a 
 | *( (moon, 1, 2), 42 )
 | ( 42, (moon, 1, 2) )
 ```
+Note: The cartesian products A✖B and B✖A are two different sets. A cartesian product upon "distributing" the elements of A onto B, creates tuples.
+<br> As previously notes, the order of elements in tuples matters. Therefore since A✖B produces tuples where the first element is from A and second element from B, it follows that it creates different tuples to B✖A where the first element taken for the tuple is from B and second from A.
+<br>For example: If A = {2,3} and B = {5, kitkat, sky}
++ A✖B = {(2,5), (2,kitkat), (2,sky), (3,5), (3,kitkat), (3, sky)} 
++ B✖A = {(5,2), (5,3), (kitkat, 2), (kitkat, 3), (sky, 2), (sky, 3)}
++ And since we know (2, kitkat) is not the same as (kitkat, 2) due to tuples being order-sensitive, it is clear that the two sets are not equal.
 
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+6. In which cases does the cartesians product A✖B = B✖A.
+| * A = {} , B = {}
+|  A = {1,2} , B = {2,4}
+| * A = {1,1} , B = {1,1}
+|  A = {1} , B = {1,2}
+|  A = {1,2} , B = {}
+| * A = {2,2} , B = {2}
+```
 <p>[Previous: Syntax](https://carnap.io/shared/srenee651@gmail.com/book-FOL-syntax.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Predicates](https://carnap.io/shared/srenee651@gmail.com/book-FOL-pred.pandoc) </p>
