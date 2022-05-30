@@ -44,6 +44,7 @@ $\forall k \geq b (P(k)\to P(k+1))$
 
 This rule means that proving the base case(s) $P(b)$ and if assuming $P(k)$ for an arbitrary $k$ that is at least as big as the base case will allow us to prove $P(k+1)$, then we derive that the property holds for __all__ $k$ at least as big as the base case.
 
+
 To start off, we are going to do some simple examples which do not need induction. <br>Later on you will do proofs where you _need_ induction for the proof.
 <br>We decided to start off easy to ensure you understand the general form for induction proofs.
 
@@ -90,6 +91,13 @@ _Notice how we show that the LHS equal the RHS over a few steps.
 <br>We do not assume from the start that LHS=RHS.
 <br>Also in the IH, we assume for _some arbitrary k_, not every k. This is important!
 
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. Select everything that that is required in an induction proof.
+| *Prove the predicate holds for the base case(s) (smallest value(s)).
+| Prove that the predicate holds for the base case + 1.
+| *Prove the conditional that if the predicate holds for an arbitrary value which is greater than or equal to the base case, then the predicate holds for the next value.
+```
 
 ###Tale of Gauss 
 
