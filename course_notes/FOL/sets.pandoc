@@ -1,7 +1,9 @@
 ---
 --from markdown+simple_tables
 ---
-
+<!---
+Needs to be reuploaded
+-->
 # First-Order Logic
 
 ## Sets
@@ -21,7 +23,9 @@ Example:
 | moon
 | *(moon, 1, 2)
 | *{sun}
+| {{{sun}, (moon, 1, 2), 42, b}}, 
 | sun
+| (moon, 2, 1)
 | {42}
 | *42
 | *b
