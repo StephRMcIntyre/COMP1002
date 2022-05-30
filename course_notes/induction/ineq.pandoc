@@ -110,4 +110,5 @@ Why did we need the proof for P(1)? <br>What is wrong with having P(0) and havin
 [^1]: The line $2^k+1<2^k+2^k$ does not hold for when $k=0$ in the inductive argument.
 
 
-<p>[Previous: Examples](https://carnap.io/shared/srenee651@gmail.com/book-induction-ex.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Examples](https://carnap.io/shared/srenee651@gmail.com/book-induction-hanoi.pandoc) </p>
+<p>[Previous: Weak Induction](https://carnap.io/shared/srenee651@gmail.com/book-induction-weak.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Examples](https://carnap.io/shared/srenee651@gmail.com/book-induction-hanoi.pandoc) </p>
+
