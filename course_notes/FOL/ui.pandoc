@@ -60,12 +60,19 @@ If we want to universally generalize a compound wff, we must apply it to the ent
 |
 ~~~
 
+Just like with existential introduction, we can introduce a universal quantifier to quantify nothing.
+
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+5 AxSxa :|-: AxAyAxSxa 
+|AxSxa :PR
+~~~
+
 For this next one, we will start with assuming Pbb. 
 <br>If we can reach a contradiction in the subproof, then we can do ¬I to get ¬Pbb outside of the subproof.
 <br>Once ¬Pbb is outside of the subproof, then b at that line will be an arbitrary constant.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-5 AxLx, Ax(Lx -> ~EyPxy) :|-: Ax~Pxx 
+6 AxLx, Ax(Lx -> ~EyPxy) :|-: Ax~Pxx 
 |AxLx :PR
 |Ax(Lx -> ~EyPxy) :PR
 | Pbb :AS
@@ -74,7 +81,7 @@ For this next one, we will start with assuming Pbb.
 He's a tautology to prove. We will want to use a similar strategy as Q5.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-6 :|-: Ax(Px \/ ~Px) 
+7 :|-: Ax(Px \/ ~Px) 
 ~~~
 
 <p>[Previous: Universal Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ue.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Existential Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ee.pandoc) </p>
