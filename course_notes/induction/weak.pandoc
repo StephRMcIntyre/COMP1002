@@ -91,13 +91,38 @@ _Notice how we show that the LHS equal the RHS over a few steps.
 <br>Also in the IH, we assume for _some arbitrary k_, not every k. This is important!
 
 
-###Tale of Galileo 
+###Tale of Gauss 
 
-Consider we have some positive integer $n$, what happens if we took all the positive integers $\leq n$, and summed them all up?
+Consider we have some positive integer $n$, how could we quickly sum all the positive integers $\leq n$?
 <br>So we would have $1+2+...+n$ and it should equal some value.
 <br>For example, if $n=4$, we get $1+2+3+4=10$.
 
-[Galileo's Story]
+There is a story about a mathematician named Carl Friedrich Gauss. Apparently one day in primary school he misbehaved. As punishment, he was given the task of adding all the integers from 1 to 100. Gauss produced the correct answer incredibly quickly using a neat trick.
+
+See, 1+100=101,
+<br>and, $~$ 2+99=101,
+<br>and, $~$ 3+98=101,
+<br>... all the way to
+<br>..., $~~$ 50+51=101.
+<br>Which gives us 50*101=5050.
+
+A neat way to visualize this is to take two copies of this set of numbers, and reorganize them in such a way that we can add up these pairs that sum to 101. Then, since there are two copies and we only wanted to sum one copy, we divide the result by two.
+
+$~~~~1~+~~~2~+~~~3~+...+~98~+~99~+100$
+<br>$100+~99~+~98~+...+~~~3~+~~~2~~~+~~~1$
+<br>---------------------------------
+<br>$101+101+101+.+101+101+101$ = (100*101)/2
+
+
+<table>
+<tr><td>This generalizes to: 1+2+...+n = &nbsp;</td>
+ <td>
+    <div class="numer">n(n+1)</div>
+    <div class="denom">2</div>
+  </td>
+<td>.</td>
+</tr>
+</table>
 
 ###Proof
 
