@@ -94,4 +94,20 @@ Prove by induction that $n<2^n$ for all integers n≥0.
  
 Why did we need the proof for P(1)? <br>What is wrong with having P(0) and having the IH assume for k≥0? [^1]
 
+#### Exercises:
+
+1. Prove by induction that for all integers n $\geq$ 1, n < n$^2$ + 1.
+
+2. Prove by induction that for all integers n $\geq$ 5, 2n < n$^2$.
+
+3. Prove by induction that for all integers n $\geq$ 5, n$^2$ < 2$^n$.
+
+4. Prove by induction that for any positive integers a and b that if a ≤ b, then na ≤ nb for all positive integers n.
+<br> You may assume the following additivity property: for any positive integers x,y,z, if x ≤ y then x+z ≤ y+z.
+
+5. Prove by induction that for all integers n $\geq$ 4, n! > 2$^n$.
+
 [^1]: The line $2^k+1<2^k+2^k$ does not hold for when $k=0$ in the inductive argument.
+
+
+<p>[Previous: Examples](https://carnap.io/shared/srenee651@gmail.com/book-induction-ex.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Examples](https://carnap.io/shared/srenee651@gmail.com/book-induction-hanoi.pandoc) </p>
