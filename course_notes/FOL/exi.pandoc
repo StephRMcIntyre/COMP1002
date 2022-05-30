@@ -63,10 +63,18 @@ If we want to existentially quantify a constant within a compound wff, we must a
 |Lcj :PR
 ~~~
 
+The sentence ∃xPx has no free variables. 
+<br>Even when there are no free variables then we can still use existential introduction!
+
+~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
+6 ExPx :|-: ExExPx /\ EyExPx
+|ExPx :PR
+~~~
+
 When we want to do a proof by contradiction and need to assume the opposite of what we want to prove, it sometimes makes more sense to only assume the oppositive of the part inside the existential quantifier.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-6 :|-: Ex ~(Px /\ ~Px) 
+7 :|-: Ex ~(Px /\ ~Px) 
 ~~~
 
 The above proof would then translate:
@@ -77,7 +85,7 @@ The above proof would then translate:
 <br>$~~~$Since it is not the case that both Pc and not Pc holds, and c is an item in our universe, <br>then there must exist an item in our universe such that not both Pc and not Pc holds.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-7 :|-: Ex(Px \/ ~Px) 
+8 :|-: Ex(Px \/ ~Px) 
 ~~~
 
 <p>[Previous: Natural Deduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Universal Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ue.pandoc) </p>
