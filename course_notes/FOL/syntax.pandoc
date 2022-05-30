@@ -54,7 +54,7 @@ Note: Quantifiers cannot bind predicates. This means ∀P is __not__ a wff in FO
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
 1. Select the wff.
-| *∀x∃x1Pxx
+| *∀x∃yPxy
 | PQc
 | ∀x
 | ∀Px→Qy
