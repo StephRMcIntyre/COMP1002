@@ -1,0 +1,96 @@
+---
+--from markdown+simple_tables
+---
+
+# Sets & Relations
+
+## Sets
+
+### Subsets
+
+Set B is a __subset__ of C if and only if every element b in B is also in C. 
+<br>This is expressed symbolically as B⊆C ↔ ∀b(b∈B → b∈C).
+<br>B is not a subset of C is denoted as B⊈C.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+1. A={1,2,’kitkat’,Φ,∅}. B={2,1,’kitkat’,Φ,∅}. A⊆B.
+| *True
+| False
+```
+
+```{.QualitativeProblem .MultipleSelect options="check" submission="none" content-format="html"}
+2. A={1,2,’kitkat’,Φ,∅}. Select all the sets X such that X⊆A.
+| *{2,1}
+| *∅
+| ’kitkat’
+| {1,2,3}
+```
+
+#### Transitivity of Subsets
+
+Claim: If A⊆B and B⊆C, then A⊆C. 
+<br>_Note: We sometimes write A⊆B⊆C to denote this relationship, treating ⊆ like ≤._
+<br> Proof: _[We are asked to prove a if-then statement. -> Intro approach is ideal here]_
+<br>_[Assume the antecedent]_  Suppose A⊆B and B⊆C. 			
+<br>_[We want to show now A⊆C]_
+<br> $~~~~~$ Let a∈A be an arbitrary element of A
+<br> $~~~~~$ Since a∈A and A⊆B, we know by definition of subset that a∈B. 
+<br> $~~~~~$ Since a∈B and B⊆C, by definition of subset we find that a∈C. 
+Since a∈A was an arbitrary element of A, and a∈C, 
+we find that every element of A must be an element of C. 
+<br>_[Conclude with the consequent]_ Thus A⊆C.
+<br>Therefore, if A⊆B and B⊆C, then A⊆C.
+
+
+### Proper Subsets
+
+A set B is a __proper subset__ of C if and only B is a subset of C and there is some c in C that is not in B. 
+<br>This is expressed symbolically as B⊂C ↔ B⊆C ∧ ∃c(c∈C ∧ c∉B). 
+<br>_Note: some people will write B⊊C instead of B⊂C._
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+3. A={1,2,’kitkat’,Φ,∅}. B={2,1,’kitkat’,Φ,∅}. A⊂B.
+| True
+| *False
+```
+
+```{.QualitativeProblem .MultipleSelect options="check" submission="none" content-format="html"}
+4. A={1,2,’kitkat’,Φ,∅}. Select all the sets X such that X⊂A.
+| *{2,1}
+| *∅
+| ’kitkat’
+| {1,2,3}
+```
+
+Examples of showing that a set is not a (proper) subset of another set:
+<br>C={‘a’,1,2}⊈{1,2,’kitkat’,Φ,∅}=A since ‘a’∈C, but ‘a’∉A.
+<br>C={‘a’,1,2}⊄{1,2,’kitkat’,Φ,∅}=A since ‘a’∈C, but ‘a’∉A.
+<br>A’={2,1,’kitkat’,Φ,∅}⊄{1,2,’kitkat’,Φ,∅} since A’⊆A, but there is no element in A’ that is not an element of A.
+
+Exercise: Prove that If A⊂B and B⊂C, then A⊂C.
+<br>_Hint: it will be similar to the previous proof but with an extra part of showing there is an element in C that is not in A._
+
+#### Are any sets subsets of every set?
+
+<br>Claim: Yes, the empty set is the unique set that is a subset of every set.
+<br>Proof: 
+<br>Let A be any set. _We want to make it arbitrary as we need to prove for every set._
+<br> $~~~~~$ Assume a∈∅ be an arbitrary element a. 
+<br> $~~~~~$ By definition of empty set, a∉∅, so we have a contradiction. 
+<br> $~~~~~$ From a contradiction, we derive a∈A. 
+<br> Then if a∈∅, then a∈A.
+<br> $~~~~~$ Since a is arbitrary, we find that ∅⊆A by definition.
+<br> $~~~~~$ Since A was arbitrary, then ∅ is a subset of every set.
+	
+  
+### Set Equality
+
+Two sets are considered equal (A=B) if and only if both A⊆B and B⊆A.
+
+Examples: 
+<br>{1,2,3}⊆{3,2,1} and {3,2,1}⊆{1,2,3}, therefore {1,2,3}={3,2,1}
+<br>{1,2,3}={3,2,1}, therefore {1,2,3}⊆{3,2,1}.
+<br>Since {1,2,3}⊈{1,2} (why?), we know that {1,2,3}≠{1,2}
+
+<p>[Previous: Overview](https://carnap.io/shared/srenee651@gmail.com/book-SR-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Quantifiers](https://carnap.io/shared/srenee651@gmail.com/book-SR-subsets.pandoc) </p>
+
