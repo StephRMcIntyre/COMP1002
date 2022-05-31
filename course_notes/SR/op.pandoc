@@ -1,0 +1,87 @@
+---
+--from markdown+simple_tables
+---
+
+# Sets & Relations
+
+## Sets
+
+### Set Operations
+
+The __union of sets__ A and B (A∪B) is defined as A∪B={x|x∈A ∨ x∈B}.
+
+The __intersection of sets__ A,B (A ⋂ B) is defined as A⋂B={x|x∈A ∧ x∈B}.
+
+The __difference of sets__ A,B (A∖B) is defined as A-B={x|x∈A ∧ x∉B}.
+<br>_[Some books use A\B instead of A-B.]_
+
+Examples:
+<br>{1,2,3} ∪ {3,4,5} = {1,2,3,4,5}
+<br>{1,2,3} ⋂ {3,4,5} = {3}
+<br>{1,2,3} - {3,4,5} = {1,2}
+<br>({1,2,3} ∪ {3,4,5}) - {2,4} = {1,3,5}
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+1. ℕ ∪ ℤ =
+| ℕ
+| *ℤ
+| ℚ
+| Set of Negative Integers
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+2. ℕ ⋂ ℤ =
+| *ℕ
+| ℤ
+| ℚ
+| Set of Negative Integers
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+3. ℤ - ℕ =
+| ℕ
+| ℤ
+| ℚ
+| *Set of Negative Integers
+```
+
+#### Proving Properties
+
+__Example 1__
+For any sets A,B,C, prove that the following property holds: A∪(B⋂C) = (A∪B)⋂(A∪C)
+<br>Proof: Using definiton of set equality, we need to show both 
+<br>A∪(B⋂C) ⊆ (A∪B)⋂(A∪C) and (A∪B)⋂(A∪C) ⊆ A∪(B⋂C).
+<br>Proof for A∪(B⋂C) ⊆ (A∪B)⋂(A∪C): 
+<br>Let x∈A∪(B⋂C). Then x∈A ∨ x∈B⋂C by definition of set union.
+<br> Case 1: x∈A. 
+<br> $~~~~~~~~~$ It follows that x∈A ∨ x∈B _[disjunction introduction]_. It also follows that x∈A ∨ x∈C.
+<br> $~~~~~~~~~$ Thus x∈(A∪B)∧x∈(A∪C) _[conjunction introduction]_. Then x∈(A∪B)⋂(A∪C).
+<br> Case 2: x∈B⋂C. 
+<br> $~~~~~~~~~$ Then x∈B ∧ x∈C by definition of set intersection. 
+<br> $~~~~~~~~~$ Since x∈B, x∈A ∨ x∈B. Since x∈A ∨ x∈B, x∈A∪B by definition of set union.
+<br> $~~~~~~~~~$ Since x∈C, x∈A ∨ x∈C. Since x∈A ∨ x∈C, x∈A∪C by definition of set union. 
+<br> $~~~~~~~~~$ Now, x∈A∪B∧x∈A∪C. It follows that x∈(A∪B)⋂(A∪C) by definition of set intersection.
+<br>In either case, x∈(A∪B)⋂(A∪C). 
+<br>Since x∈A∪(B⋂C) was arbitrary, we find that A∪(B⋂C) ⊆ (A∪B)⋂(A∪C)
+<br>Proof for (A∪B)⋂(A∪C) ⊆ A∪(B⋂C): _Left as an exercise. Hint: subcases_
+
+__Example 2__
+For any sets A,B,C, prove that the following property holds: A⊆A∪B.
+<br>Proof: Let a∈A be arbitrary. 
+<br>Then a∈A ∨ a∈B [disjunction introduction]. 
+<br>It follows then that a∈A∪B by definition of set union. 
+<br>Since a∈A was arbitrary, and we found that a∈A∪B, then by the subset definition, we know that A⊆A∪B.
+
+
+__Example 3__
+For any sets A,B prove that the following property holds: if A⊆B then A-B⊆B.
+<br>Proof: Suppose A⊆B. 
+<br> $~~~~~~~~~$ Let a∈A-B be arbitrary. 
+<br> $~~~~~~~~~$ Then a∈A ∧ a∉B by definition of set difference. 
+<br> $~~~~~~~~~$ It follows that a∈A.
+<br> $~~~~~~~~~$ As A⊆B and a∈A, then we find that a∈B.
+<br> $~~~$ Since a∈A-B was arbitrary, and we found that a∈B, then by the subset definition, we know that A⋂B⊆B.
+<br>Therefore, if A⊆B then A-B⊆B.
+
+<p>[Previous: Subsets](https://carnap.io/shared/srenee651@gmail.com/book-SR-subsets.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Powersets](https://carnap.io/shared/srenee651@gmail.com/book-SR-power.pandoc) </p>
+
