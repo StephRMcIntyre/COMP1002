@@ -1,0 +1,28 @@
+---
+--from markdown+simple_tables
+---
+
+# First-Order Logic
+
+## Restricted Quantifiers
+
+Because ∃x (Px ∧ Rx) and ∀x (Px → Rx) are common structures, some books often use a shorthand notation.
+
+∃x∈P Rx represents ∃x (Px ∧ Rx).
+<br>∀x∈P Rx represents ∀x (Px → Rx).
+
+In mathematics/computer science, relational conditions are sometimes expressed this way:
+<br>∃x<0 |x|=3 
+<br> $~~~~~$ _There is a number less than 0 who's absolute value is 3._
+<br>∀x≠1 ∀y≠0 xy≠y
+<br> $~~~~~$ _For every x not equal to 1 and non-zero y, the product of x and y does not equal y.
+
+More examples of using these restricted quantifiers:
+<br> _B is a subset of C_
+<br> $~~~~~$ ∀x∈B x∈C (in full FOL: ∀x (Bx → Cx))
+<br> _Function f is continuous at x0_ 
+<br> $~~~~~$ ∀ε>0 ∃δ>0 ∀x∈R |x-x0|<δ → |f(x)-f(x0)|<ε
+
+We won't use these alternate ways of expressing wffs in our ND proofs, but we will see more of these later on and you may be tested on these.
+
+<p>[Previous: More Translations](https://carnap.io/shared/srenee651@gmail.com/book-FOL-trans.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Interpretations](https://carnap.io/shared/srenee651@gmail.com/book-FOL-interp.pandoc) </p>
