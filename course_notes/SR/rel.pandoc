@@ -1,0 +1,65 @@
+---
+--from markdown+simple_tables
+---
+
+# Sets & Relations
+
+## Relations
+
+A relation on a domain B and co-domain C is any subset of B×C.
+
+Examples:
+<br>The Loves relation on Folks={Sam,Jamie} is given by the following:
+<br>Loves = {(Sam,Sam),(Sam,Jamie),(Jamie,Jamie)}.
+<br>Notice that Loves ⊆ Folks×Folks
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+1. Select y such that y∉Loves relation but y∈Folks×Folks.
+| Sam
+| (Sam,Rebecca)
+| *(Jamie,Sam)
+| ∅
+```
+
+The < relation on ℕ is given by the following:
+<br> < = {(a,b) | a∈ℕ ∧ b∈ℕ ∧ a<b}
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Select all of the elements in the < relation.
+| (-1,2)
+| *(1,10)
+| (10,1)
+| (20,20)
+| *(25,10000)
+```
+
+While in FOL we often wrote Rxy to express a binary predicate,
+<br>we will write xRy to denote that (a,b)∈R. We read this as “a R’s b”, or “a is related to b by R”
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+3. Let S = {(1,3),(2,4),(4,4),(4,2)}. Select all the True statements.
+| *1S3
+| 3S1
+| *4S4
+| 1S4
+```
+
+Some relations you have been exposed to already: <, ≤, =, ≠.
+
+If domain (set B) is equal to co-domain (set B), we sometimes call it a relation on the set B. 
+<br>This is related to binary predicates from FOL.
+<br>B here is what is called a _homogenous relation_.
+
+We can draw the relation with what is known as a directed graph.
+<br>Let's use the Loves relation as an example.
+
+<img src="https://carnap.io/shared/srenee651@gmail.com/loves.png" alt="Loves Relation">
+<br>Every element in Folks has what is called a node.
+<br>Every element in Loves has a directed arrow that goes from the first element of the pair to the second element.
+
+If we added another person, say Erin, to the Folks set but didn't include them in any of the pairs of the the Loves relation, 
+then Erin would have their own node but no incoming or outcoming arrows.
+
+On the next page we will discuss properties of homogenous relations.
+
+<p>[Previous: Cardinality of Finite Sets](https://carnap.io/shared/srenee651@gmail.com/book-SR-card.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Properties of Homogenous Relations](https://carnap.io/shared/srenee651@gmail.com/book-SR-prop.pandoc) </p>
