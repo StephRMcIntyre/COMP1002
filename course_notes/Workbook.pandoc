@@ -1,19 +1,21 @@
 <br>
 
-# An Algorithm for Truth
+# An Algorithm for Truth [^1]
 
 <br>
 
 ### Compiled by Steph McIntyre
 
+##### Assisted by Parsa Esmkhani
+
 
 
 <br>
-[^1][^2]
+[^2]
 
 [^1]: <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">An Algorithm for Truth</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. It is written for the [carnap.io](http://carnap.io) platform.
 
-[^2]: *Acknowledgements*: Firstly, many thanks to Graham Leach-Krouse et al, for their work on [carnap.io](http://carnap.io), as this is an amazing tool. Secondly, many thanks to Richard Zach from UCalgary and the rest of the OLP team for providing these wonderful resources and guidance. Many exercises in the first two sections are either taken from his work or inspired by his work. Thirdly, thanks to Rylo Ashmore and Dr. Antonina Kolokolova whom both heavily influenced these notes. Lastly, thank you to the students from COMP 1002 Winter 2022- you were such a fantasic group to teach and test my teaching methods on and the students from COMP 1002 Summer 2022 who are using these notes for the first time-- good luck!
+[^2]: *Acknowledgements*: Firstly, many thanks to Dr. Graham Leach-Krouse et al, for their work on [carnap.io](http://carnap.io), as this is an amazing tool. Secondly, many thanks to Dr. Richard Zach from UCalgary and the rest of the OLP team for providing these wonderful resources and guidance. Many exercises in the first two sections are either taken from his work or inspired by his work. Thirdly, thanks to Rylo Ashmore and Dr. Antonina Kolokolova whom both heavily influenced these notes. Lastly, thank you to the students from COMP 1002 Winter 2022- you were such a fantasic group to teach and test my teaching methods on and the students from COMP 1002 Summer 2022 who are using these notes for the first time-- good luck!
 
 
 <br>
@@ -128,8 +130,6 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 ## Chapter 2 - Proofs
 
-!!UNDER CONSTRUCTION!!
-
 
 <br>
 
@@ -142,11 +142,11 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 - [Equality Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-eqi.pandoc)
 - [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-prac.pandoc)
 
+
 <br>
 
 ## Chapter 3 - Additional Topics
 
-!!UNDER CONSTRUCTION!!
 
 <br>
 
