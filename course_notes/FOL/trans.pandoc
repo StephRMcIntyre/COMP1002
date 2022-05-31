@@ -33,7 +33,7 @@ Here are some more difficult translation exercises.
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-2 Ex(Cx /\ ∀y(Py->Ixy)) : There is someone who was influenced by a computer scientist and they are influenced by every professor.
+2 Ex(Cx /\ ∀y(Py->Ixy)) : There is someone who was is a computer scientist and they are influenced by every professor.
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
@@ -54,15 +54,15 @@ _Hint: Three quantifiers._
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-7 AxWxx : Every professor works with themselves. 
+7 Ax(Px -> Wxx) : Every professor works with themselves. 
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-8 ~ExIxx : No computer scientist influences themselves.
+8 ~Ex(Cx /\ Ixx) : No computer scientist influences themselves.
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-9 Ax(Wxx->~EyIxy) : Any professor who works with themselves does not have a computer scientist that influenced them.
+9 Ax((Px /\ Wxx) -> ~Ey(Cy /\ Iyx)) : Any professor who works with themselves does not have a computer scientist that influenced them.
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
