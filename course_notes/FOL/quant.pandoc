@@ -31,7 +31,7 @@ $Cx~~$        $x$ is a computer scientist.        $~~~~c~~$       Christine Paul
 $Ixy~~$       $x$ was influenced by $y$.          
 ------------- ----------------------------------- ------------- --------------------------
 
-<br> _The universe will be every person currently alive._<br>
+<br> The universe will be every person currently alive.<br>
 
 _Everyone is a computer scientist._
 <br>Cx is the only predicate being used. 
@@ -69,12 +69,21 @@ Sometimes the quantification is implicit...
 
 _Hint: "A square is a rectangle."... is this about a specific square or a general rule applied to all squares?_
 
+
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-3 ∃xWxx : Someone works with themselves.
+3 ∀x(Px -> Cx) : Professors are computer scientists.
 ~~~
 
-_Hint: W takes in two variables. What is the difference between the first input and the second input of W?
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+4 ∃x(Px/\Cx) : There is a computer scientist who is also a professor.
+~~~
+
+~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
+5 ∃xWxx : Someone works with themselves.
+~~~
+
+_Hint: W takes in two variables. What is the difference between the first input and the second input of W?_
+
+
 
 <p>[Previous: Predicates](https://carnap.io/shared/srenee651@gmail.com/book-FOL-pred.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Negating Statements](https://carnap.io/shared/srenee651@gmail.com/book-FOL-neg.pandoc) </p>
-
-
