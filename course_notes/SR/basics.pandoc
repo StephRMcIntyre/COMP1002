@@ -1,0 +1,58 @@
+---
+--from markdown+simple_tables
+---
+
+# Sets & Relations
+
+## Sets
+
+### Common Sets
+
+#### The Empty Set
+
+It is a set of no objects. End of story.
+
+But also, it is denoted as either {} or ∅.
+
+#### Other Common Sets of Numbers
+
+Natural numbers, ℕ = {0,1,2,3,...}, 
+Integers, ℤ = {0,-1,1,-2,2,-3,3,...},
+Rationals, ℚ = {0,-1,1,2,-2,½,-½,3,-3,⅓,-⅓,⅔,-⅔,...},
+Reals, ℝ = {0,1,√2,-π,Φ,e,-⅗,...},$~~~~~~~~~~$*_note: this set cannot actually be listed_
+
+Some people disagree about whether or not 0∈ℕ.
+<br>For the purposes of this course, 0∈ℕ.
+
+### Elements of Sets
+
+Sets are either empty or collections of things.
+<br>We write A={1,2,’kitkat’,Φ,∅} to denote the set of:
+
++ the number 1,
++ the number 2, 
++ the string ‘kitkat’, 
++ the number Φ = (1+sqrt(5))/2, and 
++ the empty set ∅.
+
+We write Φ∈A to denote that the number Φ is an element of the set A.
+<br>We write ‘Alberta’∉A to denote that the string ‘Alberta’ is not an element of the set A.
+
+### Properties
+
+We sometimes write {x∈X | Px} to denote all objects x∈X that satisfy property Px.
+
+Example: E={n∈ℤ | ∃k∈ℤ, 2k=n} is the set of even numbers.
+<br>Cars = {c | c is a car} is the set of all cars. Sometimes the domain is left out if it is implicit in the definition
+<br>B = {b∈Cars | b is blue} is the set of all blue cars.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+1. C = {c∈ℤ | c$^2$=4}. C is ...
+| The set of all even integers.
+| {4}
+| *{-4,4}
+| 4
+```
+
+<p>[Previous: Overview](https://carnap.io/shared/srenee651@gmail.com/book-SR-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Quantifiers](https://carnap.io/shared/srenee651@gmail.com/book-SR-subsets.pandoc) </p>
+
