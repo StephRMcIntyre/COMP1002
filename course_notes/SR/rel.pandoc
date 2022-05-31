@@ -60,6 +60,6 @@ We can draw the relation with what is known as a directed graph.
 If we added another person, say Erin, to the Folks set but didn't include them in any of the pairs of the the Loves relation, 
 then Erin would have their own node but no incoming or outcoming arrows.
 
-On the next page we will discuss properties of homogenous relations.
+<br><br><br>Next we will discuss some properties of homogenous relations. We will start with Reflexivity.
 
-<p>[Previous: Cardinality of Finite Sets](https://carnap.io/shared/srenee651@gmail.com/book-SR-card.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Properties of Homogenous Relations](https://carnap.io/shared/srenee651@gmail.com/book-SR-prop.pandoc) </p>
+<p>[Previous: Cardinality of Finite Sets](https://carnap.io/shared/srenee651@gmail.com/book-SR-card.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Reflexivity](https://carnap.io/shared/srenee651@gmail.com/book-SR-ref.pandoc) </p>
