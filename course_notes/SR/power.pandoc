@@ -1,0 +1,62 @@
+---
+--from markdown+simple_tables
+---
+
+# Sets & Relations
+
+## Sets
+
+### Power Set
+
+The __power set__ of set A, denoted as 𝒫(A), is the set of all subsets of A.
+<br>This includes both A and ∅.
+
+Examples:
+
++ 𝒫({1,2}) = {∅, {1}, {2}, {1,2}}	
+<br>_Note: {1}≠1. Be careful when type-checking!_
++ 𝒫(∅) = {∅}
++ 𝒫({∅}) = {∅, {∅}}.
+
+Note: ∅≠{∅}. 
+<br>One is the empty set and the other is the set containing the empty set.
+<br> $~~~~$ _Think about the empty set being nothing, and sets being a bag._
+<br> $~~~~$ _This means ∅ is nothingness but {∅} is an empty bag._
+
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+1. 𝒫({(1,2)}) = 
+| {∅, 1}
+| {∅, {1,2}}
+| *{∅, {(1,2)}}
+| {∅, (1,2)}
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+2. 𝒫({∅, {∅}}) = 
+| ∅
+| {∅, {∅}}
+| {∅, {∅}, {∅, {∅}}
+| *{∅, {∅}, {{∅}}, {∅, {∅}}
+```
+
+#### Proving Properties
+
+__Example__
+<br>For any sets A,B, prove that the following property holds: A ⊆ B ⇒ 𝒫(A) ⊆ 𝒫(B).
+<br>Proof: Suppose that A ⊆ B.
+<br>Let C∈𝒫(A) where C is arbitrary.
+<br> _Remember, the 𝒫(A) is a set of sets, so C must be a set._
+<br>By definition of power set, C ⊆ A.
+<br>It follows that C ⊆ B by transitivity of subsets (see Subsets page).
+<br>Since C ⊆ B, C∈𝒫(B) by definition of power set.
+<br>Since C was an arbitrary element of 𝒫(A), and we found that C∈𝒫(B), we know that 𝒫(A) ⊆ 𝒫(B).
+<br>Therefore for any sets A,B, A ⊆ B ⇒ 𝒫(A) ⊆ 𝒫(B).
+
+Exercise: For any sets A,B prove that the following property holds: A ⊂ B  ⇒  𝒫(A) ⊂ 𝒫(B).
+
+Exercise: For any sets A,B prove that the following property holds: 𝒫(A) ⊆ 𝒫(B) ⇒ A ⊆ B.
+
+
+<p>[Previous: Set Operations](https://carnap.io/shared/srenee651@gmail.com/book-SR-op.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Cardinality on Finite Sets](https://carnap.io/shared/srenee651@gmail.com/book-SR-card.pandoc) </p>
+
