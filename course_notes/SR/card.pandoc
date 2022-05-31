@@ -1,0 +1,108 @@
+---
+--from markdown+simple_tables
+---
+
+# Sets & Relations
+
+## Sets
+
+### Cardinality of Finite Sets
+
+The size of a finite set A, denoted as |A|, is the number of distinct elements in A.
+<br>The size of a set is often referred to as its __cardinality__. 
+
+A set is __finite__ if there is a specific number k∈ℕ of elements.
+<br>A set is __infinite__ if there is not a specific number of elements.
+
+Examples: 	
+<br>∅ is a finite set. |∅|=0.
+<br>{1,2,3,4} is a finite set. |{1,2,3,4}|=4.
+<br>ℕ is an infinite set.
+<br>ℤ is an infinite set. _with the same cardinality as ℕ._
+<br>ℝ is an infinite set _with a cardinality larger than ℕ._ [^1]
+
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+1. |{(1,2),3}| =
+| 1
+| *2
+| 3
+| 4
+```
+
+[^1]: We won't get into the differences between countably infinite and uncountably infinite, or comparing cardinalities of infinite sets. 
+If you are interested in this, then I highly recommend taking the Discrete Mathematics course from the Mathematics Department or I can point you to some books if you would like.
+
+The size of the __power set__ of a finite set A is $2^{|A|}$. 
+<br> Example: |𝒫({1,2,3})| = $2^{|\{1,2,3\}}|$ = $2^3$ = 8.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+2. |𝒫({(1,2),3})| =
+| 2
+| *4
+| 6
+| 8
+```
+
+##### Multiplicative Counting
+
+For any two finite sets: |A×B| = |A| ⋅ |B|.
+
+Example: 
+<br>|{1,2,3}×{4,5}| = |{(1,4),(1,5),(2,4),(2,5),(3,4),(3,5)}| = 6
+<br>Alternatively, |{1,2,3}×{4,5}| = |{1,2,3}| ⋅ |{4,5}| = 3 ⋅ 2 = 6
+
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+3. Let A = {1,2}. |A×A| = 
+| 2
+| 3
+| *4
+| 6
+```
+
+#### Additive Counting
+
+Two sets A,B are called ‘disjoint’ when A⋂B=∅. 
+<br>We think of this as having no elements in common.
+
+For any two disjoint sets A,B: |A∪B| = |A| + |B|
+
+Example: 
+<br>|{1,2,3}∪{4,5}| = |{1,2,3,4,5}| = 5. 
+<br>Alternatively, as {1,2,3}⋂{4,5}=∅, then
+<br>|{1,2,3}×{4,5}| = |{1,2,3}| + |{4,5}| = 3 + 2 = 5
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+4. Let A = {1,2}. Let B = {(1,2)}. |A∪B| = 
+| 2
+| *3
+| 4
+| 6
+```
+
+#### Principle of Inclusion and Exclusion
+
+The counting of unions can be generalized to
+<br>for any sets A,B, |A∪B| = (|A| + |B|) − |A⋂B|.
+
+Example: |A∪B| = 4, |A⋂B| = 3, |B| = 4. What is |A|?
+<br>As |A∪B| = (|A| + |B|) − |A⋂B|, we can rearrange and solve for |A|.
+<br>|A| = (|A∪B| + |A⋂B|) - |B|
+<br> $~~~~~$ = (4 + 3) - 4
+<br> $~~~~~$ = 3.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+5. Let |A| = 5. Let |B| = 4. Let |A∪B| = 8. |A⋂B| = ?
+| 0
+| *1
+| 2
+| 3
+```
+
+Exercise: Use the principle of inclusion-exclusion to show that 
+<br>For any sets A,B,C, |(A∪B)∪C| = |A| + |B| + |C| − |A⋂B| - |(A⋂C)| - |(B⋂C)| + |A⋂B⋂C|.
+
+
+<p>[Previous: Power Sets](https://carnap.io/shared/srenee651@gmail.com/book-SR-power.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Relations](https://carnap.io/shared/srenee651@gmail.com/book-SR-rel.pandoc) </p>
+
