@@ -113,5 +113,5 @@ For any sets A,B prove that the following property holds: if A⊆B then A-B⊆B.
 
 Exercise: For any sets A,B,C, prove that the following property holds: If A⊆B and A⊆C and B⋂C=∅, then A=∅.
 
-<p>[Previous: Subsets](https://carnap.io/shared/srenee651@gmail.com/book-SR-subsets.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Powersets](https://carnap.io/shared/srenee651@gmail.com/book-SR-power.pandoc) </p>
+<p>[Previous: Subsets](https://carnap.io/shared/srenee651@gmail.com/book-SR-subsets.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Power Set](https://carnap.io/shared/srenee651@gmail.com/book-SR-power.pandoc) </p>
 
