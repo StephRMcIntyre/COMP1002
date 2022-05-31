@@ -228,31 +228,20 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 - [Overview](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
 <br>
 
-## Chapter 1 - Sets
+## Chapter 1 - Sets & Counting
 
 <br>
 
-- [Subsets](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Set Operations](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Empty Set](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Powerset](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-
-<br>
-
-## Chapter 2 - Counting
-<br>
-
-- [Cardinalities on Finite Sets](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Multiplicative Counting](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Additive Counting](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Principle of Inclusion and Exclusion](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Practice Problems](https://carnap.io/shared) and [Solutions](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [Review](https://carnap.io/shared/srenee651@gmail.com/book-SR-basics.pandoc)
+- [Subsets](https://carnap.io/shared/srenee651@gmail.com/book-SR-subsets.pandoc)
+- [Set Operations](https://carnap.io/shared/srenee651@gmail.com/book-SR-op.pandoc)
+- [Power Set](https://carnap.io/shared/srenee651@gmail.com/book-SR-power.pandoc)
+- [Cardinalities on Finite Sets](https://carnap.io/shared/srenee651@gmail.com/book-SR-card.pandoc)
 
 
 <br>
 
-## Chapter 3 - Relations
+## Chapter 2 - Relations
 
 <br>
 
@@ -266,7 +255,7 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 <br>
 
 
-## Chapter 4 - Equivalence & Orders
+## Chapter 3 - Equivalence & Orders
 
 <br>
 
