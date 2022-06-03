@@ -42,7 +42,7 @@ $Ixy~~$       $x$ was influenced by $y$.
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
-2 ~∀xCx : Not everyone is a professor.
+2 ~∀xPx : Not everyone is a professor.
 ~~~
 
 ~~~{.Translate .FOL system="thomasBolducAndZachFOL"}
