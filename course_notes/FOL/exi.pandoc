@@ -36,15 +36,15 @@ __Important note__ : When ∃xPkx is put through another existential introductio
 When applying existential introduction, we can apply it to all of the constants of the same name.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-2Lcc :|-: Ex Lxx
+2 Lcc :|-: Ex Lxx
 |Lcj :PR
 ~~~
 
 Or we can apply it to some of the constants of the same name.
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-3 Kccc :|-: Ex Lxcx
-|Kccc :PR
+3 Lccc :|-: Ex Lxcx
+|Lccc :PR
 ~~~
 
 If we want to existentially quantify a constant within a compound wff, we must apply it to the entire wff.
