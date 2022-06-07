@@ -122,10 +122,10 @@ When a wff has connectives, we handle them with the semantic definitions from PL
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
 7. Select all of the formulas that are True under the given interpretation.
-| Pb
+| *Pb
 | Ob ∨ Pa
-| *Pb → Lba
-| *Pa ∧ ¬Lba
+| Pb → Lba
+| *Pa → Lba
 ```
 
 We can even evaluate these with variable assignments. 
@@ -133,11 +133,11 @@ We can even evaluate these with variable assignments.
 <br> For example, ℐ$[$x->1$][$y->2$]$(Lxy)=T as ℐ$[$x->1$][$y->2$]$(x)=1, ℐ$[$x->1$][$y->2$]$(y)=2, and (1,2)∈L.
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-8. Select all of the formulas that are True under the given interpretation.
-| Pb
-| Ob ∨ Pa
-| *Pb → Lba
-| *Pa ∧ ¬Lba
+8. Select everything that evaluates to True.
+| ℐ[x->1](Px)
+| *ℐ[y->2][x->1](Lxy)
+| *ℐ[x->1][y->2](Py → Lxy)
+| ℐ[x->1][y->2](Px)
 ```
 
 ### Quantifiers
@@ -160,7 +160,7 @@ We can think of checking existential quantifiers (on finite universes) with usin
 For example, ℐ(∃xPx)=T as ℐ$[$x->2$]$(Px)=T.
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-9. Evaluate ℐ(∃x(Px ∧ ~Ox))
+9. Evaluate ℐ(∃x(Px ∧ ¬Ox))
 | *True
 | False
 ```
@@ -171,7 +171,6 @@ For example, ℐ(∃xPx)=T as ℐ$[$x->2$]$(Px)=T.
 | *ℐ(∃x(Px ∧ Lax))
 | *ℐ(∃x(Px ∧ Ox))
 | ℐ(∃xPx ∧ Lba)
-| ℐ((∃x(Ox ∧ Lxb) ∧ ∃x(Oy ∧ Lyb))
 ```
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
@@ -202,7 +201,7 @@ For example, ℐ(∀xPx)=F as ℐ$[$x->1$]$(Px)=F.
 For example, ℐ(∀xSxx)=T as ℐ(S) is the set of all pairs (d,d) where d∈U.
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-12. Evaluate ℐ(∀x(Px ∨ ~Ox)).
+12. Evaluate ℐ(∀x(Px ∨ ¬Ox)).
 | True
 | *False
 ```
