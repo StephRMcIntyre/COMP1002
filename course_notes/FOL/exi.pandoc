@@ -37,7 +37,7 @@ When applying existential introduction, we can apply it to all of the constants 
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 2 Lcc :|-: Ex Lxx
-|Lcj :PR
+|Lcc :PR
 ~~~
 
 Or we can apply it to some of the constants of the same name.
