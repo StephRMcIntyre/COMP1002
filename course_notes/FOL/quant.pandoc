@@ -41,7 +41,7 @@ _Everyone is a computer scientist._
 _Someone is a professor._
 <br>Px is the only predicate being used. 
 <br>The use of the word _someone_ with the universe being people indicates existential quantification on the property of being a professor.
-<br>The statement would be translated to ∃xCx.
+<br>The statement would be translated to ∃xPx.
 
 _All computer scientists are professors._
 <br>Cx and Px are used here. 
