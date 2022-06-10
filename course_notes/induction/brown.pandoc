@@ -1,0 +1,35 @@
+---
+--from markdown+simple_tables
+---
+
+# Induction
+
+## Mathematical Induction (aka Weak Induction)
+
+###A Bad Induction Proof - All Cats Are Brown
+
+“Proof” (by induction):
+
+1) P(n): any set of n cats are brown.
+
+2) Base case: P(0) holds vacuously
+
+3) Induction step:
+
++ Induction hypothesis: any set of k cats are brown.
+* Induction argument: WTS any set of k+1 cats are brown.
++ Take an arbitrary set of k+1 cats. Take a cat out.
++ The remaining k cats are brown by induction hypothesis.
++ Now put that cat back in, and take out another cat.
++ Remaining k cats are again brown by induction hypothesis.
++ Therefore, all the k+1 cats in that set are brown.
+
+4) Therefore, by induction, all cats are brown.
+
+
+[ Illustration ]
+
+
+Why is this “proof” bad? It is obviously wrong, as there exists cats that are not brown. We shouldn't be able to prove false claims, so something has gone astray in the proof. [^2]
+
+[^2]: Hint: trace out the proof to prove that any set of 1 cat is brown.
