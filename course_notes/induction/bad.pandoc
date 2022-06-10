@@ -1,0 +1,119 @@
+---
+--from markdown+simple_tables
+---
+
+# Induction
+
+## Mathematical Induction (aka Weak Induction)
+
+###Bad Induction Proofs
+
+Common mistakes in induction proofs include missing the base case, incorrect base case, incorrect usage of the induction hypothesis, incorrect algebra, ciricular arguments, and reasoning that does not make sense.
+
+Here we will give some bad induction proofs and your job is to identify the issues present.
+<br> Yes, the examples are going to be ridiculous, but that is to illustrate what can go wrong.
+
+__Ex1__: For all integers $n \geq 2$, $n \not = 2$ .
+
++ Let the property P(n) be the sentence: $n \not = 2$.
++ Inductive step - Show that for all integers $n \geq 2$, if P(k) is true, then P(k+1) is also true.
++ Inductive hypothesis: Suppose k is any integer $k \geq 2$ such that P(k) is true.
++ Inductive argument: We must show that $k+1 \not = 2$.
+<br> $~~~~~~~$ Since $k\geq 2$ and by the inductive hypothesis $k \not = 2$, then it follows that $k > 2$.
+<br> $~~~~~~~$ Then, $k+1>k>2$, and thus $k+1>2$.
+<br> $~~~~~~~$ Therefore P(k+1) is true
++ By the principle of induction, P(n) is true for all integers $n \geq 2$.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+Ex1. Select what is wrong with this proof.
+| *The base case is missing.
+| The inductive step should be for all integers k>2.
+| If k≠2 and k≥2, then it does not follow that k>2.
+| If k+1>k and k>2, then it does not follow that k+1>2.
+```
+
+__Ex2__: For all integers $n \geq 6$, $n \not = 5$ .
+
++ Let the property P(n) be the sentence: $n \not = 5$.
++ Base Case - Show that P(6) is true. 6≠5.
++ Inductive step - Show that for all integers $k ≥ 6$, if P(k) is true, then P(k+1) is also true.
++ Inductive hypothesis: Suppose k=7 and P(k) is true.
++ Inductive argument: We must show that $k+1 \not = 5$.
+<br> $~~~~~~~$ Since $k = 7$ and by the inductive hypothesis $k \not = 5$, then $k + 1 = 7 + 1 = 8 > 5$.
+<br> $~~~~~~~$ Then, $k+1>5$, and thus $k+1≠5$.
+<br> $~~~~~~~$ Therefore P(k+1) is true
++ By the principle of induction, P(n) is true for all integers $n \geq 6$.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+Ex2. Select what is wrong with this proof.
+| The base case choice is incorrect.
+| The inductive step should be for all integers k≥2.
+| *k is not arbitrarily chosen in the inductive hypothesis.
+| The inductive argument is circular as it assumes what it wants to prove.
+```
+
+__Ex3__: For all integers $n \geq 2$, $n \not = 2$ .
+
++ Let the property P(n) be the sentence: $n \not = 2$.
++ Base Case - Show that P(3) is true. 3≠2.
++ Inductive step - Show that for all integers $n \geq 2$, if P(k) is true, then P(k+1) is also true.
++ Inductive hypothesis: Suppose k is any integer $k \geq 2$ such that P(k) is true.
++ Inductive argument: We must show that $k+1 \not = 2$.
+<br> $~~~~~~~$ Since $k\geq 2$ and by the inductive hypothesis $k \not = 2$, then it follows that $k > 2$.
+<br> $~~~~~~~$ Then, $k+1>k>2$, and thus $k+1>2$, meaning k+1≠2.
+<br> $~~~~~~~$ Therefore P(k+1) is true
++ By the principle of induction, P(n) is true for all integers $n \geq 2$.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+Ex3. Select what is wrong with this proof.
+| *The base case choice is incorrect.
+| The inductive step should be for all integers k>2.
+| If k≠2 and k≥2, then it does not follow that k>2.
+| If k+1>k and k>2, then it does not follow that k+1>2.
+```
+
+
+__Ex4__: For all integers $n \geq 2$, $n \not = 3$ .
+
++ Let the property P(n) be the sentence: $n \not = 3$.
++ Base Case - Show that P(2) is true. 2≠3.
++ Inductive step - Show that for all integers $n > 2$, if P(k) is true, then P(k+1) is also true.
++ Inductive hypothesis: Suppose k is any integer $k > 2$ such that P(k) is true.
++ Inductive argument: We must show that $k+1 \not = 3$.
+<br> $~~~~~~~$ Since $k > 2$ and by the inductive hypothesis $k \not = 3$, then $k + 1 > 2 + 1$.
+<br> $~~~~~~~$ Then, $k+1>3$, and thus $k+1≠3$.
+<br> $~~~~~~~$ Therefore P(k+1) is true
++ By the principle of induction, P(n) is true for all integers $n \geq 2$.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+Ex4. Select what is wrong with this proof.
+| The base case choice is incorrect.
+| The base case not proven correctly as clearly 2=3.
+| *The inductive step should be for all integers k≥2.
+| If k>2 and k≠3, then it does not follow that k+1≠3.
+```
+
+
+__Ex5__: For all integers $n \geq 2$, $n \not = 3$ .
+
++ Let the property P(n) be the sentence: $n \not = 3$.
++ Base Case - Show that P(2) is true. 2≠3.
++ Inductive step - Show that for all integers $n ≥ 2$, if P(k) is true, then P(k+1) is also true.
++ Inductive hypothesis: Suppose k is any integer $k ≥ 2$ such that P(k) is true.
++ Inductive argument: We must show that $k+1 \not = 3$.
+<br> $~~~~~~~$ Since $k+1 \not = 3$, then $k+1<3$ or $k+1>3$. 
+<br> $~~~~~~~$ As $k ≥ 2$, then $k+1≥2+1=3$. 
+<br> $~~~~~~~$ Then, $k+1≥3$, and since $k+1 \not = 3$, then $k+1>3$.
+<br> $~~~~~~~$ Therefore P(k+1) is true
++ By the principle of induction, P(n) is true for all integers $n \geq 2$.
+
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+Ex5. Select what is wrong with this proof.
+| The base case choice is incorrect.
+| The inductive step should be for all integers k≥2.
+| k is not arbitrarily chosen in the inductive hypothesis.
+| *The inductive argument is circular as it assumes what it wants to prove.
+```
+
+
