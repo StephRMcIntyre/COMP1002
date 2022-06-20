@@ -15,13 +15,13 @@ i.e. the most recent one or two terms.
 
 
 __Hanoi Recurrence Relation__
-<br>H(n)=1, $~~~~~~~~$if n=1
+<br>H(n)=1, $~~~~~~~~~~~~~~~~$if n=1
 <br>H(n)=2H(n-1)+1, if n>1.
 
 Then H(1)=1.
 <br> H(2)=2H(2-1)+1
-<br> $~~~~$ =2H(1)+1
-<br> $~~~~$ =2*1+1=3
+<br> $~~~~~~~$ =2H(1)+1
+<br> $~~~~~~~$ =2*1+1=3
 <br> H(3)=2H(3-1)+1...
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
@@ -54,14 +54,14 @@ Some of you may familiar with the Fibonacci Recurrence Relation.
 __Fibonacci Recurrence Relation__
 
 F(0)=0,
-F(1)=1,
-F(n)=F(n-1)+F(n-2), if n>1.
+<br>F(1)=1,
+<br>F(n)=F(n-1)+F(n-2), if n>1.
 
 This one has two recurrences. 
 
 F(2)=F(2-1)+F(2-2)
-<br> $~~~~$ = F(1)+F(0)
-<br> $~~~~$ = 1+0 = 1
+<br> $~~~~~~$ = F(1)+F(0)
+<br> $~~~~~~$ = 1+0 = 1
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
 F(3). Compute F(3).
