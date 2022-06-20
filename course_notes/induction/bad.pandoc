@@ -101,7 +101,7 @@ __Ex5__: For all integers $n \geq 2$, $n ≠ 3$ .
 + Inductive step - Show that for all integers $n ≥ 2$, if P(k) is true, then P(k+1) is also true.
 + Inductive hypothesis: Suppose k is any integer $k ≥ 2$ such that P(k) is true.
 + Inductive argument: We must show that $k+1 ≠ 3$.
-<br> $~~~~~~~$ Since $k+1 ≠ = 3$, then $k+1<3$ or $k+1>3$. 
+<br> $~~~~~~~$ Since $k+1 ≠ 3$, then $k+1<3$ or $k+1>3$. 
 <br> $~~~~~~~$ As $k ≥ 2$, then $k+1≥2+1=3$. 
 <br> $~~~~~~~$ Then, $k+1≥3$, and since $k+1 ≠ 3$, then $k+1>3$.
 <br> $~~~~~~~$ Therefore P(k+1) is true
