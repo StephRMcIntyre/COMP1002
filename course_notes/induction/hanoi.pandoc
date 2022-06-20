@@ -36,14 +36,16 @@ After a bit of practice, we might want to guess that n disks takes 2$^n$-1 moves
 <br>But, how to prove it?...
 
 Proof - solving n disks takes at most _2$^n$-1_ moves:
-Proof: 1 disk clearly takes 1=2$^1$-1 move. 
-To do 2 disks, we first move the top disk to the second peg, followed by the base disk to the third peg. 
-Then move the top disk on the base disk. This totals _3=2$^2$-1_ moves. For 3 disks, we repeat what we did for 2 disks but on the top two disks (3 moves),
+<br>Proof: 1 disk clearly takes 1=2$^1$-1 move. 
+<br>To do 2 disks, we first move the top disk to the second peg, followed by the base disk to the third peg. 
+<br>Then move the top disk on the base disk. This totals _3=2$^2$-1_ moves. 
+<br>For 3 disks, we repeat what we did for 2 disks but on the top two disks (3 moves),
 then we move the new base disk (_1_ move), followed by solving for two disks to get on
 top of the new base disk (_3_ moves). This gives _7=2$^3$-1_ moves.
-Continuing, if we have _n disks_, we move the top n-1 disks using 2$^n-1$-1 moves,
+<br>Continuing, if we have _n disks_, we move the top n-1 disks using 2$^n-1$-1 moves,
 followed by 1 move for the base disk, followed by another 2$^n-1$-1 moves for the top
-stack, we find we total _2$^n-1$-1 + 1 + 2$^n-1$-1 = 2*2$^n-1$-1 = 2$^n$-1_ moves. This gives a strategy finishing this in _2$^n$-1_ moves.
+stack, we find we total _2$^n-1$-1 + 1 + 2$^n-1$-1 = 2*2$^n-1$-1 = 2$^n$-1_ moves. 
+<br>This gives a strategy finishing this in _2$^n$-1_ moves.
 
 
 
