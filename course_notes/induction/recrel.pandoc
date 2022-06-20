@@ -86,3 +86,6 @@ F(10). Compute F(10).
 | *55
 | 100
 ```
+
+
+__Exercise:__ Prove by induction that $H(n)=2^n-1$.
