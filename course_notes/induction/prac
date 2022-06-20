@@ -12,3 +12,5 @@ Now prove that you will study logic everyday since yesterday.
 Ex 3: So far we have used induction to prove things that go forward. For example all natural numbers starting from 1. 
 But suppose we wanted to modify our induction to be able to prove a property P(x) for all negative numbers with base case -1.
 What would that modificiation be? can you come up with an example?
+
+Ex 4: Prove that for all n<-1, that n$^3$<n. 
