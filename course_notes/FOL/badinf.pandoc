@@ -77,7 +77,7 @@ Example 4: Prove that there exists an integer x such that 2x=0.
 This proof has all the right components, but in the wrong places...
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-4. Select the issue with Example 3's "proof".
+4. Select the issue with Example 4's "proof".
 | *It has a circular argument as it assumes there exists an integer x such that 2x=0.
 | It is a proof by example as it only proves it for a specific case.
 | It re-uses variables when using existential elimination.
@@ -95,7 +95,7 @@ Example 5: Prove that if integers $m$ and $n$ share the same parity then $m+n$ i
 Something is missing...
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-5. Select the issue with Example 3's "proof".
+5. Select the issue with Example 5's "proof".
 | It does not prove both directions in the biconditional.
 | It does not assume the antecedent for the conditional statement.
 | *It does not prove both sides of the disjunction.
