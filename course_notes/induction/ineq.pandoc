@@ -51,12 +51,12 @@ Prove the Lemma by induction.
 3) IS: 
 
 + IH: Suppose that $1<2^k$ for some k≥1.
-+ IA: WTS $1<2^(k+1)$
++ IA: WTS $1<2^{(k+1)}$
 <br> $1<2^k$ _by IH_
 <br> $<2^k+2^k$ _as $0<1<2^k$ by base case_
 <br> $=2*2^k$ _by factoring 2_
-<br> $=2^(k+1)$ _by property of exponents_
-<br>Therefore $1<2^(k+1)$ holds, and thus P(k+1) holds.
+<br> $=2^{(k+1)}$ _by property of exponents_
+<br>Therefore $1<2^{(k+1)}$ holds, and thus P(k+1) holds.
 
 4) Concluding Statement:
 <br>Thus by the principle of mathematical induction, for all n≥1, $n < n^2$.
