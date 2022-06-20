@@ -44,9 +44,9 @@ Example: 0 is a counting number.
 <br>Thus 0+1=1 is a counting number.
 <br>Thus 1+1=2 is a counting number ....etc. etc.
 
-```{.QualitativeProblem .MultipleSelect options="check" submission="none" content-format="html"}
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
 Counting-Number. Select all of those which are counting numbers.
-| -1
+| --1
 | *0
 | 5.5
 | *1000
@@ -56,7 +56,7 @@ __Exercise:__ Show by induction that all counting numbers are non-negative.
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
 Counting-Number-Exercise1. Select the base case for the Exercise.
-| -1
+| --1
 | *0
 | 1
 | 2
