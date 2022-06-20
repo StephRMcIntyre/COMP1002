@@ -89,7 +89,7 @@ Prove by induction that for all integers n≥1, $(n-1)(n+1)+1=n^2$.
 
 _Notice how we show that the LHS equal the RHS over a few steps. 
 <br>We do not assume from the start that LHS=RHS.
-<br>Also in the IH, we assume for _some arbitrary k_, not every k. This is important!
+<br>Also in the IH, we assume for __some arbitrary k__, not every k. This is important!_
 
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
@@ -156,8 +156,8 @@ $~~~~1~+~~~2~+~~~3~+...+~98~+~99~+100$
 </table>
 
 2) __Base Case__ (BC, n=1):
-<br>  &emsp WTS P(1), as 1 is the smallest value as expressed in the problem statement.
-<br>  &emsp <table>
+<br> WTS P(1), as 1 is the smallest value as expressed in the problem statement.
+<br>  <table>
 <tr>LHS = 1.</tr><tr><td>RHS = &nbsp;</td>
  <td>
     <div class="numer">1(1+1)</div>
@@ -171,7 +171,7 @@ $~~~~1~+~~~2~+~~~3~+...+~98~+~99~+100$
   <td> = 1 </td>
 </tr>
 </table>
-<br>  &emsp <table>
+<br> <table>
 <tr><td>LHS=RHS, therefore  1+2+...+n = &nbsp;</td>
  <td>
     <div class="numer">n(n+1)</div>
