@@ -27,9 +27,6 @@
 4) Therefore, by induction, all cats are brown.
 
 
-[ Illustration ]
-
-
 Why is this “proof” bad? It is obviously wrong, as there exists cats that are not brown. We shouldn't be able to prove false claims, so something has gone astray in the proof. [^2]
 
 [^2]: Hint: trace out the proof to prove that any set of 1 cat is brown.
