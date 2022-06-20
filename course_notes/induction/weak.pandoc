@@ -264,12 +264,6 @@ $~~~~1~+~~~2~+~~~3~+...+~98~+~99~+100$
 </body>
 </html>
 
-Parsing with Parsa: A section that might help in layman's terms.
-It's important to recognise __why__ induction works. You could think of it like so: When trying to prove a property for all positive integers for example,
-if you could prove that it works for your base case(1 in this case), and then while assuming that it works for an arbitrary k, prove that it holds for (k+1),
-you can imagine how then if we take 1 to be our k, then 2 would have that property, and then 3 would have that property, and there's an infinite recursion that takes place. 
-This is why all you need in order to prove a property about an infinite set of numbers with induction, is an infinitely recurring pattern of k and k+1 as well as just 1 base case.
-
 
 #### Exercises:
 
