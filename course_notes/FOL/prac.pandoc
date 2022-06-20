@@ -10,8 +10,6 @@ from markdown+simple_tables
 1 ∀y¬Py :|-: Ay(~Py\/~Qy)
 ~~~
 
-Since equality _is a predicate_, then Equality Elimination can used on it.
-
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
 2 ∃xQx  :|-: ∀x(Qx → ∃yQy)
 ~~~
@@ -21,7 +19,7 @@ Since equality _is a predicate_, then Equality Elimination can used on it.
 ~~~
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
-4 ∅ :|-: ∀xPx → ∃yPy
+4 :|-: ∀xPx → ∃yPy
 ~~~
 
 ~~~{.ProofChecker system="thomasBolducAndZachFOL" options="indent resize guides render tabindent fonts" init="now" submission="none" points=0}
