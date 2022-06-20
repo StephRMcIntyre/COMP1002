@@ -1,0 +1,20 @@
+
+
+---
+--from markdown+simple_tables
+---
+
+# Solutions to practise problems.
+
+Ex1:
+
+1) __State the property__ you wish to prove. This is often expressed as a predicate.
+<br>Let the Property P(n) be $n < n^2$.
+
+2) __Base Case (BC, n=2):__ WTS P(2), as 2 is the smallest value as expressed in the problem statement.
+<br>LHS = 2
+<br>RHS = $2^2 = 4$
+<br>As $2 < 4$, then LHS < RHS.
+<br>Therefore $n < n^2$ holds for when $n=2$, and thus P(2) holds as desired.
+
+3) __Inductive Step (IS):__
