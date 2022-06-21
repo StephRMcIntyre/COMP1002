@@ -278,5 +278,5 @@ $~~~~1~+~~~2~+~~~3~+...+~98~+~99~+100$
 
 5. Prove by induction that $(1+2)^{-1}+(2*3)^{-1}+(3*4)^{-1}+...+(n(n+1))^{-1}=n/(n+1)$.
 
-<p>[Previous: Overview](https://carnap.io/shared/srenee651@gmail.com/book-induction-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Examples with Inequalities](https://carnap.io/shared/srenee651@gmail.com/book-induction-ineq.pandoc) </p>
+<p>[Previous: Overview](https://carnap.io/shared/srenee651@gmail.com/book-induction-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Blue-Eyed Logicians](https://carnap.io/shared/srenee651@gmail.com/book-induction-blue.pandoc) </p>
 
