@@ -2,7 +2,9 @@
 --from markdown+simple_tables
 ---
 
-# Induction Practice Problems
+# Induction 
+
+## Simple Practice Problems
 
 __Exercise 1:__ Prove that for all n≥1, that $n$ x $n$ is a positive number. 
 
@@ -14,3 +16,5 @@ But suppose we wanted to modify our induction to be able to prove a property P(x
 What would that modificiation be? Can you come up with an example?
 
 __Exercise 4:__  Prove that for all $n<-1$, that $n^3<n$. 
+
+<p>[Previous: Bad Induction Proofs](https://carnap.io/shared/srenee651@gmail.com/book-induction-bad.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Solutions](https://carnap.io/shared/srenee651@gmail.com/book-induction-solutions1.pandoc) </p>
