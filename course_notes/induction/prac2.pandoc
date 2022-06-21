@@ -1,0 +1,54 @@
+ <style>
+table {
+  font-size: 16px;
+}
+
+div.numer {
+  border-bottom:1px solid;
+  text-align:center;
+  font-size: 0.8em;
+}
+
+div.denom {
+  font-size: 0.8em;
+  border-top: 1px solid;
+  text-align: center;
+}
+</style>
+
+# Induction
+
+## Structural Induction
+
+<br><br>
+
+###Exercises
+
+1. _Let the set of simple propositional wffs be recursively defined as follows:
+<br> $~~~~$ 1) P, where P is __any__ proposition symbol, is a simple propositional wff.
+<br> $~~~~$ 2) If α is a simple propositional wff, then so is (¬α).
+<br> $~~~~$ 3) If α and β are both simple propositional wffs, then so is (α ∧ β).
+<br> $~~~~$ 4) If α and β are both simple propositional wffs, then so is (α ∨ β).
+<br>_
+<br>$~~~~~$a) Prove by structural induction that for all simple propositional wffs without negations, if every propositional variable is assigned the value False, then the simple propositional wffs is evaluated to False. 
+<br>$~~~~~$b) Prove by structural induction that for all simple propositional wffs without negations, if every propositional variable is assigned the value True, then the simple propositional wffs is evaluated to True.
+
+2. _Let the set of light switch string be recursively defined as follows:
+<br> $~~~~$ 1) 0 is a light switch string.
+<br> $~~~~$ 2) 1 is a light switch string.
+<br> $~~~~$ 3) If α is a light switch string, then so is αα.
+<br> _
+<br> $~~~~$a) Prove by structural induction that for all light switch strings, there exists a k in the integers such that the number of 1s in the light switch string is equal to $2^k$.
+<br> $~~~~$b) Prove by structural induction that for all light switch strings, there exists a k in the integers such that the number of 0s in the light switch string is equal to $2^k$.
+<br> $~~~~$c) Prove by structural induction that for all light switch strings, there exists a k in the integers such that the length of the light switch string is equal to $2^k$.
+
+3. _Let the set of counting-sets be recursively defined as follows:
+<br> $~~~~$ 1) {1} is a counting-sets with the largest value as 1.
+<br> $~~~~$ 2) If α is a counting-sets with the largest value n, then so is the set α' which is the set of all of the elements in α and the value of n+1.
+<br>_
+<br> $~~~~$a) Give the first 3 counting-sets.
+<br> $~~~~$b) Prove by structural induction that for all counting-sets s with its largest value v, the number of elements in s is equal to the value v.
+<br> $~~~~$c) Prove by structural induction that for all counting-sets s with its largest value v, the sum of all of the elements in s is equal to v*(v+1)/2.
+
+
+<p>[Previous: Structural Induction](https://carnap.io/shared/srenee651@gmail.com/book-induction-si.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Pigeonhole Principle](https://carnap.io/shared/srenee651@gmail.com/book-induction-pig.pandoc) </p>
