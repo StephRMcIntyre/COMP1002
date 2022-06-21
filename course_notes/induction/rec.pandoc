@@ -30,6 +30,9 @@ A good recursive definition will have:
 	* This details how additional elements are made.
 	* There can be multiple recursive steps.
 
+_Note:_ Often there is a "nothing else" clause. Meaning nothing else is that type of structure.
+<br>If it is not included, assume it is there implicitly. 
+
 Note we have already seen these!
 <br>The syntax/semantics of PL and FOL were recursively defined!
 
