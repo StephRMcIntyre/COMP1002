@@ -58,5 +58,5 @@ Hanoi. Select when the inductive hypothesis was used.
 | *The remaining k disks must be moved on top of the base disk again, taking at least 2^k-1 moves.
 ```
 
-<p>[Next: Examples with Inequalities](https://carnap.io/shared/srenee651@gmail.com/book-induction-ineq.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Bad Induction Proofs](https://carnap.io/shared/srenee651@gmail.com/book-induction-bad.pandoc) </p>
+<p>[Next: Examples with Inequalities](https://carnap.io/shared/srenee651@gmail.com/book-induction-ineq.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Brown Cats](https://carnap.io/shared/srenee651@gmail.com/book-induction-brown.pandoc) </p>
 
