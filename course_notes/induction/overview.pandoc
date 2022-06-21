@@ -30,12 +30,11 @@ There are 3 pegs, n disks of different sizes.
 <br>You can move any single disk on the top of one of the pegs to any other peg with no disk.                                                                    or a larger disk
 <br>__Question:__ Given n disks, how many moves does it take to move a stack to another peg?
 
-[video]
-
 After a bit of practice, we might want to guess that n disks takes 2$^n$-1 moves.
 <br>But, how to prove it?...
 
 Proof - solving n disks takes at most __2$^n$-1__ moves:
+
 *Proof: 
 +1 disk clearly takes 1=2$^1$-1 move. 
 +To do 2 disks, we first move the top disk to the second peg, followed by the base disk to the third peg. 
@@ -50,6 +49,5 @@ stack, we find we total __2$^n-1$-1 + 1 + 2$^n-1$-1 = 2*2$^n-1$-1 = 2$^n$-1__ mo
 
 
 
-
-<p>[Previous: Overview](https://carnap.io/shared/srenee651@gmail.com/book-induction-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Examples with Inequalities](https://carnap.io/shared/srenee651@gmail.com/book-induction-ineq.pandoc) </p>
+&emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Weak Induction](https://carnap.io/shared/srenee651@gmail.com/book-induction-weak.pandoc) </p>
 
