@@ -48,7 +48,7 @@ The proof scheme looks like the following:
 
 
 
-###Simple Prop Wffs
+###Example: Simple Prop Wffs
 
 Recall the definiton for simple propositional wffs.
 
@@ -79,216 +79,83 @@ Prove by structural induction that for every simple propositional wff α, $L_\al
 
 3) __Inductive Step:__
 
-+ 1) Let α be a simple propositional wff of the form (¬φ) where φ is  Inductive Hypothesis (IH): Suppose for some integer k≥1, P(k) holds.
-<br> This means that $(k-1)(k+1)+1=k^2$.
-+ Inductive Argument (IA): WTS P(k+1).
-<br> That is, we want to show $((k+1)-1)((k+1)+1)+1=(k+1)^2$
-<br> So we insert $k+1$ into the LHS (or we could go from RHS to LHS, or do both sides __independently__):
-<br>$((k+1)-1)((k+1)+1)+1=((k-1)+1)((k+1)+1)+1$, as $(k+1)-1=(k-1)+1$
-<br>$=$__$(k-1)(k+1)+1$__$+(k-1)+(k+1)+1$, _by expanding_
-<br>$=$__$k^2$__$+(k-1)+(k+1)+1$ _by IH (we replaced the previous bold subexpression with the other side of the IH)_
-<br>$=k^2+2k+1$ _by algebra_
-<br>$=(k+1)^2$ _by factoring_
-<br>Again, alternatively, we could do,
-<br>LHS = $((k+1)-1)((k+1)+1)+1=((k-1)+1)((k+1)+1)+1$, as $(k+1)-1=(k-1)+1$
-<br>$=$__$(k-1)(k+1)+1$__$+(k-1)+(k+1)+1$, _by expanding_
-<br>$=$__$k^2$__$+(k-1)+(k+1)+1$ _by IH (we replaced the previous bold subexpression with the other side of the IH)_
-<br>$=k^2+2k+1$ _by algebra_
-<br>RHS = $(k+1)^2$ =$k^2+2k+1$, _by expanding_
-<br>LHS=RHS
-<br>Therefore $((k+1)-1)((k+1)+1)+1=(k+1)^2$ holds, and thus P(k+1) holds.
++ 1. Let α be a simple propositional wff of the form (¬φ) where φ is a simple propositional wff.
+	* Inductive Hypothesis (IH): Suppose P(φ) holds. Meaning $L_\varphi$ = $R_\varphi$.
+	* Inductive Argument (IA): WTS P(α). That is we want to show $L_\alpha$ = $R_\alpha$.
+		+ We do not know much about φ other than it is a simple propositional wff.
+		+ φ could be an atomic wff, but it also could be a compound wff.
+		+ We do know there is some number of left parenthesis and right parenthesis.
+			* __BUT WE DO NOT KNOW THE PRECISE NUMBER!__
+			* $L_\varphi$ is the number of left parenthesis in φ.
+			* $R_\varphi$ is the number of right parenthesis in φ.
+		+ When we construct α, we do it via rule 2) applied to φ to get (¬φ).
+		+ Constructing (¬φ) adds three symbols: 1 ¬, 1 (, and 1 ).
+		+ This means that $L_\alpha$ = $L_\varphi$ + 1.
+			* The number of left parenthesis in α is the number of left parenthesis in φ + the 1 ( from the construction of α.
+		+ Similarly, $R_\alpha$ = $R_\varphi$ + 1.
+		+ We then get $L_\alpha$ = $L_\varphi$ + 1, by how many left parenthesis are in α.
+		+ $~~~~~~~~~~~~~~~~~~~~~~~~~~~$ = $R_\varphi$ + 1, as $L_\varphi$=$R_\varphi$ by IH.
+		+ $~~~~~~~~~~~~~~~~~~~~~~~~~~~$ = $R_\alpha$, by how many right parenthesis are in α.
+		+ Therefore $L_\alpha$ = $R_\alpha$, as desired.	
++ 2. Let α be a simple propositional wff of the form (φ ∧ β) where φ, β are simple propositional wffs.
+	* Inductive Hypothesis (IH): Suppose P(φ) and P(β) both hold. 
+		+ Meaning $L_\varphi$ = $R_\varphi$ and $L_\beta$ = $R_\beta$.
+	* Inductive Argument (IA): WTS P(α). That is we want to show $L_\alpha$ = $R_\alpha$.
+		+ $L_\varphi$ is the number of left parenthesis in φ.
+		+ $R_\varphi$ is the number of right parenthesis in φ.
+		+ $L_\beta$ is the number of left parenthesis in β.
+		+ $R_\beta$ is the number of right parenthesis in β.
+		+ When we construct α, we do it via rule 3) applied to φ and β to get (φ ∧ β).
+		+ Constructing (φ ∧ β) adds three symbols: 1 ∧, 1 (, and 1 ).
+		+ This means that $L_\alpha$ = $L_\varphi$ + $L_\beta$ 1.
+		+ Similarly, $R_\alpha$ = $R_\varphi$ + $R_\beta$ + 1.
+		+ We then get $L_\alpha$ = $L_\varphi$ + $L_\beta$ + 1, by how many left parenthesis are in α.
+		+ $~~~~~~~~~~~~~~~~~~~~~~~~~~~$ = $R_\varphi$ + $L_\beta$ + 1, as $L_\varphi$=$R_\varphi$ by IH.
+		+ $~~~~~~~~~~~~~~~~~~~~~~~~~~~$ = $R_\varphi$ + $R_\beta$ + 1, as $L_\beta$=$R_\beta$ by IH.
+		+ $~~~~~~~~~~~~~~~~~~~~~~~~~~~$ = $R_\alpha$, by how many right parenthesis are in α.
+		+ Therefore $L_\alpha$ = $R_\alpha$, as desired.	
++ 3. Let α be a simple propositional wff of the form (φ ∨ β) where φ, β are simple propositional wffs.
+	* __Left as an exercise__. It is similar to the previous case.
 
 4) __Concluding Statement:__
-<br>Thus by the principle of mathematical induction, for all n≥1, $(n-1)(n+1)+1=n^2$
+<br>Thus by the principle of structural induction, every simple propositional wff has the same number of left parenthesis as right parenthesis.
 
-_Notice how we show that the LHS equal the RHS over a few steps. 
-<br>We do not assume from the start that LHS=RHS.
-<br>Also in the IH, we assume for _some arbitrary k_, not every k. This is important!
+_Note: If there is a "nothing else" clause, ignore it while doing your structural induction proof._
 
-
-```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-1. Select everything that that is required in an induction proof.
-| *Prove the predicate holds for the base case(s) (smallest value(s)).
-| Prove that the predicate holds for the base case + 1.
-| *Prove the conditional that if the predicate holds for an arbitrary value which is greater than or equal to the base case, then the predicate holds for the next value.
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+SimpleWff1. Select what is needed to prove the case left for case 3 which was left as an exercise.
+| Only one simple propositional wff, φ.
+| *Two simple propositional wffs, φ and β.
+| P and Q, two propositional symbols.
 ```
 
-###Tale of Gauss 
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+SimpleWff2. Supposing φ was some simple propositional wff for case 3, how many left parenthesis does it have?
+| 0
+| 1
+| 2
+| *Some unknown number.
+```
 
-Consider we have some positive integer $n$, how could we quickly sum all the positive integers $\leq n$?
-<br>So we would have $1+2+...+n$ and it should equal some value.
-<br>For example, if $n=4$, we get $1+2+3+4=10$.
-
-There is a story about a mathematician named Carl Friedrich Gauss. Apparently one day in primary school he misbehaved. As punishment, he was given the task of adding all the integers from 1 to 100. Gauss produced the correct answer incredibly quickly using a neat trick.
-
-See, 1+100=101,
-<br>and, $~$ 2+99=101,
-<br>and, $~$ 3+98=101,
-<br>... all the way to
-<br>..., $~~$ 50+51=101.
-<br>Which gives us 50*101=5050.
-
-A neat way to visualize this is to take two copies of this set of numbers, and reorganize them in such a way that we can add up these pairs that sum to 101. Then, since there are two copies and we only wanted to sum one copy, we divide the result by two.
-
-$~~~~1~+~~~2~+~~~3~+...+~98~+~99~+100$
-<br>$100+~99~+~98~+...+~~~3~+~~~2~~~+~~~1$
-<br>---------------------------------
-<br>$101+101+101+.+101+101+101$ = (100*101)/2
-
-
-<table>
-<tr><td>This generalizes to: 1+2+...+n = &nbsp;</td>
- <td>
-    <div class="numer">n(n+1)</div>
-    <div class="denom">2</div>
-  </td>
-<td>.</td>
-</tr>
-</table>
-
-###Proof
-
-<table>
-<tr><td>Prove by induction that for all integers n≥1, 1+2+...+n = &nbsp;</td>
- <td>
-    <div class="numer">n(n+1)</div>
-    <div class="denom">2</div>
-  </td>
-<td>.</td>
-</tr>
-</table>
-
-1) __State the property__ you wish to prove. This is often expressed as a predicate.
-
-<table>
-<tr><td>$~~~~~~~~~~$Let the Property P(n) be  1+2+...+n = &nbsp;</td>
- <td>
-    <div class="numer">n(n+1)</div>
-    <div class="denom">2</div>
-  </td>
-<td>.</td>
-</tr>
-</table>
-
-2) __Base Case__ (BC, n=1):
-<br>$~~~~~~~~~~$WTS P(1), as 1 is the smallest value as expressed in the problem statement.
-<br>$~~~~~~~~~~$<table>
-<tr>LHS = 1.</tr><tr><td>RHS = &nbsp;</td>
- <td>
-    <div class="numer">1(1+1)</div>
-    <div class="denom">2</div>
-  </td>
- <td>=</td>
- <td>
-    <div class="numer">2</div>
-    <div class="denom">2</div>
-  </td>
-  <td> = 1 </td>
-</tr>
-</table>
-<table>
-<tr><td>LHS=RHS, therefore  1+2+...+n = &nbsp;</td>
- <td>
-    <div class="numer">n(n+1)</div>
-    <div class="denom">2</div>
-  </td>
-<td>$~~$ holds for when $n=1$, and thus P(1) holds as desired. </td></tr>
-</table> 
-
-3) __Inductive Step:__
-
-+ Inductive Hypothesis (IH): Suppose for some integer k≥1, P(k) holds.
-<br> This means that <table>
-<tr><td>1+2+...+k = &nbsp;</td>
- <td>
-    <div class="numer">k(k+1)</div>
-    <div class="denom">2</div>
-  </td>
-</tr>
-</table>
-+ Inductive Argument (IA): WTS P(k+1).
-<br> That is, we want to show <table>
-<tr><td>1+2+...+k+(k+1) = &nbsp;</td>
- <td>
-    <div class="numer">(k+1)((k+1)+1)</div>
-    <div class="denom">2</div>
-  </td>
-</tr>
-</table>
-<br> So we insert $k+1$ into the LHS (or we could go from RHS to LHS, or do both sides __independently__):
-<br> <table>
-<tr><td>LHS = __1+2+...+k__+(k+1) = &nbsp;</td>
- <td>
-    <div class="numer">__k(k+1)__</div>
-    <div class="denom">__2__</div>
-  </td>
-<td> +(k+1), __by IH__ </td>
-</tr>
-<tr> <td><p style="text-align:right;">= &nbsp;</p></td>
- <td>
-    <div class="numer">k(k+1)+__2(k+1)__</div>
-    <div class="denom">2</div>
-  </td> 
- <td>, _by multiplying $(k+1)$_ by 2/2. </td>
-</tr>
-<tr> <td><p style="text-align:right;">= &nbsp;</p></td>
- <td>
-    <div class="numer">k^2+k+2k+2</div>
-    <div class="denom">2</div>
-  </td> 
- <td>, _by expanding_. </td>
-</tr>
-<tr> <td><p style="text-align:right;">= &nbsp;</p></td>
- <td>
-    <div class="numer">k^2+3k+2</div>
-    <div class="denom">2</div>
-  </td> 
- <td>, _as $k+2k=3k$_ </td>
-</tr>
-<tr> <td><p style="text-align:right;">= &nbsp;</p></td>
- <td>
-    <div class="numer">(k+1)((k+1)+1)</div>
-    <div class="denom">2</div>
-  </td> 
- <td>, _by factoring_ </td>
-</tr>
-</table>
-<table>
-<tr> <td>Then 1+2+...+k+(k+1) =</td>
- <td>
-    <div class="numer">(k+1)((k+1)+1)</div>
-    <div class="denom">2</div>
-  </td> 
- <td>, and thus LHS=RHS as required. </td>
-</tr>
-</table>
-<br>Therefore P(k+1) holds.
-
-4) __Concluding Statement:__
-<br>
-<table>
-<tr> <td>Thus by the principle of mathematical induction, for all n≥1, $1+2+...+n$ =</td>
- <td>
-    <div class="numer">n(n+1)</div>
-    <div class="denom">2</div>
-  </td> 
-</tr>
-</table>
-
-</body>
-</html>
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+SimpleWff3. Supposing φ and β were some simple propositional wffs for case 3, how many left parenthesis are in (φ ∨ β)?
+| 0
+| 1
+| 2
+| The number of left parenthesis in φ, plus 1.
+| The number of left parenthesis in β, plus 1.
+| *The number of left parenthesis in φ, plus number of left parenthesis in β, plus 1.
+```
 
 #### Exercises:
 
-1. _The sun rises today. If the sun rises today, then the sun will rise tomorrow._
-<br>Prove by induction that the sun will always rise.
+1. Prove by structural induction that there always exists some integer k such that $L_\alpha$ + $R_\alpha$ = 2k for any simple propositional wff $\alpha$.
 
-2. Prove by induction that $1^3+2^3+3^3+...+n^3=n^2(n+1)^2/4$.
+Let $C_\alpha$ be the number of connective symbols in $\alpha$.
+<br> Let $P_\alpha$ be the number of occurrences of propositional symbols in $\alpha$.
 
-3. Prove by induction that $1^2+3^2+5^2+...+(2n-1)^2=(4n^3-n)/3$.
+2. Prove that it is not the case that for every simple propositional wff $\alpha$, $P_\alpha$ ≥ $C_\alpha$.
 
-4. Prove by induction that $1^2+2^2+3^2+...+n^2=n(n+1)(2n+1)/6$.
+3. Prove by structural induction that it is the case that for every simple propositional wff $\alpha$, $C_\alpha$ ≥ $P_\alpha$-1.
 
-5. Prove by induction that $(1+2)^{-1}+(2*3)^{-1}+(3*4)^{-1}+...+(n(n+1))^{-1}=n/(n+1)$.
-
-<p>[Previous: Overview](https://carnap.io/shared/srenee651@gmail.com/book-induction-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Examples with Inequalities](https://carnap.io/shared/srenee651@gmail.com/book-induction-ineq.pandoc) </p>
+<p>[Previous: Recurrence Relations](https://carnap.io/shared/srenee651@gmail.com/book-induction-recrel.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Structural Induction Practice](https://carnap.io/shared/srenee651@gmail.com/book-induction-prac2.pandoc) </p>
