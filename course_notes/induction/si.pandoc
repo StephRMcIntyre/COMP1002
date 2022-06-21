@@ -1,0 +1,294 @@
+
+  <style>
+table {
+  font-size: 16px;
+}
+
+div.numer {
+  border-bottom:1px solid;
+  text-align:center;
+  font-size: 0.8em;
+}
+
+div.denom {
+  font-size: 0.8em;
+  border-top: 1px solid;
+  text-align: center;
+}
+</style>
+
+# Induction
+
+## Structural Induction
+
+<br><br>
+
+###Proof Structure
+
+Sometimes you want to prove a property holds for everything in a recursive definition, like on lists, trees, well-formed formulas, etc.
+<br>A very handy tool is Structural Induction- a proof method used often used in Computer Science.
+<br>Essentially, we prove that the property holds for all the smallest structures and that if it holds for structure S, then it must hold also for anything we can build from S.
+<br>You can think of this as doing induction on the number of steps done in a derivation of elements of the set S.
+
+The proof scheme looks like the following:
+
++ 0) Identify the structure.
+  * What is the induction on?
++ 1) Identify the property.
+  * What are you trying to prove for each instance of that structure?
++ 2) Base case: __One for each item in the Basis.__
++ 3) Inductive step: __One for each Recursion Step__.
+	* Assume the inductive hypothesis:
+      - That is, assume we have the instances of the structure needed in the requiremeents of that Recursion Step.
+        + This is usually seen between the "if ... then" in the Recursive clause.
+      - And, assume the property holds for each of these instances.
+	* Make the inductive argument that the new instance of the structure type is created from the Recursion Step holds.
+      - The new instance of that structure type can usually be seen after the "then" in the Recursive clause.
++ 4) Conclude that the property holds for all instances of that structure.
+
+
+
+###Simple Prop Wffs
+
+Recall the definiton for simple propositional wffs.
+
+Let the set of simple propositional wffs be recursively defined as follows:
+<br> $~~~~$ 1) P, where P is __any__ proposition symbol, is a simple propositional wff.
+<br> $~~~~$ 2) If α is a simple propositional wff, then so is (¬α).
+<br> $~~~~$ 3) If α and β are both simple propositional wffs, then so is (α ∧ β).
+<br> $~~~~$ 4) If α and β are both simple propositional wffs, then so is (α ∨ β).
+
+Let $L_\alpha$ be the number of left parenthesis in α.
+Let $R_\alpha$ be the number of right parenthesis in α.
+
+Prove by structural induction that for every simple propositional wff α, $L_\alpha$ = $R_\alpha$.
+
+0) __Identify the Structure__: The structure is the simple propositional wffs.
+
+1) __Identify the Property__:
+<br>Let the Property P(α) be $L_\alpha$ = $R_\alpha$.
+<br>_Notice how the input for this predicate will be a simple propositional wff._
+
+2) __Base Case:__ Let α be an arbitrary propositional symbol P. Prove P(α).
+<br>_Notice how we chose an arbitrary propositional symbol. 
+<br>This is because 1) in the definition says P is_ __any__ _propositional symbol._
+<br>P has no left parentheses. It is just a propositional symbol which is a letter.
+<br>P also has no right parentheses for the same reason.
+<br>$L_\alpha$ = 0 = $R_\alpha$, as desired.
+<br>As P was arbitrary, then P(α) holds where α is any propositional symbol.
+
+3) __Inductive Step:__
+
++ 1) Let α be a simple propositional wff of the form (¬φ) where φ is  Inductive Hypothesis (IH): Suppose for some integer k≥1, P(k) holds.
+<br> This means that $(k-1)(k+1)+1=k^2$.
++ Inductive Argument (IA): WTS P(k+1).
+<br> That is, we want to show $((k+1)-1)((k+1)+1)+1=(k+1)^2$
+<br> So we insert $k+1$ into the LHS (or we could go from RHS to LHS, or do both sides __independently__):
+<br>$((k+1)-1)((k+1)+1)+1=((k-1)+1)((k+1)+1)+1$, as $(k+1)-1=(k-1)+1$
+<br>$=$__$(k-1)(k+1)+1$__$+(k-1)+(k+1)+1$, _by expanding_
+<br>$=$__$k^2$__$+(k-1)+(k+1)+1$ _by IH (we replaced the previous bold subexpression with the other side of the IH)_
+<br>$=k^2+2k+1$ _by algebra_
+<br>$=(k+1)^2$ _by factoring_
+<br>Again, alternatively, we could do,
+<br>LHS = $((k+1)-1)((k+1)+1)+1=((k-1)+1)((k+1)+1)+1$, as $(k+1)-1=(k-1)+1$
+<br>$=$__$(k-1)(k+1)+1$__$+(k-1)+(k+1)+1$, _by expanding_
+<br>$=$__$k^2$__$+(k-1)+(k+1)+1$ _by IH (we replaced the previous bold subexpression with the other side of the IH)_
+<br>$=k^2+2k+1$ _by algebra_
+<br>RHS = $(k+1)^2$ =$k^2+2k+1$, _by expanding_
+<br>LHS=RHS
+<br>Therefore $((k+1)-1)((k+1)+1)+1=(k+1)^2$ holds, and thus P(k+1) holds.
+
+4) __Concluding Statement:__
+<br>Thus by the principle of mathematical induction, for all n≥1, $(n-1)(n+1)+1=n^2$
+
+_Notice how we show that the LHS equal the RHS over a few steps. 
+<br>We do not assume from the start that LHS=RHS.
+<br>Also in the IH, we assume for _some arbitrary k_, not every k. This is important!
+
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. Select everything that that is required in an induction proof.
+| *Prove the predicate holds for the base case(s) (smallest value(s)).
+| Prove that the predicate holds for the base case + 1.
+| *Prove the conditional that if the predicate holds for an arbitrary value which is greater than or equal to the base case, then the predicate holds for the next value.
+```
+
+###Tale of Gauss 
+
+Consider we have some positive integer $n$, how could we quickly sum all the positive integers $\leq n$?
+<br>So we would have $1+2+...+n$ and it should equal some value.
+<br>For example, if $n=4$, we get $1+2+3+4=10$.
+
+There is a story about a mathematician named Carl Friedrich Gauss. Apparently one day in primary school he misbehaved. As punishment, he was given the task of adding all the integers from 1 to 100. Gauss produced the correct answer incredibly quickly using a neat trick.
+
+See, 1+100=101,
+<br>and, $~$ 2+99=101,
+<br>and, $~$ 3+98=101,
+<br>... all the way to
+<br>..., $~~$ 50+51=101.
+<br>Which gives us 50*101=5050.
+
+A neat way to visualize this is to take two copies of this set of numbers, and reorganize them in such a way that we can add up these pairs that sum to 101. Then, since there are two copies and we only wanted to sum one copy, we divide the result by two.
+
+$~~~~1~+~~~2~+~~~3~+...+~98~+~99~+100$
+<br>$100+~99~+~98~+...+~~~3~+~~~2~~~+~~~1$
+<br>---------------------------------
+<br>$101+101+101+.+101+101+101$ = (100*101)/2
+
+
+<table>
+<tr><td>This generalizes to: 1+2+...+n = &nbsp;</td>
+ <td>
+    <div class="numer">n(n+1)</div>
+    <div class="denom">2</div>
+  </td>
+<td>.</td>
+</tr>
+</table>
+
+###Proof
+
+<table>
+<tr><td>Prove by induction that for all integers n≥1, 1+2+...+n = &nbsp;</td>
+ <td>
+    <div class="numer">n(n+1)</div>
+    <div class="denom">2</div>
+  </td>
+<td>.</td>
+</tr>
+</table>
+
+1) __State the property__ you wish to prove. This is often expressed as a predicate.
+
+<table>
+<tr><td>$~~~~~~~~~~$Let the Property P(n) be  1+2+...+n = &nbsp;</td>
+ <td>
+    <div class="numer">n(n+1)</div>
+    <div class="denom">2</div>
+  </td>
+<td>.</td>
+</tr>
+</table>
+
+2) __Base Case__ (BC, n=1):
+<br>$~~~~~~~~~~$WTS P(1), as 1 is the smallest value as expressed in the problem statement.
+<br>$~~~~~~~~~~$<table>
+<tr>LHS = 1.</tr><tr><td>RHS = &nbsp;</td>
+ <td>
+    <div class="numer">1(1+1)</div>
+    <div class="denom">2</div>
+  </td>
+ <td>=</td>
+ <td>
+    <div class="numer">2</div>
+    <div class="denom">2</div>
+  </td>
+  <td> = 1 </td>
+</tr>
+</table>
+<table>
+<tr><td>LHS=RHS, therefore  1+2+...+n = &nbsp;</td>
+ <td>
+    <div class="numer">n(n+1)</div>
+    <div class="denom">2</div>
+  </td>
+<td>$~~$ holds for when $n=1$, and thus P(1) holds as desired. </td></tr>
+</table> 
+
+3) __Inductive Step:__
+
++ Inductive Hypothesis (IH): Suppose for some integer k≥1, P(k) holds.
+<br> This means that <table>
+<tr><td>1+2+...+k = &nbsp;</td>
+ <td>
+    <div class="numer">k(k+1)</div>
+    <div class="denom">2</div>
+  </td>
+</tr>
+</table>
++ Inductive Argument (IA): WTS P(k+1).
+<br> That is, we want to show <table>
+<tr><td>1+2+...+k+(k+1) = &nbsp;</td>
+ <td>
+    <div class="numer">(k+1)((k+1)+1)</div>
+    <div class="denom">2</div>
+  </td>
+</tr>
+</table>
+<br> So we insert $k+1$ into the LHS (or we could go from RHS to LHS, or do both sides __independently__):
+<br> <table>
+<tr><td>LHS = __1+2+...+k__+(k+1) = &nbsp;</td>
+ <td>
+    <div class="numer">__k(k+1)__</div>
+    <div class="denom">__2__</div>
+  </td>
+<td> +(k+1), __by IH__ </td>
+</tr>
+<tr> <td><p style="text-align:right;">= &nbsp;</p></td>
+ <td>
+    <div class="numer">k(k+1)+__2(k+1)__</div>
+    <div class="denom">2</div>
+  </td> 
+ <td>, _by multiplying $(k+1)$_ by 2/2. </td>
+</tr>
+<tr> <td><p style="text-align:right;">= &nbsp;</p></td>
+ <td>
+    <div class="numer">k^2+k+2k+2</div>
+    <div class="denom">2</div>
+  </td> 
+ <td>, _by expanding_. </td>
+</tr>
+<tr> <td><p style="text-align:right;">= &nbsp;</p></td>
+ <td>
+    <div class="numer">k^2+3k+2</div>
+    <div class="denom">2</div>
+  </td> 
+ <td>, _as $k+2k=3k$_ </td>
+</tr>
+<tr> <td><p style="text-align:right;">= &nbsp;</p></td>
+ <td>
+    <div class="numer">(k+1)((k+1)+1)</div>
+    <div class="denom">2</div>
+  </td> 
+ <td>, _by factoring_ </td>
+</tr>
+</table>
+<table>
+<tr> <td>Then 1+2+...+k+(k+1) =</td>
+ <td>
+    <div class="numer">(k+1)((k+1)+1)</div>
+    <div class="denom">2</div>
+  </td> 
+ <td>, and thus LHS=RHS as required. </td>
+</tr>
+</table>
+<br>Therefore P(k+1) holds.
+
+4) __Concluding Statement:__
+<br>
+<table>
+<tr> <td>Thus by the principle of mathematical induction, for all n≥1, $1+2+...+n$ =</td>
+ <td>
+    <div class="numer">n(n+1)</div>
+    <div class="denom">2</div>
+  </td> 
+</tr>
+</table>
+
+</body>
+</html>
+
+#### Exercises:
+
+1. _The sun rises today. If the sun rises today, then the sun will rise tomorrow._
+<br>Prove by induction that the sun will always rise.
+
+2. Prove by induction that $1^3+2^3+3^3+...+n^3=n^2(n+1)^2/4$.
+
+3. Prove by induction that $1^2+3^2+5^2+...+(2n-1)^2=(4n^3-n)/3$.
+
+4. Prove by induction that $1^2+2^2+3^2+...+n^2=n(n+1)(2n+1)/6$.
+
+5. Prove by induction that $(1+2)^{-1}+(2*3)^{-1}+(3*4)^{-1}+...+(n(n+1))^{-1}=n/(n+1)$.
+
+<p>[Previous: Overview](https://carnap.io/shared/srenee651@gmail.com/book-induction-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Examples with Inequalities](https://carnap.io/shared/srenee651@gmail.com/book-induction-ineq.pandoc) </p>
