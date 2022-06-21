@@ -11,7 +11,7 @@
 Often-times, problems are solvable by breaking the problem into parts,
 then solving the parts, and then combining the individual parts’ solutions.
 <br>Sometimes the individual parts’ problems are the same as the original
-problem, just smaller. In this case, we call the method _recursive_.
+problem, just smaller. <br>In this case, we call the method _recursive_.
 
 In programming, this is done by having functions that eventually call
 themselves to solve sub-problems
@@ -132,8 +132,8 @@ A recursive definition gives a set of objects which share that type.
 Let the set of simple propositional wffs be recursively defined as follows:
 <br> $~~~~$ 1) P, where P is __any__ proposition symbol, is a simple propositional wff.
 <br> $~~~~$ 2) If α is a simple propositional wff, then so is (¬α).
-<br> $~~~~$ If α and β are both simple propositional wffs, then so is (α ∧ β).
-<br> $~~~~$ If α and β are both simple propositional wffs, then so is (α ∨ β).
+<br> $~~~~$ 3) If α and β are both simple propositional wffs, then so is (α ∧ β).
+<br> $~~~~$ 4) If α and β are both simple propositional wffs, then so is (α ∨ β).
 
 For example, (¬P) would be a simple propositional wff, but ¬P would not as it is missing the parentheses.
 
