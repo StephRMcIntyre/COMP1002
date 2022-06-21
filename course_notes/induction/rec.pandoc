@@ -125,6 +125,29 @@ __Proof:__ Suppose a is any real number and m is any counting number.
 <br>__Conclusion:__ Therefore, $a^m$ · $a^n$ = $a^{m+n}$ for all counting numbers $n$ by the principle of induction.
 <br>Since $a$ and $m$ are arbitrary, the conclusion holds for any real number $a$ and any counting numbers $m$ and $n$ by Universal Generalization.
 
+__Example 3: Simple Prop Wffs__
+
+A recursive definition gives a set of objects which share that type.
+
+Let the set of simple propositional wffs be recursively defined as follows:
+<br> $~~~~$ 1) P, where P is __any__ proposition symbol, is a simple propositional wff.
+<br> $~~~~$ 2) If α is a simple propositional wff, then so is (¬α).
+<br> $~~~~$ If α and β are both simple propositional wffs, then so is (α ∧ β).
+<br> $~~~~$ If α and β are both simple propositional wffs, then so is (α ∨ β).
+
+For example, (¬P) would be a simple propositional wff, but ¬P would not as it is missing the parentheses.
+
+```{.QualitativeProblem .MultipleSelect options="check" submission="none" content-format="html"}
+SimplePropWffs1. Select all of the elements in the set of simple propositional wffs.
+| *R
+| (P ∧ Q) ∨ S
+| *((P ∧ Q) ∨ (¬S))
+| (P)
+| *(¬(P ∧ Q))
+| (P → P)
+```
+_Hint: It must be constructed exactly as given in the definition. Construct them on paper following the rules._
+
 <br><br><br>
 
 __Exercise:__ Using the definition of exponentiation, prove it is not the case that for all real numbers $a$ and counting numbers $m$,$n$ that $a^{m+n}$≥$0$
