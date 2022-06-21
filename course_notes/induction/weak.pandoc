@@ -30,8 +30,8 @@ The proof scheme looks like the following:
 + Base case: Show the property holds for the
 “smallest thing” you are reasoning about, b
 + Inductive step:
-* Assume the inductive hypothesis, P(k)
-* Make the inductive argument that P(k+1) holds.
+	* Assume the inductive hypothesis, P(k)
+	* Make the inductive argument that P(k+1) holds.
 + Conclude that the property holds for all integers after the base case
 
 You will not have to do ND proofs with Induction, but we are giving it to you in this format as it might make sense seeing it as a rule for mathematics:
