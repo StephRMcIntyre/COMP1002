@@ -137,7 +137,7 @@ Let the set of simple propositional wffs be recursively defined as follows:
 
 For example, (¬P) would be a simple propositional wff, but ¬P would not as it is missing the parentheses.
 
-```{.QualitativeProblem .MultipleSelect options="check" submission="none" content-format="html"}
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
 SimplePropWffs1. Select all of the elements in the set of simple propositional wffs.
 | *R
 | (P ∧ Q) ∨ S
