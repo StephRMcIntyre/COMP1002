@@ -1,0 +1,62 @@
+<style>
+table {
+  font-size: 16px;
+}
+
+div.numer {
+  border-bottom:1px solid;
+  text-align:center;
+  font-size: 0.8em;
+}
+
+div.denom {
+  font-size: 0.8em;
+  border-top: 1px solid;
+  text-align: center;
+}
+</style>
+
+# Induction
+
+## Mathematical Induction (aka Weak Induction)
+
+<br><br>
+
+###Towers of Hanoi
+
+[image]
+
+There are 3 pegs, n disks of different sizes.
+<br>You can move any single disk on the top of one of the pegs to any other peg with no disk.  
+
+__Claim:__ n disks takes at least $2^n-1$ moves.
+
+__Property P(n):__ n disks takes at least $2^n-1$ moves.
+
+__Base Case (n=1): 1 disk clearly takes $1=2-1=2^1-1$ moves.__
+
+__Inductive Hypothesis:__ Suppose it takes at least $2^k -1$ moves to move k disks for some k≥1.
+
+__Inductive argument:__ In order to move k+1 disks, the base disk must be moved.
+<br>In order to do this, one peg must be empty and the base disk must be on top.
+<br>Thus the top k disks must have moved to the third peg, taking at least $2^k-1$ moves.
+<br>Then the base disk must move, and then the remaining k disks must be moved on top
+of the base disk again. 
+<br>All together, there must be at least $2^k-1+1+2^k-1 = 2^{k+1}-1$ moves.
+
+By the principle of induction, n disks takes at least $2^n-1$ moves.
+
+Combined with the previous result in the [overview](https://carnap.io/shared/srenee651@gmail.com/book-induction-overview.pandoc), we find that the optimal number of moves for n
+disks is always exactly $2^n-1$ moves.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+Hanoi. Select when the inductive hypothesis was used.
+| In order to move k+1 disks, the base disk must be moved.
+| In order to do this, one peg must be empty and the base disk must be on top.
+| *Thus the top k disks must have moved to the third peg, taking at least 2^k-1 moves.
+| The base disk must move, taking 1 move.
+| *The remaining k disks must be moved on top of the base disk again, taking at least 2^k-1 moves.
+```
+
+&emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Weak Induction](https://carnap.io/shared/srenee651@gmail.com/book-induction-weak.pandoc) </p>
+
