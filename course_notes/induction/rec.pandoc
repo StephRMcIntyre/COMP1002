@@ -148,7 +148,34 @@ SimplePropWffs1. Select all of the elements in the set of simple propositional w
 ```
 _Hint: It must be constructed exactly as given in the definition. Construct them on paper following the rules._
 
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+SimplePropWffs2. Select all of the elements in the basis for simple propositional wffs.
+| *R
+| (P ∧ Q) ∨ S
+| ((P ∧ Q) ∨ (¬S))
+| (P)
+| (¬(P ∧ Q))
+| *P
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+SimplePropWffs3. Select all of the clauses which are part of the recursion step for simple propositional wffs.
+| P, where P is __any__ proposition symbol, is a simple propositional wff.
+| *If α is a simple propositional wff, then so is (¬α).
+| *If α and β are both simple propositional wffs, then so is (α ∧ β).
+| *If α and β are both simple propositional wffs, then so is (α ∨ β).
+```
+
+Derive ((P ∧ Q) ∨ (¬S)).
+<br> $~~~~$ By the basis, P, Q and S are all simple propositional wffs.
+<br> $~~~~$ Since P and Q are simple propositional wffs, then by 3) (P ∧ Q) is a simple propositional wff.
+<br> $~~~~$ As S is a simple propositional wff, then by 2) so is (¬S).
+<br> $~~~~$ Lastly, as both (P ∧ Q) and (¬S) are simple propositional wffs, then by 4) so is ((P ∧ Q) ∨ (¬S)).
+
 <br><br><br>
+####Exercises
+
+__Exercise:__ Derive (¬((¬Q) ∨ (¬(¬S)))).
 
 __Exercise:__ Using the definition of exponentiation, prove it is not the case that for all real numbers $a$ and counting numbers $m$,$n$ that $a^{m+n}$≥$0$
 
