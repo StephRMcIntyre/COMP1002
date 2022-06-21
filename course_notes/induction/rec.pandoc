@@ -17,15 +17,18 @@ In programming, this is done by having functions that eventually call
 themselves to solve sub-problems
 <br>In mathematics, this is done by having recursive definitions.
 
-Some books will call it an inductive definition. Either is fine.
+Note: Some books will call it an inductive definition. Either is fine.
 
 A good recursive definition will have:
 
-+ Base Case/Basis
-- where the recursion stops.
-- without this, we typically have infinite recursion
-+ Recursion Step
-- this details how additional elements are made
++ Base Case(s)/Basis
+- These are the smallest items in the recursive set.
+- It is also where the recursion stops.
+- Without this, we typically have infinite recursion, which is not desirable.
+- There can be multiple base cases.
++ Recursion/Recursive Step(s)
+- This details how additional elements are made.
+- There can be multiple recursive steps.
 
 Note we have already seen these!
 <br>The syntax/semantics of PL and FOL were recursively defined!
@@ -121,7 +124,9 @@ __Proof:__ Suppose a is any real number and m is any counting number.
 
 __Exercise:__ Using the definition of exponentiation, prove that it is not the case that for all real numbers $a$ and counting numbers $m$,$n$ that $a^{m+n}$≥$0$
 
-
 __Exercise:__ Using the definition of exponentiation, prove that it is not the case that for any counting number $m$, $-1^{m}$ ≥ $1^{m}$
 
 __Exercise:__ Using the definition of exponentiation, show by induction for any counting number $m$, $1^{m}$ ≥ $-1^{m}$.
+
+<p>[Previous: Sequences Practice Problems](https://carnap.io/shared/srenee651@gmail.com/oops) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Recurrence Relations](https://carnap.io/shared/srenee651@gmail.com/book-induction-recrel.pandoc) </p>
+
