@@ -1,0 +1,47 @@
+# Induction
+
+## Mathematical Induction (aka Weak Induction)
+
+###Blue-Eyed Logicians
+
+There is an island with 100 logicians with blue eyes.
+<br>The island has a peculiar property that when any person knows with certainty
+that they have blue eyes, then they will leave the island at midnight of the current
+night. Further, there are no mirrors or ways to view your own eyes on the island.
+<br>An oracle appears one day and gathers all 100 residents, then states to all of them
+<br>_“I know that at least one of you has blue eyes.”_
+<br>When do they leave? How can we prove it?
+
+
+__Claim:__ For all integers n≥1; The island with n blue-eyed logicians will have all n blue-eyed logicians leave after at
+most n days.
+
+_Proof by induction._
+
+__Base case (n=1):__ If the island has only one blue-eyed logician, they look around
+and see no other blue-eyed logicians, and conclude the oracle was referring to
+them. They leave at midnight on the first day.
+
+__Inductive hypothesis:__ Suppose that k blue-eyed logicians will all leave after at most k days.
+
+__Inductive argument:__ On an island with k+1 blue-eyed logicians, let L be an arbitrary blue-eyed logician.
+<br>L looks around and sees k people with blue eyes.
+<br>L thinks, _“Suppose I have non-blue eyes. Then there are k logicians with blue eyes.
+If this were the case, they would all leave after at most k days”._ 
+<br>Given this, L’s strategy is to wait k days.
+<br>Since L is an arbitrary blue-eyed logician, all blue-eyed logicians will follow this reasoning and wait k days.
+<br>On day k+1, every blue-eyed logician realizes their hypothesis that they have non-blue eyes is false, and so they
+conclude they have blue eyes.
+<br>Finally, on day k+1, all blue-eyed logicians leave the island.
+
+By induction, an island with n blue-eyed logicians will have all of them leave after at most n days.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+Blue. When was the inductive hypothesis used?
+| L looks around and sees k people with blue eyes.
+| *“Suppose I have non-blue eyes. Then there are k logicians with blue eyes. If this were the case, they would all leave after at most k days”
+| Since L is an arbitrary blue-eyed logician, all blue-eyed logicians will wait k days.
+```
+
+<p>[Previous: Overview](https://carnap.io/shared/srenee651@gmail.com/book-induction-weak.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Examples with Inequalities](https://carnap.io/shared/srenee651@gmail.com/book-induction-ineq.pandoc) </p>
+
