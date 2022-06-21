@@ -58,11 +58,10 @@ Prove by induction that for all integers n≥1, $(n-1)(n+1)+1=n^2$.
 2) __Base Case (BC, n=1):__ WTS P(1), as 1 is the smallest value as expressed in the problem statement.
 <br>$(1-1)(1+1)+1=(0)(2)+1=1=1^2$
 <br>Alternatively, we could do,
-<br>LHS(Left hand side) = $(1-1)(1+1)+1=(0)(2)+1=1$
-<br>RHS(Right hand side) = $1^2=1$.
+<br>LHS = $(1-1)(1+1)+1=(0)(2)+1=1$
+<br>RHS = $1^2=1$.
 <br>LHS=RHS
 <br>Therefore $(n-1)(n+1)+1=n^2$ holds for when $n=1$, and thus P(1) holds as desired.
-+ Note: For base cases you can either start from LHS and get to RHS, or start from RHS and get to LHS, or do both sides and reach something which both LHS and RHS are equal to.
 
 3) __Inductive Step:__
 
@@ -90,7 +89,7 @@ Prove by induction that for all integers n≥1, $(n-1)(n+1)+1=n^2$.
 
 _Notice how we show that the LHS equal the RHS over a few steps. 
 <br>We do not assume from the start that LHS=RHS.
-<br>Also in the IH, we assume for __some arbitrary k__, not every k. This is important!_
+<br>Also in the IH, we assume for _some arbitrary k_, not every k. This is important!
 
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
@@ -146,8 +145,9 @@ $~~~~1~+~~~2~+~~~3~+...+~98~+~99~+100$
 </table>
 
 1) __State the property__ you wish to prove. This is often expressed as a predicate.
-<br>
-<tr><td>Let the Property P(n) be  1+2+...+n = &nbsp;</td>
+
+<table>
+<tr><td>$~~~~~~~~~~$Let the Property P(n) be  1+2+...+n = &nbsp;</td>
  <td>
     <div class="numer">n(n+1)</div>
     <div class="denom">2</div>
@@ -157,8 +157,8 @@ $~~~~1~+~~~2~+~~~3~+...+~98~+~99~+100$
 </table>
 
 2) __Base Case__ (BC, n=1):
-<br> WTS P(1), as 1 is the smallest value as expressed in the problem statement.
-<br>  <table>
+<br>$~~~~~~~~~~$WTS P(1), as 1 is the smallest value as expressed in the problem statement.
+<br>$~~~~~~~~~~$<table>
 <tr>LHS = 1.</tr><tr><td>RHS = &nbsp;</td>
  <td>
     <div class="numer">1(1+1)</div>
@@ -172,7 +172,7 @@ $~~~~1~+~~~2~+~~~3~+...+~98~+~99~+100$
   <td> = 1 </td>
 </tr>
 </table>
-<br> <table>
+<table>
 <tr><td>LHS=RHS, therefore  1+2+...+n = &nbsp;</td>
  <td>
     <div class="numer">n(n+1)</div>
@@ -264,7 +264,6 @@ $~~~~1~+~~~2~+~~~3~+...+~98~+~99~+100$
 </body>
 </html>
 
-
 #### Exercises:
 
 1. _The sun rises today. If the sun rises today, then the sun will rise tomorrow._
@@ -278,5 +277,5 @@ $~~~~1~+~~~2~+~~~3~+...+~98~+~99~+100$
 
 5. Prove by induction that $(1+2)^{-1}+(2*3)^{-1}+(3*4)^{-1}+...+(n(n+1))^{-1}=n/(n+1)$.
 
-<p>[Previous: Overview](https://carnap.io/shared/srenee651@gmail.com/book-induction-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Blue-Eyed Logicians](https://carnap.io/shared/srenee651@gmail.com/book-induction-blue.pandoc) </p>
+<p>[Previous: Overview](https://carnap.io/shared/srenee651@gmail.com/book-induction-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Examples with Inequalities](https://carnap.io/shared/srenee651@gmail.com/book-induction-ineq.pandoc) </p>
 
