@@ -24,22 +24,26 @@ Ex 2: Suppose today and yesterday you studied logic. Further suppose that whenev
 Now prove that you will study logic everyday since yesterday. 
 <br>Yesterday was monday, today is teusday. If we count monday as day 0 and tesuday as day 1, by adding two to each day, 
 every subsequent day will be odd or even. 
-<br>Therefore we shall prove once for even days and once for odd days. 
-<br>For even days:
-<br>Base case: P(0) holds since we know I studied logic on day 0(monday which was yesterday). 
-<br>IH: Suppose for some day k such that k = 2p, that I studied logic. Note that p is also arbitrary, and k is an arbitrary even number. 
-Note: + by definition even numbers are 2p where p is some constant. 
-<br>IA: WTS k+1 is also even.
-<br> LHS: 2p +  = (k x k) + k + k + 1, by Dsitribution 
-<br>$~~~~~~~~~~~~~~~~~~$ > (k x k) + k + k, As 1>0
-<br>$~~~~~~~~~~~~~~~~~~$ > (k x k) + k, as k is at least 1 and 1>0.
-<br>$~~~~~~~~~~~~~~~~~~$ > (k x k), as k is at least 1 and 1>0.
-<br>$~~~~~~~~~~~~~~~~~~$ > 0, by Induction Hyptohesis where (k x k) > 0 
-<br>__Conclusion:__ Therefore, by POMI(principle of mathematical induction), for all integers n≥1, n x n > 0 meaning it is a positive number.
 
 
 Ex 3: So far we have used induction to prove things that go forward. For example all natural numbers starting from 1. 
 But suppose we wanted to modify our induction to be able to prove a property P(x) for all negative numbers with base case -1.
 What would that modificiation be? can you come up with an example?
 
+The modification would be to assume for k and prove for k-1 instead of k+1. Because now instead of going from a constant to positive infinity we 
+would go from a constant to negative infinity in the case of integers. So the base case would be the largest value isntead of the smallest.
+
 Ex 4: Prove that for all n<-1, that n$^3$<n. 
+<br>Let the Property P(n) be n$^3$<n
+<br>__Base case (n=-1):__ WTS P(-2), as -2 is the largest value as expressed in the problem statement.
+<br>$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$ LHS = -2$^3$ = -6 < -2. Therefore P(-2) holds.
+<br>__Induction Hypothesis:__ Assume for some k<-1 that k$^3$<k
+<br>__Inductive Argument:__ We want to prove that (k-1)$^3$<(k-1)
+<br> LHS:(k-1)$^3$ = (k-1) x (k-1)$^2$, by factorisation 
+<br>$~~~~~~~~~~~~~~~~~~$ = k$^3$ - 2k$^2$ + k - k$^2$ + 2k - 1 by distribution 
+<br>$~~~~~~~~~~~~~~~~~~$ = k$^3$ - k$^2$ + 3k - 1 
+<br>$~~~~~~~~~~~~~~~~~~$ < k - k$^2$ + 3k - 1 
+<br>$~~~~~~~~~~~~~~~~~~$ < k - k$^2$ + 0 - 1 since 3(x) is a negative number if x is negative and 0>all negative numbers.
+<br>$~~~~~~~~~~~~~~~~~~$ = (k - 1) - k$^2$
+<br>$~~~~~~~~~~~~~~~~~~$ < k - 1 since k$^2$ is a positive number regardless of what k is(and we know it can not be 0).
+<br>__Conclusion:__ Therefore, by POMI(principle of mathematical induction), for all integers n>-1, n$^3$<n.
