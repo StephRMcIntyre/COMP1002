@@ -22,8 +22,25 @@ Ex 1: Prove that for all n≥1, that n x n is a positive number.
 
 Ex 2: Suppose today and yesterday you studied logic. Further suppose that whenever you study logic, 2 days from then you again study logic. 
 Now prove that you will study logic everyday since yesterday. 
-<br>Yesterday was monday, today is teusday. If we count monday as day 0 and tesuday as day 1, by adding two to each day, 
-every subsequent day will be odd or even. 
+<br>Yesterday was Monday, today is Tuesday. If we count monday as day 0 and Tuesday as day 1, by adding two to each day, 
+every subsequent day will be odd or even. We will once prove for odd and once for even days.
+
+For even days:
+<br>Let the Property P(n) be "2n"
+<br>__Base case (n=0):__ WTS P(0), as 0 is the smallest value as expressed in the problem statement.
+<br>$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$ P(0) holds as stated in the problem statement.
+<br>__Induction Hypothesis:__ Assume for some k that P(k). Meaning 2k
+<br>__Inductive Argument:__ We want to prove that (k+1) also holds P(k+1)
+<br>  2(k+1) = 2k + 2 and this equals 2 days after our inductive hypothesis 2k therefore, by the problem statement, we study on day 2k + 2. 
+
+For odd days:
+<br>Let the Property P(n) be "2n + 1"
+<br>__Base case (n=0):__ WTS P(1), as 0 is the smallest value as expressed in the problem statement.
+<br>$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$ P(1) holds as stated in the problem statement.
+<br>__Induction Hypothesis:__ Assume for some k that P(k). Meaning 2k + 1
+<br>__Inductive Argument:__ We want to prove that (k+1) also holds P(k+1)
+<br>  2(k+1) + 1 = 2k + 2 + 1 = (2k + 1) + 2 and this equals 2 days after our inductive hypothesis 2k + 1 therefore, by the problem statement, we study on day (2k + 1) + 2. 
+<br>__Conclusion:__ Therefore, by POMI(principle of mathematical induction), we study every day odd or even from monday forward.
 
 
 Ex 3: So far we have used induction to prove things that go forward. For example all natural numbers starting from 1. 
