@@ -14,7 +14,7 @@ jobs:
         with:
           apiKey: '${{ secrets.CARNAP_API_KEY }}'
           # make any newly created documents private
-          defaultVisibility: 'Private'
+          defaultVisibility: 'LinkOnly'
           # files to include in the upload (important: this must be quoted)
           includeFiles: '["*.md"]'
           instanceUrl: 'https://carnap.io'
