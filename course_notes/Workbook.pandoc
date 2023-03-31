@@ -1,59 +1,22 @@
 <br>
 
-# An Algorithm for Truth [^1]
+# Carnap for COMP 1002 - Spring 2023
 
-<br>
-
-### Compiled by Steph McIntyre
-
-##### Assisted by Parsa Esmkhani
-
-
-
-<br>
-[^2]
-
-[^1]: <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">An Algorithm for Truth</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. It is written for the [carnap.io](http://carnap.io) platform.
-
-[^2]: *Acknowledgements*: Firstly, many thanks to Dr. Graham Leach-Krouse et al, for their work on [carnap.io](http://carnap.io), as this is an amazing tool. Secondly, many thanks to Dr. Richard Zach from UCalgary and the rest of the OLP team for providing these wonderful resources and guidance. Many exercises in the first two sections are either taken from his work or inspired by his work. Thirdly, thanks to Rylo Ashmore and Dr. Antonina Kolokolova whom both heavily influenced these notes. Lastly, thank you to the students from COMP 1002 Winter 2022- you were such a fantasic group to teach and test my teaching methods on and the students from COMP 1002 Summer 2022 who are using these notes for the first time-- good luck!
-
-
-<br>
-<br>
-
-This workbook is for an introductory course in logic and discrete mathematics for computer scientists. This is based on one 14-week course with 6 chapters. The first half of the course is on propositional logic and first order logic, and the last half is on other areas of discrete mathematics for computer science such as induction, recursion, number theory, sets, relations, and program verification.
-The course is cumulative and chapters rely on knowledge learned from previous chapters. The goal of this course is to give students a solid foundation in logic, proof writing, and a sampling of topics in discrete mathematics.
-
-Every section comes with practice problems. Some chapters/sections are incomplete and will redirect back to this page. The plan is to have these chapters/sections available before they are covered in lecture. My apologies for the delay.
-
-To report bugs, please use the brightspace discussion forum and fill out a bug report. If you have any questions, please email smcintyre at mun.ca.
+To report bugs, please post the necessary information in the Brightspace Bug Report Discussion forum.
 
 <br>
 
 ### Table of Contents
 
-- [Prologue](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#prologue)
-- [Propositional Logic](https://carnap.io/assignments/Testing/Workbook.pandoc#part-i-propositional-logic)
-- [First-Order Logic](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)
-- [Induction](https://carnap.io/assignments/Testing/Workbook.pandoc#part-iii-induction)
-- [Sets & Relations](https://carnap.io/assignments/Testing/Workbook.pandoc#part-iv-sets-relations)
-- [Number Theory](https://carnap.io/assignments/Testing/Workbook.pandoc#part-v-number-theory)
-- [Program Verification](https://carnap.io/assignments/Testing/Workbook.pandoc#part-vi-program-verification)
-- [Epilogue](https://carnap.io/assignments/Testing/Workbook.pandoc#epilogue)
+- [Propositional Logic](https://carnap.io/assignments/smcintyre/Workbook.pandoc#part-i-propositional-logic)
+- [First-Order Logic](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-ii-first-order-logic)
+- [Induction](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iii-induction)
+- [Sets & Relations](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)
+- [Number Theory](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-v-number-theory)
+- [Program Verification](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-vi-program-verification)
 
-<br>
-
-### [Prologue](https://carnap.io/shared/srenee651@gmail.com/book-prologue.pandoc)
-
-<br>
-
-<br>
 
 ## Part I: Propositional Logic
-
-<br>
-
--[Overview](https://carnap.io/shared/srenee651@gmail.com/book-prop-overview.pandoc)
 
 <br>
 
@@ -61,31 +24,30 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 <br>
 
-- [Syntax](https://carnap.io/shared/srenee651@gmail.com/book-prop-syntax.pandoc)
-- [Translations](https://carnap.io/shared/srenee651@gmail.com/book-prop-trans.pandoc)
-- [Conjunction, Disjunction and Negation](https://carnap.io/shared/srenee651@gmail.com/book-prop-CDN.pandoc)
-- [Logical Truths & Falsehoods](https://carnap.io/shared/srenee651@gmail.com/book-prop-taf.pandoc)
-- [Logical Equivalence & Implication](https://carnap.io/shared/srenee651@gmail.com/book-prop-arg.pandoc)
-- [Conditionals and Biconditionals](https://carnap.io/shared/srenee651@gmail.com/book-prop-CB.pandoc)
-- [Sound & Valid Arguments](https://carnap.io/shared/srenee651@gmail.com/book-prop-SV.pandoc)
-- [Negating Statements](https://carnap.io/shared/srenee651@gmail.com/book-prop-neg.pandoc)
-- [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/book-prop-prac1.pandoc)
+- [Syntax](https://carnap.io/shared/smcintyre/book-prop-syntax.pandoc)
+- [Translations](https://carnap.io/shared/smcintyre/book-prop-trans.pandoc)
+- [Conjunction, Disjunction and Negation](https://carnap.io/shared/smcintyre/book-prop-CDN.pandoc)
+- [Logical Truths & Falsehoods](https://carnap.io/shared/smcintyre/book-prop-taf.pandoc)
+- [Logical Equivalence & Implication](https://carnap.io/shared/smcintyre/book-prop-arg.pandoc)
+- [Conditionals and Biconditionals](https://carnap.io/shared/smcintyre/book-prop-CB.pandoc)
+- [Sound & Valid Arguments](https://carnap.io/shared/smcintyre/book-prop-SV.pandoc)
+- [Negating Statements](https://carnap.io/shared/smcintyre/book-prop-neg.pandoc)
+- [Practice Problems](https://carnap.io/shared/smcintyre/book-prop-prac1.pandoc)
 
 <br>
 
 ## Chapter 2 - Proofs
 <br>
 
-- [Natural Deduction](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND.pandoc)
-- [Conjunction Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-and.pandoc)
-- [Conditional Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-cond.pandoc)
-- [Biconditional Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-bicond.pandoc)
-- [Reiteration Rule](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-reit.pandoc)
-- [Disjunction Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-or.pandoc)
-- [Negation Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-neg.pandoc)
-- [Indirect Proof Rule](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-ip.pandoc)
-- [ND Playground](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-play.pandoc)
-- [More ND Practice](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-prac.pandoc)
+- [Natural Deduction](https://carnap.io/shared/smcintyre/book-prop-ND.pandoc)
+- [Conjunction Rules](https://carnap.io/shared/smcintyre/book-prop-ND-and.pandoc)
+- [Conditional Rules](https://carnap.io/shared/smcintyre/book-prop-ND-cond.pandoc)
+- [Biconditional Rules](https://carnap.io/shared/smcintyre/book-prop-ND-bicond.pandoc)
+- [Reiteration Rule](https://carnap.io/shared/smcintyre/book-prop-ND-reit.pandoc)
+- [Disjunction Rules](https://carnap.io/shared/smcintyre/book-prop-ND-or.pandoc)
+- [Negation Rules](https://carnap.io/shared/smcintyre/book-prop-ND-neg.pandoc)
+- [Indirect Proof Rule](https://carnap.io/shared/smcintyre/book-prop-ND-ip.pandoc)
+- [ND Playground](https://carnap.io/shared/smcintyre/book-prop-ND-play.pandoc)
 
 
 <br>
@@ -94,44 +56,40 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 <br>
 
-- [Soundness and Completeness Theorems](https://carnap.io/shared/srenee651@gmail.com/book-prop-SC.pandoc)
+- [Soundness and Completeness Theorems](https://carnap.io/shared/smcintyre/book-prop-SC.pandoc)
 
 <br>
-[Practice Term Test 1](https://carnap.io/shared/srenee651@gmail.com/book-prop-practest.pandoc)
+[Practice Term Test 1](https://carnap.io/shared/smcintyre/book-prop-practest.pandoc)
 <br>
 <br>
 
 ## Part II: First-Order Logic
 
-<br>
-- [Overview](https://carnap.io/shared/srenee651@gmail.com/book-FOL-overview.pandoc)
-<br>
-
 ## Chapter 1 - Language
 
 <br>
 
-- [Syntax](https://carnap.io/shared/srenee651@gmail.com/book-FOL-syntax.pandoc)
-- [Sets](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sets.pandoc)
-- [Predicates](https://carnap.io/shared/srenee651@gmail.com/book-FOL-pred.pandoc)
-- [Quantifiers](https://carnap.io/shared/srenee651@gmail.com/book-FOL-quant.pandoc)
-- [Negating Statements](https://carnap.io/shared/srenee651@gmail.com/book-FOL-neg.pandoc)
-- [Multiple Quantifiers](https://carnap.io/shared/srenee651@gmail.com/book-FOL-multq.pandoc)
-- [More Translations](https://carnap.io/shared/srenee651@gmail.com/book-FOL-trans.pandoc)
-- [Restricted Quantifiers](https://carnap.io/shared/srenee651@gmail.com/book-FOL-restr.pandoc)
+- [Syntax](https://carnap.io/shared/smcintyre/book-FOL-syntax.pandoc)
+- [Sets](https://carnap.io/shared/smcintyre/book-FOL-sets.pandoc)
+- [Predicates](https://carnap.io/shared/smcintyre/book-FOL-pred.pandoc)
+- [Quantifiers](https://carnap.io/shared/smcintyre/book-FOL-quant.pandoc)
+- [Negating Statements](https://carnap.io/shared/smcintyre/book-FOL-neg.pandoc)
+- [Multiple Quantifiers](https://carnap.io/shared/smcintyre/book-FOL-multq.pandoc)
+- [More Translations](https://carnap.io/shared/smcintyre/book-FOL-trans.pandoc)
+- [Restricted Quantifiers](https://carnap.io/shared/smcintyre/book-FOL-restr.pandoc)
 <br>
 
 ## Chapter 2 - Semantics
 
 <br>
 
-- [Interpretations](https://carnap.io/shared/srenee651@gmail.com/book-FOL-interp.pandoc)
-- [Semantics](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sem.pandoc)
-- [Satisfying Formulas](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sat.pandoc)
-- [Harder Examples](https://carnap.io/shared/srenee651@gmail.com/book-FOL-hardS.pandoc)
-- [Equality Predicate](https://carnap.io/shared/srenee651@gmail.com/book-FOL-equality.pandoc)
-- [Databases](https://carnap.io/shared/srenee651@gmail.com/book-FOL-databases.pandoc)
-- [Logical Implication & Equivalence](https://carnap.io/shared/srenee651@gmail.com/book-FOL-arg.pandoc)
+- [Interpretations](https://carnap.io/shared/smcintyre/book-FOL-interp.pandoc)
+- [Semantics](https://carnap.io/shared/smcintyre/book-FOL-sem.pandoc)
+- [Satisfying Formulas](https://carnap.io/shared/smcintyre/book-FOL-sat.pandoc)
+- [Harder Examples](https://carnap.io/shared/smcintyre/book-FOL-hardS.pandoc)
+- [Equality Predicate](https://carnap.io/shared/smcintyre/book-FOL-equality.pandoc)
+- [Databases](https://carnap.io/shared/smcintyre/book-FOL-databases.pandoc)
+- [Logical Implication & Equivalence](https://carnap.io/shared/smcintyre/book-FOL-arg.pandoc)
 
 <br>
 
@@ -140,14 +98,14 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 <br>
 
-- [Natural Deduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND.pandoc)
-- [Existential Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-exi.pandoc)
-- [Universal Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ue.pandoc)
-- [Universal Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-ui.pandoc)
-- [Existential Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-exe.pandoc)
-- [Equality Elimination](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-eqe.pandoc)
-- [Equality Introduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-eqi.pandoc)
-- [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND-prac.pandoc)
+- [Natural Deduction](https://carnap.io/shared/smcintyre/book-FOL-ND.pandoc)
+- [Existential Introduction](https://carnap.io/shared/smcintyre/book-FOL-ND-exi.pandoc)
+- [Universal Elimination](https://carnap.io/shared/smcintyre/book-FOL-ND-ue.pandoc)
+- [Universal Introduction](https://carnap.io/shared/smcintyre/book-FOL-ND-ui.pandoc)
+- [Existential Elimination](https://carnap.io/shared/smcintyre/book-FOL-ND-ee.pandoc)
+- [Equality Elimination](https://carnap.io/shared/smcintyre/book-FOL-ND-eqe.pandoc)
+- [Equality Introduction](https://carnap.io/shared/smcintyre/book-FOL-ND-eqi.pandoc)
+- [Practice Problems](https://carnap.io/shared/smcintyre/book-FOL-ND-prac.pandoc)
 
 
 <br>
@@ -157,44 +115,42 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 <br>
 
-- [Soundness and Completeness Theorems](https://carnap.io/shared/srenee651@gmail.com/book-FOL-SC.pandoc)
-- [Informal Proofs](https://carnap.io/shared/srenee651@gmail.com/book-FOL-inf.pandoc)
-- [Bad Informal Proofs](https://carnap.io/shared/srenee651@gmail.com/book-FOL-badinf.pandoc)
+- [Soundness and Completeness Theorems](https://carnap.io/shared/smcintyre/book-FOL-SC.pandoc)
+- [Informal Proofs](https://carnap.io/shared/smcintyre/book-FOL-inf.pandoc)
+- [Bad Informal Proofs](https://carnap.io/shared/smcintyre/book-FOL-badinf.pandoc)
 
 <br>
-<br>
+
 
 ## Part III: Induction
 
-!!UNDER CONSTRUCTION!!
-
 
 <br>
-- [Overview](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [Overview](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 <br>
 
 ## Chapter 1 - Mathematical Induction
 
 <br>
 
-- [Weak Induction](https://carnap.io/shared/srenee651@gmail.com/book-induction-weak.pandoc)
-- [Examples](https://carnap.io/shared/srenee651@gmail.com/book-induction-ex.pandoc)
-- [Examples with Inequalities](https://carnap.io/shared/srenee651@gmail.com/book-induction-ineq.pandoc)
-- [Towers of Hanoi](https://carnap.io/shared/srenee651@gmail.com/book-induction-hanoi.pandoc)
-- [All Cats are Brown](https://carnap.io/shared/srenee651@gmail.com/book-induction-brown.pandoc)
-- [Bad Induction Proofs](https://carnap.io/shared/srenee651@gmail.com/book-induction-bad.pandoc)
-- [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/book-induction-prac.pandoc)
+- [Weak Induction](https://carnap.io/shared/smcintyre/book-induction-weak.pandoc)
+- [Examples](https://carnap.io/shared/smcintyre/book-induction-ex.pandoc)
+- [Examples with Inequalities](https://carnap.io/shared/smcintyre/book-induction-ineq.pandoc)
+- [Towers of Hanoi](https://carnap.io/shared/smcintyre/book-induction-hanoi.pandoc)
+- [All Cats are Brown](https://carnap.io/shared/smcintyre/book-induction-brown.pandoc)
+- [Bad Induction Proofs](https://carnap.io/shared/smcintyre/book-induction-bad.pandoc)
+- [Practice Problems](https://carnap.io/shared/smcintyre/book-induction-prac.pandoc)
 
 <br>
 
 ## Chapter 2 - Sequences
 <br>
 
-- [Sequences](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Summation Notation](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Product Notation](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [More Induction](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Practice Problems](https://carnap.io/shared) and [Solutions](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [Sequences](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Summation Notation](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Product Notation](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [More Induction](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Practice Problems](https://carnap.io/shared) and [Solutions](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 
 
 <br>
@@ -203,10 +159,10 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 <br>
 
-- [Recursive Definitions](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Recurrence Relations](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Structural Induction](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [Recursive Definitions](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Recurrence Relations](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Structural Induction](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Practice Problems](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 
 
 <br>
@@ -215,11 +171,11 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 <br>
 
-- [Closed-Forms](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Strong Induction](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Pigeonhole Principle](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Well-Ordering Principle](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [Closed-Forms](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Strong Induction](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Pigeonhole Principle](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Well-Ordering Principle](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Practice Problems](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 
 <br>
 <br>
@@ -231,18 +187,18 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 
 <br>
-- [Overview](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [Overview](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 <br>
 
 ## Chapter 1 - Sets & Counting
 
 <br>
 
-- [Review](https://carnap.io/shared/srenee651@gmail.com/book-SR-basics.pandoc)
-- [Subsets](https://carnap.io/shared/srenee651@gmail.com/book-SR-subsets.pandoc)
-- [Set Operations](https://carnap.io/shared/srenee651@gmail.com/book-SR-op.pandoc)
-- [Power Set](https://carnap.io/shared/srenee651@gmail.com/book-SR-power.pandoc)
-- [Cardinalities on Finite Sets](https://carnap.io/shared/srenee651@gmail.com/book-SR-card.pandoc)
+- [Review](https://carnap.io/shared/smcintyre/book-SR-basics.pandoc)
+- [Subsets](https://carnap.io/shared/smcintyre/book-SR-subsets.pandoc)
+- [Set Operations](https://carnap.io/shared/smcintyre/book-SR-op.pandoc)
+- [Power Set](https://carnap.io/shared/smcintyre/book-SR-power.pandoc)
+- [Cardinalities on Finite Sets](https://carnap.io/shared/smcintyre/book-SR-card.pandoc)
 
 
 <br>
@@ -251,12 +207,12 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 <br>
 
-- [Relations](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Reflexivity](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Symmetry](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Transitivity](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Anti-Symmetry](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [Relations](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Reflexivity](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Symmetry](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Transitivity](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Anti-Symmetry](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Practice Problems](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 
 <br>
 
@@ -265,12 +221,12 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 <br>
 
-- [Equivalence Relation](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Equivalence Classes](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Hasse Diagrams](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Partial Orders](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Total Orders](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [Equivalence Relation](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Equivalence Classes](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Hasse Diagrams](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Partial Orders](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Total Orders](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Practice Problems](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 
 <br>
 <br>
@@ -281,28 +237,28 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 
 <br>
-- [Overview](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [Overview](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 <br>
 
 ## Chapter 1 - Sets of Numbers
 
 <br>
 
-- [Naturals](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Integers](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Rationals](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Reals](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [Naturals](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Integers](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Rationals](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Reals](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Practice Problems](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 
 <br>
 
 ## Chapter 2 - Divisibility
 <br>
 
-- [Primes](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Divisibility](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Modular Arithmetic](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Practice Problems](https://carnap.io/shared) and [Solutions](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [Primes](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Divisibility](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Modular Arithmetic](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Practice Problems](https://carnap.io/shared) and [Solutions](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 
 
 <br>
@@ -311,10 +267,10 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 <br>
 
-- [Combinations](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Permutations](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Pascal's Triangle](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [Combinations](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Permutations](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Pascal's Triangle](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Practice Problems](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 
 <br>
 
@@ -322,10 +278,10 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 <br>
 
-- [RSA Encryption](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Unique Factorization](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Infinitely Many Primes](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [RSA Encryption](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Unique Factorization](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Infinitely Many Primes](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Practice Problems](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 
 <br>
 <br>
@@ -336,18 +292,18 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 
 <br>
-- [Overview](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [Overview](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 <br>
 
 ## Chapter 1 - Without Loops
 
 <br>
 
-- [Pre-Conditions](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Post-Conditions](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Assignments](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Conditionals](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [Pre-Conditions](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Post-Conditions](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Assignments](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Conditionals](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Practice Problems](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 
 
 <br>
@@ -356,9 +312,9 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 
 <br>
 
-- [Partial Correctness](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Total Correctness](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
-- [Practice Problems](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+- [Partial Correctness](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Total Correctness](https://carnap.io/shared/smcintyre/Workbook.pandoc)
+- [Practice Problems](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 
 
 <br>
@@ -367,11 +323,9 @@ To report bugs, please use the brightspace discussion forum and fill out a bug r
 !!UNDER CONSTRUCTION!!
 
 
-## [Epilogue](https://carnap.io/shared/srenee651@gmail.com/book-epilogue.pandoc)
+## [Epilogue](https://carnap.io/shared/smcintyre/book-epilogue.pandoc)
 
 
-[Practice Final Exam](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)
+[Practice Final Exam](https://carnap.io/shared/smcintyre/Workbook.pandoc)
 <br>
 
-<br>
-<br>
