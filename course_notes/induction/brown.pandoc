@@ -29,7 +29,7 @@
 
 Why is this “proof” bad? It is obviously wrong, as there exists cats that are not brown. We shouldn't be able to prove false claims, so something has gone astray in the proof. [^2]
 
-<p>[Previous: Hanoi Continued](https://carnap.io/shared/srenee651@gmail.com/book-induction-hanoi.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Bad Induction Proofs](https://carnap.io/shared/srenee651@gmail.com/book-induction-bad.pandoc) </p>
+<p>[Previous: Hanoi Continued](https://carnap.io/shared/smcintyre/book-induction-hanoi.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Bad Induction Proofs](https://carnap.io/shared/smcintyre/book-induction-bad.pandoc) </p>
 
 
 [^2]: Hint: trace out the proof to prove that any set of 1 cat is brown.

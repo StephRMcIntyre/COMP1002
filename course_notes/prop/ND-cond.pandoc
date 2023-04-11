@@ -150,4 +150,4 @@ However, you can cite the entire subproof as an object, as we did for $\to I$
 →.8 (A & C) -> B, C :|-: (A -> (B & C)) /\ (B -> (B & C))
 ~~~
 
-<p>[Previous: Conjunction Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-and.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Biconditional Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-bicond.pandoc) </p>
+<p>[Previous: Conjunction Rules](https://carnap.io/shared/smcintyre/book-prop-ND-and.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Biconditional Rules](https://carnap.io/shared/smcintyre/book-prop-ND-bicond.pandoc) </p>

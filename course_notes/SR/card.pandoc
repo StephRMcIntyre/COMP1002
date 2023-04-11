@@ -104,5 +104,5 @@ Exercise: Use the principle of inclusion-exclusion to show that
 <br>For any sets A,B,C, |(A∪B)∪C| = |A| + |B| + |C| − |A⋂B| - |(A⋂C)| - |(B⋂C)| + |A⋂B⋂C|.
 
 
-<p>[Previous: Power Sets](https://carnap.io/shared/srenee651@gmail.com/book-SR-power.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Relations](https://carnap.io/shared/srenee651@gmail.com/book-SR-rel.pandoc) </p>
+<p>[Previous: Power Sets](https://carnap.io/shared/smcintyre/book-SR-power.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Relations](https://carnap.io/shared/smcintyre/book-SR-rel.pandoc) </p>
 

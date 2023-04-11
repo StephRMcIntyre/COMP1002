@@ -51,4 +51,4 @@ div.denom {
 <br> $~~~~$c) Prove by structural induction that for all counting-sets s with its largest value v, the sum of all of the elements in s is equal to v*(v+1)/2.
 
 
-<p>[Previous: Structural Induction](https://carnap.io/shared/srenee651@gmail.com/book-induction-si.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Pigeonhole Principle](https://carnap.io/shared/srenee651@gmail.com/book-induction-pig.pandoc) </p>
+<p>[Previous: Structural Induction](https://carnap.io/shared/smcintyre/book-induction-si.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Pigeonhole Principle](https://carnap.io/shared/smcintyre/book-induction-pig.pandoc) </p>

@@ -100,4 +100,4 @@ Tip: These rules only effect the main connective in the sentence.
 In this case, $\land E$ only breaks apart the first conjunction to get $A$ and $B \land C$ from
 line 1. To get $C$, you have to apply $\land$E again.
 
-<p>[Previous: Natural Deduction Overview](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Conditional Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-cond.pandoc) </p>
+<p>[Previous: Natural Deduction Overview](https://carnap.io/shared/smcintyre/book-prop-ND.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Conditional Rules](https://carnap.io/shared/smcintyre/book-prop-ND-cond.pandoc) </p>

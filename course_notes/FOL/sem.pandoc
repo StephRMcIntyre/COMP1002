@@ -7,7 +7,7 @@
 ## Semantics
 
 The semantics of the connectives were discussed in PL and remain unchanged. 
-<br>The only things left to discuss are the semantics of the [Constants](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sem.pandoc#constants), [Variables](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sem.pandoc#variables), [Predicates](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sem.pandoc#predicates) and [Quantifiers](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sem.pandoc#quantifiers)...
+<br>The only things left to discuss are the semantics of the [Constants](https://carnap.io/shared/smcintyre/book-FOL-sem.pandoc#constants), [Variables](https://carnap.io/shared/smcintyre/book-FOL-sem.pandoc#variables), [Predicates](https://carnap.io/shared/smcintyre/book-FOL-sem.pandoc#predicates) and [Quantifiers](https://carnap.io/shared/smcintyre/book-FOL-sem.pandoc#quantifiers)...
 
 Consider this interpretation, ℐ.
 
@@ -220,4 +220,4 @@ For example, ℐ(∀xSxx)=T as ℐ(S) is the set of all pairs (d,d) where d∈U.
 | False
 ```
 
-<p>[Previous: Interpretations](https://carnap.io/shared/srenee651@gmail.com/book-FOL-interp.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Satisfying Formulas](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sat.pandoc) </p>
+<p>[Previous: Interpretations](https://carnap.io/shared/smcintyre/book-FOL-interp.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Satisfying Formulas](https://carnap.io/shared/smcintyre/book-FOL-sat.pandoc) </p>

@@ -186,5 +186,5 @@ __Exercise:__ Using the definition of exponentiation, prove it is not the case t
 
 __Exercise:__ Using the definition of exponentiation, show by induction for any counting number $m$, $1^{m}$ ≥ $-1^{m}$.
 
-<p>[Previous: Sequences Practice Problems](https://carnap.io/shared/srenee651@gmail.com/oops) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Recurrence Relations](https://carnap.io/shared/srenee651@gmail.com/book-induction-recrel.pandoc) </p>
+<p>[Previous: Sequences Practice Problems](https://carnap.io/shared/smcintyre/oops) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Recurrence Relations](https://carnap.io/shared/smcintyre/book-induction-recrel.pandoc) </p>
 

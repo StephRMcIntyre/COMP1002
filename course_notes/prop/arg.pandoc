@@ -150,4 +150,4 @@ Exercise: Show that anything is a logical consequence from a contradictory set o
 8 P /\ ~P :|-: Q
 ```
 
-<p>[Previous: Logical Truths & Falsehoods](https://carnap.io/shared/srenee651@gmail.com/book-prop-taf.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Conditionals & Biconditionals](https://carnap.io/shared/srenee651@gmail.com/book-prop-CB.pandoc) </p>
+<p>[Previous: Logical Truths & Falsehoods](https://carnap.io/shared/smcintyre/book-prop-taf.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Conditionals & Biconditionals](https://carnap.io/shared/smcintyre/book-prop-CB.pandoc) </p>

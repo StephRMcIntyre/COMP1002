@@ -53,7 +53,7 @@ If domain (set B) is equal to co-domain (set B), we sometimes call it a relation
 We can draw the relation with what is known as a directed graph.
 <br>Let's use the Loves relation as an example.
 
-<img src="https://carnap.io/shared/srenee651@gmail.com/loves.png" alt="Loves Relation">
+<img src="https://carnap.io/shared/smcintyre/loves.png" alt="Loves Relation">
 <br>Every element in Folks has what is called a node.
 <br>Every element in Loves has a directed arrow that goes from the first element of the pair to the second element.
 
@@ -62,4 +62,4 @@ then Erin would have their own node but no incoming or outcoming arrows.
 
 <br><br><br>Next we will discuss some properties of homogenous relations. We will start with Reflexivity.
 
-<p>[Previous: Cardinality of Finite Sets](https://carnap.io/shared/srenee651@gmail.com/book-SR-card.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Reflexivity](https://carnap.io/shared/srenee651@gmail.com/book-SR-ref.pandoc) </p>
+<p>[Previous: Cardinality of Finite Sets](https://carnap.io/shared/smcintyre/book-SR-card.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Reflexivity](https://carnap.io/shared/smcintyre/book-SR-ref.pandoc) </p>

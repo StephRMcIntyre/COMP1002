@@ -74,7 +74,7 @@ When doing a parse tree, the quantifiers behave similar to negation.
 
 __Example of the parse tree for ∀xPx∨∃x¬Px__
 
-<img src="https://carnap.io/shared/srenee651@gmail.com/parse_FOL.png" alt="∀xPx∨∃x¬Px Parse Tree">
+<img src="https://carnap.io/shared/smcintyre/parse_FOL.png" alt="∀xPx∨∃x¬Px Parse Tree">
 
 
 ### Sentences
@@ -96,7 +96,7 @@ The way to check if a wff is a sentence is to take a look at the parse tree.
 
 Example.
 
-<img src="https://carnap.io/shared/srenee651@gmail.com/parse_FOL2.png" alt="∀xPx∨∃x¬Px Parse Tree">
+<img src="https://carnap.io/shared/smcintyre/parse_FOL2.png" alt="∀xPx∨∃x¬Px Parse Tree">
 
 <br>Looking at the previous parse tree, we want to check the variables that are arguments with the quantified variables.
 <br>We notice that the subformula ∀xPx has Px underneath it. Variable x for the universal quantifier has the scope of Px.
@@ -104,7 +104,7 @@ Example.
 
 Example. ∀xPx∨¬Px is not a sentence.
 
-<img src="https://carnap.io/shared/srenee651@gmail.com/parse_FOL3.png" alt="∀xPx∨¬Px Parse Tree">
+<img src="https://carnap.io/shared/smcintyre/parse_FOL3.png" alt="∀xPx∨¬Px Parse Tree">
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
 3. Select all of the wffs which are sentences.
@@ -114,4 +114,4 @@ Example. ∀xPx∨¬Px is not a sentence.
 | *P
 ```
 
-<p>[Previous: Overview](https://carnap.io/shared/srenee651@gmail.com/book-FOL-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Sets](https://carnap.io/shared/srenee651@gmail.com/book-FOL-sets.pandoc) </p>
+<p>[Previous: Overview](https://carnap.io/shared/smcintyre/book-FOL-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Sets](https://carnap.io/shared/smcintyre/book-FOL-sets.pandoc) </p>

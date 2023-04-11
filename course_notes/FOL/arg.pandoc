@@ -120,4 +120,4 @@ For example, show that $\neg$∃yPy⊨$\neg$∀xPx.
 <br>Since ℐ was arbitrary, then any interpretation which sets ∀y¬Py=T must then set Ex¬Px=T.
 <br>Therefore, ∀y¬Py⊨Ex¬Px.
 
-<p>[Previous: Databases](https://carnap.io/shared/srenee651@gmail.com/book-FOL-databases.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Natural Deduction](https://carnap.io/shared/srenee651@gmail.com/book-FOL-ND.pandoc) </p>
+<p>[Previous: Databases](https://carnap.io/shared/smcintyre/book-FOL-databases.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Natural Deduction](https://carnap.io/shared/smcintyre/book-FOL-ND.pandoc) </p>

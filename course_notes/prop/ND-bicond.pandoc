@@ -108,4 +108,4 @@ Let's do one more exercise using biconditionals.
 ↔.6 A <-> (B <-> C) :|-: (A /\ B) <-> (A /\ C)
 ~~~
 
-<p>[Previous: Conditional Rules](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-cond.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Reiteration Rule](https://carnap.io/shared/srenee651@gmail.com/book-prop-ND-reit.pandoc) </p>
+<p>[Previous: Conditional Rules](https://carnap.io/shared/smcintyre/book-prop-ND-cond.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Reiteration Rule](https://carnap.io/shared/smcintyre/book-prop-ND-reit.pandoc) </p>

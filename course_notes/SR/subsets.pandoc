@@ -92,5 +92,5 @@ Examples:
 <br>{1,2,3}={3,2,1}, therefore {1,2,3}⊆{3,2,1}.
 <br>Since {1,2,3}⊈{1,2} (why?), we know that {1,2,3}≠{1,2}
 
-<p>[Previous: Overview](https://carnap.io/shared/srenee651@gmail.com/book-SR-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Quantifiers](https://carnap.io/shared/srenee651@gmail.com/book-SR-subsets.pandoc) </p>
+<p>[Previous: Overview](https://carnap.io/shared/smcintyre/book-SR-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Quantifiers](https://carnap.io/shared/smcintyre/book-SR-subsets.pandoc) </p>
 

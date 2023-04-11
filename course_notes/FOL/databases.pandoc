@@ -85,7 +85,7 @@ Typically each table has a primary key. This key uniquely identifies the row.
 A __database__ is a __set of relations__.
 <br>These are usually related to each other, captured by the database schema which can be expressed in FOL.
 
-<img src="https://carnap.io/shared/srenee651@gmail.com/DB.png" alt="DB Sample">
+<img src="https://carnap.io/shared/smcintyre/DB.png" alt="DB Sample">
 
 The above diagram illustrates there are three tables in our database: Instructor, Section, and Course.
 <br>The Instructor table has three attributes, in order: ID, First Name, Last Name.
@@ -200,4 +200,4 @@ Note: There could be other ways to express the query from Q6. In fact, one of th
 </body>
 </html>
 
-<p>[Previous: Equality Predicate](https://carnap.io/shared/srenee651@gmail.com/book-FOL-equality.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Logical Implication & Equivalence](https://carnap.io/shared/srenee651@gmail.com/book-FOL-arg.pandoc) </p>
+<p>[Previous: Equality Predicate](https://carnap.io/shared/smcintyre/book-FOL-equality.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-ii-first-order-logic)   &emsp; &emsp; &emsp; &emsp;  [Next: Logical Implication & Equivalence](https://carnap.io/shared/smcintyre/book-FOL-arg.pandoc) </p>

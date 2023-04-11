@@ -158,4 +158,4 @@ Let $C_\alpha$ be the number of connective symbols in $\alpha$.
 
 3. Prove by structural induction that it is the case that for every simple propositional wff $\alpha$, $C_\alpha$ ≥ $P_\alpha$-1.
 
-<p>[Previous: Recurrence Relations](https://carnap.io/shared/srenee651@gmail.com/book-induction-recrel.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Structural Induction Practice](https://carnap.io/shared/srenee651@gmail.com/book-induction-prac2.pandoc) </p>
+<p>[Previous: Recurrence Relations](https://carnap.io/shared/smcintyre/book-induction-recrel.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Structural Induction Practice](https://carnap.io/shared/smcintyre/book-induction-prac2.pandoc) </p>

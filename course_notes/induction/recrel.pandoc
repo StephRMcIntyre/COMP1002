@@ -91,5 +91,5 @@ F(10). Compute F(10).
 __Exercise:__ Prove by induction that $H(n)=2^n-1$.
 
 
-<p>[Previous: Recursive Definitions](https://carnap.io/shared/srenee651@gmail.com/oops) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Structural Induction](https://carnap.io/shared/srenee651@gmail.com/book-induction-si.pandoc) </p>
+<p>[Previous: Recursive Definitions](https://carnap.io/shared/smcintyre/oops) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/assignments/COMP%201002%20-%20Spring%202022/Workbook.pandoc#part-iii-induction)   &emsp; &emsp; &emsp; &emsp;  [Next: Structural Induction](https://carnap.io/shared/smcintyre/book-induction-si.pandoc) </p>
 

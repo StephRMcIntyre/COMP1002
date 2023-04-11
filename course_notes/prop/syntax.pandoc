@@ -98,7 +98,7 @@ conjunctions ($\land$)/disjunctions($\lor$), then biconditionals($\leftrightarro
 The formula $2\times 3+4$ is equal to $(2\times 3)+4$.
 The formula can be represented as the parse diagram:
 
-<img src="https://carnap.io/shared/srenee651@gmail.com/z_math_parse.jpg" alt="Arithmetic Parse Tree">
+<img src="https://carnap.io/shared/smcintyre/z_math_parse.jpg" alt="Arithmetic Parse Tree">
 
 
 In PL, a parse diagram starts with a formula and splitting it up by the last operation (the main
@@ -127,4 +127,4 @@ In this example, the main connective was $\to$.
 3 ~P -> Q \/ (~R <> ~~Q /\ P)
 ~~~
 
-<p>&emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Translations](https://carnap.io/shared/srenee651@gmail.com/book-prop-trans.pandoc) </p>
+<p>&emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp;  [Next: Translations](https://carnap.io/shared/smcintyre/book-prop-trans.pandoc) </p>

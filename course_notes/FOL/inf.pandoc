@@ -52,4 +52,4 @@ Using only basic math and the definitions of even/odd, prove the following:
 + For all integers x, there exists an integer y such that xy = 0.
 + If integer n$^2$ is even, then n is even.
 
-<p>[Previous: Soundness & Completeness](https://carnap.io/shared/srenee651@gmail.com/book-FOL-SC.pandoc)&emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/srenee651@gmail.com/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp; [Next: Bad Informal Proofs](https://carnap.io/shared/srenee651@gmail.com/book-FOL-badinf.pandoc)</p>
+<p>[Previous: Soundness & Completeness](https://carnap.io/shared/smcintyre/book-FOL-SC.pandoc)&emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc)  &emsp; &emsp; &emsp; &emsp; [Next: Bad Informal Proofs](https://carnap.io/shared/smcintyre/book-FOL-badinf.pandoc)</p>
