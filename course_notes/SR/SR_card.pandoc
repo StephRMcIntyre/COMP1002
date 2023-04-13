@@ -14,34 +14,95 @@ The size of a finite set A, denoted as |A|, is the number of distinct elements i
 A set is __finite__ if there is a specific number k∈ℕ of elements.
 <br>A set is __infinite__ if there is not a specific number of elements.
 
+A set is __countable__, or rather it has the same cardinality as ℕ if you can enumerate through all of the elements.
+<br>This means, we could assign every item in the set a natural number, and thus we would know when each particular element would appear in the ordered list.
+<br>A set is __uncountable__ when it cannot be enumerated like this.
+
 Examples: 	
 <br>∅ is a finite set. |∅|=0.
 <br>{1,2,3,4} is a finite set. |{1,2,3,4}|=4.
-<br>ℕ is an infinite set.
-<br>ℤ is an infinite set. _with the same cardinality as ℕ._
-<br>ℝ is an infinite set _with a cardinality larger than ℕ._ [^1]
+<br>ℕ is an infinite set. It is countable.
+<br>ℤ is an infinite set. _with the same cardinality as ℕ_, so it is countable.
+<br>ℝ is an infinite set _with a cardinality larger than ℕ_, [^1] so it is uncountable.
 
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
 1. |{(1,2),3}| =
+| 0
 | 1
 | *2
 | 3
 | 4
 ```
 
-[^1]: We won't get into the differences between countably infinite and uncountably infinite, or comparing cardinalities of infinite sets. 
-If you are interested in this, then I highly recommend taking the Discrete Mathematics course from the Mathematics Department or I can point you to some books if you would like.
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+2. |{1,{2,3},∅}| =
+| 0
+| 1
+| 2
+| *3
+| 4
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+3. |{1,{2,3},1,{3,2}| =
+| 0
+| 1
+| *2
+| 3
+| 4
+
+Oh this one above is "tricky". Remember... duplicates are ignored. Order does not matter.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+3. |∅| =
+| *0
+| 1
+| 2
+| 3
+| 4
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+4. |{∅}| =
+| 0
+| *1
+| 2
+| 3
+| 4
 
 The size of the __power set__ of a finite set A is $2^{|A|}$. 
 <br> Example: |𝒫({1,2,3})| = $2^{|\{1,2,3\}}|$ = $2^3$ = 8.
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-2. |𝒫({(1,2),3})| =
+5. |𝒫({(1,2),3})| =
+| 0
+| 1
 | 2
 | *4
 | 6
 | 8
+| 16
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+6. |A| = 4. |𝒫(A)| =
+| 0
+| 1
+| 2
+| 4
+| 6
+| 8
+| *16
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+7. |𝒫(∅)| =
+| 0
+| *1
+| 2
+| 4
+| 6
+| 8
+| 16
 ```
 
 ##### Multiplicative Counting
@@ -103,6 +164,10 @@ Example: |A∪B| = 4, |A⋂B| = 3, |B| = 4. What is |A|?
 Exercise: Use the principle of inclusion-exclusion to show that 
 <br>For any sets A,B,C, |(A∪B)∪C| = |A| + |B| + |C| − |A⋂B| - |(A⋂C)| - |(B⋂C)| + |A⋂B⋂C|.
 
+
+[^1]: We won't get into the differences between countably infinite and uncountably infinite, or comparing cardinalities of infinite sets. 
+If you are interested in this, then I highly recommend taking the Discrete Mathematics course from the Mathematics Department or I can point you to some books if you would like.
+To see why ℝ is uncountable, then see Cantor's Diagonalization Argument.
 
 <p>[Previous: Power Sets](https://carnap.io/shared/smcintyre/book-SR-power.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Relations](https://carnap.io/shared/smcintyre/book-SR-rel.pandoc) </p>
 
