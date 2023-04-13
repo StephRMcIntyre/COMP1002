@@ -38,6 +38,30 @@ Sets are either empty or collections of things.
 We write Φ∈A to denote that the number Φ is an element of the set A.
 <br>We write ‘Alberta’∉A to denote that the string ‘Alberta’ is not an element of the set A.
 
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. Let A = { 1, 2, ∅, {3} }. Select all of the elements below which are elements of A.
+| 0
+| *1
+| *2
+| 3 
+| ∅
+| {1}
+| {2}
+| *{3}
+| {∅}
+```
+
+Items in a set have no order and duplicates do not matter.
+<br>i.e. {2,2} is the same as {2}, and {1,2} is the same as {2,1}.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Let A = { 1, {1,1}, 1, {1,2} }. Select all of the sets that are the same as A.
+| *{ {2,1}, {1, 1}, 1 }
+| *{ 1, {1}, {1,2} }
+| *{ 1, {1,1,1}, {2,1,1,2,2} }
+| { 1, {1,2} }
+```
+
 ### Properties
 
 We sometimes write {x∈X | Px} to denote all objects x∈X that satisfy property Px.
@@ -47,12 +71,14 @@ Example: E={n∈ℤ | ∃k∈ℤ, 2k=n} is the set of even numbers.
 <br>B = {b∈Cars | b is blue} is the set of all blue cars.
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-1. C = {c∈ℤ | c$^2$=4}. C is ...
+3. C = {c∈ℤ | c$^2$=4}. C is ...
 | The set of all even integers.
 | {4}
 | *{-4,4}
 | 4
 ```
+
+For more basic set review, please revisit: [FOL - sets](https://carnap.io/shared/smcintyre/FOL_sets.pandoc)
 
 <p>[Previous: Overview](https://carnap.io/shared/smcintyre/book-SR-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Subsets](https://carnap.io/shared/smcintyre/book-SR-subsets.pandoc) </p>
 
