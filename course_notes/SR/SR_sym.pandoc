@@ -1,0 +1,48 @@
+# Sets & Relations
+
+## Relations
+
+###Symmetry
+
+In short, a relation R on a set A has the symmetric property if and only if every a,b∈A, if aRb then bRa.
+<br>We can express this in FOL as ∀x∀y(Rxy → Ryx), where the domain for x is A.
+
+Looking back at the Loves relation on Folks = {Sam,Jamie},
+
+<img src="https://carnap.io/shared/smcintyre/loves1.png" alt="Loves Relation on {Sam,Jamie}">
+<br>This relation is not symmetric. 
+<br>This is because we found a counterexample to ∀x∀y(Rxy → Ryx). 
+<br>This is when x is the value Jamie and y is the value Sam, as Sam Loves Jamie, but it is not the case that Jamie Loves Sam.
+
+In short, for a relation to be symmetric: if there is an arrow that goes one-way, then it *needs* to go both ways! 
+<br>Else it is not symmetric.
+
+Consider this new relation, Self-Love, on {Sam,Jamie,Erin}.
+
+<img src="https://carnap.io/shared/smcintyre/loves3.png" alt="Self-Love Relation on {Sam,Jamie,Erin}">
+<br>Is this symmetric?
+<br>Well, there are only self-loops, arrows pointing to itself. There are no arrows pointing to other nodes.
+<br>Recall, a relation is symmetric if and only if ∀x∀y(Rxy → Ryx).
+<br>So is there a counterexample to this? In other words, is it the case that its negation, ∃x∃y (Rxy ∧ ¬Ryx), is True?
+<br>No, the negation is not True. There is no counterexample to ∀x∀y(Rxy → Ryx), so this relation must be symmetric!
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. Let A = {1,2,3}. Select all of the relations below on A such that the relation is symmetric.
+| *R = {(1,1),(2,2),(3,3)}
+| R = {(1,1),(2,3),(2,2),(3,3),(3,1)}
+| R = {(1,2),(2,3),(3,3)}
+| *R = {(1,1),(1,2),(2,2),(2,1)}
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Let A = ℕ. Select all of the relations below on A such that the relation is reflexive.
+| R is the < relation.
+| R is the ≤ relation.
+| *R is the = relation.
+| *R is the ≠ relation.
+```
+
+
+<br><br><br>Next we will discuss Transitivity.
+
+<p>[Previous: Reflexivity](https://carnap.io/shared/smcintyre/SR-ref.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Transitivity](https://carnap.io/shared/smcintyre/SR-trans.pandoc) </p>
