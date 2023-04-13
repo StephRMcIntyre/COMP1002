@@ -1,0 +1,106 @@
+# Sets & Relations
+
+## Relations
+
+###Orders
+
+####Partial Orders
+
+A relation is a partial-order relation that is reflexive, antisymmetric and transitive. 
+<br>It has to have all three of these properties to be a partial order relation.
+<br>In essence, there must be some order to the elements in the set, meaning some come before others, and there are no cycles (other than self-loops).
+
+
+Looking back at the original Loves relation on Folks = {Sam,Jamie},
+
+<img src="https://carnap.io/shared/smcintyre/loves1.png" alt="Loves Relation on {Sam,Jamie}">
+<br>Is this a partial order?
+<br>Yes, it is. We early discovered it is reflexive, transitive, and antisymmetric.
+<br>As it satisfies all three properties, it is a partial order.
+
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. Let A = {1,2,3}. Select all of the relations below on A such that the relation is a partial order.
+| *R = {(1,1),(2,2),(3,3)}
+| *R = {(1,1),(2,3),(2,2),(3,3),(3,1)}
+| R = {(1,2),(2,3),(3,3)}
+| R = {(1,1),(1,2),(2,2),(2,1)}
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Let A = ℕ. Select all of the relations below on A such that the relation is a partial order.
+| R is the < relation.
+| *R is the ≤ relation.
+| *R is the = relation.
+| R is the ≠ relation.
+```
+
+####Hasse Diagrams 
+
+We sometimes diagram partial orders where aRb is represented by a being physically below b. 
+<br>If there are no elements c such that aRc and cRb, we draw a line between a,b.
+<br>These diagrams have the reflexivity and transitivity implicitly shown.
+<br>The "smallest" elements are at the bottom, and it grows upwards.
+
+Here's the Hasse Diagram of the Loves on Folks relation.
+<img src="https://carnap.io/shared/smcintyre/loves1_ord.png" alt="Loves Relation on {Sam,Jamie}">
+
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+3. Let A = {1,2,3}. Select all of the relations below on A such that the relation is an equivalence relation.
+| *R = {(1,1),(2,2),(3,3)}
+| R = {(1,1),(2,3),(2,2),(3,3),(3,1)}
+| R = {(1,2),(2,3),(3,3)}
+| *R = {(1,1),(1,2),(2,2),(2,1)}
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+4. Let A = ℕ. Select all of the relations below on A such that the relation is an equivalence relation.
+| R is the < relation.
+| R is the ≤ relation.
+| *R is the = relation.
+| R is the ≠ relation.
+```
+
+###Equivalence Classes
+
+Suppose R on A is an equivalence relation.
+<br>We can define equivalence classes on objects in A.
+<br>Suppose a∈A. 
+<br>Then the equivalence class of a is defined as the set of all elements b in A such that aRb.
+<br>Formally, we can express this as:
+<br>$~~~~~~$ [a] = {b∈A | aRb}
+<br>_It is important for you to know this notation as you will be tested on it!_
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+3. Let A = {1,2,3}. Let R = {(1,1),(3,3),(2,2),(1,3),(3,1)}. Select all the elements in [1].
+| *1
+| 2
+| *3
+| (1,1)
+```
+
+We can view this pictorally by drawing out the equivalence relation, and we can group all of the elements that relate to each other together.
+
+<img src="https://carnap.io/shared/smcintyre/eqclass.png" alt="Equivalence Classes">
+
+Notice here we have 3 distinct equivalence classes, as we have 3 groupings.
+<br>Also note how [a] = [b] as both [a] and [b] would produce the same sets.
+<br>But that [a] and [d] are disjoint! Meaning they share NO elements; their intersection is empty!
+<br>The union of alllllll of the equivalence classes results in the set the relation is on.
+
+
+<br>NOTE: THIS GROUPING MUST ONLY BE DONE WITH EQUIVALENCE RELATIONS.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+4. From the above example, select all of the equivalence classes that are disjoint with [a].
+| [b]
+| [c]
+| *[d]
+| *[e]
+| *[f]
+```
+
+<br><br><br>Next we will discuss Orders.
+
+<p>[Previous: Transitivity](https://carnap.io/shared/smcintyre/SR-trans.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Orders](https://carnap.io/shared/smcintyre/SR-ord.pandoc) </p>
