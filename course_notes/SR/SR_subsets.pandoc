@@ -96,7 +96,7 @@ Claim: For sets A,B,C, if A=B and B=C, then A=C.
 <br> Proof: _[We are asked to prove a if-then statement. -> Intro approach is ideal here]_
 <br>_[Assume the antecedent]_  Suppose A=B and B=C. 
 <br> By definition of set equality, this means that A⊆B and B⊆A, C⊆B and B⊆C.
-<br>_[We want to show now A=C. To do this, we need to show that A⊆C and C⊆A]_		
+<br>_[We want to show now A=C. To do this, we need to show both A⊆C and C⊆A.]_		
 <br>$~~~~~$_[We want to show now A⊆C]_
 <br> $~~~~~$$~~~~~$ Let a be an arbitrary element of A
 <br> $~~~~~$$~~~~~$ Since a∈A and A⊆B, we know by definition of subset that a∈B. 
@@ -114,6 +114,9 @@ we find that every element of C must be an element of A.
 <br>$~~~~~$ _[Conclude with the consequent]_ As A⊆C and C⊆A, then by set equality, A=C.
 <br>Therefore, if A=B and B=C, then A=C.
 
+You will __definitely__ need to do proofs like these, so you will want to practice, practice, practice!
+<br>See Brightspace for additional practice problems.
+<br>Go nowwwww!!!
 
 <p>[Previous: Overview](https://carnap.io/shared/smcintyre/book-SR-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Quantifiers](https://carnap.io/shared/smcintyre/book-SR-subsets.pandoc) </p>
 
