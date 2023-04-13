@@ -33,10 +33,10 @@ Claim: If A⊆B and B⊆C, then A⊆C.
 <br> Proof: _[We are asked to prove a if-then statement. -> Intro approach is ideal here]_
 <br>_[Assume the antecedent]_  Suppose A⊆B and B⊆C. 			
 <br>_[We want to show now A⊆C]_
-<br> $~~~~~$ Let a∈A be an arbitrary element of A
+<br> $~~~~~$ Let a be an arbitrary element of A
 <br> $~~~~~$ Since a∈A and A⊆B, we know by definition of subset that a∈B. 
 <br> $~~~~~$ Since a∈B and B⊆C, by definition of subset we find that a∈C. 
-Since a∈A was an arbitrary element of A, and a∈C, 
+Since a was an arbitrary element of A, and a∈C, 
 we find that every element of A must be an element of C. 
 <br>_[Conclude with the consequent]_ Thus A⊆C.
 <br>Therefore, if A⊆B and B⊆C, then A⊆C.
@@ -75,7 +75,7 @@ Exercise: Prove that If A⊂B and B⊂C, then A⊂C.
 <br>Claim: Yes, the empty set is the unique set that is a subset of every set.
 <br>Proof: 
 <br>Let A be any set. _We want to make it arbitrary as we need to prove for every set._
-<br> $~~~~~$ Assume a∈∅ be an arbitrary element a. 
+<br> $~~~~~$ Assume a is an arbitrary element ∅. 
 <br> $~~~~~$ By definition of empty set, a∉∅, so we have a contradiction. 
 <br> $~~~~~$ From a contradiction, we derive a∈A. 
 <br> Then if a∈∅, then a∈A.
@@ -91,6 +91,29 @@ Examples:
 <br>{1,2,3}⊆{3,2,1} and {3,2,1}⊆{1,2,3}, therefore {1,2,3}={3,2,1}
 <br>{1,2,3}={3,2,1}, therefore {1,2,3}⊆{3,2,1}.
 <br>Since {1,2,3}⊈{1,2} (why?), we know that {1,2,3}≠{1,2}
+
+Claim: For sets A,B,C, if A=B and B=C, then A=C. 
+<br> Proof: _[We are asked to prove a if-then statement. -> Intro approach is ideal here]_
+<br>_[Assume the antecedent]_  Suppose A=B and B=C. 
+<br> By definition of set equality, this means that A⊆B and B⊆A, C⊆B and B⊆C.
+<br>_[We want to show now A=C. To do this, we need to show that A⊆C and C⊆A]_		
+<br>$~~~~~$_[We want to show now A⊆C]_
+<br> $~~~~~$$~~~~~$ Let a be an arbitrary element of A
+<br> $~~~~~$$~~~~~$ Since a∈A and A⊆B, we know by definition of subset that a∈B. 
+<br> $~~~~~$$~~~~~$ Since a∈B and B⊆C, by definition of subset we find that a∈C. 
+<br>$~~~~~$ Since a was an arbitrary element of A, and a∈C, 
+we find that every element of A must be an element of C. 
+<br>$~~~~~$ _[Conclude with the first subproof]_ Thus A⊆C.	
+<br>$~~~~~$_[We want to show now C⊆A]_
+<br> $~~~~~$$~~~~~$ Let c be an arbitrary element of C
+<br> $~~~~~$$~~~~~$ Since c∈C and C⊆B, we know by definition of subset that c∈B. 
+<br> $~~~~~$$~~~~~$ Since c∈B and B⊆A, by definition of subset we find that c∈A. 
+<br>$~~~~~$ Since c was an arbitrary element of C, and c∈A, 
+we find that every element of C must be an element of A. 
+<br>$~~~~~$ _[Conclude with the second subproof]_ Thus C⊆A.
+<br>$~~~~~$ _[Conclude with the consequent]_ As A⊆C and C⊆A, then by set equality, A=C.
+<br>Therefore, if A=B and B=C, then A=C.
+
 
 <p>[Previous: Overview](https://carnap.io/shared/smcintyre/book-SR-overview.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Quantifiers](https://carnap.io/shared/smcintyre/book-SR-subsets.pandoc) </p>
 
