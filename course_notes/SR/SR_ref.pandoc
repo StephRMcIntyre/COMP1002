@@ -1,0 +1,40 @@
+# Sets & Relations
+
+## Relations
+
+###Reflexivity
+
+In short, a relation R on a set A has the reflexive property if and only if every a∈A, aRa.
+<br>We can express this in FOL as ∀x Rxx, where the domain for x is A.
+
+Looking back at the Loves relation on Folks = {Sam,Jamie},
+
+<img src="https://carnap.io/shared/smcintyre/loves1.png" alt="Loves Relation on {Sam,Jamie}">
+<br>This relation is reflexive as every node in Folks has an arrow that points to itself.
+
+However, if we look at the Modified Loves relation on {Sam,Jamie,Erin}
+
+<img src="https://carnap.io/shared/smcintyre/loves2.png" alt="Loves Relation on {Sam,Jamie,Erin}">
+<br>This relation is not reflexive. 
+<br>This is because we found a counterexample to ∀x Rxx. This is when x is the value Erin as it is, sadly, not the case that Erin Loves Erin.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. Let A = {1,2,3}. Select all of the relations below on A such that the relation is reflexive.
+| *R = {(1,1),(2,2),(3,3)}
+| *R = {(1,1),(2,3),(2,2),(3,3),(3,1)}
+| R = {(1,2),(2,3),(3,3)}
+| R = {(1,1),(1,2),(2,2),(2,1)}
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Let A = ℕ. Select all of the relations below on A such that the relation is reflexive.
+| R is the < relation.
+| *R is the ≤ relation.
+| *R is the = relation.
+| R is the ≠ relation.
+```
+
+
+<br><br><br>Next we will discuss Symmetry.
+
+<p>[Previous: Cardinality of Finite Sets](https://carnap.io/shared/smcintyre/SR-ref.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Reflexivity](https://carnap.io/shared/smcintyre/book-SR-sym.pandoc) </p>
