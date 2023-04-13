@@ -35,7 +35,7 @@ Consider this new relation, Self-Love, on {Sam,Jamie,Erin}.
 ```
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-2. Let A = ℕ. Select all of the relations below on A such that the relation is reflexive.
+2. Let A = ℕ. Select all of the relations below on A such that the relation is symmetric.
 | R is the < relation.
 | R is the ≤ relation.
 | *R is the = relation.
