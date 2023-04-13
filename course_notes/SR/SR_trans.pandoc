@@ -1,0 +1,84 @@
+# Sets & Relations
+
+## Relations
+
+###Transitivity
+
+In short, a relation R on a set A has the transitive property if and only if every a,b,c∈A, if aRb and bRc then aRc.
+<br>We can express this in FOL as ∀x∀y∀z(Rxy ∧ Ryz → Rxz), where the domain for x is A.
+
+Consider the Love-Triangle relation on {Sam,Jamie,Erin}.
+<img src="https://carnap.io/shared/smcintyre/loves3.png" alt="Love-Triangle Relation on {Sam,Jamie,Erin}">
+<br>This relation is not transitive. 
+<br>This is because we found a counterexample to ∀x∀y∀z(Rxy ∧ Ryz → Rxz), _there are a few counterexamples, but we only need to pick one!_
+<br>One such counterexample is when x is the value Jamie, y is the value Sam, z is the value Erin.
+<br>We cab see that (Sam,Jamie) ∈ LoveTriangle and (Jamie,Erin) ∈ LoveTiangle, but (Sam,Erin) ∉ LoveTriangle.
+
+Consider the All-Love relation on {Sam,Jamie,Erin
+<img src="https://carnap.io/shared/smcintyre/loves4.png" alt="All-Love Relation on {Sam,Jamie,Erin}">
+<br>This is transitive. There are no counterexamples!
+
+Looking back at the original Loves relation on Folks = {Sam,Jamie},
+
+<img src="https://carnap.io/shared/smcintyre/loves1.png" alt="Loves Relation on {Sam,Jamie}">
+<br>Is this relation transitive?
+<br>For many students, their first instinct is "NO! It is not because we don't have three items in the set!"
+<br>This is incorrect reasoning as recall, the variables can point to the same objects!
+<br>To show it is not transitive, we would need to find a counterexample to ∀x∀y∀z(Rxy ∧ Ryz → Rxz).
+<br>This means we need to find values for x,y,z such that Rxy ∧ Ryz ∧ ¬Rxz is True.
+<br>Let's consider ALL the cases:
+<br>$~~~~~$x = Sam
+<br>$~~~~~$ $~~~~~$y = Sam
+<br>$~~~~~$ $~~~~~$ $~~~~~$z = Sam
+<br>$~~~~~$ $~~~~~$ $~~~~~$ $~~~~~$Is Rxy ∧ Ryz ∧ ¬Rxz True? 
+<br>$~~~~~$ $~~~~~$ $~~~~~$ $~~~~~$No. We can't have (Sam,Sam)∈Loves and (Sam,Sam)∉Loves!
+<br>$~~~~~$ $~~~~~$ $~~~~~$z = Jamie
+<br>$~~~~~$ $~~~~~$ $~~~~~$ $~~~~~$Is Rxy ∧ Ryz ∧ ¬Rxz True? 
+<br>$~~~~~$ $~~~~~$ $~~~~~$ $~~~~~$No. (Sam,Sam)∈Loves, (Jamie,Jamie)∈Loves and (Sam,Jamie)∈Loves!
+<br>$~~~~~$ $~~~~~$y = Jamie
+<br>$~~~~~$ $~~~~~$ $~~~~~$z = Sam
+<br>$~~~~~$ $~~~~~$ $~~~~~$ $~~~~~$Is Rxy ∧ Ryz ∧ ¬Rxz True? 
+<br>$~~~~~$ $~~~~~$ $~~~~~$ $~~~~~$No. We need Ryz, but (Jamie,Sam)∉Loves.
+<br>$~~~~~$ $~~~~~$ $~~~~~$z = Jamie
+<br>$~~~~~$ $~~~~~$ $~~~~~$ $~~~~~$Is Rxy ∧ Ryz ∧ ¬Rxz True? 
+<br>$~~~~~$ $~~~~~$ $~~~~~$ $~~~~~$Same as before, no, as we need Ryz, but (Jamie,Sam)∉Loves.
+<br>$~~~~~$ $~~~~~$ $~~~~~$ $~~~~~$We could shorten this by earlier saying y cannot be Jamie if x is Sam for this reason.
+<br>$~~~~~$x = Jamie
+<br>$~~~~~$ $~~~~~$y = Sam
+<br>$~~~~~$ $~~~~~$ We cannot have Rxy ∧ Ryz ∧ ¬Rxz be True as (Jamie,Sam)∉Loves so Rxy will not be True.
+<br>$~~~~~$ $~~~~~$y = Jamie
+<br>$~~~~~$ $~~~~~$ $~~~~~$z = Sam
+<br>$~~~~~$ $~~~~~$ $~~~~~$ $~~~~~$Is Rxy ∧ Ryz ∧ ¬Rxz True? 
+<br>$~~~~~$ $~~~~~$ $~~~~~$ $~~~~~$No. We need Ryz, but (Jamie,Sam)∉Loves.
+<br>$~~~~~$ $~~~~~$ $~~~~~$z = Jamie
+<br>$~~~~~$ $~~~~~$ $~~~~~$ $~~~~~$Is Rxy ∧ Ryz ∧ ¬Rxz True? 
+<br>$~~~~~$ $~~~~~$ $~~~~~$ $~~~~~$No. We can't have (Jamie,Jamie)∈Loves and (Jamie,Jamie)∉Loves!
+<br>We have enumerated through ALL of the cases and there was not a single counterexample!
+<br>Thus, this relation on {Jamie,Sam} must be transitive!
+
+Consider this new relation, No-Love, on {Sam,Jamie,Erin}.
+
+<img src="https://carnap.io/shared/smcintyre/loves4.png" alt="No-Love Relation on {Sam,Jamie,Erin}">
+<br>Is this transitive?
+<br>Well, the antecedant of our conditional will *never* be True. Therefore the conditional is vacously True.
+<br>So yes, this is a transitive relation!
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. Let A = {1,2,3}. Select all of the relations below on A such that the relation is transitive.
+| *R = {(1,1),(2,2),(3,3)}
+| *R = {(1,1),(2,3),(2,2),(3,3),(3,1)}
+| R = {(1,2),(2,3),(3,3)}
+| R = {(1,2),(2,2),(2,1)}
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Let A = ℕ. Select all of the relations below on A such that the relation is transitive.
+| *R is the < relation.
+| *R is the ≤ relation.
+| *R is the = relation.
+| *R is the ≠ relation.
+```
+
+<br><br><br>Next we will discuss Equivalence Relations.
+
+<p>[Previous: Symmetry](https://carnap.io/shared/smcintyre/SR-sym.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Equivalence Relations](https://carnap.io/shared/smcintyre/SR-eq.pandoc) </p>
