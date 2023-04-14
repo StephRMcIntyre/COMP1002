@@ -8,14 +8,14 @@ In short, a relation R on a set A has the transitive property if and only if eve
 <br>We can express this in FOL as ∀x∀y∀z(Rxy ∧ Ryz → Rxz), where the domain for x is A.
 
 Consider the Love-Triangle relation on {Sam,Jamie,Erin}.
-<img src="https://carnap.io/shared/smcintyre/loves3.png" alt="Love-Triangle Relation on {Sam,Jamie,Erin}">
+<img src="https://carnap.io/shared/smcintyre/loves4.png" alt="Love-Triangle Relation on {Sam,Jamie,Erin}">
 <br>This relation is not transitive. 
 <br>This is because we found a counterexample to ∀x∀y∀z(Rxy ∧ Ryz → Rxz), _there are a few counterexamples, but we only need to pick one!_
 <br>One such counterexample is when x is the value Jamie, y is the value Sam, z is the value Erin.
 <br>We cab see that (Sam,Jamie) ∈ LoveTriangle and (Jamie,Erin) ∈ LoveTiangle, but (Sam,Erin) ∉ LoveTriangle.
 
-Consider the All-Love relation on {Sam,Jamie,Erin
-<img src="https://carnap.io/shared/smcintyre/loves4.png" alt="All-Love Relation on {Sam,Jamie,Erin}">
+Consider the Self-Love relation on {Sam,Jamie,Erin}
+<img src="https://carnap.io/shared/smcintyre/loves5.png" alt="All-Love Relation on {Sam,Jamie,Erin}">
 <br>This is transitive. There are no counterexamples!
 
 Looking back at the original Loves relation on Folks = {Sam,Jamie},
