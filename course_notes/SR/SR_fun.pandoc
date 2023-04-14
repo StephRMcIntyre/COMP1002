@@ -1,0 +1,144 @@
+# Sets & Relations
+
+## Functions
+
+Up until now, we have been dealing with homogeneous relations (subsets of B⨉B).
+<br>In general, a relation may be on domain B and co-domain C subsets of B⨉C.
+
+A relation R on BxC is a function if and only if:
+<br>$~~~~~$For every b∈B, there exists a c∈C such that (b,c)∈R AND
+<br>$~~~~~$$~~~~~$For every d∈C, either d=c, or (b,d)∉R.
+<br>Back in highschool math, you might recall the ‘vertical line test’ for functions. That is essentially what this is.
+
+In short, every item in the domain must map to EXACTLY ONE thing in the co-domain.
+
+If there's at least one item in the domain does not map to an item in the co-domain, then it is NOT a function.
+<br>If there is at least one item in the domain that maps to more than one item in the co-domain, then it is NOT a function.
+
+If R is a function, we write R(b)=c to denote that (b,c)∈R. 
+<br>We generally wouldn’t use R, but rather f,g, or h for function names.
+
+
+Looking back at the original Loves relation on Folks = {Sam,Jamie},
+
+<img src="https://carnap.io/shared/smcintyre/loves1.png" alt="Loves Relation on {Sam,Jamie}">
+<br>Is this a function?
+<br>Well the domain is {Sam, Jamie} and the co-domain is {Sam, Jamie}.
+<br>Sam Loves Sam and Sam Loves Jamie. This means Sam maps to TWO items in the co-domain. 
+<br>It violates the necessity that every item in the domain maps to EXACTLY ONE item.
+<br>Thus this is not a function.
+
+Let's look back at Modified Loves relation on {Sam,Jamie,Erin}
+
+<img src="https://carnap.io/shared/smcintyre/loves2.png" alt="Loves Relation on {Sam,Jamie,Erin}">
+<br>Is this a function?
+<br>Well the domain is {Sam, Jamie, Erin} and the co-domain is {Sam, Jamie, Erin}.
+<br>Erin does not love anyone, so Erin does not map to an item in the co-domain.
+<br>It violates the necessity that every item in the domain maps to EXACTLY ONE item.
+<br>Thus this is not a function.
+
+What about A = {1,2}, B = {2,3,4}, and R on AxB where R = {(1,2),(2,4)}?
+<br>Is this a function?
+<br>The domain is A, {1,2}. The co-domain is B, {2,3,4}.
+<br>Does every item in the domain map to EXACTLY ONE item in the co-domain?
+<br>Yes. 1 only maps to 2. 2 only maps to 4. And that's everything in the domain.
+<br>So yes this is a function.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. Let A = {1,2,3}, B = {4,5,6,7} Select all of the relations below on AxB such that the relation is a function.
+| R = {(1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7)}
+| R = {(1,1),(2,3)}
+| *R = {(1,4),(2,5),(3,6)}
+| R = {(1,6),(2,4),(2,5),(3,7)}
+| R = {(1,6),(2,4)}
+| *R = {(1,4),(2,4),(3,5)}
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Let A = ℕ. Select all of the relations below on A such that the relation is a function.
+| R is the < relation.
+| R is the ≤ relation.
+| *R is the = relation.
+| R is the ≠ relation.
+```
+
+####Injective
+
+A function that is injective has the additional requirement,
+<br>All elements b_1,b_2 of the domain B satisfy the following: b_1≠b_2 implies that f(b_1)≠f(b_2).
+
+In some sense, we are ‘injecting’ B into C (different things map to different things). 
+<br>In other words, for every pair of distinct elements, they must map to different results!
+
+What about A = {1,2}, B = {2,3,4}, and f on AxB where f = {(1,2),(2,4)}?
+<br>Is this function injective?
+<br>The domain is A, {1,2}. The co-domain is B, {2,3,4}.
+<br>Does every pair of elements in the domain map different items in the co-domain?
+<br>Yes, because 1 maps to 2, and 2 maps to 4. 
+<br>So yes this function is injective.
+
+What about A = {1,2,3}, B = {2,3,4}, and f on AxB where f = {(1,2),(2,2),(3,4)}?
+<br>Is this function injective?
+<br>The domain is A, {1,2,3}. The co-domain is B, {2,3,4}.
+<br>Does every pair of elements in the domain map different items in the co-domain?
+<br>No, because 1 maps to 2, and 2 maps to 2. 
+<br>This means two different items in the domain map to the same element in the co-domain.
+<br>So no this function is NOT injective.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+3. Let A = {1,2,3}, B = {4,5,6,7} Select all of the relations below on AxB such that the relation is an injective function.
+| *R = {(1,4),(2,5),(3,6)}
+| R = {(1,5),(2,4),(3,5)}
+| *R = {(1,6),(2,5),(3,7)}
+| R = {(1,4),(2,4),(3,5)}
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+4. Let A,B = ℕ. Select all of the functions below on AxB such that the function is injective.
+| *f(x) = x + 1
+| *g(x) = 2x
+| *h(x) = x
+| m(x) = x mod 2
+```
+
+
+####Surjective
+
+A function that is surjective has the additional requirement,
+<br>For all elements c of the co-domain C, there exists an element b of the domain B such that f(b)=c.
+
+Basically, every item in the co-domain must have something in the domain that maps to it.
+<br>There cannot be an item in the co-domain that is left alone :(
+
+
+What about A = {1,2}, B = {2,3,4}, and f on AxB where f = {(1,2),(2,4)}?
+<br>Is this function surjective?
+<br>The domain is A, {1,2}. The co-domain is B, {2,3,4}.
+<br>1 maps to 2, and 2 maps to 4. But NOTHING maps to 3. It is all alone and sad....
+<br>So no this function is NOT surjective.
+
+What about A = {1,2,3}, B = {2,4}, and f on AxB where f = {(1,2),(2,4),(3,4)}?
+<br>Is this function surjective?
+<br>The domain is A, {1,2,3}. The co-domain is B, {2,4}.
+<br>1 maps to 2. 2 maps to 4. And so everything in the co-domain has been mapped to!
+<br>So yes this function is surjective.
+
+You may be clever and notice that if we have a function who's cardinality of the domain is larger than the cardinality of the co-domain, it cannot be surjective!
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+5. Let A = {1,2,3,4}, B = {4,5,6} Select all of the relations below on AxB such that the relation is an surjective function.
+| *R = {(1,4),(2,5),(3,6),(4,4)}
+| R = {(1,5),(2,4),(3,5),(4,4)}
+| *R = {(1,6),(2,5),(3,4),(4,6)}
+| R = {(1,4),(2,4),(3,5),(4,4)}
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+6. Let A,B = ℕ. Select all of the functions below on AxB such that the function is surjective.
+| f(x) = x + 1
+| g(x) = 2x
+| *h(x) = x
+| m(x) = x mod 2
+```
+
+<p>[Previous: Orders](https://carnap.io/shared/smcintyre/SR-ord.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)  
