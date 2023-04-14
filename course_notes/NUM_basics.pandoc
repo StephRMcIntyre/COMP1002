@@ -1,0 +1,87 @@
+# Number Theory
+
+Number theory is the study of numbers, in particular the integers!
+
+### The Integers ℤ
+
+ℤ = {0,-1,1,-2,2,-3,3,...}
+
+<br>Note that the sum of any two integers is an integer.
+
+Which other operations are the integers ‘closed’ under?
+<br>$~~~~$By ‘closed’, we mean the operation will still produce an element of that type 
+<br>$~~~~$(in this case, we are talking about integers).
+
+Is it the case that the following operations are closed? 
+<br>Meaning, if we take any two integers, and perform the operation, we will result in an integer.
+<br>$~~~~$__Multiplication?__	
+<br>$~~~~$__Subtraction?__ 
+<br>$~~~~$__Division?__ 
+<br>$~~~~$__Exponentiation?__ 
+Answers: [^2]
+
+[^2]: Answers:
+<br>$~~~~$__Multiplication?__	Yes! Every two integers that we multiply with will result in an integer.
+<br>$~~~~$__Subtraction?__ Yes! Every two integers that we subtract with will result in an integer.	
+<br>$~~~~$__Division?__ No :( 1/2 does not produce an integer!
+<br>$~~~~$__Exponentiation?__ No :(
+
+
+### Elements of Sets
+
+Sets are either empty or collections of things.
+<br>We write A={1,2,’kitkat’,Φ,∅} to denote the set of:
+
++ the number 1,
++ the number 2, 
++ the string ‘kitkat’, 
++ the number Φ = (1+sqrt(5))/2, and 
++ the empty set ∅.
+
+We write Φ∈A to denote that the number Φ is an element of the set A.
+<br>We write ‘Alberta’∉A to denote that the string ‘Alberta’ is not an element of the set A.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. Let A = { 1, 2, ∅, {3} }. Select all of the elements below which are elements of A.
+| 0
+| *1
+| *2
+| 3 
+| ∅
+| {1}
+| {2}
+| *{3}
+| {∅}
+```
+
+Items in a set have no order and duplicates do not matter.
+<br>i.e. {2,2} is the same as {2}, and {1,2} is the same as {2,1}.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Let A = { 1, {1,1}, 1, {1,2} }. Select all of the sets that are the same as A.
+| *{ {2,1}, {1, 1}, 1 }
+| *{ 1, {1}, {1,2} }
+| *{ 1, {1,1,1}, {2,1,1,2,2} }
+| { 1, {1,2} }
+```
+
+### Properties
+
+We sometimes write {x∈X | Px} to denote all objects x∈X that satisfy property Px.
+
+Example: E={n∈ℤ | ∃k∈ℤ, 2k=n} is the set of even numbers.
+<br>Cars = {c | c is a car} is the set of all cars. Sometimes the domain is left out if it is implicit in the definition
+<br>B = {b∈Cars | b is blue} is the set of all blue cars.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+3. C = {c∈ℤ | c$^2$=4}. C is ...
+| The set of all even integers.
+| {4}
+| *{-4,4}
+| 4
+```
+
+For more basic set review, please revisit: [FOL - sets](https://carnap.io/shared/smcintyre/FOL_sets.pandoc)
+
+<p>[-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Subsets](https://carnap.io/shared/smcintyre/book-SR-subsets.pandoc) </p>
+
