@@ -6,7 +6,9 @@
 
 ## Sets
 
-### Set Operations
+### Proofs
+
+Recall, the definitions... We will need these in our proofs.
 
 The __union of sets__ A and B (A∪B) is defined as A∪B={x|x∈A ∨ x∈B}.
 
@@ -15,44 +17,7 @@ The __intersection of sets__ A,B (A ⋂ B) is defined as A⋂B={x|x∈A ∧ x∈
 The __difference of sets__ A,B (A∖B) is defined as A-B={x|x∈A ∧ x∉B}.
 <br>_[Some books use A\B instead of A-B.]_
 
-Examples:
-<br>{1,2,3} ∪ {3,4,5} = {1,2,3,4,5}
-<br>{1,2,3} ⋂ {3,4,5} = {3}
-<br>{1,2,3} - {3,4,5} = {1,2}
-<br>{1,2} - {1,2,3} = ∅
-<br>({1,2,3} ∪ {3,4,5}) - {2,4} = {1,3,5}
-
-```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-1. ℕ ∪ ℤ =
-| ℕ
-| *ℤ
-| ℚ
-| Set of Negative Integers
-```
-
-```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-2. ℕ ⋂ ℤ =
-| *ℕ
-| ℤ
-| ℚ
-| Set of Negative Integers
-```
-
-```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-3. ℤ - ℕ =
-| ℕ
-| ℤ
-| ℚ
-| *Set of Negative Integers
-```
-
-```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-4. ( {(1,2),(2,2)} ⋂ {(2,1),(2,2),(2,3)}) - {(1,1),(2,2)} =
-| {(1,2),(2,2)}
-| {(1,2)}
-| {(1,2),(2,1),(2,3)}
-| *∅
-```
+A ⊆ B if and only if every element in A is also in B.
 
 #### Proving Properties
 
@@ -99,17 +64,37 @@ Disprove: For any sets A,B A⊆A⋂B.
 <br>Therefore it is not the case that any sets A,B A⊆A⋂B.
 
 Exercise: Disprove the statement _For any sets A,B A-B⊆B-A._
+<br>You need to come up with examples for A, B such that A-B⊈B-A.
+<br>So give me what A is, give me what B is.
+<br>Then determine A-B and B-A.
+<br>Then show that A-B⊈B-A.
 
 
 __Example 4__
 For any sets A,B prove that the following property holds: if A⊆B then A-B⊆B.
+
+<details>
+<summary>First step...</summary>
+
 <br>Proof: Suppose A⊆B. 
+
+Now what? We need to show that A-B⊆B, so how do we do that?
+<details>
+<summary>Next step</summary>
+
 <br> $~~~~~~~~~$ Let a∈A-B be arbitrary. 
+
+<details>
+<summary>Rest of the proof</summary>
+
 <br> $~~~~~~~~~$ Then a∈A ∧ a∉B by definition of set difference. 
 <br> $~~~~~~~~~$ It follows that a∈A.
 <br> $~~~~~~~~~$ As A⊆B and a∈A, then we find that a∈B.
+</details>
 <br> $~~~$ Since a∈A-B was arbitrary, and we found that a∈B, then by the subset definition, we know that A⋂B⊆B.
+</details>
 <br>Therefore, if A⊆B then A-B⊆B.
+</details>
 
 Exercise: For any sets A,B,C, prove that the following property holds: If A⊆B and A⊆C and B⋂C=∅, then A=∅.
 
