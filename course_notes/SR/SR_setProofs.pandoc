@@ -91,7 +91,7 @@ Now what? We need to show that A-B⊆B, so how do we do that?
 <br> $~~~~~~~~~$ It follows that a∈A.
 <br> $~~~~~~~~~$ As A⊆B and a∈A, then we find that a∈B.
 </details>
-<br> $~~~$ Since a∈A-B was arbitrary, and we found that a∈B, then by the subset definition, we know that A⋂B⊆B.
+<br> $~~~$ Since a∈A-B was arbitrary, and we found that a∈B, then by the subset definition, we know that A-B⊆B.
 </details>
 <br>Therefore, if A⊆B then A-B⊆B.
 </details>
