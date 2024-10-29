@@ -1,80 +1,199 @@
-# Sets & Relations
+# Sets - Basics
 
-## Sets
 
-### Common Sets
+##The Empty Set
 
-#### The Empty Set
+It is a set of no objects. End of story. <br>
+It is denoted as either {} or ∅.
 
-It is a set of no objects. End of story.
+It is important to note that {} is not the same as {{}}.<br>
+{} is an empty set, whereas {{}} is a set which contains the empty set.<br>
+{} contains 0 items -- it *is* the empty set. <br>
+{{}} contains 1 item -- it contains the empty set!
 
-But also, it is denoted as either {} or ∅.
 
-#### Other Common Sets of Numbers
+##Common Sets
 
-Natural numbers, ℕ = {0,1,2,3,...}, 
-Integers, ℤ = {0,-1,1,-2,2,-3,3,...},
-Rationals, ℚ = {0,-1,1,2,-2,½,-½,3,-3,⅓,-⅓,⅔,-⅔,...},
-Reals, ℝ = {0,1,√2,-π,Φ,e,-⅗,...},$~~~~~~~~~~$*_note: this set cannot actually be listed_
+Empty set - {},∅.<br>
+Natural numbers N = {0,1,2,3,...}  *note: it contains 0*<br>
+Integers Z = {0,-1,1,-2,2,-3,3,...} <br>
+Rationals Q = {0,-1,1,2,-2,½,-½,3,-3,⅓,-⅓,⅔,-⅔,...} <br>
+Reals R = {0,1,√2,-π,Φ,e,-⅗,...}, *note: this set cannot actually be listed*<br>
 
-Some people disagree about whether or not 0∈ℕ.
-<br>For the purposes of this course, 0∈ℕ.
 
-### Elements of Sets
 
-Sets are either empty or collections of things.
-<br>We write A={1,2,’kitkat’,Φ,∅} to denote the set of:
+##Elements of sets
+Sets are either empty or collections of things.<br>
+We write A={1,2,‘kitkat’,Φ,∅} to denote the set of:<br>
+the number 1,<br>
+the number 2,<br>
+the string ‘kitkat’,<br>
+the number Φ=(1+sqrt(5))/2, and<br>
+the empty set ∅.
 
-+ the number 1,
-+ the number 2, 
-+ the string ‘kitkat’, 
-+ the number Φ = (1+sqrt(5))/2, and 
-+ the empty set ∅.
-
-We write Φ∈A to denote that the number Φ is an element of the set A.
-<br>We write ‘Alberta’∉A to denote that the string ‘Alberta’ is not an element of the set A.
-
-```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-1. Let A = { 1, 2, ∅, {3} }. Select all of the elements below which are elements of A.
-| 0
-| *1
-| *2
-| 3 
-| ∅
-| {1}
-| {2}
-| *{3}
-| {∅}
-```
-
-Items in a set have no order and duplicates do not matter.
-<br>i.e. {2,2} is the same as {2}, and {1,2} is the same as {2,1}.
+We write Φ∈A to denote that the number Φ is an element of the set A.<br>
+We write ‘Alberta’∉A to denote that the string ‘Alberta’ is not an element of the set A.<br>
 
 ```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
-2. Let A = { 1, {1,1}, 1, {1,2} }. Select all of the sets that are the same as A.
-| *{ {2,1}, {1, 1}, 1 }
-| *{ 1, {1}, {1,2} }
-| *{ 1, {1,1,1}, {2,1,1,2,2} }
-| { 1, {1,2} }
+S1. Which set(s) is 0 an element of?
+| {}
+| *Natural Numbers
+| *Integers
+| *Rationals
+|*Reals
 ```
 
-### Properties
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+S2. Which set(s) is 4/1 an element of?
+| {}
+| *Natural Numbers N
+| *Integers Z
+| *Rationals Q
+|*Reals R
+```
 
-We sometimes write {x∈X | Px} to denote all objects x∈X that satisfy property Px.
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+S3. Which set(s) is {} an element of?
+| {}
+| *{{}}
+| {{{}}}
+|*{{}, 1}
+|Natural Numbers N
+```
 
-Example: E={n∈ℤ | ∃k∈ℤ, 2k=n} is the set of even numbers.
-<br>Cars = {c | c is a car} is the set of all cars. Sometimes the domain is left out if it is implicit in the definition
-<br>B = {b∈Cars | b is blue} is the set of all blue cars.
+##Sets and properties
+We sometimes write {x∈X|P(x)} to denote all objects x in set X that satisfy property
+P.
+
+Examples: <br>
+Even = {n ∈ | ∃k∈N: 2k=n} is the set of even numbers.<br>
+Cars = {c|c is a car} is the set of all cars. <br>
+B = {b∈Cars|b is blue} is the set of all blue cars.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+S4. Select all of the elements in the set {x ∈ People | Instructor(x) ∧ WorksAtMUN(x)}
+| Justin Trudeau
+| *Dr. Antonina Kolokolova
+|Wayne Gretzky
+|*Steph McIntyre
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+S5. Select all of the elements in the set {x ∈ Z | (∃k∈N: 2k=n) ∧ x > 2}
+|0
+|1
+|2
+| 3
+|*4
+|5
+```
+
+##Subsets
+
+A set B is a subset of C if and only if every element b in B is also in C.<br>
+This is denoted as B⊆C.
+
+B is not a subset of C is denoted as B⊈C.
+
+Examples of subsets:<br>
+{1,2,’kitkat’}⊆{1,2,’kitkat’,Φ,∅}<br>
+{1,2,’kitkat’}⊆{1,2,’kitkat’}<br>
+
+To show a set is not a subset of another set -- you have to find an element in the first set that is not in the second set!<br>
+Example:<br>{‘a’,1,2}⊈{1,2,’kitkat’,Φ,∅} since ‘a’∈{‘a’,1,2}, but ‘a’∉{1,2,’kitkat’,Φ,∅}.
+
+
+*Reminder: there is no ordering to sets, and duplicates are ignored!*
+
+
+Let A = {3,4,5}, Even = {n ∈ | ∃k∈N: 2k=n}, and N be the Natural Numbers.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+S6. Which sets are subsets?
+|A⊆Even
+|*A⊆N
+|*Even⊆N
+|Even⊆A
+| N⊆A
+|N⊆Even
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+S7. What is a reason as to why A⊈Even?
+|*3∈A but 3∉Even
+|4∈A and 4∈Even
+|2∈Even but 2∉A
+```
 
 ```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
-3. C = {c∈ℤ | c$^2$=4}. C is ...
-| The set of all even integers.
-| {4}
-| *{-4,4}
-| 4
+S8. Is A ⊆ A ? Hint: Review how to show it is not a subset.
+|*Yes
+|No
 ```
 
-For more basic set review, please revisit: [FOL - sets](https://carnap.io/shared/smcintyre/FOL_sets.pandoc)
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S9. Is {} ⊆ {} ? Hint: Review how to show it is not a subset.
+|*Yes
+|No
+```
 
-<p>[-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Subsets](https://carnap.io/shared/smcintyre/book-SR-subsets.pandoc) </p>
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S10. Is {4,4,3} ⊆ {3,3,4} ?
+|*Yes
+|No
+```
 
+##Set Equality
+
+A set B is equal to C, denoted B = C, if and only if B ⊆ C and C ⊆ B.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S11. Is {4,4,3} = {3,3,4} ?
+|*Yes
+|No
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S12. Is {(1,2)} = {1,2} ?
+|Yes
+|*No
+```
+
+##Proper Subset
+
+A set B is a proper subset of C if and only B is a subset of C and there is some c
+in C that is not in B. <br>This is denoted as B⊂C. (some people will write B⊊C)<br>
+
+An example of proper subsets:<br>
+{1,2,’kitkat’}⊂{1,2,’kitkat’,Φ,∅}
+
+
+To show a set is not a subset of another set -- you have to either show it is not a subset or show the sets are equal. <br>
+{‘a’,1,2}⊄{1,2,’kitkat’,Φ,∅} since ‘a’∈{‘a’,1,2}, but ‘a’∉{1,2,’kitkat’,Φ,∅}.<br>
+{2,1,’kitkat’,Φ,∅}⊄{1,2,’kitkat’,Φ,∅} as they are equal sets.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+S13. Which sets are proper subsets?
+|{1,2,3}⊂{1,2}
+|*{1,2}⊂{1,2,3}
+|{1,2}⊂{1,2}
+|{1,2}⊂{1,1,2}
+```
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+S14. What is a reason as to why {2}⊄{2,2,2}?
+|*They are equal.
+|Trick question -- it is a proper subset!
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S8. Is A ⊂ A ? Hint: Review how to show it is not a proper subset.
+|Yes
+|*No
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S9. Is {} ⊂ {} ? Hint: Review how to show it is not a proper subset.
+|Yes
+|*No
+```
