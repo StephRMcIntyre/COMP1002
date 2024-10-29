@@ -1,0 +1,197 @@
+# Set Operations
+
+
+Remember, ∅ and {} mean the same thing -- the empty set!
+
+##Set Union
+
+The union of sets A and B (A∪B)
+is defined as A∪B={x|x∈A ∨ x∈B}.
+
+
+For example, {1,3,5} ∪ {2,4} = {1,2,3,4,5}
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S1. What is {1,2,3} ∪ {2}?
+| {2}
+| *{1,2,3}
+| {1,2}
+| ∅
+| {1,3}
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S2. What is N ∪ Z?
+| ∅
+| Natural Numbers N
+| *Integers Z
+| Rationals Q
+| Reals R
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S3. What is ∅ ∪ N?
+| ∅
+| *Natural Numbers N
+| Integers Z
+| Rationals Q
+| Reals R
+```
+
+##Set Intersection
+
+The intersection of sets A,B (A ⋂ B)
+is defined as A⋂B={x|x∈A ∧ x∈B}
+
+For example, {1,3,5} ⋂ {2,4} = ∅<br>
+Because there is nothing that is both in {1,3,5} and {2,4}.
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S4. What is {1,2,3} ⋂ {2}?
+| *{2}
+| {1,2,3}
+| {1,2}
+| ∅
+| {1,3}
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S5. What is N ⋂ Z?
+| ∅
+| *Natural Numbers N
+| Integers Z
+| Rationals Q
+| Reals R
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S6. What is ∅ ⋂ N?
+| *∅
+| Natural Numbers N
+| Integers Z
+| Rationals Q
+| Reals R
+```
+
+##Set Difference
+
+The set difference of sets A,B (A∖B)
+is defined as A-B={x|x∈A ∧ x∉B}.<br>
+(Some books use A\B instead of A-B.)
+
+For example, {1,3,5} - {2,4} = {1,3,5}<br>
+Another example, {1,1,1} - {1} = ∅. This is because duplicates don't matter!
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S7. What is {1,2,3} - {2}?
+| {2}
+| {1,2,3}
+| {1,2}
+| ∅
+| *{1,3}
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S8. What is N - Z?
+| *∅
+| Natural Numbers N
+| Integers Z
+| Rationals Q
+| Reals R
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S9. What is ∅ - N?
+| *∅
+| Natural Numbers N
+| Integers Z
+| Rationals Q
+| Reals R
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S10. What is Z - N?
+| ∅
+| Natural Numbers N
+| Integers Z
+| *The negative integers
+| The non-positive integers
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S11. What is {2} - ({1,2,3} ⋂ {4,5}) ?
+| *{2}
+| {1,2,3}
+| {1,2}
+| ∅
+| {1,3}
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S12. What could X be such that {1,2,3} ⋂ ({3,4} - X) = ∅ ?
+| ∅
+| {4}
+| {1,2}
+| *{3,5}
+| {1,2,4}
+```
+
+##Power set
+
+The power set of a set A, denoted as P(A), is the set of all subsets of A.<br>
+This includes both A and ∅.<br>
+Remember, ∅ and {} mean the same thing.
+
+In fact, the number of elements in P(A) is $2^{# of elements in A}$.
+
+Examples:
+
+1.	P({1,2})  =  {∅, {1}, {2}, {1,2}} 
+	<br> Note: {1}≠1. 
+	<br>Be careful when type-checking!
+
+2.	P({1,2,3})  =  {∅, {1}, {2},{3},{1,2},{1,3},{2,3},{1,2,3}} 
+
+2.	P(∅) = {∅}
+
+3.	P({∅}) = {∅, {∅}}.<br>
+	Note: ∅ ≠ {∅}.
+	<br>Why? Well, ∅∈{∅}, but ∅∉∅  (since there are no elements of the empty set!)
+
+4.	P({1,2,{2,4}}) = ?
+
+	Hint
+	<details>
+
+
+    	Set B = {2,4}, now do the power set!
+	
+	Solution
+	<details>
+
+    	P({1,2,B}) = {∅, {1}, {2},{B},{1,2},{1,B},{2,B},{1,2,B}} 
+	Now, re-write the final solution, but substitute B for {2,4}.<br>
+	P({1,2,{2,4}}) = {∅, {1}, {2},{{2,4}},{1,2},{1,{2,4}},{2,{2,4}},{1,2,{2,4}}} 
+
+
+
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S13. What is P({2})?
+| ∅
+| {2}
+| {∅}
+| {∅,2}
+| *{∅,{2}}
+```
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+S14. What is P({{{∅}}, ∅})?
+| {∅}
+| {{∅},∅}
+| {{{∅}}, ∅}
+| {{{{∅}}}, {∅}, ∅, {{∅}}}
+| *{{{{∅}}}, {∅}, {{{∅}}, ∅}, ∅}
+| {{{{∅}}}, {∅}, {{{∅}}, ∅}, {{∅}}, ∅}
+```
+
