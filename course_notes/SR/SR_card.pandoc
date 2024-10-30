@@ -166,8 +166,8 @@ Exercise: Use the principle of inclusion-exclusion to show that
 
 
 [^1]: We won't get into the differences between countably infinite and uncountably infinite, or comparing cardinalities of infinite sets. 
-If you are interested in this, then I highly recommend taking the Discrete Mathematics course from the Mathematics Department or I can point you to some books if you would like.
-To see why ℝ is uncountable, then see Cantor's Diagonalization Argument.
+<br>If you are interested in this, then I highly recommend taking the Discrete Mathematics course from the Mathematics Department or I can point you to some books if you would like.
+<br>To see why ℝ is uncountable, then see Cantor's Diagonalization Argument.
 
 <p>[Previous: Power Sets](https://carnap.io/shared/smcintyre/book-SR-power.pandoc) &emsp; &emsp; &emsp; &emsp; [-Main Page-](https://carnap.io/shared/smcintyre/Workbook.pandoc#part-iv-sets-relations)   &emsp; &emsp; &emsp; &emsp;  [Next: Relations](https://carnap.io/shared/smcintyre/book-SR-rel.pandoc) </p>
 
