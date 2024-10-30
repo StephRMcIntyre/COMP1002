@@ -1,0 +1,105 @@
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true},
+      jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+      extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+      TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+      equationNumbers: {
+      autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+#Number Theory
+
+##More with Mod
+
+###Cancellations###
+<br>In normal arithmetic, if ab=ac and a≠0, then b=c.
+<br>In modular arithmetic, if ab≡ac mod n, and gcd(a,n)=1, then b≡c (mod n).
+
+Modular arithmetic has a natural notion of “dividing by a on both sides” when
+certain conditions hold.
+<br>Note: This is not necessarily expected! We are only dealing with integers
+which are not generally closed under division!
+*We’ll formally define gcd later, right now just recognize there is an added
+condition. gcd is greatest common divisor.
+
+###Inverses###
+
+Definition:
+<br>Two numbers a,b are considered inverses mod n when ab ≡ 1 mod n.
+<br>The inverse of b mod n is typically expressed as $b^{-1}$ mod n.
+<br>Typically these are evaluated with n a prime.
+
+Example:
+<br>Compute $5^{-1}$ mod 7. Namely, seek k where 5k=7m+1.
+<br>Solution: Start with 1, as this is the desired remainder that we want.
+<br>Now, repeatedly add n, which is 7, until we get a multiple of 5.
+<br>We compute 1,8,15. 
+<br>15 is a multiple of 5, so we stop.
+<br>Thus 5*3 ≡ 1 mod 7
+<br>Thus 3 is 5’s multiplicative inverse.
+<br>So $5^{-1}$ mod 7 = 3.
+
+It is also important to note that sometimes inverses do not exist.
+<br>For example, $8^{-1}$ mod 2 does not exist.
+<br>There is no such integer b such that 8b ≡ 1 mod 2.
+<br>This is essentially asking for an integer b where 8b is odd.
+
+An inverse for integer a mod n exists iff gcd(a,n) = 1.
+
+
+###Fast Exponents###
+
+Suppose on a test I asked you to find the last two digits of  $3^39$.
+Well, you might realize that to do this you need to calculate $3^39 mod 100$.
+<br>But how could you do this, without a calculator, and without taking a long period of time?
+
+
+Note that if $b=\sum_{i=0}^{k}b_i2^i$ where $b_i$ are the binary bits of b, then we can express $a^b$ as a
+product over terms where $b_i$ is 1.
+$$a^b = \prod_{b_i=1}a^2^i$$
+
+Basically, we can break down a power into sums of powers of 2.
+<br>Like $3^39 = 3^{32+4+2+1}$
+<br>And then we can split these off to the product of the base to those powers.
+<br>Like $3^39 = 3^{32+4+2+1} = 3^32*3^4*3^2*3^1$
+
+Now, $3^39 mod 100$ is quickly computable by using this binary bits break down. 
+
+Solution:
+<br>$3^39 = 3^{32+4+2+1} = 3^32*3^4*3^2*3^1$
+<br>Now, start with 1, and go up by powers of 2 until you get to the largest power of 2 you have, and compute these mod 100.
+<br>1:  $3^1 mod 100 = 3$
+<br>2:  $3^2 mod 100 = 9 mod 100 = 9$
+<br>4:  $3^4 mod 100 = (3^2)^2 mod 100 = 9^2 mod 100 = 81$
+<br>8:  $3^8 mod 100 = (3^4)^2 mod 100 = 81^2 mod 100 = 6561 mod 100 = 61$
+<br>16:  $3^16 mod 100 = (3^8)^2 mod 100 = 61^2 mod 100 = 3721 mod 100 = 21$
+<br>32:  $3^32 mod 100 = (3^16)^2 mod 100 = 21^2 mod 100 = 441 mod 100 = 41$
+<br>Now, we calculate $3^32*3^4*3^2*3^1 mod 100$
+<br>$3^32*3^4*3^2*3^1 mod 100 = 41 * 81 * 9 * 3 mod 100 = 67$
+<br>And remember, we have access to the mod properties, specifically that ab mod n = (a mod n)(b mod n) mod n, so we can always take mod after any multiplication!
+
+Now, on a test, I will not ask mod 100. I will ask for mod n where n is a single digit though.
+
+Example: Calculate $3^41 mod 10$. 
+
+Solution:
+<br>$3^41 = 3^{32+8+1} = 3^32*3^8*3^1$
+<br>Now, start with 1, and go up by powers of 2 until you get to the largest power of 2 you have, and compute these mod 10.
+<br>1:  $3^1 mod 10 = 3$
+<br>2:  $3^2 mod 10 = 9 mod 10 = 9$
+<br>4:  $3^4 mod 10 = (3^2)^2 mod 10 = 9^2 mod 10 = 81 mod 10 = 1$
+<br>8:  $3^8 mod 10 = (3^4)^2 mod 10 = 1^2 mod 10 = 1$
+<br>16:  $3^16 mod 10 = (3^8)^2 mod 10 = 1^2 mod 10 = 1$
+<br>32:  $3^32 mod 10 = (3^16)^2 mod 10 = 1^2 mod 10 = 1$
+<br>Now, we calculate $3^32*3^8*3^1 mod 10$
+<br>$3^32*3^8*3^1 mod 10 = 1 * 1 * 3 mod 10 = 3$
