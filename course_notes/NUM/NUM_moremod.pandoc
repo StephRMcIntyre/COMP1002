@@ -54,8 +54,26 @@ It is also important to note that sometimes inverses do not exist.
 <br>There is no such integer b such that 8b ≡ 1 mod 2.
 <br>This is essentially asking for an integer b where 8b is odd.
 
-An inverse for integer a mod n exists iff gcd(a,n) = 1.
+__An inverse for integer a mod n exists iff gcd(a,n) = 1.__
 
+For each of the following, determine the inverse (if one exists).
+<br>If the inverse does not exist, then give the answer -1.
+
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+1 1: Inverse of 7 mod 2
+~~~
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+2 -1: Inverse of 15 mod 6
+~~~
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+3 -1: Inverse of 12 mod 4
+~~~
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+4 13: Inverse of 15 mod 7
+~~~
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+5 -1: Inverse of 8 mod 6
+~~~
 
 ###Fast Exponents###
 
@@ -103,3 +121,21 @@ Solution:
 <br>32:  $3^32 mod 10 = (3^16)^2 mod 10 = 1^2 mod 10 = 1$
 <br>Now, we calculate $3^32*3^8*3^1 mod 10$
 <br>$3^32*3^8*3^1 mod 10 = 1 * 1 * 3 mod 10 = 3$
+
+Calculate the following:
+
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+6 1: 5^127 mod 2
+~~~
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+7 4: 4^51 mod 5
+~~~
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+8 9: 9^31 mod 10
+~~~
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+9 9: 7^26 mod 10
+~~~
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+10 7: 3^63 mod 10
+~~~
