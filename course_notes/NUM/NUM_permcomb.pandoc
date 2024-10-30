@@ -1,0 +1,61 @@
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true},
+      jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+      extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+      TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+      equationNumbers: {
+      autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+
+#Number Theory
+
+##Permutations
+
+Suppose S is a set of objects.
+<br>A permutation of S is a rearrangement of S.
+<br>It has all the same items as S, it just might be in a different *ordering*.
+
+Example: How many ways to stack (permute) a given flavors {chocolate, vanilla, strawberry} ice cream on a cone?
+
+Let's see... We can pick for the first scoop to be either chocolate, vanilla or strawberry.
+<br>$~~~~$Scoop 1: Chocolate
+<br>$~~~~$Now the second can either be vanilla or strawberry...
+<br>$~~~~$$~~~~$Scoop 2: Vanilla
+<br>$~~~~$$~~~~$$~~~~$Scoop 3: Strawberry -- (Chocolate, Vanilla, Strawberry) is a permutation
+<br>$~~~~$$~~~~$Scoop 2: Strawberry
+<br>$~~~~$$~~~~$$~~~~$Scoop 3: Vanilla -- (Chocolate, Strawberry, Vanilla) is a permutation
+<br>$~~~~$Scoop 1: Vanilla
+<br>$~~~~$Now the second can either be chocolate or strawberry...
+<br>$~~~~$$~~~~$Scoop 2: Chocolate
+<br>$~~~~$$~~~~$$~~~~$Scoop 3: Strawberry -- (Vanilla, Chocolate, Strawberry) is a permutation
+<br>$~~~~$$~~~~$Scoop 2: Strawberry
+<br>$~~~~$$~~~~$$~~~~$Scoop 3: Chocolate -- (Vanilla, Strawberry, Chocolate) is a permutation
+<br>$~~~~$Scoop 1: Strawberry
+<br>$~~~~$Now the second can either be chocolate or vanilla...
+<br>$~~~~$$~~~~$Scoop 2: Chocolate
+<br>$~~~~$$~~~~$$~~~~$Scoop 3: Vanilla -- (Strawberry, Chocolate, Vanilla) is a permutation
+<br>$~~~~$$~~~~$Scoop 2: Vanilla
+<br>$~~~~$$~~~~$$~~~~$Scoop 3: Chocolate -- (Strawberry, Vanilla, Chocolate) is a permutation
+
+As we can see there are 6 permutations.
+<br>Infact, there are 3 options for the first scoop, 
+<br>then given a first scoop there are 2 options left as 1 has been taken away,
+<br>and then given the first two scoops, there is only 1 option left as 2 have been taken away.
+<br>We find 3!=3*2*1=6 options total.
+
+###Generalized Formula###
+
+Infact, we can generalize this so that if we want to __pick__ objects from a set, and maybe not grab all the objects, but still want the ordering to be important, we can do so via
+
+$$n P k = \frac{n!}{(n-k)!}$$
