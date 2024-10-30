@@ -1,0 +1,102 @@
+#Number Theory
+
+##Divisibility
+
+Let n and d be integers, with d ≠ 0.
+<br>We say that d divides n, d ∣ n, if and only if there is some integer q s.t. n = dq.
+<br>Where q is the quotient and d is a divisor or factor of n.
+<br>If d does not divide n, we express this as d∤n.
+
+Note, d|n is different from d/n.
+<br>d/n is the division operator, it returns a numeric value.
+<br>d|n is a predicate that returns True or False based on the definition of divisibility. Infact, it is a relation as it is a binary predicate.
+
+Examples:
+
+1.  42 = 6*7, therefore 6 divides 42 and is written as 6∣42.
+    <br>We could also say that 7|42 as we have 7 * integer = 42.
+
+2.  -21 = -3*(7), therefore -3∣-21.
+
+3.  -21|-21. Infact, almost every integer divides itself. 
+
+<details>
+<summary>An integer that does not divide itself...?</summary>
+
+0.
+<br>Look at the definition. d has to be non-zero!
+</details>
+
+Exercise: List all of the divisors of -12.
+<br>Hint: There are 12 divisors of -12.
+
+<details>
+<summary>What properties does the divisibility relation have on the integers?</summary>
+
+
+<details>
+<summary>Is it reflexive?</summary>
+
+No. We just discussed 0 does not divide 0.
+<br>If we changed this to divisibility relation on the positive integers, then we would say yes it is reflexive.
+</details>
+
+<details>
+<summary>Is it symmetric?</summary>
+
+No. 1|0 but it is not the case that 0|1.
+<br>If we changed this to divisibility relation on the positive integers, then would it be symmetric???
+
+<details>
+<summary>Is divisibility relation on the positive integers symmetric???</summary>
+
+No. 1|4 but it is not the case that 4|1.
+
+</details>
+</details>
+
+<details>
+<summary>Is it transitive?</summary>
+
+Suppose integers a,b,c where a|b and b|c. Is it the case that a|c?
+<br>Since a|b, then we know that b = ak for some integer k AND that a is non-zero!
+<br>Since b|c, then we know that c = bj for some integer j AND that b is non-zero.
+<br>By substitution we get c = (ak)j, and so c = a(kj). 
+<br>Now we have that c is a * integer and a is non-zero.
+<br>Thus, c|a.
+<br>So yes, it is transitive.
+</details>
+
+<details>
+<summary>Is it anti-symmetric?</summary>
+
+Suppose integers a,b where a|b and b|a. Is it the case that a=b?
+
+Yes it is. Proof left as an exercise :)
+</details>
+
+</details>
+
+Claim: Let n and d be integers, with n≠0 and d≠0.
+<br>If d∣n, then there is an integer q such that n=dq and q∣n.
+
+Proof:
+<br>Suppose d∣n. <br>By definition of divides, there is an integer q such that n=dq. <br>It
+follows that there is an integer d such that n=dq.<br>Also, q≠0 as the product of two non-zero integers is also non-zero. <br>Thus q∣n. <br>Then there exists an
+integer q such that n=dq and q∣n.
+
+###Quotient Remainder Theorem### 
+
+For every integers d>0, n, there exist unique integers q,r such that:
+
+1.  n=dq+r, and
+
+2.  0 ≤ r < d
+
+Proof Sketch: 
+<br>The intervals [md,(m+1)d) partition the integers.
+<br>There is exactly one partition element n falls in. 
+<br>$~~~~~~$Use this to get q,r.
+<br>Verify the needed properties of q,r.
+<br>Argue that property 1) and 2) imply two q,r solutions need to be the same.
+<br>Note: Finding r is essentially long division.
