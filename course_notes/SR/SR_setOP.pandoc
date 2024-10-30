@@ -195,3 +195,12 @@ S14. What is P({{{∅}}, ∅})?
 | {{{{∅}}}, {∅}, {{{∅}}, ∅}, {{∅}}, ∅}
 ```
 
+Claim: For any sets A,B, prove that the following property holds: A ⊆ B ⇒ 𝒫(A) ⊆ 𝒫(B).
+<br>Proof: Suppose that A ⊆ B.
+<br>Let C∈𝒫(A) where C is arbitrary.
+<br> _Remember, the 𝒫(A) is a set of sets, so C must be a set._
+<br>By definition of power set, C ⊆ A.
+<br>It follows that C ⊆ B by transitivity of subsets (see Subsets page).
+<br>Since C ⊆ B, C∈𝒫(B) by definition of power set.
+<br>Since C was an arbitrary element of 𝒫(A), and we found that C∈𝒫(B), we know that 𝒫(A) ⊆ 𝒫(B).
+<br>Therefore for any sets A,B, A ⊆ B ⇒ 𝒫(A) ⊆ 𝒫(B).
