@@ -1,0 +1,71 @@
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true},
+      jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+      extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+      TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+      equationNumbers: {
+      autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+
+#Number Theory
+
+##Combinations
+
+A combination is like a permutation EXCEPT that ordering does not matter..
+<br>We can express a combination as a set of the objects as recall, for set the order does not matter.
+
+So the example of ice cream is like, how many combinations of given flavours of ice cream in a bowl -- bowl instead of cone as the order does not matter.
+
+Example: How many combinations a 3 flavours from the given flavors {chocolate, vanilla, strawberry} of ice cream?
+<br>Well, we saw 6 permutations, but if we ignore the ordering of the objects, we can see there is only one combination! 
+<br>That is, in the bowl there is chocolate, strawberry and vanilla ice cream.
+
+Infact, each combination of k objects has k! permutations.
+<br>So we need to divide by k!
+
+Now let us suppose we had 5 different flavours of ice cream, but want to choose only 3 flavours.
+<br>Then there are 5 options for the first scoop.
+<br>4 for the second.
+<br>3 for the third.
+<br>$5*4*3 = 60 = \frac{120}{2} = \frac{5!}{(5-3)!}$
+<br>But we know that there are 3! permutations for a set of 3 objects, so we need to divide by 6.
+<br>Thus there are 10 combinations.
+<br>If our flavours were {A,B,C,D,E} then our 10 combinations are
+<br>{A,B,C},{A,B,D},{A,B,E},{A,C,D},{A,C,D},{A,D,E},
+<br>{B,C,D},{B,C,E},{B,D,E},
+<br>{C,D,E}
+
+
+###Generalized Formula###
+
+We can generalize this so that if we want to __choose__ (combination) objects from a set we can do so via
+
+$$n C k = \frac{n!}{k!(n-k)!}$$
+
+Read as _from n objects, choose k_.
+
+$n C k$ also written as a binomial coefficient, $\binom{n}{k}$.
+
+
+###Pascal's Triangle###
+
+A visual representation of binomial coefficients, or combinations, is Pascals triangle.
+
+<img src="https://carnap.io/shared/smcintyre/pascal.png" alt="Pascal's Triangle">
+
+Explanation and Example
+<br>To find n choose k, go to row n, the k’th element in (counting from 0 on both).
+<br>5 choose 3 is the circled dot, row 5, 3’rd element in, so to compute it we would
+take 6+4=10 ways to choose 3 from 5 elements.
+
