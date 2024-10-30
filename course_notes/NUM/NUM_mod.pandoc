@@ -1,0 +1,52 @@
+#Number Theory
+
+##Mod Operator
+
+Definition:
+<br>Given that remainders are unique, we can define mod to be the operation that
+returns the remainder r of n on division by divisor d.
+
+Examples:
+
+1.  7 mod 3 = 1 (since 7=3*2+1, 0≤1<3)
+
+2.  2 mod 6 = 2 (since 2=6*0+2, 0≤2<6)
+
+3.  -2 mod 3 = 1 (since -2=3*(-1)+1, 0≤1<3)
+
+Exercise: Show a mod b = 0 if and only if b divides a.
+
+
+##Mod Congruence
+
+Definition:
+<br>We say that two integers are ‘congruent modulo p’ when a mod p = b mod p.
+<br>It turns out this is equivalent to stating that (a-b)=kp for some integer k.
+<br>We write this as a≡b mod p
+
+Examples:
+
+1.  -2≡7 mod 3)
+2.  4≡28 mod 12
+
+Exercise: Show congruence is an equivalence relation.
+
+Exercise: Is the function $r_m (n):Z→\{[0],...,[m-1]\}$ defined by n↦[n mod m] injective/surjective?
+
+
+##Modular Arithmetic
+
+Properties:
+
+1.  ab mod n = (a mod n) * (b mod n) mod n
+
+2.  a+b mod n = (a mod n) + (b mod n) mod n
+
+
+Why? In short, representatives of the equivalence class are interchangeable.
+
+Proof sketch:
+<br>(a+nk)*(b+nk’) = ab + ank’ + bnk + n 2 kk’ = ab + n(ak’+bk+nkk’).
+<br>(a+nk) + (b+nk’) = (a+b) + (k+k’)n.
+<br>Reduce each formula mod n to get result. A more direct way is to use abstract
+algebra outside of the scope of this course.
