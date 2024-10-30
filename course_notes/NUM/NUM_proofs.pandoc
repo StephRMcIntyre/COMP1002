@@ -1,0 +1,76 @@
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true},
+      jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+      extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+      TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+      equationNumbers: {
+      autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+#Number Theory
+
+##Fundamental Theorem of Arithmetic##
+
+####Theorem: Every number n>0 has a unique prime factorization.####
+
+####Proof Sketch: By strong induction on n.####
+
+####Base Case: 1≤k≤1. ####
+Here, 1 is considered the empty product which is a unique factorization.
+
+####IH: Suppose all integers j where 1≤j≤k have a unique prime factorization. ####
+
+
+####Inductive Argument:####
+Consider k+1. k+1 is either prime or composite.
+<br>If k+1 is prime, then it only has factors 1,k+1, which is a unique factorization.
+<br>If k+1 is composite, then there exist a≤k,b≤k such that ab=k+1.
+
+<br>By IH assumption, each of a,b have a unique factorization, say $a=\prod_{i=0}^{P}p_i$ and $b=\prod_{i=0}^{Q}q_i$
+<br>Thus $k+1= (\prod_{i=0}^{P}p_i)(\prod_{i=0}^{Q}q_i)$. 
+
+<br>If $k+1=r_0 r_1 ... r_s$ is a different factorization, then by previous claim each
+prime $r_i$ either divides a or b.
+<br>So we can iteratively cancel out common terms from the r's and primes from a or b's factorization.
+<br>Doing so we will find that the
+factorizations must have been the same. 
+
+<br>Thus factorizations are unique.
+
+
+##Infinitely Many Primes##
+
+####Theorem: There are infinitely many primes.####
+__Recall: All numbers have a unique prime factorization__
+
+####Proof: By contradiction.####
+Suppose there were finitely many primes, say $p_0, p_1 , ..., p_k$.
+
+Set $N=(\prod_{i=0}^{k}p_i)+1$. That is the product of all the primes, plus 1.
+
+<br>By fundamental theorem of arithmetic, $N=\prod_{i=0}^{j}q_i$ for some unique $q_i$.
+<br>That is, there is some product of primes that creates $N$.
+
+<br>Then either this product is empty or non-empty.
+<br>If it were empty, then we created a new prime N, and thus that contradicts that we had all the primes to begin with.
+<br>Thus it must be non-empty -- there is at least one prime in the product, say $q_0$.
+
+<br>Then that $q_0 | N$. 
+<br>This would mean that since $q_0 | N$, that $N mod q_0 = 0$.
+<br>However, since we constructed $N=(\prod_{i=0}^{k}p_i)+1$, and $q_0$ is a prime in that product, then $N mod q_0 = 1$
+
+<br>$N mod q_0 = 0$ and $N mod q_0 = 1$, however remainders are unique when $q_0$ > 0, which it is as $q_0$ is prime!
+<br>Thus a contradiction!
+
+<br>Therefore there are infinitely many primes!
+
