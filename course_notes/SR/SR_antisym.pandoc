@@ -1,0 +1,82 @@
+# Sets & Relations
+
+## Relations
+
+###Anti-symmetry
+
+In short, a relation R on a set A has the anti-symmetry property if and only if every a,b∈A, if aRb and bRa then a=b.
+<br>We can express this in FOL as ∀x∀y∀z(Rxy ∧ Ryx → x=y), where the domain for x is A.
+<br>Basically, if we have symmetry happening, then the two objects MUST be the same element!
+<br>With the diagrams, antisymmetry has no bidirectional arrows.
+
+Example 1. Consider the following relation on {Sam,Jamie}.
+<img src="https://carnap.io/shared/smcintyre/loves1.png" alt="relation on {Sam,Jamie}">
+<br>This relation is anti-symmetric. 
+<br>This is an easy case for anti-symmetry.
+
+Example 2. Consider the following relation on {Sam,Jamie,Erin}.
+<img src="https://carnap.io/shared/smcintyre/loves2.png" alt="relation on {Sam,Jamie,Erin}">
+<br>Also ant-symmetric for the same reasons. 
+<br>Notice how we don't need reflexivity for anti-symmetry!
+
+Example 3. Consider the following relation on {Sam,Jamie,Erin}.
+<img src="https://carnap.io/shared/smcintyre/loves5.png" alt="relation on {Sam,Jamie,Erin}">
+<br>This is not ant-symmetric.
+<br>We can see that Sam R Jamie and Jamie R Sam, but Sam ≠ Jamie.
+
+Now, a **common misconception** is that anti-symmetry is the opposite of symmetry.
+<br>**This is wrong!**
+Example 4. <br>Consider the following relation on {Sam,Jamie,Erin}.
+<img src="https://carnap.io/shared/smcintyre/loves3.png" alt="relation on {Sam,Jamie,Erin}">
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. Select what is true about the above relation.
+| *It is symmetric.
+| *It is anti-symmetric.
+```
+
+Could we have a relation that is neither symmetric nor anti-symmetric?
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Select the relations that are neither symmetric nor anti-symmetric.
+| R = {(1,1),(2,2),(3,3)}
+| R = {(1,2),(2,1),(3,3)}
+| R = {(1,2),(2,3),(3,3)}
+| *R = {(1,2),(2,1),(1,3)}
+| Trick question, there are none!
+```
+
+<details>
+<summary>Explanation for Q2</summary>
+
+1.  R = {(1,1),(2,2),(3,3)}
+    <br>This is clearly symmetric and anti-symmetric. This is just like Example 4. 
+    
+2.  R = {(1,2),(2,1),(3,3)}
+    <br>While this not anti-symmetric as 1R2, 2R1 but 1 is not 2...
+    <br>It is symmetric. There is no counterexample of x,y where xRy and not yRx.
+    
+3.  R = {(1,2),(2,3),(3,3)}
+    <br>While this not symmetric as 1R2, but it is not the case that 2R1...
+    <br>It is anti-symmetric. There is no counterexample of x,y where both xRy and yRx but not x=y.
+    
+4.  R = {(1,2),(2,1),(1,3)}
+    <br>This one is not symmetric as 1R3, but it is not the case that 3R1...
+    <br>This one is not antisymmetric as 1R2 and 2R1 but 1 is not 2...
+    <br>Thus we have found an example of a relation that is neither symmetric nor anti-symmetric.
+    
+5.  Trick question, there are none!
+    <br>Well, this is incorrect as we found an example above!
+
+So there are relations that are anti-symmetric AND symmetric, and relations that are neither anti-symmetric nor symmetric.
+<br>In short, anti-symmetri and symmetry are NOT opposites.
+
+</details>
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+3. Let A = ℕ. Select all of the relations below on A such that the relation is anti-symmetric.
+| *R is the < relation.
+| *R is the ≤ relation.
+| *R is the = relation.
+| R is the ≠ relation.
+```
