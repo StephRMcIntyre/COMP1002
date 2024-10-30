@@ -1,0 +1,77 @@
+#Number Theory
+
+##Primes
+
+Prime Number: An integer greater than 1 whose only positive divisors are 1 and itself.
+
+Composite Number: An integer greater than 1 that is not prime.
+
+
+Example: Show that the number 34 is not a prime number.
+<br>2|34 as 34 = 17*2.
+<br>Since 34 has another positive divisor that is neither 1 nor itself, namely 2, then 34 is not prime.
+
+
+###Bounds for Testing Primality###
+Claim: A positive integer n≥1 is composite if and only if n has a divisor d satisfying
+2≤d≤sqrt(n).
+
+Proof Sketch: Note that this is an if and only if statement. We must prove both directions!
+<br>(->) WTS: if positive integer n≥1 is composite then n has a divisor d satisfying 2≤d≤sqrt(n).
+<br>$~~~~~$Exercise.
+<br>(<-) WTS: if n has a divisor d satisfying 2≤d≤sqrt(n) then positive integer n≥1 is composite.
+<br>$~~~~~$Suppose n has a divisor d satisfying 2≤d≤sqrt(n).
+<br>$~~~~~$Since n has a positive divisor other than 1 and itself, then by definition n is composite.
+
+####An Algorithm for Testing Primality####
+
+This is a method, in pseudocode, which will take an integer n>1 as input
+and returns true if n is prime, otherwise it returns false.
+
+``` {.python language="Python" basicstyle="\\ttfamily"}
+def is_prime(n):
+  d = 2
+  while d<=sqrt(n):
+    if (n mod d == 0):
+      return false
+    d += 1
+  return true
+```
+
+There are more efficient ways of determining that n is prime, but for now this will suffice. 
+
+####Sieve of Eratosthenes####
+
+An algorithm for finding all primes from 2 to bound B.
+<br>This is a method, in pseudocode, which will take an integer B>1 as input
+and returns a list of all the primes up to and including B.
+
+``` {.python language="Python" basicstyle="\\ttfamily"}
+def sieve(B):
+  #initiate a list of all the numbers from 2 to B inclusive
+  numbers = [2..B]  
+  #empty list to store the prime numbers
+  primes = []
+  done = false
+
+  #now we go through the numbers
+  while not done:
+    p = numbers.pop(0)
+    #we are done if we pass the sqrt of B
+    if p>sqrt(B): 
+      done = true
+    primes.append(p)
+
+    #sieve through and remove the multiples of p!
+    for k in range(0,B,p):
+      if k in numbers: 
+        numbers.remove(k);
+        
+  #done the loop -- return the lists merged together
+  return primes + numbers
+```
+
+To find the largest known
+primes, a different technique is
+used - often focusing on
+<a href="https://en.wikipedia.org/wiki/Mersenne_prime">Mersenne primes.</a>
