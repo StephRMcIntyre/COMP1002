@@ -1,0 +1,142 @@
+# Sets & Relations
+
+## Relations
+
+###Orders
+
+####Partial Orders
+
+A relation is a partial-order relation that is reflexive, antisymmetric and transitive. 
+<br>It has to have all three of these properties to be a partial order relation.
+<br>In essence, there must be some order to the elements in the set, meaning some come before others, and there are no cycles (other than self-loops).
+
+
+Looking back at the original Loves relation on Folks = {Sam,Jamie},
+
+<img src="https://carnap.io/shared/smcintyre/loves1.png" alt="Loves Relation on {Sam,Jamie}">
+<br>Is this a partial order?
+<br>Yes, it is. We early discovered it is reflexive, transitive, and antisymmetric.
+<br>As it satisfies all three properties, it is a partial order.
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. Select all of the relations R on Z that are partial orders.
+| R is the < relation.
+| *R is the ≤ relation.
+| *R is the = relation.
+| R is the ≠ relation.
+```
+
+<details>
+<summary>Explanation for Q1</summary>
+
+1.  R is the < relation.<br>This is not a partial order. <br>1 ≮ 1, and so it does not satisfy the reflexivity requirement.
+
+2.  R is the ≤ relation.<br>This is a partial order as it satisfies all the requirements. <br>For any integer n, n = n, so n ≤ n. Thus it is reflexive.
+<br>For any integer n,m. Suppose n≤m and m≤n, then since n ≤ m ≤ n, it must be the case that m=n. Thus it is antisymmetric.
+<br>We know ≤ is transitive -- we have used this all term!
+
+3.  R is the = relation.<br>This is a partial order as it satisfies all the requirements. <br>We have proved that equality is transitive and reflexive in FOL unit.
+<br>Exercise: prove that = is antisymmetric in ND.
+
+4.  R is the ≠ relation.<br>This is not a partial order. <br>1 = 1, and so it does not satisfy the reflexivity requirement.
+
+</details>
+
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Let A = {1,2,3}. Select all of the relations below on A such that the relation is a partial order.
+| *R = {(1,1),(2,2),(3,3)}
+| *R = {(1,1),(2,3),(2,2),(3,3),(3,1)}
+| R = {(1,2),(2,3),(3,3)}
+| R = {(1,1),(1,2),(2,2),(2,1)}
+```
+Claim: ⊆ on sets is a partial order.
+
+Proof Sketch with hints: 
+<br>Transitive: Proved earlier in the slides.
+<br>Anti-symmetric: Look at the definition of set equality.
+<br>Reflexive: Look at the definition of set equality.
+<br>As the relation is transitive, anti-symmetric and reflexive, then it is a partial order.
+<br>Exercise: Fill in the details of the proof sketch.
+
+<details>
+<summary>Select solutions to above</summary>
+
+Reflexive: Suppose we have arbitrary set A.
+<br>Every set is equal to itself, so A = A.
+<br>By the definition of set equality and A = A, then A⊆A and A⊆A.
+<br>Thus A⊆A.
+<br>Therefore, ⊆ is reflexive.
+
+Anti-symmetric: Suppose we have arbitrary sets A, B such that A⊆B and B⊆A.
+<br>By definition of set equality as A⊆B and B⊆A, then A=B.
+<br>Thus A=B.
+<br>Therefore, ⊆ is antisymmetric.
+
+</details>
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+2. Select all of the relations R on simple prop WFFs that are partial orders.
+| αRβ iff α ⊨ β
+| αRβ iff α ⧦ β 
+| *αRβ iff α and β are syntactically the same simple prop WFF.
+| αRβ iff α and β have the same number of parenthesis.
+```
+
+<details>
+<summary>Hints to Q2</summary>
+
+For 1,2, play around with different simple prop WFFs and determine which ones are logically implied/equivalent.
+
+For 3, syntactically the same means they are the EXACT same symbols in the same order. They are the same formula.
+
+For 4, look at the simple prop WFFs from 1,2 and see how they relate.
+
+For all of these, keep in mind of reflexivity, anti-symmetry, and transitivity!
+
+</details>
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+3. The relation xRy iff ∃k∈N x-k < y  on N is a partial order. (N is natural numbers)
+| True
+| *False
+```
+
+<details>
+<summary>Hint to Q3</summary>
+
+Sometimes there is a single counterexample that disproves one of the properties.
+
+There is one that disproves reflexivity.
+<br>Find it, and keep in mind that you are only dealing with natural numbers!
+
+</details>
+
+
+####Hasse Diagrams 
+
+We sometimes diagram partial orders where aRb is represented by a being physically below b. 
+<br>Start with an empty diagram.
+<br>$~~~~$For all pairs, if there are no elements c such that aRc and cRb, we draw an arrow between a,b.
+<br>$~~~~$When you are done, find the Nodes with no incoming arrows, and then draw them at the bottom, and build upwards.
+<br>$~~~~$Then remove the arrow head so it is just a line.
+<br>These diagrams have the reflexivity and transitivity implicitly shown.
+<br>The "smallest" elements are at the bottom, and it grows upwards.
+
+Here's the Hasse Diagram of the Loves on Folks relation.
+<br><img src="https://carnap.io/shared/smcintyre/loves1_ord.png" alt="Loves Relation on {Sam,Jamie}">
+<br>Notice how we removed the self loops. Sam is at the bottom as Sam Loves Jamie, but Jamie does not love Sam.
+
+
+<img src="https://carnap.io/shared/smcintyre/loves_ord.png" alt="Loves Relation on {Sam,Jamie}">
+
+
+```{.QualitativeProblem .MultipleChoice options="check" submission="none" content-format="html"}
+3. For the above Hasse Diagram, identify the relation R. Remember, R is a partial order!
+| R = {(Jamie,Erin),(Erin,Alex),(Sam,Alex),(Sam,Erin)}
+| R = {(Erin,Jamie),(Alex,Sam),(Alex,Erin),(Alex,Alex),(Erin,Sam),(Jamie,Alex),(Erin,Alex),(Sam,Alex),(Sam,Erin)}
+| R = {(Jamie,Jamie),(Sam,Sam),(Erin,Erin),(Alex,Alex),(Jamie,Erin),(Erin,Alex),(Sam,Alex),(Sam,Erin)}
+| *R = {(Jamie,Jamie),(Sam,Sam),(Erin,Erin),(Alex,Alex),(Jamie,Erin),(Jamie,Alex),(Erin,Alex),(Sam,Alex),(Sam,Erin)}
+```
+
+
