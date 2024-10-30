@@ -6,11 +6,17 @@ Prime Number: An integer greater than 1 whose only positive divisors are 1 and i
 
 Composite Number: An integer greater than 1 that is not prime.
 
+Unit: The number 1.
+
 
 Example: Show that the number 34 is not a prime number.
 <br>2|34 as 34 = 17*2.
 <br>Since 34 has another positive divisor that is neither 1 nor itself, namely 2, then 34 is not prime.
 
+
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+1 2: What is the smallest prime number?
+~~~
 
 ###Bounds for Testing Primality###
 Claim: A positive integer n≥1 is composite if and only if n has a divisor d satisfying
@@ -62,7 +68,7 @@ def sieve(B):
       done = true
     primes.append(p)
 
-    #sieve through and remove the multiples of p!
+    #sieve through and remove the multiples of p
     for k in range(0,B,p):
       if k in numbers: 
         numbers.remove(k);
@@ -75,3 +81,7 @@ To find the largest known
 primes, a different technique is
 used - often focusing on
 <a href="https://en.wikipedia.org/wiki/Mersenne_prime">Mersenne primes.</a>
+
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+2 31: What is the 11th prime number?
+~~~
