@@ -3,8 +3,9 @@
 ##Mod Operator
 
 Definition:
-<br>Given that remainders are unique, we can define mod to be the operation that
+<br>Given that remainders are unique (see Quotient Remainder Theorem), we can define mod to be the operation that
 returns the remainder r of n on division by divisor d.
+<br>_Recall, 0≤r<d_
 
 Examples:
 
@@ -16,6 +17,22 @@ Examples:
 
 Exercise: Show a mod b = 0 if and only if b divides a.
 
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+1 4: Determine the value of 4 mod 7.
+~~~
+
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+2 3: Determine the value of 7 mod 4.
+~~~
+
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+3 0: Determine the value of 0 mod 4.
+~~~
+
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+4 1: Determine the value of -7 mod 4.
+~~~
+
 
 ##Mod Congruence
 
@@ -26,8 +43,20 @@ Definition:
 
 Examples:
 
-1.  -2≡7 mod 3)
-2.  4≡28 mod 12
+1.  -2 ≡ 7 mod 3
+    <br> -2 mod 3 = 1. 7 mod 3 = 1. 
+2.  4 ≡ 28 mod 12
+    <br> 4 mod 12 = 4. 28 mod 12 = 4. 
+
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+5. Determine which of the following are congruent to 1 mod 2
+| 0
+| *1
+| 2
+| *-1
+| *100001
+| 290914
+```
 
 Exercise: Show congruence is an equivalence relation.
 
@@ -50,3 +79,17 @@ Proof sketch:
 <br>(a+nk) + (b+nk’) = (a+b) + (k+k’)n.
 <br>Reduce each formula mod n to get result. A more direct way is to use abstract
 algebra outside of the scope of this course.
+
+Without using a calculator, solve the following:
+
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+6 0: 32*3*7 mod 4.
+~~~
+
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+7 2: 32+3+7 mod 4.
+~~~
+
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+8 0: 8^6 mod 7.
+~~~
