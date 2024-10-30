@@ -30,6 +30,17 @@ Examples:
 Exercise: List all of the divisors of -12.
 <br>Hint: There are 12 divisors of -12.
 
+```{.QualitativeProblem .MultipleSelection options="check" submission="none" content-format="html"}
+1. Select all of the numbers below that are divisors of 15.
+|0
+|*-1
+|*1
+|*3
+|*-5
+|7
+|*15
+```
+
 <details>
 <summary>What properties does the divisibility relation have on the integers?</summary>
 
@@ -100,3 +111,21 @@ Proof Sketch:
 <br>Verify the needed properties of q,r.
 <br>Argue that property 1) and 2) imply two q,r solutions need to be the same.
 <br>Note: Finding r is essentially long division.
+
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+2 1: Using the quotient remainder theorem, find r when n=25, d=3.
+~~~
+
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+3 8: Using the quotient remainder theorem, find q when n=25, d=3.
+~~~
+
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+4 5: Using the quotient remainder theorem, find r when n=-16, d=7.
+~~~
+
+~~~{.QualitativeProblem .Numerical submission="none" options="check"}
+5 -3: Using the quotient remainder theorem, find q when n=-16, d=7.
+~~~
+
+_Hint: Read the two criteria required._
